@@ -8,7 +8,7 @@ title = "Impressum & AGB"
 
 ## AGB
 
-Hier findest du in kürze meine AGB
+Hier findest du in Kürze meine AGB
 
 ## Attribution
 
