@@ -1,5 +1,5 @@
 +++
-title = "Buchung"
+title = "Buchung & Aktuelle Kurse"
 template = "courses/page.html"
 weight = 1110
 sort_by = "weight"
