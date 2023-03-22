@@ -5,6 +5,10 @@ weight = 1110
 sort_by = "weight"
 +++
 
+## Aktuelle Kurse
+
+Hier findest du in Kürze Informationen zu aktuellen kursen
+
 ## Buchungsanfrage
 
 Hier findest du in Kürze Informationen zu Buchungsanfrage
