@@ -4,7 +4,7 @@ title = "Impressum & AGB"
 
 ## Impressum
 
-Hier findest du in kürze mein Impressum
+<img src="/img/imprint.svg" width="80%"/>
 
 ## AGB
 
