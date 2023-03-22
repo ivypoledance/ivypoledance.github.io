@@ -1,8 +1,8 @@
 +++
-title = "Ayesha"
+title = "Ayesha 2.0"
 template = "courses/page.html"
 weight = 1206
 sort_by = "weight"
 +++
 
-Hier findest du in Kürze Informationen zu Ayesha
+Hier findest du in Kürze Informationen zu Ayesha 2.0
