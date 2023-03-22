@@ -5,4 +5,4 @@ weight = 1202
 sort_by = "weight"
 +++
 
-Hier findest du in Kürze Informationen zu Combine & Captivate
+In Combine & Captivate lernst und perfektionierst du kreative Kombinationen mit vertrauten Tricks und fesselnden, neuen Variationen.
