@@ -7,7 +7,7 @@ sort_by = "weight"
 
 ## Aktuelle Kurse
 
-Hier findest du in Kürze Informationen zu aktuellen kursen
+Hier findest du in Kürze Informationen zu aktuellen Kursen
 
 ## Buchungsanfrage
 
