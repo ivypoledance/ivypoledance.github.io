@@ -1,5 +1,5 @@
 +++
-title = ":star:Cirque Chair"
+title = "~Cirque Chair"
 template = "courses/page.html"
 weight = 1210
 sort_by = "weight"
