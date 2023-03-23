@@ -1,7 +1,7 @@
 +++
 title = "Fliptastic!"
 template = "courses/page.html"
-weight = 1203
+weight = 1202
 sort_by = "weight"
 +++
 
