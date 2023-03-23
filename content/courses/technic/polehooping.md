@@ -1,7 +1,7 @@
 +++
-title = "Polehooping"
+title = "~Polehooping"
 template = "courses/page.html"
-weight = 1212
+weight = 1211
 sort_by = "weight"
 +++
 
