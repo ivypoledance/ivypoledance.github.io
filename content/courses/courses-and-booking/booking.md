@@ -9,14 +9,10 @@ sort_by = "weight"
 
 Hier findest du in Kürze Informationen zu aktuellen Kursen
 
-## Buchungsanfrage
+## Kursanfrage
 
-Hier findest du in Kürze Informationen zu Buchungsanfrage
+Ein Kurs, der dich interessiert ist gerade nicht verfügbar? Lass es uns unverbindlich wissen und wir versuchen bei der nächsten Kursplanung darauf Rücksicht zu nehmen!
 
-## Gutscheine
+## Buchungsanfrage / Performances
 
-Hier findest du in Kürze Informationen zu Gutscheine
-
-## Performances
-
-Hier findest du in Kürze Informationen zu Performances
+Du willst eine maßgeschneiderte Performance für dein Event, oder Unterhaltung zum Mitmachen für Polterabend und Co? Schick uns eine Buchungsanfrage!
