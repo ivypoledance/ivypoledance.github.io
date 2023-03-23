@@ -1,7 +1,7 @@
 +++
 title = "Posetastic!"
 template = "courses/page.html"
-weight = 1209
+weight = 1203
 sort_by = "weight"
 +++
 
