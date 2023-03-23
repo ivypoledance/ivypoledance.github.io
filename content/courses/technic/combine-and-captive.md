@@ -1,7 +1,7 @@
 +++
 title = "Combine & Captivate"
 template = "courses/page.html"
-weight = 1202
+weight = 1206
 sort_by = "weight"
 +++
 
