@@ -1,7 +1,7 @@
 +++
 title = "Superman 2.0"
 template = "courses/page.html"
-weight = 1207
+weight = 1205
 sort_by = "weight"
 +++
 
