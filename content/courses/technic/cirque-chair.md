@@ -1,7 +1,7 @@
 +++
-title = "Cirque Chair"
+title = "&#10055;Cirque Chair"
 template = "courses/page.html"
-weight = 1213
+weight = 1210
 sort_by = "weight"
 +++
 
