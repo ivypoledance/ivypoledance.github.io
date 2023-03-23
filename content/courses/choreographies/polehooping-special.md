@@ -1,8 +1,8 @@
 +++
-title = "Polehooping Special"
+title = "~Spezial Choreos (Twin, Chair, Polehooping)"
 template = "courses/page.html"
-weight = 1304
+weight = 1303
 sort_by = "weight"
 +++
 
-Hier findest du in Kürze Informationen zu Polehooping Special
+In einem eineinhalbstündigen Choreo Special erlernst du eine Choreographie in einem Spezialskill (Twinpole, Chairdance, Chair-Pole Fusion, Polehooping).
