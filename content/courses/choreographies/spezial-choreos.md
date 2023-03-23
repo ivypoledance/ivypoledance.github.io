@@ -1,5 +1,5 @@
 +++
-title = "~Spezial Choreographien (Twinpole, Chair/Fusion, Polehooping)"
+title = "~Spezial Choreographien (Twinpole,Chair/Fusion,Polehooping)"
 template = "courses/page.html"
 weight = 1303
 sort_by = "weight"
