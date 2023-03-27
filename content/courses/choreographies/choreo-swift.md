@@ -1,7 +1,7 @@
 +++
-title = "Choreo Special"
+title = "Choreo Swift"
 template = "courses/bookingpage.html"
-weight = 1302
+weight = 1301
 sort_by = "weight"
 +++
 

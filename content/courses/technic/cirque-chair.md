@@ -1,5 +1,5 @@
 +++
-title = "~Cirque Chair"
+title = "Cirque Chair ☆"
 template = "courses/bookingpage.html"
 weight = 1210
 sort_by = "weight"

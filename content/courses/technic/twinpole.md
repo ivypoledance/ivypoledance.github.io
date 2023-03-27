@@ -1,5 +1,5 @@
 +++
-title = "~Twinpole"
+title = "Twinpole ☆"
 template = "courses/bookingpage.html"
 weight = 1213
 sort_by = "weight"

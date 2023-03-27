@@ -1,5 +1,5 @@
 +++
-title = "~Spezial Choreos (Twinpole,Chair,Polehooping)"
+title = "Choreo Fusion & Extra ☆"
 template = "courses/bookingpage.html"
 weight = 1303
 sort_by = "weight"
