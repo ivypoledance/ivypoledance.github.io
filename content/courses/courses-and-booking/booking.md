@@ -23,4 +23,4 @@ Du willst eine maßgeschneiderte Performance für dein Event, oder Unterhaltung 
 <hr />
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
-<img style="display: block; height:100%; opacity: 0.1; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/10BG_EGhide.png" />
+<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/10BG_EGhide.png" />
