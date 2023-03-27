@@ -1,7 +1,7 @@
 +++
 title = "Gutscheine"
 template = "courses/page.html"
-weight = 1140
+weight = 1130
 sort_by = "weight"
 +++
 

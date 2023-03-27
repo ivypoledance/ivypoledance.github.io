@@ -1,7 +1,7 @@
 +++
 title = "Privat- und Schnupperstunden"
 template = "courses/page.html"
-weight = 1130
+weight = 1120
 sort_by = "weight"
 +++
 
