@@ -4,11 +4,15 @@ title = "Impressum & AGB"
 
 ## Impressum
 
-<img src="/img/imprint.svg" width="80%"/>
+<div class="text-center">
+    <img src="/img/imprint.svg" width="60%"/>
+</div>
 
 ## AGB
 
-Hier findest du in Kürze meine AGB
+<div class="text-center">
+    <a class="btn btn-primary" href="/download/AGB-IvyPoledance.pdf">AGB herunterladen</a>
+</div>
 
 ## Attribution
 
