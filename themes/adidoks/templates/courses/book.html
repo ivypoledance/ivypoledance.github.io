@@ -1,0 +1,57 @@
+{% extends "page.html" %}
+
+{% block body %}
+  {% set page_class = "docs single" %}
+{% endblock body %}
+
+{% block header %}
+  {# This value is matched by the config.extra.menu.main~url #}
+  {% set current_section = "courses" %}
+  {{ macros_header::header(current_section=current_section)}}
+{% endblock header %}
+
+{% block content %}
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  {{ macros_sidebar::docs_sidebar(current_section=current_section) }}
+	  {{ macros_toc::docs_toc(page=page) }}
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>{{ page.title }}</h1>        
+        <form action="#" method="POST">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Dein Name">
+            <label for="name">Dein Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Deine Email Adresse</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="courseType" class="form-control" id="floatingInput" placeholder="name@example.com" value="Choreo Perfection - Devilicious" disabled>
+            <label for="courseType">Kurs</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="courseDate" class="form-control" id="floatingInput" placeholder="name@example.com" value="06.05.2023 - 19:00-20:15 & 07.05.2023 - 19:00-20:15 " disabled>
+            <label for="courseDate">Termin</label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="agb">
+            <label class="form-check-label" for="agb">
+              Ich habe die <a href="/imprint/#agb">AGB</a> gelesen und akzeptiere sie.</td>
+            </label>
+          </div>
+          <div class="checkbox mb-3">
+            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
+          </div>
+          <button class="w-100 btn btn-primary disabled" type="submit" value="Submit">Buchung abschicken</button>
+        </form>
+      </main>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block js %}
+<script type="text/javascript" src="{{ get_url(path="js/book.js") | safe }}" defer></script>
+{% endblock js %}
