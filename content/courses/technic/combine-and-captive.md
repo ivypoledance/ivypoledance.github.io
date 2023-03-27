@@ -1,6 +1,6 @@
 +++
 title = "Combine & Captivate"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1206
 sort_by = "weight"
 +++

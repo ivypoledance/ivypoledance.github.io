@@ -1,6 +1,6 @@
 +++
 title = "~Twinpole"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1213
 sort_by = "weight"
 +++

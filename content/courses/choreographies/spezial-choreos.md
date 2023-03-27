@@ -1,6 +1,6 @@
 +++
 title = "~Spezial Choreos (Twinpole,Chair,Polehooping)"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1303
 sort_by = "weight"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "Posetastic!"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1203
 sort_by = "weight"
 +++

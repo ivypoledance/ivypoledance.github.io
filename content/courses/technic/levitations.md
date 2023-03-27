@@ -1,6 +1,6 @@
 +++
 title = "Levitations"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1208
 sort_by = "weight"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "~Polehooping"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1211
 sort_by = "weight"
 +++

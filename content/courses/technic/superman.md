@@ -1,6 +1,6 @@
 +++
 title = "Superman 2.0"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1205
 sort_by = "weight"
 +++

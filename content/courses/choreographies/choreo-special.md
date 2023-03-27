@@ -1,6 +1,6 @@
 +++
 title = "Choreo Special"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1302
 sort_by = "weight"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "Tricktastic!"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1201
 sort_by = "weight"
 +++

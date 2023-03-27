@@ -1,6 +1,6 @@
 +++
 title = "Powerspins"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1209
 sort_by = "weight"
 +++

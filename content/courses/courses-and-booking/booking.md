@@ -1,13 +1,9 @@
 +++
 title = "Buchung & Aktuelle Kurse"
-template = "courses/page.html"
+template = "courses/currentcoursespage.html"
 weight = 1110
 sort_by = "weight"
 +++
-
-## Aktuelle Kurse
-
-Hier findest du in Kürze Informationen zu aktuellen Kursen
 
 ## Kursanfrage
 

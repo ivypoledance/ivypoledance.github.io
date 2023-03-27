@@ -1,6 +1,6 @@
 +++
 title = "Ayesha 2.0"
-template = "courses/page.html"
+template = "courses/bookingpage.html"
 weight = 1204
 sort_by = "weight"
 +++
