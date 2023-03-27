@@ -9,6 +9,4 @@ Lerne im österreichweit einzigartigen Twinpole Special Moves und Combos an den 
 
 Max. Teilnehmerinnenzahl: 3 Personen! (Zusätzlich zum Twinpole Setup gibt es eine Einzelpole zum Ausprobieren einzelner Elemente)
 
-<div class="text-right">
-    <img src="/img/TwinPole_BGremoved_cut.png" width="40%"/>
-</div>
+<img style="display: block; height:100%; opacity: 0.1; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/TwinPole_BGremoved_cut.png" />
