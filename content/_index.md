@@ -2,8 +2,6 @@
 title = "Ivy Poledance"
 
 [extra]
-<img src="/img/01landingpage.jpg" width="100%"/>
-
 url = "/courses/courses-and-booking/booking/"
 url_button = "Buche jetzt!"
 
