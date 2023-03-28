@@ -11,7 +11,7 @@ content = "Kursinhalte werden jeweils auf die Teilnehmerinnen, ihr aktuelles Lev
 
 [[extra.list]]
 title = "Choreographien"
-content = "Erleine einzigartige Choreographies und erkunde die Möglichkeiten von Chair Pole Fusion, Twinpole, Polehooping und mehr!"
+content = "Erlerne einzigartige Choreographies und erkunde die Möglichkeiten von Chair Pole Fusion, Twinpole, Polehooping und mehr!"
 
 [[extra.list]]
 title = "Privatstunden"
