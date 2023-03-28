@@ -9,6 +9,7 @@ Einer der großen Stars unter den Pole Moves: Die Ayesha! Es gibt mehr als nur e
 In diesem zweiwöchigen Kurs erwartet euch eine ganze Reihe dieser Transitions, individuell an euch einzeln und als Gruppe angepasst und aus einer ellenlangen Liste an Möglichkeiten ausgewählt ♥
 
 ACHTUNG, dieser Kurs ist NICHT Open Level!
+
 VORAUSSETZUNG: stabile Ayesha (mindestens eine Grip-Variante)
 
 <img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/05BG_ayesha.png" />
