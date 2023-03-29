@@ -16,7 +16,9 @@ title = "Impressum & AGB"
 
 ## Kontakt
 office@ivypoledance.at
+
 Dingelstedtgasse 1
+
 1150 Wien
 
 ## Attribution
