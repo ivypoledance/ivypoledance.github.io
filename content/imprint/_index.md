@@ -14,6 +14,11 @@ title = "Impressum & AGB"
     <a class="btn btn-primary" href="/download/AGB-IvyPoledance.pdf">AGB herunterladen</a>
 </div>
 
+## Kontakt
+office@ivypoledance.at
+Dingelstedtgasse 1
+1150 Wien
+
 ## Attribution
 
 ### Theme
