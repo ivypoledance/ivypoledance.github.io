@@ -2,6 +2,7 @@
 title = "Ivy Poledance"
 
 [extra]
+lead = "♡ Poleaddict ♡ Instructor & performer ♡ Tricks & Combos ♡ Choreo ♡ Floorwork ♡ Open to beginners & all levels! ♡"
 url = "/courses/courses-and-booking/booking/"
 url_button = "Buche jetzt!"
 
