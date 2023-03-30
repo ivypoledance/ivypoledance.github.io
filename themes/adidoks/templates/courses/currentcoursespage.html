@@ -26,6 +26,7 @@
         <p>Derzeit gibt es keine aktuellen Kurstermine.<br />
         Du kannst mir aber gerne eine <a href="/courses/courses-and-booking/booking/#kursanfrage">Kursanfrage</a> schicken.</p>
         {% else %}
+        {% set showPrice = records | map(attribute="2") | join(sep="") | length > 0 %}
         <p>
           Aktuell kannst du folgende Kurse buchen.<br>
           Den Buchungslink findes du auf der Kursseite.
@@ -34,6 +35,7 @@
           <thead>
               <tr>
                   <th>Kurs</th>
+                  {% if showPrice == true %}<th>Preis</th>{% endif %}
                   <th>Datum</th>
               </tr>
           </thead>
@@ -45,10 +47,15 @@
                     <a href="{{ coursePage.path }}">{{ coursePage.title }}</a>
                     {% if record[1] | length > 0 %} - {{ record[1] }}{% endif %}
                   </td>
+                  {% if showPrice == true %}
                   <td>
-                    {{ record[2] | date(format="%d.%m.%Y - %H:%M") }}{% if record[3] | length > 0 %}-{{ record[3] | date(format="%H:%M") }}{% endif %}
-                    {% if record[4] | length > 0 %} &amp;<br/>
+                    {{ record[2] }}
+                  </td>
+                  {% endif %}
+                  <td>
                     {{ record[4] | date(format="%d.%m.%Y - %H:%M") }}{% if record[5] | length > 0 %}-{{ record[5] | date(format="%H:%M") }}{% endif %}
+                    {% if record[6] | length > 0 %} &amp;<br/>
+                    {{ record[6] | date(format="%d.%m.%Y - %H:%M") }}{% if record[6] | length > 0 %}-{{ record[6] | date(format="%H:%M") }}{% endif %}
                     {% endif %}
                   </td>
               </tr>

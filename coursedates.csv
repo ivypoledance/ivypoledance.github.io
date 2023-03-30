@@ -1,4 +1,4 @@
-course,name,date1-from,date1-to,date2-from,date2-to
-courses/technic/combine-and-captive.md,(€54),2023-04-14T19:00:00,2023-04-14T20:15:00,2023-04-21T19:00:00,2023-04-21T20:15:00
-courses/choreographies/choreo-perfection.md,Devilicious (€54),2023-05-06T19:00:00,2023-05-06T20:15:00,2023-05-07T19:00:00,2023-05-07T20:15:00
-courses/choreographies/choreo-swift.md,Rock it out (€54),2023-05-17T19:00:00,2023-05-17T20:30:00,,
+course,name,price,date1-from,date1-to,date2-from,date2-to
+courses/technic/combine-and-captive.md,,€ 54.-,2023-04-14T19:00:00,2023-04-14T20:15:00,2023-04-21T19:00:00,2023-04-21T20:15:00
+courses/choreographies/choreo-perfection.md,Devilicious,€ 54.-,2023-05-06T19:00:00,2023-05-06T20:15:00,2023-05-07T19:00:00,2023-05-07T20:15:00
+courses/choreographies/choreo-swift.md,Rock it out,€ 54.-,2023-05-17T19:00:00,2023-05-17T20:30:00,,
