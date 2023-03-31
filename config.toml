@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://ivypoledance.at/"
 title = "Ivy Poledance"
-description = "Privatstunden, Workshops und Performances in Wien und Umgebung - Poledance & Polehooping"
+description = "Kurse, Privatstunden, Workshops und Performances in Wien und Umgebung"
 
 theme = "adidoks"
 
