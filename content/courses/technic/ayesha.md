@@ -6,7 +6,7 @@ sort_by = "weight"
 +++
 
 Einer der großen Stars unter den Pole Moves: Die Ayesha! Es gibt mehr als nur eine "handvoll" Grip-Varianten für sie – und eine Unmenge an spannenden, kreativen Ein- und Ausgängen!  
-In diesem zweiwöchigen Kurs erwartet euch eine ganze Reihe dieser Transitions, individuell an euch einzeln und als Gruppe angepasst und aus einer ellenlangen Liste an Möglichkeiten ausgewählt ♥
+In diesem zweiwöchigen Kurs erwartet dich eine ganze Reihe dieser Transitions, individuell an dich und die Gruppe angepasst und aus einer ellenlangen Liste an Möglichkeiten ausgewählt ♥
 
 ##### Achtung:
 
