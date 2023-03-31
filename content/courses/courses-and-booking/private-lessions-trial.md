@@ -7,7 +7,7 @@ sort_by = "weight"
 
 ## Privatstunden
 
-Privatstunden einzeln, sowie Stunden für dich und deine Freundinnen (2-6 Personen) sind jederzeit buchbar! In einer Einheit, die komplett auf dich und deine Wünsche, dein Können und deine Bedürfnisse abgestimmt wird können wir Technik, Choreos, sowie Spezialskills (Twinpole, Chairdance, Lollipop, Polehooping…) zu einem perfekt für dich/ euch passendem Programm zusammenstellen.
+Privatstunden einzeln sowie Stunden für dich und deine Freundinnen (2-6 Personen) sind jederzeit buchbar! In einer Einheit, die komplett auf dich und deine Wünsche, dein Können und deine Bedürfnisse abgestimmt wird können wir Technik, Choreos, sowie Spezialskills (Twinpole, Chairdance, Lollipop, Polehooping…) zu einem perfekt für dich/ euch passendem Programm zusammenstellen.
 
   - 1 Stunde: 	  € 59.- (zu zweit: je € 39.-, ab drei Personen: je € 32.-)
   - 90 Minuten: 	€ 74.- (zu zweit: je € 49.-, ab drei Personen: je € 39.-)
