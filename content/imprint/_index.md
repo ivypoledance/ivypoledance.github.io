@@ -37,4 +37,3 @@ title = "Impressum & AGB"
 ### Icons
 
 - [Feather Icons](https://feathericons.com/)
-- [Ivy icons created by tulpahn - Flaticon](https://www.flaticon.com/free-icons/ivy)
