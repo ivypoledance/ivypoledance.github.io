@@ -13,4 +13,4 @@ Sportliche Freude schenken leicht gemacht! Schenke deinen Polebuddies einen Guts
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/05BG_ayesha.png" />
+<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/ayesha.png" />

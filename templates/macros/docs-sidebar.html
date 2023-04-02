@@ -17,8 +17,10 @@
 					{% if subsection.pages %}
 							<h3>{{ subsection.title }}</h3>
 							<ul class="list-unstyled">
-							{% for page in subsection.pages %}                           
-									<li><a class="docs-link{% if current_url == page.permalink %} active{% endif %}" href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+							{% for p in subsection.pages %}
+								{% if p.extra.hidden | default(value=false) != true %}
+									<li><a class="docs-link{% if current_url == p.permalink %} active{% endif %}" href="{{ p.permalink | safe }}">{{ p.title }}</a></li>
+								{% endif %}
 							{% endfor %}
 					</ul>
 					{% endif %}

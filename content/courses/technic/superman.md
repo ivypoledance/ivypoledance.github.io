@@ -16,4 +16,4 @@ Dieser Kurs ist **nicht** Open Level!
 
 Superman (mindestens ein Eingang)
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/05BG_ayesha.png" />
+<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/ayesha.png" />

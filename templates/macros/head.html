@@ -1,6 +1,5 @@
 {% macro resource() %}
-  <link rel="preload" as="font" href="{{ get_url(path="fonts/vendor/jost/jost-v4-latin-regular.woff2") | safe }}" type="font/woff2" crossorigin>
-  <link rel="preload" as="font" href="{{ get_url(path="fonts/vendor/jost/jost-v4-latin-700.woff2") | safe }}"  type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ get_url(path="fonts/vendor/cambo/cambo-regular.woff2") | safe }}" type="font/woff2" crossorigin>
 {% endmacro %}
 
 
@@ -10,13 +9,13 @@
 
 
 {% macro favicons() %}
-  <meta name="theme-color" content="{{ config.extra.theme_color | default(value="#fff") }}">
+  <meta name="theme-color" content="#ffffff">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path="apple-touch-icon.png") | safe }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path="favicon-32x32.png") | safe }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="favicon-16x16.png") | safe }}">
-  {% if not config.extra.is_netlify %}
-    <link rel="manifest" href="{{ get_url(path="site.webmanifest") | safe }}" crossorigin>
-  {% endif %}
+  <link rel="manifest" href="{{ get_url(path="site.webmanifest") | safe }}">
+  <link rel="mask-icon" href="{{ get_url(path="safari-pinned-tab.svg") | safe }}" color="#597d61">
+  <meta name="msapplication-TileColor" content="#91ac9a">
 {% endmacro %}
 
 
