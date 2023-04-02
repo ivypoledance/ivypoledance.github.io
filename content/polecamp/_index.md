@@ -2,9 +2,7 @@
 title = "Ivy Polecamp"
 +++
 
-<div class="text-center">
-    <img src="/img/polecamp/polecamp.jpg" width="60%"/>
-</div>
+{{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
 
 <br />
 
@@ -18,12 +16,8 @@ title = "Ivy Polecamp"
 
 ## Polecamp 2022
 
-<div class="text-center">
-    <img src="/img/polecamp/polecamp2022.jpg" width="60%"/>
-</div>
+{{ image(img="/img/polecamp/polecamp2022.jpg", max=400) }}
 
 ## Polecamp 2021
 
-<div class="text-center">
-    <img src="/img/polecamp/polecamp2021.jpg" width="60%"/>
-</div>
+{{ image(img="/img/polecamp/polecamp2021.jpg", max=400) }}

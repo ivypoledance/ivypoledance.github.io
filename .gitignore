@@ -92,3 +92,4 @@ $RECYCLE.BIN/
 *.lnk
 
 .idea/
+static/processed_images/
