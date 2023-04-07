@@ -9,9 +9,18 @@ if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') 
     document.body.classList.add('dark');
 }
 
-[...document.getElementsByClassName('imageModal')].forEach(function (element, index, array) {
-    element.addEventListener("click", function () {
-        // event.preventDefault();
-        // return false;
-    }, false);
-});
+function closeModal(modal) {
+    modal.parentElement.remove();
+    return false;
+}
+
+function openModal(imageLink) {
+    document.body.innerHTML = document.body.innerHTML + "" +
+        '<div class="imageModal">' +
+        '   <span onclick="closeModal(this)">&times;</span>' +
+        '   <img src="' + imageLink.href + '" />' +
+        '</div>'
+    event.preventDefault();
+    return false;
+}
+

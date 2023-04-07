@@ -1,6 +1,6 @@
 {% set image = resize_image(path=img, width=max, height=max, op="fit") %}
 <div class="text-center">
-    <a class="imageModal" href="{{ get_url(path=img) }}" target="_blank">
+    <a onclick="openModal(this)" href="{{ get_url(path=img) }}" target="_blank">
         <img src="{{ image.url }}" />
     </a>
 </div>
