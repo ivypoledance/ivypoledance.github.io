@@ -21,7 +21,7 @@
         {% if page.extra.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
         <h2 id="aktuelle-kurse">Aktuelle Kurse</h2>
         {% set data = load_data(path="coursedates.csv") -%}
-        {% set records = data["records"] | sort(attribute="2") %}
+        {% set records = data["records"] | sort(attribute="3") %}
         {% if records | length <= 0 %}
         <p>Derzeit gibt es keine aktuellen Kurstermine.<br />
         Du kannst mir aber gerne eine <a href="/courses/courses-and-booking/booking/#kursanfrage">Kursanfrage</a> schicken.</p>
