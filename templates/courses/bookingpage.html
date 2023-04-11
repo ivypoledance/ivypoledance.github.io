@@ -21,7 +21,7 @@
         {% if page.extra.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
         {{ page.content | safe }}
         {% set data = load_data(path="coursedates.csv") -%}
-        {% set records = data["records"] | filter(attribute="0", value=page.relative_path) | sort(attribute="2") %}
+        {% set records = data["records"] | filter(attribute="0", value=page.relative_path) | sort(attribute="3") %}
         {% if records | length <= 0 %}
         <hr />
         <p>Derzeit gibt es keine Termine für den Kurs.<br />
