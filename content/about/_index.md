@@ -36,6 +36,7 @@ Pole Theatre Hungary Finalist 2018 (Trafó, Budapest)
 
 <br/>
 {{ image(img="/img/performance/performance2.jpg", max=500) }}
+
 © Rainer Kriesch
 
 ## FAQs
