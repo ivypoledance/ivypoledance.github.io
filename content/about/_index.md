@@ -34,6 +34,10 @@ Poledance Playhouse 2017 (Theater Akzent, Wien)
 
 Pole Theatre Hungary Finalist 2018 (Trafó, Budapest)
 
+{{ image(img="/img/performance/performance1.jpg", max=500) }}  
+<br/>
+{{ image(img="/img/performance/performance2.jpg", max=500) }}
+
 ## FAQs
 
 Hier findest du in Kürze die gängigsten Fragen und Antworten rund um Poledance!
