@@ -4,10 +4,10 @@ title = "About"
 
 ## Ivy Poledance
 
-### Ivy Poledance in Worten:
+#### Ivy Poledance in Worten:
 Tanz ist Verbindung – zu anderen, zu Musik, zu sich selbst. Die Freude an der Bewegung und daran, zu entdecken, was der eigene Körper alles bewerkstelligen kann, steht für mich gemeinsam mit der Sicherheit aller Teilnehmenden an erster Stelle. Jeder ist anders – und genau darauf einzugehen, flexibel und individualisiert die Kurseinheiten gestalten zu können bereitet mir die allergrößte Freude.
 
-### Ivy Poledance in Zahlen:
+#### Ivy Poledance in Zahlen:
 Tanzerfahrung seit über 25 Jahren (Ballett, Flamenco, Standard- und Lateintänze)
 
 Poledance & Aerial seit 2011 
@@ -24,10 +24,10 @@ Twinpole (Parallel Stangen) seit 2021
 
 Veranstaltung Ivy Polecamp 2021 und 2022
 
-### Workshops/ (Online-)Kurse/ Forbildungen bei: 
+#### Workshops/ (Online-)Kurse/ Forbildungen bei: 
 Dan Rosen, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazree, Sergia Louse Anderson, Simone Fluhr
 
-### Sonstiges:
+#### Sonstiges:
 Poledance Playhouse 2016 (SimmCity, Wien) 
 
 Poledance Playhouse 2017 (Theater Akzent, Wien) 
