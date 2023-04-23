@@ -311,6 +311,7 @@ body.dark .figure-caption {
 
 body.dark table {
   @extend .table-dark;
+  --bs-table-bg: transparent;
 }
 
 body.dark .copy-status::after {

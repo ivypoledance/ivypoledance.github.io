@@ -6,7 +6,7 @@
 - [ ] Logo in menu
 - [ ] Automated booking
 - [ ] Email send from booking
-- [ ] Dark mode table in courses not transparent
+- [X] Dark mode table in courses not transparent
 - [ ] Imprint
 - [ ] Fixed position background images
 - [ ] Optimize photos
