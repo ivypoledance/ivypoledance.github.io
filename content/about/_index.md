@@ -24,6 +24,8 @@ Poledance Playhouse 2016 (SimmCity, Wien)
 Poledance Playhouse 2017 (Theater Akzent, Wien) 
 Pole Theatre Hungary Finalist 2018 (Trafó, Budapest)
 
+{{ image(img="/img/x-5626 Rainer Kriesch", max=400) }}    {{ image(img="/img/x-5673 Rainer Kriesch", max=400) }}
+
 ## FAQs
 
 Hier findest du in Kürze die gängigsten Fragen und Antworten rund um Poledance!
