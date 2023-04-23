@@ -22,6 +22,8 @@ Lollipop/ Pole Lyra seit 2020
 
 Twinpole (Parallel Stangen) seit 2021
 
+Veranstaltung Ivy Polecamp 2021 und 2022
+
 ### Workshops/ (Online-)Kurse/ Forbildungen bei: 
 Dan Rosen, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazree, Sergia Louse Anderson, Simone Fluhr
 
