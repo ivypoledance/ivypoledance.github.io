@@ -9,11 +9,17 @@ Tanz ist Verbindung – zu anderen, zu Musik, zu sich selbst. Die Freude an der 
 
 ### Ivy Poledance in Zahlen:
 Tanzerfahrung seit über 25 Jahren (Ballett, Flamenco, Standard- und Lateintänze)
+
 Poledance & Aerial seit 2011 
+
 Poledancetrainerin seit 2014 (2014-2018 bei Poledancvienna)
+
 Polehooping (Poledance + Hulahoop Fusion) seit 2017
+
 Selbstständige Poledancetrainerin seit 2018
+
 Lollipop/ Pole Lyra seit 2020
+
 Twinpole (Parallel Stangen) seit 2021
 
 ### Workshops/ (Online-)Kurse/ Forbildungen bei: 
@@ -21,7 +27,9 @@ Dan Rosen, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazr
 
 ### Sonstiges:
 Poledance Playhouse 2016 (SimmCity, Wien) 
+
 Poledance Playhouse 2017 (Theater Akzent, Wien) 
+
 Pole Theatre Hungary Finalist 2018 (Trafó, Budapest)
 
 {{ image(img="/img/x-5626 Rainer Kriesch", max=400) }}    {{ image(img="/img/x-5673 Rainer Kriesch", max=400) }}
