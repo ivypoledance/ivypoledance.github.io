@@ -1,7 +1,7 @@
 # ToDo:
 
-- [ ] Landing Page Logo
-  - [ ] + Mobile Version
+- [X] Landing Page Logo
+  - [X] + Mobile Version
 - [ ] Favicon (transparent background)
 - [ ] Logo in menu
 - [ ] Automated booking
