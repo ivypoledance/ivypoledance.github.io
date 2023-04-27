@@ -1,5 +1,5 @@
 +++
-title = "Levelkurs 1"
+title = "Level 1"
 template = "courses/bookingpage.html"
 weight = 1200
 sort_by = "weight"
