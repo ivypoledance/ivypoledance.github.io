@@ -2,6 +2,7 @@
 
 - [X] Landing Page Logo
   - [X] + Mobile Version
+- [ ] Update Kursort (in Buchung & Aktuelle Kurse)
 - [ ] Favicon (transparent background)
 - [X] Logo in menu
 - [ ] Automated booking
