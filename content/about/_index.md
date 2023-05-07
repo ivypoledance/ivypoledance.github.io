@@ -4,7 +4,7 @@ title = "About"
 
 ## Ivy Poledance
 
-Poledance zentral in Wien, direkt beim Westbahnhof! (Exakte Kursadresse bei Buchung)
+Poledance zentral in Wien, direkt beim Westbahnhof! (Kursadresse bei Buchung)
 
 #### Ivy Poledance in Worten:
 Tanz ist Verbindung – zu anderen, zu Musik, zu sich selbst. Die Freude an der Bewegung und daran, zu entdecken, was der eigene Körper alles bewerkstelligen kann, steht für mich gemeinsam mit der Sicherheit aller Teilnehmenden an erster Stelle. Jeder ist anders – und genau darauf einzugehen, flexibel und individualisiert die Kurseinheiten gestalten zu können bereitet mir die allergrößte Freude.
