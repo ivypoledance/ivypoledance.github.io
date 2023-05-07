@@ -3,7 +3,7 @@
 - [X] Landing Page Logo
   - [X] + Mobile Version
 - [ ] Favicon (transparent background)
-- [ ] Logo in menu
+- [X] Logo in menu
 - [ ] Automated booking
 - [ ] Email send from booking
 - [X] Dark mode table in courses not transparent
