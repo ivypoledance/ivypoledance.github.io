@@ -14,3 +14,4 @@
 - [ ] Photo frame (like on landing page)
 - [ ] Staging process with PRs
 - [ ] Different icon for imprint (feather or impressum in bottom bar)
+- [ ] Testimonials into two columns
