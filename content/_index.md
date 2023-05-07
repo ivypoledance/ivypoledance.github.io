@@ -7,12 +7,12 @@ url = "/courses/courses-and-booking/booking/"
 url_button = "Buche jetzt!"
 
 [[extra.list]]
-title = "Technik"
-content = "Kursinhalte werden jeweils auf die Teilnehmerinnen, ihr aktuelles Level und ihre Vorkenntnisse angepasst!"
+title = "Technik & Choreographien"
+content = "Kursinhalte werden individualisiert und jeweils auf die Teilnehmerinnen, ihr aktuelles Level und ihre Vorkenntnisse angepasst!"
 
 [[extra.list]]
-title = "Choreographien"
-content = "Erlerne einzigartige Choreographien und erkunde die Möglichkeiten von Chair Pole Fusion, Twinpole, Polehooping und mehr!"
+title = "Zentral in Wien"
+content = "Erlerne einzigartige Choreographien, spannende Technik und innovative Spielarten wie Chairpole, Twinpole oder Polehooping direkt bei Wien Westbahnhof!"
 
 [[extra.list]]
 title = "Privatstunden"
