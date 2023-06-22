@@ -6,5 +6,6 @@ sort_by = "weight"
 +++
 
 Trainiere kreative, neue Tricks und spannende Combos. Das Format ist Open Level und wird individuell an die Teilnehmerinnen angepasst!
+Einzeltermin/ Drop-in: €23
 
 <img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/ayesha.png" />
