@@ -16,4 +16,9 @@ Dieser Kurs ist **nicht** Open Level!
 
 Stabile Ayesha (mindestens eine Grip-Variante)
 
+
+
+Einzeltermin/ Drop-in: €28
+
+
 <img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/ayesha.png" />
