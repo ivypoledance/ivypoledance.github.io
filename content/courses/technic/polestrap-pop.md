@@ -1,7 +1,7 @@
 +++
 title = "Polestrap & Lollipop ☆"
 template = "courses/bookingpage.html"
-weight = 1212
+weight = 1214
 sort_by = "weight"
 +++
 
