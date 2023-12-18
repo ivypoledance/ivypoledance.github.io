@@ -9,4 +9,4 @@ Lerne die fabelhafte Welten von Polestrap (Achtung, Spinning Pole!) kennen!
 
 Max. Teilnehmerinnenzahl: 3 Personen! 
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/twinpole.png" />
+<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/strap.png" />
