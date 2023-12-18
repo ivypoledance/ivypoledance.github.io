@@ -5,7 +5,7 @@ weight = 1215
 sort_by = "weight"
 +++
 
-Best of both worlds - lerne mit Lollipop (Polelyra) die fabelhafte Kombination aus Pole und Hoop kennen!
+The best of two worlds - lerne mit Lollipop (Polelyra) die fabelhafte Kombination aus Pole und Hoop kennen!
 
 Max. Teilnehmerinnenzahl: 3 Personen! 
 
