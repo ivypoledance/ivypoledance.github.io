@@ -1,5 +1,8 @@
 course,name,price,date1-from,date1-to,date2-from,date2-to
-courses/technic/combine-and-captive.md,,€ 54,2023-12-06T19:00:00,2023-12-06T20:15:00,2023-12-13T19:00:00,2023-12-13T20:15:00
-courses/technic/fliptastic.md,,€ 54,2023-12-11T18:00:00,2023-12-11T19:15:00,2023-12-18T18:00:00,2023-12-18T19:15:00
-courses/technic/polestrap.md, Gruppe 1,€ 39,2023-12-15T17:00:00,2023-12-15T18:30:00,,
-courses/technic/polestrap.md, Gruppe 2,€ 39,2023-12-15T18:45:00,2023-12-15T20:15:00,,
+courses/technic/tricktastic.md,,€ 44,2024-01-10T18:30:00,2024-01-10T19:30:00,2024-01-17T18:30:00,2024-01-17T19:30:00
+courses/technic/combine-and-captive.md,,€ 54,2024-01-15T18:30:00,2024-01-15T19:45:00,2024-01-22T18:30:00,2024-01-22T19:45:00
+courses/technic/fliptastic.md,,€ 54,2024-01-19T18:30:00,2024-01-19T19:45:00,2024-01-26T18:30:00,2024-01-26T19:45:00
+courses/technic/polestrap.md,,€ 39,2024-01-31T17:00:00,2024-01-31T18:30:00,,
+courses/technic/polehooping.md, Polehooping Combos,€ 39,2024-01-31T19:00:00,2024-01-31T20:30:00,,
+courses/technic/twinpole.md,,€ 39,2024-01-21T16:00:00,2024-01-21T17:30:00,,
+courses/technic/lollipop.md,,€ 39,2024-01-21T18:00:00,2024-01-21T19:30:00,,
