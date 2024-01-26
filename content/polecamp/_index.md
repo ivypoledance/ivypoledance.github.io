@@ -14,6 +14,8 @@ title = "Ivy Polecamp"
 
 20./21. bis 23. Juni 2024
 
+(Infos folgen in Kürze!) 
+
 - EARLY BIRD: € 429 (nur bis 11. Februar 2024)
 - REGULAR: € 479.- 
 
