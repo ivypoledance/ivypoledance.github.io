@@ -33,7 +33,7 @@ Wie gehabt gibt es auch die Möglichkeit, zusätzliche Privatstunden (Aerial Spi
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
-
+<br />
 <br />
 
 {{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
@@ -41,22 +41,34 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 ## Programm
 
 - Donnerstag
+- 
 Optional: Anreise (bitte entsprechend die Unterkunft buchen!)
+
 Privatstunden
+
 
 - Freitag bis Sonntag
 
 Kurse:
+
 Aerial Spiral (+ Shooting)
+
 Stretching
+
 Combine & Captivate (Poletricks und Kombos)
+
 Choose your format (Posetastic!/Tricktastic! ODER Twinpole ODER Lollipop)
 
+
 Offenes Training
+
 Privatstunden
 
+
 Shootings am See
+
 Freizeit (Bademöglichkeit, Sauna)
+
 
 
 - EARLY BIRD: € 429 (nur bis 11. Februar 2024)
@@ -75,7 +87,7 @@ Ich freue mich auf dich!
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
-
+<br />
 <br />
 
 {{ image(img="/img/polecamp/spiral.jpg", max=400) }}
