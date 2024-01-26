@@ -13,7 +13,7 @@ Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich tolle Kle
 
 BRANDNEU dabei:
 
-# AERIAL SPIRAL
+### Aerial Spiral
 
 Zum ersten Mal österreichweit hast du exklusiv die Möglichkeit, Aerial Spiral auszuprobieren – und das gleich in dem traumhaften Setting am See, begleitet von unserer Fotografin!
 
@@ -33,6 +33,7 @@ Wie gehabt gibt es auch die Möglichkeit, zusätzliche Privatstunden (Aerial Spi
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
+<br />
 
 {{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
 
@@ -73,6 +74,7 @@ Ich freue mich auf dich!
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
+<br />
 
 {{ image(img="/img/polecamp/spiral.jpg", max=400) }}
 
