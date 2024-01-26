@@ -25,6 +25,10 @@ title = "Ivy Polecamp"
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
+<br />
+
+{{ image(img="/img/polecamp/spiral.jpg", max=400) }}
+
 ## Polecamp 2023
 
 {{ image(img="/img/polecamp/polecamp2023.jpg", max=400) }}
