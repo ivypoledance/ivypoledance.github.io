@@ -26,6 +26,7 @@ title = "Ivy Polecamp"
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 <br />
+<br />
 
 {{ image(img="/img/polecamp/spiral.jpg", max=400) }}
 
