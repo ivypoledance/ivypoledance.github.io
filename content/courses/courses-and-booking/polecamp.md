@@ -12,7 +12,9 @@ sort_by = "weight"
 Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich tolle Kleinstgruppen-Kurse in entspannter Atmosphäre, Shootings und natürlich Badespaß!
 
 BRANDNEU dabei:
+
 AERIAL SPIRAL!
+
 Zum ersten Mal österreichweit hast du exklusiv die Möglichkeit, Aerial Spiral auszuprobieren – und das gleich in dem traumhaften Setting am See, begleitet von unserer Fotografin!
 
 
@@ -21,6 +23,7 @@ Zum ersten Mal österreichweit hast du exklusiv die Möglichkeit, Aerial Spiral 
 <br />
 
 EBENFALLS NEU: Euer Wunsch war uns Befehl - heuer erstmals mit dabei: Stretching mit der wundervollen Sandra!
+
 Zusätzlich gibt es heuer eine CHOOSE YOUR FORMAT Option: Deine Präferenzen (Pole, Twinpole oder Lollipop) werden nach deiner Anmeldung erhoben und ins Programm mit einbezogen.
 
 Wie gehabt gibt es auch die Möglichkeit, zusätzliche Privatstunden (Aerial Spiral, Pole, Lollipop, Chair) vor Ort zu buchen und im Open Training selbstständig zu üben. Außerdem hast du dieses Jahr die Option bereits einen Tag früher anzureisen (Do, 20.6.2024) und die wundervolle Anlage zu genießen oder auch schon eine exklusive Privatstunde zu nehmen.
@@ -33,6 +36,7 @@ Wie gehabt gibt es auch die Möglichkeit, zusätzliche Privatstunden (Aerial Spi
 </div>
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
+
 
 {{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
 
@@ -71,4 +75,4 @@ Die Unterkunft (Selbstversorger!) muss selbstständig gebucht werden. Ich empfeh
 
 Ich freue mich auf dich! 
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/polecamp/spiral2.jpg" />
+<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/polecamp/spiral4.png" />
