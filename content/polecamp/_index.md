@@ -14,7 +14,7 @@ title = "Ivy Polecamp"
 
 20./21. bis 23. Juni 2024
 
-(Infos folgen in Kürze!) 
+<a href="https://ivypoledance.at/courses/courses-and-booking/polecamp/">Programm und weitere Infos</a>
 
 - EARLY BIRD: € 429 (nur bis 11. Februar 2024)
 - REGULAR: € 479.- 
