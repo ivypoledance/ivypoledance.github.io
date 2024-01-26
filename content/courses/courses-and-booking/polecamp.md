@@ -40,14 +40,15 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 ## Programm
 
-- Donnerstag
-- 
-Optional: Anreise (bitte entsprechend die Unterkunft buchen!)
+- Donnerstag: optional
 
-Privatstunden
+Anreise (bitte entsprechend die Unterkunft buchen!)
 
+Privatstunden, Freizeit, wenn gewünscht gemeinsame Abendgestaltung
 
-- Freitag bis Sonntag
+<br />
+
+- Freitag bis Sonntag: Polecamp
 
 Kurse:
 
@@ -59,6 +60,7 @@ Combine & Captivate (Poletricks und Kombos)
 
 Choose your format (Posetastic!/Tricktastic! ODER Twinpole ODER Lollipop)
 
+<br />
 
 Offenes Training
 
@@ -69,6 +71,7 @@ Shootings am See
 
 Freizeit (Bademöglichkeit, Sauna)
 
+<br />
 
 
 - EARLY BIRD: € 429 (nur bis 11. Februar 2024)
