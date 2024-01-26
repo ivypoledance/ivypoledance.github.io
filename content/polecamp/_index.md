@@ -25,6 +25,8 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 ## Polecamp 2023
 
+{{ image(img="/img/polecamp/polecamp2023.jpg", max=400) }}
+
 ## Polecamp 2022
 
 {{ image(img="/img/polecamp/polecamp2022.jpg", max=400) }}
