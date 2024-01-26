@@ -33,6 +33,7 @@ Wie gehabt gibt es auch die Möglichkeit, zusätzliche Privatstunden (Aerial Spi
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
+
 <br />
 
 {{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
@@ -73,6 +74,7 @@ Ich freue mich auf dich!
 </div>
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
+
 
 <br />
 
