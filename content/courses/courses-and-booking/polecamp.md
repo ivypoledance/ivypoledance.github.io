@@ -42,7 +42,7 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 - Donnerstag: optional
 
-Anreise (bitte entsprechend die Unterkunft buchen!)
+Anreise (in Fahrgemeinschaften; bitte entsprechend die Unterkunft buchen!)
 
 Privatstunden, Freizeit, wenn gewünscht gemeinsame Abendgestaltung
 
