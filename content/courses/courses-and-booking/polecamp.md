@@ -62,12 +62,11 @@ Choose your format (Posetastic!/Tricktastic! ODER Twinpole ODER Lollipop)
 
 <br />
 
-Offenes Training
+Shootings am See (eigenständig durchgeführt von Claudia, 4 Fotos inklusiert)
 
 Privatstunden
 
-
-Shootings am See
+Offenes Training
 
 Freizeit (Bademöglichkeit, Sauna)
 
