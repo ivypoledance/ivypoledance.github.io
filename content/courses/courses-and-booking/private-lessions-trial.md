@@ -27,7 +27,7 @@ Wenn du dich für einen anschließenden Kurs anmeldest, wird dir der Schnupperst
 
   - PREIS: € 7.-
 
-  - Nächste Termine:
+### Nächste Termine:
   - Sa. 17.2., 11:00-12:00
   - So, 18.2., 11:00-12:00
   - Mo, 19.2., 19:00-20:00
