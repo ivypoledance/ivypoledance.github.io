@@ -19,7 +19,7 @@ Privatstunden einzeln sowie Stunden für dich und deine Freundinnen (2-6 Persone
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
-## Schnupperstunden
+## Schnupperstunden Poledance & Lollipop
 
 Lerne in Kleinstgruppen (maximal 6 Personen) eine neue Sportart kennen und lieben!  
 Die Schnupperstunde für Poledance 101 setzt keinerlei Vorkenntnisse voraus und ist für alle geeignet: Egal welches Alter, Gewicht oder Sportlichkeitslevel - hier bist du richtig!  
