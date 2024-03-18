@@ -28,9 +28,12 @@
         {% else %}
         {% set showPrice = records | map(attribute="2") | join(sep="") | length > 0 %}
         <p>
-          Aktuell kannst du folgende Kurse buchen. Schnupperstunden findest du <a href="https://ivypoledance.at/courses/courses-and-booking/private-lessions-trial/">hier</a> und Informationen zu Ivy Polecamp 2024 <a href="https://ivypoledance.at/courses/courses-and-booking/polecamp/">hier.</a><br />
+          Aktuell kannst du folgende Kurse buchen.<br />
           Der Kursort befindet sich direkt beim Westbahnhof - die genaue Adresse folgt in der Buchungsbestätigung.<br />
           Den Buchungslink findest du auf der Kursseite.
+
+		<a href="https://ivypoledance.at/courses/courses-and-booking/private-lessions-trial/">Schnupperstunden</a> 
+		<a href="https://ivypoledance.at/courses/courses-and-booking/polecamp/">Ivy Polecamp 2024</a>
         </p>
         <table>
           <thead>
