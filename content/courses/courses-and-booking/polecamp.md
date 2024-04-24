@@ -15,7 +15,7 @@ BRANDNEU dabei:
 
 ### Aerial Spiral
 
-Zum ersten Mal österreichweit hast du exklusiv die Möglichkeit, Aerial Spiral auszuprobieren – und das gleich in dem traumhaften Setting am See, begleitet von unserer Fotografin!
+Zum ersten Mal österreichweit hast du exklusiv die Möglichkeit, Aerial Spiral auszuprobieren – und das gleich in dem traumhaften Setting am See, begleitet von unserer Fotografin! Dank static Setting kannst du dich bequem an dieses fantastische Gerät gewöhnen und sicher die spannendsten Moves ausprobieren!
 
 
 EBENFALLS NEU: Euer Wunsch war uns Befehl - heuer erstmals mit dabei: Stretching mit der wundervollen Sandra!
