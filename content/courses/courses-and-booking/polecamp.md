@@ -61,7 +61,7 @@ Choose your format (Posetastic!/Tricktastic! ODER Twinpole ODER Lollipop)
 
 <br />
 
-Shootings am See (eigenständig durchgeführt von Claudia, 4 Fotos inklusiert)
+Shootings am See (eigenständig durchgeführt von Claudia, 4 Fotos inkludiert)
 
 Privatstunden
 
