@@ -1,6 +1,7 @@
 +++
 title = "Ivy Polecamp 2024"
-weight = 0
+template = "courses/page.html"
+weight = 1140
 sort_by = "weight"
 +++
 
