@@ -24,10 +24,12 @@ Lollipop/ Pole Lyra seit 2020
 
 Twinpole (Parallel Stangen) seit 2021
 
-Veranstaltung Ivy Polecamp 2021 und 2022
+Veranstaltung Ivy Polecamp jährlich seit 2021
+
+Aerial Spiral seit 2024
 
 #### Workshops/ (Online-)Kurse/ Forbildungen bei: 
-Dan Rosen, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazree, Sergia Louse Anderson, Simone Fluhr
+Dan Rosen, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazree, Sergia Louse Anderson, Simone Fluhr, Evgeny Greshilov, Anna Valfsson, Jazzy K
 
 #### Sonstiges:
 Poledance Playhouse 2016 (SimmCity, Wien) 
