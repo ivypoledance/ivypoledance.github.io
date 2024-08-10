@@ -1,7 +1,7 @@
 +++
-title = "Aerial Spiral"
+title = "☆ NEU: Aerial Spiral ☆"
 template = "courses/bookingpage.html"
-weight = 1204
+weight = 1200
 sort_by = "weight"
 +++
 
