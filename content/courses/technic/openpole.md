@@ -1,7 +1,7 @@
 +++
 title = "Open Pole"
 template = "courses/bookingpage.html"
-weight = 1200
+weight = 2200
 sort_by = "weight"
 +++
 
