@@ -24,7 +24,7 @@
         {% set records = data["records"] | sort(attribute="3") %}
         {% if records | length <= 0 %}
         <p>KURSPAUSE VOM 26.10.2024 - 17.12.2024<br />
-        In dieser Zeit finden keine Kurse und Privatstunden statt (Poledance im Studioraum Westbahnhof; Aerial Spiral im TRAP Circus Center). 
+        In dieser Zeit finden keine Kurse und Privatstunden statt (Poledance im Studioraum Westbahnhof; Aerial Spiral im TRAP Circus Center). <br />
 		Du kannst mir aber gerne eine <a href="/courses/courses-and-booking/booking/#kursanfrage">Kursanfrage</a> schicken, bzw. dich schon jetzt für die Zeit danach für eine Privatstunde voranmelden</p>
         {% else %}
         {% set showPrice = records | map(attribute="2") | join(sep="") | length > 0 %}
