@@ -40,15 +40,25 @@ Privatstunden, Freizeit, wenn gewünscht gemeinsame Abendgestaltung
 <br />
 
 - Freitag
+  
 Chair-Pole Fusion
+
 Kick-off
 
-- Samstag 
+<br />
+
+- Samstag
+  
 Choreography
+
 Dynamics & Drops
+
 Tricks & Transitions
 
+<br />
+
 - Sonntag
+  
 Choreography
 
 <br />
@@ -86,5 +96,5 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 <br />
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/polecamp/camp2025see.jpg" />
+<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/polecamp/camp2025seefaded.png" />
 
