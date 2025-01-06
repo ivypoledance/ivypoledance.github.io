@@ -62,6 +62,8 @@ Tricks & Transitions
 Choreography
 
 <br />
+<br />
+
 
 Shootings am See (eigenständig durchgeführt von Claudia, 4 Fotos inkludiert)
 
@@ -75,6 +77,7 @@ Freizeit (Bademöglichkeit, Sauna)
 
 
 - PREIS: € 429.- 
+<br />
 
 ACHTUNG:
 
