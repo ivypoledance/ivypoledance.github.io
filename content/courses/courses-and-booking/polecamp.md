@@ -12,7 +12,7 @@ sort_by = "weight"
 
 Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich tolle Kleinstgruppen-Kurse in entspannter Atmosphäre, Shootings und natürlich Badespaß!
 
-Bei unseren Shootings wird dich unsere Fotomagierin Claudia heuer naturnah-est auf der freistehenden (im Boden versenkten!) Pole ablichten.
+Bei unseren Shootings wird dich unsere Fotomagierin Claudia heuer naturnah-est auf der freistehenden (im Untergrund versenkten!) Pole ablichten.
 
 Wie gehabt gibt es auch die Möglichkeit, zusätzliche Privatstunden (Pole, Twinpole, Lollipop, Chair) vor Ort zu buchen und im Open Training selbstständig zu üben. Außerdem hast du auch dieses Jahr wieder die Option, bereits einen Tag früher anzureisen (Do, 19.6.2025) und die wundervolle Anlage zu genießen oder auch schon eine exklusive Privatstunde zu nehmen.
 
