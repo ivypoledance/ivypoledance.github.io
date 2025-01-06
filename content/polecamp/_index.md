@@ -10,7 +10,7 @@ title = "Ivy Polecamp"
     Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich tolle Kleinstgruppen-Kurse in entspannter Atmosphäre, Shootings und natürlich Badespaß! 
 </p>
 
-## Polecamp 2024
+## Polecamp 2025
 
 19./20. bis 22. Juni 2025
 
