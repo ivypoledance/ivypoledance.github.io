@@ -38,6 +38,8 @@ Poledance Playhouse 2017 (Theater Akzent, Wien)
 
 Pole Theatre Hungary Finalist 2018 (Trafó, Budapest)
 
+Pole Soirée 2025 (Atelier Theater, Wien)
+
 <br/>
 {{ image(img="/img/performance/performance2.jpg", max=500) }}
 
