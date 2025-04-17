@@ -6,8 +6,22 @@ title = "About"
 
 Poledance zentral in Wien, direkt beim Westbahnhof! (Kursadresse bei Buchung)
 
-#### Ivy Poledance in Worten:
-Tanz ist Verbindung – zu anderen, zu Musik, zu sich selbst. Die Freude an der Bewegung und daran, zu entdecken, was der eigene Körper alles bewerkstelligen kann, steht für mich gemeinsam mit der Sicherheit aller Teilnehmenden an erster Stelle. Jeder ist anders – und genau darauf einzugehen, flexibel und individualisiert die Kurseinheiten gestalten zu können bereitet mir die allergrößte Freude.
+Unisex & inklusiv!
+
+#### Hi!
+
+Dagmar (sie/ihr) hier – schön, dass du dich hergeklickt hast!
+
+Ich unterrichte nun schon seit 2014 Poledance und Aerial, und habe das große Glück, seit 2018 selbstständig meine Ideen, Konzepte und Spielereien mit euch teilen zu können. In Gruppen von drei bis maximal 6 Teilnehmenden ist es mir möglich, unsere Stunden optimal individualisiert zu gestalten – gemischte Trainingsstände und Polelevels sind nicht nur kein Problem, sondern eine Bereicherung! Spontan auf die Dynamiken, die sich daraus ergeben und deine persönlichen Bedürfnisse und Wünsche einzugehen ist meine mit Abstand liebste Art zu unterrichten. 
+
+Mit einer fundierten Basis, pädagogischem Background und einem professionell geplanten und vorbereiteten Unterrichtskonzept haben wir gemeinsam die Möglichkeit, spontan und flexibel zu reagieren und zu gestalten, ohne dass damit der Fokus unserer Stunde verloren geht: Dein Spaß, deine Polereise, deine Freude an der Bewegung.
+
+Meine Räumlichkeiten sind leider nicht barrierefrei zugänglich, solltest du hier Bedenken haben, bitte ich um eine EMail – wir finden eine ausgelagerte Lösung 😊
+
+Es ist mir wichtig, unsere gemeinsamen Stunden und den Studio-Space so inklusiv wie möglich zu gestalten, denn: Ein Studio ist nie neutral. Hier ist kein Platz für Rassismus, Queerfeindlichkeit, Bodyshaming, Ableismus und andere Formen der Ausgrenzung. Ich arbeite kontinuierlich daran, einen möglichst sicheren Raum für BIPoC, LGBTQIA+-Personen, Menschen jeder Körperform, Altersgruppe, Herkunft und neurodivergente Menschen zu gestalten. Poledance ist Ausdruck, Community und Empowerment – für alle.
+
+Komm wie du bist, tanz wie du willst!
+
 
 #### Ivy Poledance in Zahlen:
 Tanzerfahrung seit über 25 Jahren (Ballett, Flamenco, Standard- und Lateintänze)
