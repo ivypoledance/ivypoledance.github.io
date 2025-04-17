@@ -4,7 +4,7 @@ title = "About"
 
 ## Ivy Poledance
 
-Poledance zentral in Wien, direkt beim Westbahnhof! (Kursadresse bei Buchung)
+Zentral in Wien, direkt beim Westbahnhof! (Kursadresse bei Buchung)
 
 Unisex & inklusiv!
 
