@@ -1,4 +1,4 @@
-+++
+![grafik](https://github.com/user-attachments/assets/cb6f7e48-852b-41ee-9ba3-ccc8f3f7264d)+++
 title = "About"
 +++
 
@@ -64,4 +64,4 @@ Pole Soirée 2025 (Atelier Theater, Wien)
 
 Hier findest du in Kürze die gängigsten Fragen und Antworten rund um Poledance!
 
-<img style="display: block; height:100%; opacity: 0.5; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/hi5.png" />
+<img style="display: block; height:100%; opacity: 0.5; position: absolute; z-index: -100; left: 50%; top: 0; transform: translateX(-50%);" src="/img/hi5.png" />
