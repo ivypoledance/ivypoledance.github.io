@@ -1,4 +1,4 @@
-![grafik](https://github.com/user-attachments/assets/cb6f7e48-852b-41ee-9ba3-ccc8f3f7264d)+++
++++
 title = "About"
 +++
 
