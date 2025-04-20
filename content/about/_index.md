@@ -66,4 +66,4 @@ Pole Soirée 2025 (Atelier Theater, Wien)
 
 Hier findest du in Kürze die gängigsten Fragen und Antworten rund um Poledance!
 
-<img style="display: block; height: 100%; opacity: 0.5; position: absolute; z-index: -100; left: 30%; top: 50%; transform: translate(-50%, -50%);" src="/img/hifilmstrips4.png" />
+<img style="display: block; height: 100%; opacity: 0.5; position: absolute; z-index: -100; left: 30%; top: 50%; transform: translate(-50%, -50%);" src="/img/hifilmstrips5.png" />
