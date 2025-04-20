@@ -8,7 +8,7 @@ Zentral in Wien, direkt beim Westbahnhof! (Kursadresse bei Buchung)
 
 Unisex & inklusiv!
 
-
+<br/>
 
 #### Hi!
 
@@ -66,4 +66,4 @@ Pole Soirée 2025 (Atelier Theater, Wien)
 
 Hier findest du in Kürze die gängigsten Fragen und Antworten rund um Poledance!
 
-<img style="display: block; height: 100%; opacity: 0.5; position: absolute; z-index: -100; left: 60%; top: 50%; transform: translate(-50%, -50%);" src="/img/hi6.png" />
+<img style="display: block; height: 100%; opacity: 0.5; position: absolute; z-index: -100; left: 20%; top: 50%; transform: translate(-50%, -50%);" src="/img/hi6.png" />
