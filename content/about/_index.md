@@ -48,7 +48,19 @@ Aerial Spiral seit 2024
 Dan Rosen, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazree, Sergia Louse Anderson, Simone Fluhr, Evgeny Greshilov, Anna Valfsson, Jazzy K
 
 #### Sonstiges:
+Cirque Noir / Kathy and the Troubles 2014 (Cabaret Feldermaus, Wien)
+
+Cirque Noel / Kathy and the Troubles 2014 (Cabaret Feldermaus, Wien)
+
+Summer Intermission / Kathy and the Troubles 2015 (Cabaret Feldermaus, Wien)
+
+Gothic Dandy & Lolita Music Festival 2015 ((szene) Wien, Wien)
+
+Cirque Noel / Kathy and the Troubles 2015 (Cabaret Feldermaus, Wien)
+
 Poledance Playhouse 2016 (SimmCity, Wien) 
+
+Cirque Noel / Kathy and the Troubles 2016 (Cabaret Feldermaus, Wien)
 
 Poledance Playhouse 2017 (Theater Akzent, Wien) 
 
