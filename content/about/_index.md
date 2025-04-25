@@ -52,7 +52,7 @@ Cirque Noir / Kathy and the Troubles 2014 (Cabaret Feldermaus, Wien)
 
 Cirque Noel / Kathy and the Troubles 2014 (Cabaret Feldermaus, Wien)
 
-Summer Intermission / Kathy and the Troubles 2015 (Cabaret Feldermaus, Wien)
+Cirque Noir / Kathy and the Troubles 2015 (Cabaret Feldermaus, Wien)
 
 Gothic Dandy & Lolita Music Festival 2015 ((szene) Wien, Wien)
 
