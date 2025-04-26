@@ -7,12 +7,12 @@ url = "/courses/courses-and-booking/booking/"
 url_button = "Buche jetzt!"
 
 [[extra.list]]
-title = "Technik & Choreographien"
+title = "Poledance, Aerial Spiral & mehr!"
 content = "Kursinhalte werden individualisiert und jeweils auf die Teilnehmer*innen, ihr aktuelles Level und ihre Vorkenntnisse angepasst!"
 
 [[extra.list]]
 title = "Zentral in Wien"
-content = "Erlerne einzigartige Choreographien, spannende Technik und innovative Spielarten wie Chairpole, Twinpole oder Polehooping direkt bei Wien Westbahnhof!"
+content = "Erlerne einzigartige Choreographien, spannende Technik und innovative Spielarten wie Chairpole, Twinpole oder Polehooping in Kursen und Privatstunden direkt bei Wien Westbahnhof!"
 
 [[extra.list]]
 title = "Privatstunden"
