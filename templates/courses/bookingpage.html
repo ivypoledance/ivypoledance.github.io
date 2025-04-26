@@ -56,41 +56,45 @@
                     {{ record[5] | date(format="%a. %d.%m.%Y - %H:%M", locale="de_DE") }}{% if record[6] | length > 0 %}-{{ record[6] | date(format="%H:%M") }}{% endif %}
                     {% endif %}
          
-	   <td>
+	  <td>
 
-  {% assign wochentag = record[3] | date: "%a" %}
+  {# Wochentag ermitteln #}
+  {% set wochentag = record[3] | date(format="%a") %}
   {% if wochentag == "Mon" %}
-    {% assign wochentag = "Mo." %}
-  {% elsif wochentag == "Tue" %}
-    {% assign wochentag = "Di." %}
-  {% elsif wochentag == "Wed" %}
-    {% assign wochentag = "Mi." %}
-  {% elsif wochentag == "Thu" %}
-    {% assign wochentag = "Do." %}
-  {% elsif wochentag == "Fri" %}
-    {% assign wochentag = "Fr." %}
-  {% elsif wochentag == "Sat" %}
-    {% assign wochentag = "Sa." %}
-  {% elsif wochentag == "Sun" %}
-    {% assign wochentag = "So." %}
+    {% set wochentag = "Mo." %}
+  {% elseif wochentag == "Tue" %}
+    {% set wochentag = "Di." %}
+  {% elseif wochentag == "Wed" %}
+    {% set wochentag = "Mi." %}
+  {% elseif wochentag == "Thu" %}
+    {% set wochentag = "Do." %}
+  {% elseif wochentag == "Fri" %}
+    {% set wochentag = "Fr." %}
+  {% elseif wochentag == "Sat" %}
+    {% set wochentag = "Sa." %}
+  {% elseif wochentag == "Sun" %}
+    {% set wochentag = "So." %}
   {% endif %}
 
-  {% assign mail_subject = "Buchungsanfrage - " | append: page.title %}
+  {# Mail-Subject #}
+  {% set mail_subject = "Buchungsanfrage - " ~ page.title %}
   {% if showName == true %}
-    {% assign mail_subject = mail_subject | append: " - " | append: record[1] %}
+    {% set mail_subject = mail_subject ~ " - " ~ record[1] %}
   {% endif %}
 
-  {% assign mail_body = "Liebes Ivy Poledance Team,%0D%0A%0D%0A" %}
-  {% assign mail_body = mail_body | append: "ich buche hiermit (sofern verfügbar):%0D%0A%0D%0A" %}
-  {% assign mail_body = mail_body | append: page.title %}
-  {% assign mail_body = mail_body | append: " - " | append: wochentag | append: " " | append: record[3] | date: "%d.%m.%Y" %}
-  {% assign mail_body = mail_body | append: " und " | append: record[4] | date: "%d.%m.%Y" %}
-  {% assign mail_body = mail_body | append: " (" | append: record[5] | date: "%H:%M" %}
-  {% assign mail_body = mail_body | append: " - " | append: record[6] | date: "%H:%M" | append: ")" %}
-  {% assign mail_body = mail_body | append: "%0D%0A%0D%0A" %}
-  {% assign mail_body = mail_body | append: "und bitte um die Übermittlung der Überweisungsdaten zur Begleichung der Kursgebühr.%0D%0AMit der Überweisung bestätige ich, die AGB inklusive Stornoregelung gelesen und zur Kenntnis genommen zu haben.%0D%0A%0D%0ALG" %}
+  {# Mail-Body #}
+  {% set mail_body = "Liebes Ivy Poledance Team,%0D%0A%0D%0A" %}
+  {% set mail_body = mail_body ~ "ich buche hiermit (sofern verfügbar):%0D%0A%0D%0A" %}
+  {% set mail_body = mail_body ~ page.title %}
+  {% set mail_body = mail_body ~ " - " ~ wochentag ~ " " ~ record[3] | date(format="%d.%m.%Y") %}
+  {% set mail_body = mail_body ~ " und " ~ record[4] | date(format="%d.%m.%Y") %}
+  {% set mail_body = mail_body ~ " (" ~ record[5] | date(format="%H:%M") %}
+  {% set mail_body = mail_body ~ " - " ~ record[6] | date(format="%H:%M") ~ ")" %}
+  {% set mail_body = mail_body ~ "%0D%0A%0D%0A" %}
+  {% set mail_body = mail_body ~ "und bitte um die Übermittlung der Überweisungsdaten zur Begleichung der Kursgebühr.%0D%0AMit der Überweisung bestätige ich, die AGB inklusive Stornoregelung gelesen und zur Kenntnis genommen zu haben.%0D%0A%0D%0ALG" %}
 
-  <a class="btn btn-primary" href="mailto:buchung@ivypoledance.at?subject={{ mail_subject | urlencode }}&body={{ mail_body }}">Buchen</a>
+  {# Buchen-Button #}
+  <a class="btn btn-primary" href="mailto:buchung@ivypoledance.at?subject={{ mail_subject | urlencode }}&body={{ mail_body | urlencode }}">Buchen</a>
 
 </td>
 
