@@ -1,7 +1,7 @@
 +++
-title = "Ivy Polecamp 2024"
+title = "Ivy Aerial Lab 2025"
 template = "courses/page.html"
-weight = 1140
+weight = 1150
 sort_by = "weight"
 +++
 
