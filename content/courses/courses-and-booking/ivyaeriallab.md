@@ -30,11 +30,11 @@ Einheiten werden möglichst mit Rücksichtnahme auf deine Terminwünsche geplant
 
 ### Programm
 
-4 Einheiten Technik (á 75min) und Flow & Choreography (á 75min) (Verteilung nach Vorkenntnissen/ Wünschen)
+4x: Technik (á 75min) und Flow & Choreography (á 75min) (Verteilung nach Vorkenntnissen/ Wünschen)
 
-1x Play & Practice (75min)
+1x: Play & Practice (75min)
 
-Shooting mit Photography Cloud/ Claudia (45min, 2 Bilder inkludiert)
+1x: Shooting mit Photography Cloud/ Claudia (45min, 2 Bilder inkludiert)
 
 
 ### Preis
