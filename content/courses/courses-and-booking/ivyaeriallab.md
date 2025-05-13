@@ -55,7 +55,7 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 <br />
 <br />
 
-{{ image(img="/img/polecamp/spiralbanner.jpg", max=400) }}
+{{ image(img="/img/polecamp/spiralbanner.jpg", max=800) }}
 
 
 <img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/polecamp/spiral4.png" />
