@@ -1,18 +1,26 @@
 +++
-title = "Ivy Polecamp"
+title = "Up next: Ivy Polecamp (Juni) und Ivy Aerial Lab (Oktober)"
 +++
 
 {{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
 
+## Ivy Aerial Lab: Spiral Intensives (Wien)
+
+3. bis 5. Oktober 2025
+
+<a href="https://ivypoledance.at/courses/courses-and-booking/ivyaeriallab/">Programm und weitere Infos</a>
+
+- PREIS: € 299 / € 211 (Back for more-Bonus)
+  
 <br />
+
+## Ivy Polecamp 2025 (CZ)
+
+19./20. bis 22. Juni 2025
 
 <p>
     Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich tolle Kleinstgruppen-Kurse in entspannter Atmosphäre, Shootings und natürlich Badespaß! 
 </p>
-
-## Polecamp 2025
-
-19./20. bis 22. Juni 2025
 
 <a href="https://ivypoledance.at/courses/courses-and-booking/polecamp/">Programm und weitere Infos</a>
 
