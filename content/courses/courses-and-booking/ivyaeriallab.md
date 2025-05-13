@@ -1,5 +1,5 @@
 +++
-title = "Ivy Aerial Lab 2025: Spiral Intensives"
+title = "Ivy Aerial Lab: Spiral Intensives"
 template = "courses/page.html"
 weight = 1150
 sort_by = "weight"
