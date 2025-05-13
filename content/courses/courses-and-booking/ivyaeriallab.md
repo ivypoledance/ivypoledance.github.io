@@ -13,7 +13,7 @@ sort_by = "weight"
 Let’s get spiraling!
 
 
-Beim Ivy Aerial Lab erwarten dich 5h+ an der Spirale: Technik, Flow & Choreografie werden dir den Kopf verdrehen und in einem Shooting kannst du mit Claudia, unserer Aerial-Fotografin des Vertrauens, deine schönsten Momente festhalten.
+Beim Ivy Aerial Lab erwarten dich 5h+ an der Spirale: Technik, Flow & Choreografie werden dir den Kopf verdrehen und in einem Shooting kannst du mit Photography Cloud, unserer Aerial-Fotografin des Vertrauens, deine schönsten Momente festhalten.
 
 Wir spiralisieren in kleinen Gruppen von maximal 3 Personen und stellen diese individuell passend zusammen (je nach Vorkenntnissen). Auch die Zeiten werden so flexibel wie möglich nach den Bedürfnissen der Teilnehmenden vorab geplant.
 
@@ -35,7 +35,7 @@ Einheiten werden möglichst mit Rücksichtnahme auf deine Terminwünsche geplant
 
 1x Play & Practice (75min)
 
-Shooting mit Claudia (45min, 2 Bilder inkludiert)
+Shooting mit Photography Cloud/ Claudia (45min, 2 Bilder inkludiert)
 
 
 ### Preis
