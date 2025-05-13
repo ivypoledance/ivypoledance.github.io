@@ -5,26 +5,44 @@ weight = 1150
 sort_by = "weight"
 +++
 
-## 20./21. - 23. Juni 2024
+## Ivy Aerial Lab: Spiral Intensives
+## 3. - 5. Oktober 2024
 
 <br />
 
-Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich tolle Kleinstgruppen-Kurse in entspannter Atmosphäre, Shootings und natürlich Badespaß!
-
-BRANDNEU dabei:
-
-### Aerial Spiral
-
-Zum ersten Mal österreichweit hast du exklusiv die Möglichkeit, Aerial Spiral auszuprobieren – und das gleich in dem traumhaften Setting am See, begleitet von unserer Fotografin! Dank static Setting kannst du dich bequem an dieses fantastische Gerät gewöhnen und sicher die spannendsten Moves ausprobieren!
+Let’s get spiraling!
 
 
-EBENFALLS NEU: Euer Wunsch war uns Befehl - heuer erstmals mit dabei: Stretching mit der wundervollen Sandra!
+Tauche ein in die Welt der Aerial Spiral – beim Ivy Aerial Lab erwarten dich 5h+ an der Spirale: Technik, Flow & Choreografie werden dir den Kopf verdrehen und in einem Mini-Shooting kannst du mit Claudia, unserer Aerial-Fotografin des Vertrauens, deine schönsten Momente festhalten.
 
-Zusätzlich gibt es heuer eine CHOOSE YOUR FORMAT Option: Deine Präferenzen (Pole, Twinpole oder Lollipop) werden nach deiner Anmeldung erhoben und ins Programm mit einbezogen.
+Wir spiralisieren in kleinen Gruppen von maximal 3 Personen und stellen diese individuell passend zusammen (je nach Vorkenntnissen). Auch die Zeiten werden so flexibel wie möglich nach den Bedürfnissen der Teilnehmenden vorab geplant.
 
-Wie gehabt gibt es auch die Möglichkeit, zusätzliche Privatstunden (Aerial Spiral, Pole, Lollipop, Chair) vor Ort zu buchen und im Open Training selbstständig zu üben. Außerdem hast du dieses Jahr die Option bereits einen Tag früher anzureisen (Do, 20.6.2024) und die wundervolle Anlage zu genießen oder auch schon eine exklusive Privatstunde zu nehmen.
+Ob du dich zum ersten Mal an eine Aerial Spiral traust oder schon Erfahrung mitbringst – get ready to fly & flow!
 
-- PREIS: € 429
+
+### Eckdaten
+
+Wann? Freitag, 3.5.2025 bis Sonntag, 5.5.2025
+
+Wo? TRAP center for contemporary circus & the art of movement, Rappachgasse 26, 1110 Wien
+
+Einheiten werden möglichst mit Rücksichtnahme auf deine Terminwünsche geplant (1- Programmpunkt / Tag).
+
+
+### Programm
+
+4 Einheiten Technik (á 75min) und Flow & Choreography (á 75min) (Verteilung nach Vorkenntnissen/ Wünschen)
+
+1x Play & Practice (75min)
+
+Shooting mit Claudia (45min, 2 Bilder inkludiert)
+
+
+### Preis
+
+- Regulär: € 429
+  
+- Back for more-Bonus: 211.- (Nur für Teilnehmende Ivy Polecamp 2025: 30% Ersparnis!)
 
 <div class="text-center">
     <a class="btn btn-primary" href="mailto:buchung@ivypoledance.at?subject=Buchungsanfrage%20-%20Ivy%20Polecamp%202024&body=Liebes%20Ivy%20Poledance%20Team%2C%0D%0A%0D%0Aich%20buche%20hiermit%20(sofern%20verf%C3%BCgbar)%20einen%20Platz%20im%20Ivy%20Polecamp%20 2024%20(20./21.-23.%20Juni%20 2024)%20und%20bitte%20um%20die%20%C3%9Cbermittlung%20der%20%C3%9Cberweisungsdaten%20zur%20Begleichung%20der%20Campgeb%C3%BChr.%0D%0AMit%20der%20%C3%9Cberweisung%20best%C3%A4tigte%20ich%2C%20die%20AGB%20inklusive%20Stornoregelung%20gelesen%20und%20zur%20Kenntnis%20genommen%20zu%20haben.%0D%0A%0D%0AMeine%20vollst%C3%A4ndige%20Adressanschrift%20lautet:%0D%0A%0D%0A%0D%0A%0D%0ALiebe%20Gr%C3%BC%C3%9Fe%0D%0A">Buchen</a></td>
@@ -37,46 +55,6 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 {{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
 
-## Programm
-
-- Donnerstag: optional
-
-Anreise (in Fahrgemeinschaften; bitte entsprechend die Unterkunft buchen!)
-
-Privatstunden, Freizeit, wenn gewünscht gemeinsame Abendgestaltung
-
-<br />
-
-- Freitag bis Sonntag: Polecamp
-
-Kurse:
-
-Aerial Spiral (+ Shooting)
-
-Stretching
-
-Combine & Captivate (Poletricks und Kombos)
-
-Choose your format (Posetastic!/Tricktastic! ODER Twinpole ODER Lollipop)
-
-<br />
-
-Shootings am See (eigenständig durchgeführt von Claudia, 4 Fotos inkludiert)
-
-Privatstunden
-
-Offenes Training
-
-Freizeit (Bademöglichkeit, Sauna)
-
-<br />
-
-
-- PREIS: € 429.- 
-
-ACHTUNG:
-
-Die Unterkunft (Selbstversorger!) muss selbstständig gebucht werden. Ich empfehle eine Buchung beim Unterkunftseigentümer CAL Gmbh (Unterbringung Doppelzimmer im Kurshaus/nebenan, € 29 pro Ps/ Nacht) – es genügt eine Email mit dem Text „Buchung Ivy Polecamp [GEWÜNSCHTER ZEITRAUM]“ an andreas@kubouschek.at. Beim gewünschten Zeitraum bitte angeben, ob du von Do, 20.6. oder von Fr 21.6. bis So, 23.6.2024 buchen willst.
 
 Ich freue mich auf dich! 
 
