@@ -14,7 +14,7 @@ Let’s get spiraling!
 
 Beim Ivy Aerial Lab erwarten dich 5h+ an der Spirale: Technik, Flow & Choreografie werden dir den Kopf verdrehen und in einem Shooting kannst du mit <a href="https://www.instagram.com/photography__cloud/">Photography Cloud</a>, unserer Aerial-Fotografin des Vertrauens, deine schönsten Momente festhalten.
 
-Wir spiralisieren in kleinen Gruppen von maximal 3 Personen und stellen diese individuell passend zusammen (je nach Vorkenntnissen). Auch die Zeiten werden so flexibel wie möglich nach den Bedürfnissen der Teilnehmenden vorab geplant.
+Wir spiralisieren in kleinen Gruppen von maximal 3 Personen und stellen diese individuell passend zusammen (je nach Vorkenntnissen). Auch die Kurszeiten werden so flexibel wie möglich nach den Bedürfnissen der Teilnehmenden vorab geplant.
 
 Ob du dich zum ersten Mal an eine Aerial Spiral traust oder schon Erfahrung mitbringst – get ready to fly & flow!
 
@@ -25,7 +25,7 @@ Wann? Freitag, 3.5.2025 bis Sonntag, 5.5.2025
 
 Wo? TRAP center for contemporary circus & the art of movement, Rappachgasse 26, 1110 Wien
 
-Einheiten werden möglichst mit Rücksichtnahme auf deine Terminwünsche geplant (1- Programmpunkt / Tag).
+Einheiten werden möglichst mit Rücksichtnahme auf deine Terminwünsche geplant (1-2 Programmpunkte / Tag).
 
 
 ### Programm
@@ -42,6 +42,7 @@ Shooting mit Photography Cloud/ Claudia (45min, 2 Bilder inkludiert)
 - Regulär: € 299
   
 - Back for more-Bonus: € 211
+  
   (Nur für Teilnehmende Ivy Polecamp 2025: 30% Ersparnis!)
 
 Tauche ein in die Welt der Aerial Spiral – ich freue mich auf dich!
