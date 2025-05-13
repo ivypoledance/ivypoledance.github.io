@@ -5,7 +5,7 @@ weight = 1150
 sort_by = "weight"
 +++
 
-## 3. - 5. Oktober 2024
+## 3. - 5. Oktober 2024 (Wien)
 
 <br />
 
