@@ -21,7 +21,7 @@ Ob du dich zum ersten Mal an eine Aerial Spiral traust oder schon Erfahrung mitb
 
 ### Eckdaten
 
-Wann? Freitag, 3.5.2025 bis Sonntag, 5.5.2025
+Wann? Freitag, 3.10.2025 bis Sonntag, 5.10.2025
 
 Wo? TRAP center for contemporary circus & the art of movement, Rappachgasse 26, 1110 Wien
 
