@@ -1,11 +1,10 @@
 +++
-title = "Ivy Aerial Lab 2025"
+title = "Ivy Aerial Lab 2025: Spiral Intensives"
 template = "courses/page.html"
 weight = 1150
 sort_by = "weight"
 +++
 
-## Ivy Aerial Lab: Spiral Intensives
 ## 3. - 5. Oktober 2024
 
 <br />
