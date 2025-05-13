@@ -40,9 +40,10 @@ Shooting mit Claudia (45min, 2 Bilder inkludiert)
 
 ### Preis
 
-- Regulär: € 429
+- Regulär: € 299
   
-- Back for more-Bonus: 211.- (Nur für Teilnehmende Ivy Polecamp 2025: 30% Ersparnis!)
+- Back for more-Bonus: € 211
+  (Nur für Teilnehmende Ivy Polecamp 2025: 30% Ersparnis!)
 
 Tauche ein in die Welt der Aerial Spiral – ich freue mich auf dich!
 
@@ -55,7 +56,7 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 <br />
 <br />
 
-{{ image(img="/img/polecamp/spiralbanner.jpg", max=800) }}
+{{ image(img="/img/polecamp/spiralbanner.jpg", max=700) }}
 
 
 <img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/polecamp/spiral4.png" />
