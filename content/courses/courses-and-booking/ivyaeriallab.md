@@ -30,7 +30,7 @@ Einheiten werden möglichst mit Rücksichtnahme auf deine Terminwünsche geplant
 
 ### Programm
 
-4x: Technik (á 75min) und Flow & Choreography (á 75min) (Verteilung nach Vorkenntnissen/ Wünschen)
+3x: Technik (á 75min) und Flow & Choreography (á 75min) (Verteilung nach Vorkenntnissen/ Wünschen)
 
 1x: Play & Practice (75min)
 
