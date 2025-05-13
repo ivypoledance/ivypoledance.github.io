@@ -43,7 +43,7 @@ Shooting mit Photography Cloud/ Claudia (45min, 2 Bilder inkludiert)
   
 - Back for more-Bonus: € 211
   
-  (Nur für Teilnehmende Ivy Polecamp 2025: 30% Ersparnis!)
+  (Nur für Teilnehmende von Ivy Polecamp 2025: 70% des regulären Preises!)
 
 Tauche ein in die Welt der Aerial Spiral – ich freue mich auf dich!
 
