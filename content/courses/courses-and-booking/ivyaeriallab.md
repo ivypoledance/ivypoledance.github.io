@@ -34,7 +34,7 @@ Einheiten werden möglichst mit Rücksichtnahme auf deine Terminwünsche geplant
 
 1x: Play & Practice (75min)
 
-1x: Shooting mit Photography Cloud/ Claudia (45min, 2 Bilder inkludiert)
+1x: Shooting mit Photography Cloud/ Claudia (45min/Gruppe, 2 Bilder/Person inkludiert)
 
 
 ### Preis
