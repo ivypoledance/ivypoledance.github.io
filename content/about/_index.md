@@ -60,7 +60,7 @@ Pole Theatre Hungary Finalist 2018 (Trafó, Budapest)
 
 Pole Soirée 2025 (Atelier Theater, Wien)
 
-Acro Vision - Aerial Art Pro (18+) Winner 2025 (Online Competition)
+Acro Vision - Aerial Art Pro (17+) Winner 2025 (Online Competition)
 
 <br/>
 {{ image(img="/img/performance/performance2.jpg", max=500) }}
