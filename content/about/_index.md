@@ -63,10 +63,10 @@ Pole Soirée 2025 (Atelier Theater, Wien)
 Acro Vision - Aerial Art Pro (17+) Winner 2025 (Online Competition)
 
 <br/>
-{{ image(img="/img/performance/performance2.jpg", max=500) }} {{ image(img="/img/performance/acrovision.png", max=500) }}
+ {{ image(img="/img/performance/acrovision.png", max=500) }}
 
 
-© Rainer Kriesch, © Photography Cloud
+© Photography Cloud
 
 ## FAQs
 
