@@ -1,10 +1,10 @@
-+++
+n+++
 title = "Up next: Ivy Polecamp (Juni) und Ivy Aerial Lab (Oktober)"
 +++
 
 {{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
 
-## Ivy Aerial Lab: Spiral Intensives (Wien)
+## Ivy Aerial Lab: Spiral Edition (Wien)
 
 3. bis 5. Oktober 2025
 
