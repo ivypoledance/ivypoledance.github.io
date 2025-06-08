@@ -2,13 +2,13 @@
 
 - [X] Landing Page Logo
   - [X] + Mobile Version
-- [ ] Update Kursort (in Buchung & Aktuelle Kurse)
+- [x] Update Kursort (in Buchung & Aktuelle Kurse)
 - [ ] Favicon (transparent background)
 - [X] Logo in menu
 - [ ] Automated booking
 - [ ] Email send from booking
 - [X] Dark mode table in courses not transparent
-- [ ] Imprint
+- [x] Imprint
 - [ ] Fixed position background images
 - [ ] Optimize photos
 - [ ] Photo frame (like on landing page)
