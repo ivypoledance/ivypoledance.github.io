@@ -7,11 +7,10 @@ sort_by = "weight"
 
 ## Privatstunden
 
-Privatstunden einzeln sowie Stunden für dich und deine Freund*innen (2-6 Personen) sind jederzeit buchbar! In einer Einheit, die komplett auf dich und deine Wünsche, dein Können und deine Bedürfnisse abgestimmt wird, können wir Technik, Choreos, sowie Spezialskills (Twinpole, Chairdance, Lollipop, Polehooping…) zu einem perfekt für dich/ euch passenden Programm zusammenstellen.
+Privatstunden einzeln sowie Stunden für dich und deine Freund*innen (2-6 Personen) sind jederzeit buchbar! In einer Einheit, die komplett auf dich und deine Wünsche, dein Können und deine Bedürfnisse abgestimmt wird, können wir Technik, Choreos, sowie Spezialskills (Aerial Spiral, Twinpole, Chairdance, Lollipop, Polehooping…) zu einem perfekt für dich/ euch passenden Programm zusammenstellen.
 
-  - 1 Stunde: 	  € 59.- (zu zweit: je € 39.-, ab drei Personen: je € 32.-)
-  - 90 Minuten: 	€ 74.- (zu zweit: je € 49.-, ab drei Personen: je € 39.-)
-  - 120 Minuten: 	€ 94.- (zu zweit: je € 62.-, ab drei Personen: je € 49.-) 
+  - 1 Stunde: 	  € 59.- (zu zweit: je € 44.-, zu dritt: je € 44.-, ab vier Personen: je € 25.-)
+  - 90 Minuten: 	€ 79.- (zu zweit: je € 59.-, zu dritt: je € 48.-, ab vier Personen: je € 34.-)
 
 <div class="text-center">
     <a class="btn btn-primary" href="mailto:buchung@ivypoledance.at?subject=Buchungsanfrage%20-%20Privatstunde&body=Liebes%20Ivy%20Poledance%20Team%2C%0D%0A%0D%0Aich%20interessiere%20mich%20f%C3%BCr%20die%20Buchung%20einer%20Privatstunde.%0D%0AMein%2Fe%20Wunschtermin%2Fe%20und%20Uhrzeiten%20w%C3%A4ren%3A%0D%0A%0D%0A%7B%7B%20DATUM%20%2F%20UHRZEIT%20%2F%2060-90-120%20MINUTEN%20%7D%7D%0D%0A%0D%0ALG%0D%0A%0D%0A%0D%0A">Privatstunde buchen!</a>
