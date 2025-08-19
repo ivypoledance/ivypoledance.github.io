@@ -45,7 +45,7 @@ Veranstaltung Ivy Polecamp jährlich seit 2021
 Aerial Spiral seit 2024
 
 #### Workshops/ (Online-)Kurse/ Forbildungen bei: 
-Dan Rosen, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazree, Sergia Louse Anderson, Simone Fluhr, Evgeny Greshilov, Anna Valfsson, Jazzy K
+Dan Rosen, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazree, Sergia Louse Anderson, Simone Fluhr, Evgeny Greshilov, Anna Valfsson, Jazzy K, Jenny Tufts, Oran Leong, Emma D'Lemma, Laila Umeko, Chantal McCormick, Lindsey Butcher
 
 #### Sonstiges:
 Cirque Noir / Kathy and the Troubles 2014-2016 (Cabaret Feldermaus, Wien)
