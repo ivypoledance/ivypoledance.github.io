@@ -1,5 +1,5 @@
 +++
-title = " • NEU: Kurse (4wöchig) • "
+title = "•• NEU: Kurse (4wöchig) ••"
 template = "courses/bookingpage.html"
 weight = 1200
 sort_by = "weight"
