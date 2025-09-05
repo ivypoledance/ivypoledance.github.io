@@ -25,7 +25,7 @@ Wann? Freitag, 3.10.2025 bis Sonntag, 5.10.2025
 
 Wo? TRAP center for contemporary circus & the art of movement, Rappachgasse 26, 1110 Wien
 
-Einheiten werden möglichst mit Rücksichtnahme auf deine Terminwünsche geplant (1-2 Programmpunkte / Tag).
+Einheiten werden möglichst mit Rücksichtnahme auf deine Terminwünsche geplant (1-3 Programmpunkte / Tag).
 
 
 ### Programm
