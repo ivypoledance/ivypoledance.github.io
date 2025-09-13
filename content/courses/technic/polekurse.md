@@ -13,15 +13,17 @@ Du bist dir nicht sicher, welcher Kurs der richtige für dich ist? Schreib uns e
 <summary>Poledance 101</summary>
 
   Du hast noch keine/ fast keine Erfahrung an der Stange.
-
+    </details>
 <details>
 <summary>Poledance: Explorer</summary>
 
    Du hast schon Erfahrung und kannst - einigermaßen verlässlich - vom Boden invertieren. (Tricks, Transitions zw. Boden und Stange, vereinzelte Kombinationen von Tricks)
+       </details>
 <details>
 <summary>Poledance: Improver</summary>
 
   Auch Inverts aus der Luft/aus dem Klettern stellen für dich kein (großes) Hindernis dar. (Tricks, Transitions, Kombos, Drops)
+      </details>
 <details>
 <summary>Poledance: Elevated</summary>
 
