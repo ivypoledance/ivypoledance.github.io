@@ -7,7 +7,7 @@ sort_by = "weight"
 
 In diesen vierwöchigen Kursen lernst du spannende Tricks und Transitions, arbeitest an deiner Technik und erweiterst dein Bewegungsvokabular mit dem Fokus auf das jeweilige "Level"/ den jeweiligen Schwerpunkt. 
 
-Du bist dir nicht sicher, welcher Kurs der richtige für dich ist? Schreib uns eine EMail!
+Klick auf den Kurs für die nähere Beschreibung! Wenn du dir nicht sicher bist, welcher Fokus der richtige für dich ist, schreib uns eine EMail!
 
 <details>
 <summary>Poledance 101</summary>
@@ -29,4 +29,6 @@ Du bist dir nicht sicher, welcher Kurs der richtige für dich ist? Schreib uns e
 
   Ayeshas? Zumindest eine Variante stellt kein Problem für dich dar. (Tricks, Kombos, Drops & Flips)
     </details>
+
+  Du weißt schon vorab, dass du nicht zu allen Einheiten Zeit haben wirst? Schreib uns eine EMail, auch Teilbuchungen sind meistens möglich!
 <img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/ayesha.png" />
