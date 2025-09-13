@@ -9,10 +9,11 @@ In diesen vierwöchigen Kursen lernst du spannende Tricks und Transitions, arbei
 
 Du bist dir nicht sicher, welcher Kurs der richtige für dich ist? Schreib uns eine EMail!
 
-
-* Poledance 101
+<details>
+<summary>* Poledance 101</summary>
 
   Du hast noch keine/ fast keine Erfahrung an der Stange.
+  </details>
 * Poledance: Explorer
 
    Du hast schon Erfahrung und kannst - einigermaßen verlässlich - vom Boden invertieren. (Tricks, Transitions zw. Boden und Stange, vereinzelte Kombinationen von Tricks)
