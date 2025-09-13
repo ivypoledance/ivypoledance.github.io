@@ -10,17 +10,21 @@ In diesen vierwöchigen Kursen lernst du spannende Tricks und Transitions, arbei
 Du bist dir nicht sicher, welcher Kurs der richtige für dich ist? Schreib uns eine EMail!
 
 <details>
-<summary>* Poledance 101</summary>
+<summary>Poledance 101</summary>
 
   Du hast noch keine/ fast keine Erfahrung an der Stange.
-  </details>
-* Poledance: Explorer
+
+<details>
+<summary>Poledance: Explorer</summary>
 
    Du hast schon Erfahrung und kannst - einigermaßen verlässlich - vom Boden invertieren. (Tricks, Transitions zw. Boden und Stange, vereinzelte Kombinationen von Tricks)
-* Poledance: Improver
+<details>
+<summary>Poledance: Improver</summary>
 
   Auch Inverts aus der Luft/aus dem Klettern stellen für dich kein (großes) Hindernis dar. (Tricks, Transitions, Kombos, Drops)
-* Poledance: Elevated
+<details>
+<summary>Poledance: Elevated</summary>
 
   Ayeshas? Zumindest eine Variante stellt kein Problem für dich dar. (Tricks, Kombos, Drops & Flips)
+    </details>
 <img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/ayesha.png" />
