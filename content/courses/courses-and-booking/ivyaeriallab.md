@@ -14,7 +14,7 @@ Let’s get spiraling!
 
 Beim Ivy Aerial Lab erwarten dich 5h+ an der Spirale: Technik, Flow & Choreografie werden dir den Kopf verdrehen und in einem Shooting kannst du mit <a href="https://www.instagram.com/photography__cloud/">Photography Cloud</a>, unserer Aerial-Fotografin des Vertrauens, deine schönsten Momente festhalten.
 
-Wir spiralisieren in kleinen Gruppen von maximal 3 Personen und stellen diese individuell passend zusammen (je nach Vorkenntnissen). Auch die Kurszeiten werden so flexibel wie möglich nach den Bedürfnissen der Teilnehmenden vorab geplant.
+Wir spiralisieren in kleinen Gruppen von maximal 3 Personen und stellen diese individuell passend zusammen (möglichst je nach Vorkenntnissen). Auch die Kurszeiten werden so flexibel wie möglich nach den Bedürfnissen der Teilnehmenden vorab geplant.
 
 Ob du dich zum ersten Mal an eine Aerial Spiral traust oder schon Erfahrung mitbringst – get ready to fly & flow!
 
