@@ -51,9 +51,9 @@
                   </td>
                   {% endif %}
                   <td>
-                    {{ record[3] | date(format="%a. %d.%m.%Y - %H:%M", locale="de_DE") }}{% if record[4] | length > 0 %}-{{ record[4] | date(format="%H:%M") }}{% endif %}
-                    {% if record[5] | length > 0 %} &amp;<br/>
-                    {{ record[5] | date(format="%a. %d.%m.%Y - %H:%M", locale="de_DE") }}{% if record[6] | length > 0 %}-{{ record[6] | date(format="%H:%M") }}{% endif %}
+                    {{ record[3] | date(format="%a. %d.%m.%Y, %H:%M", locale="de_DE") }}{% if record[4] | length > 0 %}-{{ record[4] | date(format="%H:%M") }}{% endif %}
+                    {% if record[5] | length > 0 %} - <br/>
+                    {{ record[5] | date(format="%a. %d.%m.%Y, %H:%M", locale="de_DE") }}{% if record[6] | length > 0 %}-{{ record[6] | date(format="%H:%M") }}{% endif %}
                     {% endif %}
          
 	          </td>
