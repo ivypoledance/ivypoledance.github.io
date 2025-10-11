@@ -10,7 +10,7 @@ In diesen vierwöchigen Kursen lernst du spannende Tricks und Transitions, arbei
 Klick auf den Kurs für die nähere Beschreibung! Wenn du dir nicht sicher bist, welcher Fokus der richtige für dich ist, schreib uns eine EMail!
 
 <details>
-<summary>Poledance 101 (Beschreibung)</summary>
+<summary>Poledance 101 (click me)</summary>
 
   Du hast noch keine/ fast keine Erfahrung an der Stange.
     </details>
@@ -20,7 +20,7 @@ Klick auf den Kurs für die nähere Beschreibung! Wenn du dir nicht sicher bist,
    Du hast schon Erfahrung und kannst - einigermaßen verlässlich - vom Boden invertieren. (Tricks, Transitions zw. Boden und Stange, vereinzelte Kombinationen von Tricks)
        </details>
 <details>
-<summary>Poledance: Improver (Beschreibung)</summary>
+<summary>Poledance: Improver</summary>
 
   Auch Inverts aus der Luft/aus dem Klettern stellen für dich kein (großes) Hindernis dar. (Tricks, Transitions, Kombos, Drops)
       </details>
