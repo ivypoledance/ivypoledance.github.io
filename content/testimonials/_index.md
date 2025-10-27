@@ -3,20 +3,6 @@ title = "Testimonials"
 +++
 Du hast Feedback für mich? <a href="https://tinyurl.com/ivypole">Klicke hier!</a>
 
-<style>
-.responsive-two-column-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1.5rem;
-  align-items: start;
-}
-
-.responsive-two-column-grid iframe {
-  width: 100%;
-  border: none;
-  overflow: hidden;
-}
-
 <div class="responsive-two-column-grid">
     <div>
         
@@ -54,4 +40,4 @@ Du hast Feedback für mich? <a href="https://tinyurl.com/ivypole">Klicke hier!</
  
   </div>
 </div>   
-</style>
+
