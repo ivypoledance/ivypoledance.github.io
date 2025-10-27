@@ -1,7 +1,7 @@
 +++
 title = "Testimonials"
 +++
-Du hast Feedback für mich? <a href="https://tinyurl.com/ivypole>Hier</a> kannst du mir - auch anonym - ein paar Worte oder Zeilen da lassen!
+Du hast Feedback für mich? <a href="https://tinyurl.com/ivypole">Hier</a> kannst du mir - auch anonym - ein paar Worte oder Zeilen da lassen!
 
 <div class="responsive-two-column-grid">
     <div>
