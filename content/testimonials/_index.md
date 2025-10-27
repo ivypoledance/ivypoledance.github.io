@@ -1,22 +1,22 @@
 +++
 title = "Testimonials"
 +++
-(tbc)
+Du hast Feedback für mich? <a href="https://tinyurl.com/ivypole>Hier</a> kannst du mir - auch anonym - ein paar Worte oder Zeilen da lassen!
 
 <div class="responsive-two-column-grid">
     <div>
         
-{{ image(img="/img/testimonials/Charlotte1.jpg", max=500) }}
+{{ image(img="/img/testimonials/Charlotte1.jpg", max=550) }}
  
-{{ image(img="/img/testimonials/Viv1.jpg", max=500) }}
+{{ image(img="/img/testimonials/Viv1.jpg", max=550) }}
 
-{{ image(img="/img/testimonials/Lena1.jpg", max=500) }}
+{{ image(img="/img/testimonials/Lena1.jpg", max=550) }}
 
-{{ image(img="/img/testimonials/Larissa01.jpg", max=500) }}
+{{ image(img="/img/testimonials/Larissa01.jpg", max=550) }}
 
-{{ image(img="/img/testimonials/Larissa11.jpg", max=500) }}
+{{ image(img="/img/testimonials/Larissa11.jpg", max=550) }}
 
-{{ image(img="/img/testimonials/Lisi1.jpg", max=500) }}
+{{ image(img="/img/testimonials/Lisi1.jpg", max=550) }}
 
         
 <iframe src="https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/claudia.leissner/posts/pfbid02CSFyR6DKPKpseg3NRPegDQjECdf5ECxrh6afg1VwRYjaXQrZPVkP13oZxDf6Exvml&show_text=true&width=500" width="500" height="227" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
