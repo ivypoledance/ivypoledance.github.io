@@ -6,7 +6,7 @@ title = "Testimonials"
 <div class="responsive-two-column-grid">
     <div>
         
-{{ image(img="/img/testimonials/Charlotte.jpg", max=500) }}
+{{ image(img="/img/testimonials/Charlotte1.jpg", max=500) }}
 
 {{ image(img="/img/testimonials/Viv.jpg", max=500) }}
 
