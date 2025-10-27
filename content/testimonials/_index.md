@@ -16,7 +16,6 @@ Du hast Feedback für mich? <a href="https://tinyurl.com/ivypole">Klicke hier!</
   border: none;
   overflow: hidden;
 }
-</style>
 
 <div class="responsive-two-column-grid">
     <div>
@@ -55,3 +54,4 @@ Du hast Feedback für mich? <a href="https://tinyurl.com/ivypole">Klicke hier!</
  
   </div>
 </div>   
+</style>
