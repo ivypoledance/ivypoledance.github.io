@@ -62,6 +62,8 @@ Pole Soirée 2025 (Atelier Theater, Wien)
 
 Acro Vision - Aerial Art Pro (17+) Winner 2025 (Online Competition)
 
+Cirque Rouge / Burlesque Spectacular Shows 2025-- (Mirage, Wien)
+
 <br/>
  {{ image(img="/img/performance/acrovision.png", max=500) }}
 
