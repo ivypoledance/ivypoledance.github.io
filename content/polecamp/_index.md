@@ -4,14 +4,12 @@ title = "Up next: Ivy Polecamp 2026"
 
 {{ image(img="/img/polecamp/savethedate2026.jpg", max=400) }}
 <br />
+<br />
+{{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
 
 ## Ivy Aerial Lab: Spiral Edition (Wien)
 
 {{ image(img="/img/polecamp/spiralbanner.jpg", max=400) }}
-
-<br />
-<br />
-{{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
 
 ## Polecamp 2025
 
