@@ -14,7 +14,7 @@ Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich – heuer
 <br />
 <br />
 
-Nachdem wir heuer vier Tage lang Camp und Anlage genießen können, gibt es gleich ZWEI spannende Spezialitäten in unserem Programm!
+Nachdem wir heuer vier Tage lang Camp und Anlage genießen können, gibt es gleich <b>zwei</b> spannende Spezialitäten in unserem Programm!
 <br />
 <br />
 
