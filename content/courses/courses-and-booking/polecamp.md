@@ -12,16 +12,24 @@ sort_by = "weight"
 <br />
 Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich – heuer erstmals <b>vier Tage</b> lang! - tolle Kleinstgruppen-Kurse in entspannter Atmosphäre, Shootings und natürlich Badespaß!
 <br />
+<br />
+
 Nachdem wir heuer vier Tage lang Camp und Anlage genießen können, gibt es gleich ZWEI spannende Spezialitäten in unserem Programm!
+<br />
+<br />
+
 - <b>Polestrap!</b>
   
 Du bekommst – passend zu deinem Vorwissen – technischen Input um wie ein Profi mit dem Polestrap um die Stange zu wirbeln UND erlernst danach noch, wie du den Polestrap kreativ in einer Choreo einsetzen kannst. Achtung, Spinning Pole!
 - <b>LED-Hoop! </b>
+
 Unsere bewährte Fotomagierin Claudia ist wieder mit dabei – und ihr habt heuer die Wahl zwischen <b>drei Sets</b>! Neben der Stagepole am Steg und der frei im Wasser stehenden Pole gibt es heuer erstmals die Möglichkeit ein magisches LED-Shooting im Hoop über der funkelnden Wasserspiegelung zu machen.
 
 <br />
 Wie gehabt gibt es auch die Möglichkeit, zusätzliche Privatstunden (Pole, Twinpole, Lollipop, Chair) vor Ort zu buchen und im Open Training selbstständig zu üben.
 <br />
+<br />
+
 - PREIS: € 537
 
 <div class="text-center">
@@ -63,6 +71,7 @@ Tricks & Transitions
 Polestrap (Choreography)
 
 Stretching
+
 <br />
 
 - Sonntag
