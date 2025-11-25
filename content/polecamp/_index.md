@@ -6,6 +6,9 @@ title = "Up next: Ivy Polecamp 2026"
 
 4. bis 7. Juni 2026
 
+{{ image(img="/img/polecamp/2026shoot.jpg", max=400) }}
+
+<br />
 <a href="https://ivypoledance.at/courses/courses-and-booking/polecamp/">Programm und weitere Infos</a>
 
 - PREIS: € 537.-  
@@ -17,10 +20,7 @@ title = "Up next: Ivy Polecamp 2026"
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 <br />
-<br />
-{{ image(img="/img/polecamp/2026shoot.jpg", max=400) }}
 
-<br />
 <br />
 {{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
 
