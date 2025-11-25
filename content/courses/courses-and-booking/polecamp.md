@@ -32,7 +32,7 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 <br />
 <br />
 
-{{ image(img="/img/polecamp/polestrap.jpg", max=400) }}
+{{ image(img="/img/pose/strap.png", max=400) }}
 
 ## Programm
 
