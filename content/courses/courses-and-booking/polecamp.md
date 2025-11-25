@@ -10,17 +10,18 @@ sort_by = "weight"
 {{ image(img="/img/polecamp/2026shoot.jpg", max=600) }}
 
 <br />
-Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich – heuer erstmals vier Tage lang! - tolle Kleinstgruppen-Kurse in entspannter Atmosphäre, Shootings und natürlich Badespaß!
-
+Im wunderschönen Lakeside Village am Moldaustausee (CZ) erwarten dich – heuer erstmals <b>vier Tage</b> lang! - tolle Kleinstgruppen-Kurse in entspannter Atmosphäre, Shootings und natürlich Badespaß!
+<br />
 Nachdem wir heuer vier Tage lang Camp und Anlage genießen können, gibt es gleich ZWEI spannende Spezialitäten in unserem Programm!
-- Polestrap! 
+- <b>Polestrap!</b>
+  
 Du bekommst – passend zu deinem Vorwissen – technischen Input um wie ein Profi mit dem Polestrap um die Stange zu wirbeln UND erlernst danach noch, wie du den Polestrap kreativ in einer Choreo einsetzen kannst. Achtung, Spinning Pole!
-- LED-Hoop! 
-Unsere bewährte Fotomagierin Claudia ist wieder mit dabei – und ihr habt heuer die Wahl zwischen DREI Sets zu wählen! Neben der Stagepole am Steg und der frei im Wasser stehenden Pole gibt es heuer erstmals die Möglichkeit ein magisches LED-Shooting im Hoop über der funkelnden Wasserspiegelung zu machen.
+- <b>LED-Hoop! </b>
+Unsere bewährte Fotomagierin Claudia ist wieder mit dabei – und ihr habt heuer die Wahl zwischen <b>drei Sets</b>! Neben der Stagepole am Steg und der frei im Wasser stehenden Pole gibt es heuer erstmals die Möglichkeit ein magisches LED-Shooting im Hoop über der funkelnden Wasserspiegelung zu machen.
 
 <br />
 Wie gehabt gibt es auch die Möglichkeit, zusätzliche Privatstunden (Pole, Twinpole, Lollipop, Chair) vor Ort zu buchen und im Open Training selbstständig zu üben.
-
+<br />
 - PREIS: € 537
 
 <div class="text-center">
@@ -32,7 +33,7 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 <br />
 <br />
 
-{{ image(img="/img/pose/strap.png", max=600) }}
+{{ image(img="/img/pose/strap.png", max=400) }}
 
 ## Programm
 
@@ -46,7 +47,7 @@ Kick-off
 <br />
 
 - Freitag
-- 
+  
 Polestrap (Technik)
 
 Posetastic! OR Tricks & Transitions
@@ -93,6 +94,8 @@ Freizeit (Bademöglichkeit, Sauna)
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 <br />
+<br />
+
 ACHTUNG:
 
 Die Unterkunft (Selbstversorger!) muss selbstständig gebucht werden. Ich empfehle eine Buchung beim Unterkunftseigentümer CAL Gmbh (Unterbringung Doppelzimmer im Kurshaus/nebenan, € 24 pro Ps/ Nacht) – es genügt eine Email mit dem Text „Buchung Ivy Polecamp“ und eurem vollständigen Namen an andreas@kubouschek.at. 
