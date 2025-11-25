@@ -11,6 +11,7 @@ title = "Up next: Ivy Polecamp 2026"
 <br />
 <a href="https://ivypoledance.at/courses/courses-and-booking/polecamp/">Programm und weitere Infos</a>
 
+
 - Early bird: € 534
 - Regular: € 587
   
