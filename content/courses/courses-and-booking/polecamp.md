@@ -41,7 +41,7 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 <br />
 <br />
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/strap.png" />
+<img style="display: block; height:100%; opacity: 0.3; position: absolute; top:200px; z-index: -100; right: 0px; top: 0px;" src="/img/pose/strap.png" />
 
 ## Programm
 
