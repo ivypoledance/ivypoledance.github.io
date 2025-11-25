@@ -6,7 +6,7 @@ title = "Up next: Ivy Polecamp 2026"
 
 4. bis 7. Juni 2026
 
-{{ image(img="/img/polecamp/2026shoot.jpg", max=400) }}
+{{ image(img="/img/polecamp/2026shoot.jpg", max=600) }}
 
 <br />
 <a href="https://ivypoledance.at/courses/courses-and-booking/polecamp/">Programm und weitere Infos</a>
