@@ -13,7 +13,7 @@ title = "Up next: Ivy Polecamp 2026"
 
 <br />
 
-- Early bird: € 534
+- Early bird: € 534 - nur noch bis 31. Dezember 2025!
 - Regular: € 587
   
 <div class="text-center">
