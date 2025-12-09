@@ -47,7 +47,7 @@ Aerial Spiral seit 2024
 #### Workshops/ (Online-)Kurse/ Forbildungen bei: 
 Dan Rosen, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazree, Sergia Louse Anderson, Simone Fluhr, Evgeny Greshilov, Anna Valfsson, Jazzy K, Jenny Tufts, Oran Leong, Emma D'Lemma, Laila Umeko, Chantal McCormick, Lindsey Butcher
 
-#### Sonstiges:
+#### Performances:
 Cirque Noir / Kathy and the Troubles 2014-2016 (Cabaret Feldermaus, Wien)
 
 Gothic Dandy & Lolita Music Festival 2015 ((szene) Wien, Wien)
@@ -60,7 +60,9 @@ Pole Theatre Hungary Finalist 2018 (Trafó, Budapest)
 
 Pole Soirée 2025 (Atelier Theater, Wien)
 
-Acro Vision - Aerial Art Pro (17+) Winner 2025 (Online Competition)
+Acro Vision - Aerial Art Pro (17+) Winner 2025 (Online Competition - Aerial Spiral)
+
+Acroyoga Vienna Festival 2025 (TRAP, Wien - Aerial Spiral)
 
 Cirque Rouge / Burlesque Spectacular Shows 2025-- (Mirage, Wien)
 
