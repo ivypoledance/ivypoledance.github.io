@@ -22,13 +22,13 @@ Du willst eine maßgeschneiderte Performance für dein Event, oder Unterhaltung 
 </div>
 <hr />
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
+
 <style>
-body {
+.bg-scroll {
   background-image: url("/img/pose/hide.png");
   background-repeat: no-repeat;
   background-position: right top;
-  background-size: contain; /* oder cover, je nach Geschmack */
-  background-attachment: scroll; /* bewegt sich mit beim Scrollen */
-  opacity: 0.3; /* optional – besser mit overlay lösen */
+  background-size: contain;
+  background-attachment: scroll;
 }
 </style>
