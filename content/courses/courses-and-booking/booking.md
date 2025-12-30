@@ -23,27 +23,4 @@ Du willst eine maßgeschneiderte Performance für dein Event, oder Unterhaltung 
 <hr />
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
-<style>
-body {
-  background-image: url("/img/pose/hide.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 300px auto;
-  background-attachment: scroll;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 300px;
-  background-image: inherit;
-  background-repeat: no-repeat;
-  background-position: right top;
-  opacity: 0.3;
-  pointer-events: none;
-  z-index: -1;
-}
-</style>
+<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 100px;" src="/img/pose/hide.png" />
