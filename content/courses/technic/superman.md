@@ -6,7 +6,7 @@ sort_by = "weight"
 +++
 
 Der Superman ist zweifelsfrei eine Ikone unter den Polemoves – und es gibt eine Vielzahl an spannenden, kreativen Ein- und Ausgängen für ihn!  
-In diesem zweiwöchigen Kurs erwartet euch eine ganze Reihe dieser Transitions, individuell an euch einzeln und als Gruppe angepasst und aus einer ellenlangen Liste an Möglichkeiten ausgewählt ♥
+In diesem zweiwöchigen Kurs erwartet euch eine ganze Reihe dieser Transitions, individuell an euch einzeln und als Gruppe angepasst und aus einer ellenlangen Liste an Möglichkeiten ausgewählt - mehrfach besuchbar!
 
 ##### Achtung:
 
@@ -16,6 +16,6 @@ Dieser Kurs ist **nicht** Open Level!
 
 Superman (mindestens ein Eingang)
 
-Einzeltermin/ Drop-in: €28
+Einzeltermin/ Drop-in: €29
 
 <img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/ayesha.png" />
