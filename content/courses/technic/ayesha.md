@@ -18,7 +18,7 @@ Stabile Ayesha (mindestens eine Grip-Variante)
 
 
 
-Einzeltermin/ Drop-in bei zweiwöchigem Kurs: €28
+Einzeltermin/ Drop-in bei zweiwöchigem Kurs: €29
 
 Technik-Special (1,5h): €39
 
