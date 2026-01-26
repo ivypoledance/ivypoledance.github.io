@@ -5,7 +5,9 @@ weight = 1200
 sort_by = "weight"
 +++
 
-In diesen vierwöchigen Kursen lernst du spannende Tricks und Transitions, arbeitest an deiner Technik und erweiterst dein Bewegungsvokabular mit dem Fokus auf das jeweilige "Level"/ den jeweiligen Schwerpunkt. Die Unterteilung dient der groben Orientierung, ist aber nicht als "hier geht es ausschließlich um Inverts/Aerial Inverts/Ayeshas" zu verstehen. Skills überschneiden sich und Kursinhalte werden stark an Teilnehmende angepasst.
+In diesen vierwöchigen Kursen lernst du spannende Tricks und Transitions, arbeitest an deiner Technik und erweiterst dein Bewegungsvokabular mit dem Fokus auf das jeweilige "Level"/ den jeweiligen Schwerpunkt. 
+
+Die Unterteilung dient der groben Orientierung, ist aber nicht als "hier geht es ausschließlich um Inverts/Aerial Inverts/Ayeshas" zu verstehen. Skills überschneiden sich und Kursinhalte werden stark an Teilnehmende angepasst.
 
 Klick auf den Kurs für die nähere Beschreibung:
 
