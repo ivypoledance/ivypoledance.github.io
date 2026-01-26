@@ -11,7 +11,7 @@ In diesem zweiwöchigen Kurs lernst du Flips an die Pole, von der Pole und mit d
 
 Open Format: Bitte gib bei deiner Anmeldung an, welche Voraussetzung (Aerial Invert oder/und Ayesha) du erfüllst, die Inhalte werden entsprechend ausgewählt.
 
-Einzeltermin/ Drop-in: €28
+Einzeltermin/ Drop-in: €29
 
 
 
