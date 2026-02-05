@@ -109,7 +109,7 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 ACHTUNG:
 
-Die Unterkunft (Selbstversorger!) muss selbstständig gebucht werden. Ich empfehle eine Buchung beim Unterkunftseigentümer CAL Gmbh (Unterbringung Doppelzimmer im Kurshaus/nebenan, € 24 pro Ps/ Nacht) – es genügt eine Email mit dem Text „Buchung Ivy Polecamp“ und eurem vollständigen Namen an andreas@kubouschek.at. 
+Die Unterkunft (Selbstversorger!) muss selbstständig gebucht werden. Ich empfehle eine Buchung beim Unterkunftseigentümer CAL Gmbh (Unterbringung Doppelzimmer im Kurshaus/nebenan, € 25 pro Ps/ Nacht) – es genügt eine Email mit dem Text „Buchung Ivy Polecamp“ und eurem vollständigen Namen an andreas@kubouschek.at. 
 
 Ich freue mich auf dich! 
 
