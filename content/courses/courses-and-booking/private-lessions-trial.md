@@ -34,7 +34,16 @@ Wenn du dich für einen anschließenden Kurs anmeldest, wird dir der Schnupperst
 
 ### Nächste Termine:
 
-Derzeit sind keine Termine geplant - schick uns eine Anfrage per EMail!
+Mi, 11.2., 17:15-18:15
+So, 15.2., 19:15-20:15
+Mo, 16.2., 17:00-18:00 
+Di, 17.2., 18:00-19:00 
+Do, 19.2., 17:15-18:15
+So, 22.2., 16:45-17:45
+
+Keiner der Termine passt? Schick uns unverbindlich eine Termin-Anfrage per EMail!
+Du möchtest zu einem der Termine (direkt beim Westbahnhof, genaue Adresse bei Buchung) kommen? Melde dich gleich hier, per EMail an!
+
 <div class="text-center">
     <a class="btn btn-primary" href="mailto:buchung@ivypoledance.at?subject=Buchungsanfrage%20-%20Schnupperstunde&body=Liebes%20Ivy%20Poledance%20Team%2C%0D%0A%0D%0Aich%20interessiere%20mich%20f%C3%BCr%20die%20Buchung%20einer%20Schnupperstunde.%20%0D%0A%0D%0AWunschtermin%2Fe%3A%20%20%7B%7B%20DATUM%20%7D%7D%0D%0AWunschuhrzeit%3A%20%20%7B%7B%20UHRZEIT%20%7D%7D%0D%0A%0D%0AEs%20gibt%20noch%20weitere%20Interessent*innen%3A%20%7B%7B%20ANZAHL%20%7D%7D%0D%0A%0D%0ALG%0D%0A%0D%0A%0D%0A%0D%0A">Schnupperstunden buchen!</a>
 </div>
