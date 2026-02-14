@@ -33,4 +33,6 @@ Klick auf den Kurs für die nähere Beschreibung:
     </details>
 
   Du weißt schon vorab, dass du nicht zu allen Einheiten Zeit haben wirst? Oder du bist dir nicht sicher, welcher Fokus der richtige für dich ist? Schreib uns eine EMail, wir finden eine Lösung!
+
+  Einzeltermin/ Drop-in: €25
 <img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/ayesha.png" />
