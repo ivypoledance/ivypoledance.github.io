@@ -24,7 +24,7 @@ In einer Einheit, die ideal auf dich, deine Wünsche & deine Bedürfnisse abgest
 <hr/>
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
-## Schnupperstunden Poledance & Lollipop
+## Schnupperstunden Poledance
 
 Lerne in Kleinstgruppen (maximal 6 Personen) eine neue Sportart kennen und lieben!  
 Die Schnupperstunde für Poledance 101 setzt keinerlei Vorkenntnisse voraus und ist für alle geeignet: Egal welches Alter, Gewicht oder Sportlichkeitslevel - hier bist du richtig!  
@@ -34,17 +34,15 @@ Wenn du dich für einen anschließenden Kurs anmeldest, wird dir der Schnupperst
 
 ### Nächste Termine:
 
-Mi, 11.2., 17:15-18:15
+Mi, 1.4., 17:15-18:15
 
-So, 15.2., 19:15-20:15
+Mo, 6.4., 18:15-19:15 
 
-Mo, 16.2., 17:00-18:00 
+Di, 7.4., 18:00-19:00 
 
-Di, 17.2., 18:00-19:00 
+Do, 16.4., 17:15-18:15
 
-Do, 19.2., 17:15-18:15
-
-So, 22.2., 16:45-17:45
+So, 19.4., 16:45-17:45
 
 Keiner der Termine passt? Schick uns unverbindlich eine Termin-Anfrage per EMail!
 
