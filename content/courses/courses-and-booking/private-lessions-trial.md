@@ -34,8 +34,6 @@ Wenn du dich für einen anschließenden Kurs anmeldest, wird dir der Schnupperst
 
 ### Nächste Termine:
 
-Mi, 1.4., 17:15-18:15
-
 Mo, 6.4., 18:15-19:15 
 
 Di, 7.4., 18:00-19:00 
