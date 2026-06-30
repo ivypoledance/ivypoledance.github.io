@@ -28,7 +28,7 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 ## Polecamp 2026
 
-{{ image(img="/img/polecamp/polecamp2026_instagram.jpg", max=400) }}
+{{ image(img="/img/polecamp/POLECAMP2026_INSTAGRAM.jpg", max=400) }}
 
 
 ## Ivy Aerial Lab 2025: Spiral Edition (Wien)
