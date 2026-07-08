@@ -5,7 +5,13 @@ Du hast Feedback für mich? <a href="https://tinyurl.com/ivypole">Klicke hier!</
 
 <div class="responsive-two-column-grid">
     <div>
-        
+
+{{ image(img="/img/testimonials/AngiCamp1.jpg", max=550) }}
+
+{{ image(img="/img/testimonials/GabiCamp1.jpg", max=550) }}
+
+{{ image(img="/img/testimonials/LisiCamp2.jpg", max=550) }}
+
 {{ image(img="/img/testimonials/Charlotte1.jpg", max=550) }}
  
 {{ image(img="/img/testimonials/Viv1.jpg", max=550) }}
