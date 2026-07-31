@@ -69,6 +69,8 @@ Acroyoga Vienna Festival 2025 (TRAP, Wien - Aerial Spiral)
 
 Cirque Rouge / Burlesque Spectacular Shows 2025-- (Mirage, Wien)
 
+Emma Insley Cabaret (Irish Aerial Dance Fest) 2026 (An Grianán Theatre, Letterkenny - Flying Pole)
+
 <br/>
  {{ image(img="/img/performance/acrovision.png", max=500) }}
 
