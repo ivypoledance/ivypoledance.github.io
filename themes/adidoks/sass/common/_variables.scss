@@ -98,6 +98,35 @@ $grid-row-columns:            6;
 
 $border-color:                $gray-200;
 
+// Bootstrap 5.3 enlarged the default corner radii (.375/.25/.5rem). Keep the
+// tighter radii this design uses for buttons, inputs and cards.
+$border-radius:               .25rem;
+$border-radius-sm:            .2rem;
+$border-radius-lg:            .3rem;
+
+// Forms
+//
+// Bootstrap 5.3 derives the placeholder colour from --bs-secondary-color, a
+// translucent body colour. Keep the previous solid grey.
+$input-placeholder-color:     $gray-600;
+
+// Bootstrap 5.3 points this at --bs-border-color ($gray-200 here), which is
+// lighter than the grey the form controls were designed with.
+$input-border-color:          $gray-400;
+
+// Same for checkboxes and radios, which used a translucent black outline.
+$form-check-input-border:     1px solid rgba(0, 0, 0, .25);
+
+// Tables
+//
+// Bootstrap 5.3 fills table cells with the body background. Tables here sit on
+// top of decorative page images, so cells must stay transparent.
+$table-bg:                    transparent;
+
+// Bootstrap 5.3 doubled this factor, which lightens the borders of the table
+// colour variants (notably the dark tables used for dark mode).
+$table-border-factor:         .1;
+
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.

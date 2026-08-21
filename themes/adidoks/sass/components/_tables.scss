@@ -2,4 +2,12 @@ table {
   @extend .table;
 
   margin: 3rem 0;
+
+  // Bootstrap draws every row divider in the light border colour and offers a
+  // heavier divider between table groups only via the opt-in
+  // .table-group-divider class. Keep the darker divider below thead and above
+  // tfoot that this theme's tables are designed around.
+  > :not(:last-child) > :last-child > * {
+    border-bottom-color: currentcolor;
+  }
 }

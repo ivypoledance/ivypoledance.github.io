@@ -1,3 +1,24 @@
+/**
+ * Floating labels: Bootstrap dims the label at rest by baking
+ * $form-floating-label-opacity into its colour, and dims nothing extra once the
+ * label floats. This design expects the opposite: a full-contrast resting label
+ * that dims only while floated. Restore that split.
+ *
+ * These selectors mirror Bootstrap's own; they need revisiting if it reworks
+ * the floating-label markup again.
+ */
+.form-floating > label {
+  color: inherit;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-select ~ label,
+.form-floating > .form-control:-webkit-autofill ~ label {
+  opacity: $form-floating-label-opacity;
+}
+
 /** Search form */
 .search-form {
   @extend .form-inline !optional;
