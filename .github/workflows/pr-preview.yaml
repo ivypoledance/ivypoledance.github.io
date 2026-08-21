@@ -50,6 +50,12 @@ jobs:
     runs-on: ubuntu-latest
     # Forks cannot receive the deploy token.
     if: github.event.pull_request.head.repo.full_name == github.repository
+    # Records each preview as a deployment of the Staging environment. Every pull
+    # request shares this one environment, so its history shows the most recent
+    # preview as active and supersedes the previous one.
+    environment:
+      name: Staging
+      url: ${{ steps.names.outputs.url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
