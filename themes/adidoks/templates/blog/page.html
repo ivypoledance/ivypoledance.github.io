@@ -13,7 +13,7 @@
 {% endblock body %}
 
 {% block header %}
-  {{ macros_header::header(current_section=current_section)}}
+  {{<adidoks.header current_section={current_section} config={config} lang={lang} />}}
 {% endblock header %}
 
 {% block content %}
@@ -24,9 +24,9 @@
         <article>
           <div class="blog-header">
             <h1>{{ page.title }}</h1>
-            {{ macros_publish::page_publish_metadata(page=page) }}
+            {{<adidoks.page_publish_metadata page={page} config={config} />}}
           </div>
-          {% if page.extra.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
+          {% if page.extra?.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
           {{ page.content | safe }}
         </article>
       </div>

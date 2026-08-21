@@ -1,10 +1,10 @@
 {% extends "page.html" %}
 
 {% block seo %}
-  {% set author_name_in_url = term.permalink | trim_end_matches(pat="/") | split(pat="/") | last %}
+  {% set author_name_in_url = term.permalink | trim_end(pat="/") | split(pat="/") | last %}
   {% set section = get_section(path="authors/_index.md") %}
-  
-  {% if section.extra.author_pages[author_name_in_url] %}
+
+  {% if section.extra?.author_pages?[author_name_in_url] %}
     {% set_global author_page = get_page(path=section.extra.author_pages[author_name_in_url])%}
   {% endif %}
   {% if author_page and author_page.title %}
@@ -12,31 +12,32 @@
   {% else %}
     {% set_global title = term.name %}
   {% endif %}
-  
+
   {% set title_addition = "" %}
-    {% if config.extra.title_separator %}
+    {% if config.extra?.title_separator %}
       {% set title_separator = " " ~ config.extra.title_separator ~ " " %}
     {% else %}
       {% set title_separator = " | " %}
     {% endif %}
-  
+
   {% if config.title %}
     {% set title_addition = title_separator ~ config.title %}
   {% else %}
     {% set title_addition = "" %}
   {% endif %}
-  
+
   {% if author_page and author_page.description %}
     {% set description = author_page.description %}
   {% else %}
     {% set description = config.description %}
   {% endif %}
-  
-  {{ macros_head::seo(title=title, title_addition=title_addition, description=description) }}
+
+  {{<site.seo config={config} current_url={current_url} current_path={current_path}
+              title={title} title_addition={title_addition} description={description} />}}
 {% endblock seo %}
 
 {% block body %}
-  {% if page.extra.class %}
+  {% if page?.extra?.class %}
     {% set page_class = page.extra.class %}
   {% else %}
     {% set page_class = "contributors list" %}
@@ -56,8 +57,8 @@
 					    <div class="card">
 						    <div class="card-body">
 							    <h2 class="h3"><a class="stretched-link text-body" href="{{ page.permalink }}">{{ page.title }}</a></h2>
-								    {% if page.extra.lead %}<p>{{ page.extra.lead | safe }}</p>{% elif page.description %}<p>{{ page.description | safe }}</p>{% endif %}
-                    {{ macros_publish::page_publish_metadata(page=page) }}
+								    {% if page.extra?.lead %}<p>{{ page.extra.lead | safe }}</p>{% elif page.description %}<p>{{ page.description | safe }}</p>{% endif %}
+                    {{<adidoks.page_publish_metadata page={page} config={config} />}}
 					    	</div>
 					    </div>
 				    {% endfor %}
@@ -68,5 +69,3 @@
   </div>
 </div>
 {% endblock content %}
-
-

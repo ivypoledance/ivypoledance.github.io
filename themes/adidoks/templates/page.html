@@ -3,7 +3,11 @@
 {% extends "base.html" %}
 
 {% block seo %}
-  {{ super() }}
+  {% if config.extra?.title_separator %}
+    {% set title_separator = " " ~ config.extra.title_separator ~ " " %}
+  {% else %}
+    {% set title_separator = " | " %}
+  {% endif %}
   {% set title_addition = "" %}
   {% if page.title and config.title %}
     {% set title = page.title %}
@@ -13,25 +17,31 @@
   {% else %}
     {% set title = config.title %}
   {% endif %}
-  
+
   {% if page.description %}
     {% set description = page.description %}
   {% else %}
     {% set description = config.description %}
   {% endif %}
-  {% set created_time = page.date %}
-  {% set updated_time = page.updated %}
+  {# Tera v2 infers these component arguments as strings; unset dates are null,
+     which rendered as an empty string before. #}
+  {% set created_time = page.date or "" %}
+  {% set updated_time = page.updated or "" %}
   {% if current_section %}
     {% set page_section = current_section %}
   {% else %}
     {% set page_section = "" %}
   {% endif %}
-  
-  {{ macros_head::seo(title=title, title_addition=title_addition, description=description, type="article", is_page=true, created_time=created_time, updated_time=updated_time, page_section=page_section) }}
+
+  {{<site.seo config={config} current_url={current_url} current_path={current_path}
+              images={page.extra?.images or []}
+              title={title} title_addition={title_addition} description={description}
+              type="article" is_page={true} created_time={created_time}
+              updated_time={updated_time} page_section={page_section} />}}
 {% endblock seo %}
-  
+
 {% block body %}
-  {% if section.extra.class %}
+  {% if section?.extra?.class %}
     {% set page_class = page.extra.class %}
   {% else %}
     {% set page_class = "page single" %}
@@ -47,7 +57,7 @@
           <div class="page-header">
             <h1>{{ page.title }}</h1>
           </div>
-          {% if page.extra.lead %}<p class="lead">{{ page.extra.lead }}</p>{% endif %}
+          {% if page.extra?.lead %}<p class="lead">{{ page.extra.lead }}</p>{% endif %}
           {{ page.content | safe }}
         </article>
       </div>

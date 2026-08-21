@@ -1,14 +1,14 @@
-{% macro resource() %}
+{% component site.head_resource() %}
   <link rel="preload" as="font" href="{{ get_url(path="fonts/vendor/cambo/cambo-regular.woff2") | safe }}" type="font/woff2" crossorigin>
-{% endmacro %}
+{% endcomponent site.head_resource %}
 
 
-{% macro stylesheet() %}
+{% component site.head_stylesheet() %}
 <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
-{% endmacro %}
+{% endcomponent site.head_stylesheet %}
 
 
-{% macro favicons() %}
+{% component site.head_favicons() %}
   <meta name="theme-color" content="#ffffff">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path="apple-touch-icon.png") | safe }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path="favicon-32x32.png") | safe }}">
@@ -16,14 +16,19 @@
   <link rel="manifest" href="{{ get_url(path="site.webmanifest") | safe }}">
   <link rel="mask-icon" href="{{ get_url(path="safari-pinned-tab.svg") | safe }}" color="#597d61">
   <meta name="msapplication-TileColor" content="#91ac9a">
-{% endmacro %}
+{% endcomponent site.head_favicons %}
 
 
 {# type:          website or article, generally setting article for blog articles #}
 {# page_images:   using for the blog single template page #}
 {# page_section:  the blog single template page have to pass the parameter #}
 {# is_404:        using for the 404.html template #}
-{% macro seo(
+{# images:        og/twitter images of the current page or section #}
+{% component site.seo(
+  config,
+  current_url,
+  current_path,
+  images=[],
   title="",
   title_addition="",
   description="",
@@ -59,53 +64,45 @@
 <meta name="description" content="{{ description }}">
 <link rel="canonical" href="{{ page_url | safe }}">
 
-{% if config.extra.open.enable %}
+{% if config.extra?.open?.enable %}
   <meta name="twitter:card" content="summary_large_image">
-  {% if page.extra.images %}
-    {% for image in page.extra.images %}
+  {% if images %}
+    {% for image in images %}
       <meta property="twitter:image" content="{{ get_url(path=image) | safe }}">
     {% endfor %}
-  {% elif section.extra.images %}
-    {% for image in section.extra.images %}
-      <meta property="twitter:image" content="{{ get_url(path=image) | safe }}">
-    {% endfor %}
-  {% elif config.extra.open.image %}
+  {% elif config.extra?.open?.image %}
     <meta name="twitter:image" content="{{ config.base_url | safe }}/{{ config.extra.open.image }}">
   {% endif %}
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ description }}">
   <meta name="twitter:site" content="@{{ config.extra.open.twitter_site }}">
   <meta name="twitter:creator" content="@{{ config.extra.open.twitter_creator }}">
-  
+
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:type" content="{{ type }}">
   <meta property="og:url" content="{{ page_url | safe }}">
 
-  {% if page.extra.images %}
-    {% for image in page.extra.images %}
+  {% if images %}
+    {% for image in images %}
       <meta property="og:image" content="{{ get_url(path=image) | safe }}">
     {% endfor %}
-  {% elif section.extra.images %}
-    {% for image in section.extra.images %}
-      <meta property="og:image" content="{{ get_url(path=image) | safe }}">
-    {% endfor %}
-  {% elif config.extra.open.image %}
+  {% elif config.extra?.open?.image %}
     <meta property="og:image" content="{{ config.base_url | safe }}/{{ config.extra.open.image }}">
   {% endif %}
 
   <meta property="og:updated_time" content="{{ updated_time }}">
   <meta property="og:site_name" content="{{ title }}">
 
-  {% if config.extra.open.audio %}
+  {% if config.extra?.open?.audio %}
     <meta property="og:audio" content="{{ config.extra.open.audio }}">
   {% endif %}
 
-  {% if config.extra.open.locale %}
+  {% if config.extra?.open?.locale %}
     <meta property="og:locale" content="{{ config.extra.open.locale }}">
   {% endif %}
 
-  {% if config.extra.open.videos %}
+  {% if config.extra?.open?.videos %}
     {% for video in config.extra.open.videos %}
       <meta property="og:video" content="{{ get_url(path=video) }}">
     {% endfor %}
@@ -115,7 +112,7 @@
   <meta property="og:locale" content="{{ config.extra.open.og_locale }}">
 {% endif %}
 
-{% if is_home and config.extra.schema %}
+{% if is_home and config.extra?.schema %}
   {% if config.extra.schema.type == "Organization" %}
     <script type="application/ld+json">
     {
@@ -125,9 +122,9 @@
       "name": "{{ title }}",
       "logo": "{{ page_path | safe }}{{ config.extra.schema.logo }}",
       "sameAs": [
-        {% if config.extra.schema.twitter %}"{{ config.extra.schema.twitter | safe }}",{% endif %}
-        {% if config.extra.schema.linked_in %}"{{ config.extra.schema.linked_in | safe }}",{% endif %}
-        {% if config.extra.schema.github %}"{{ config.extra.schema.github | safe }}"{% endif %}
+        {% if config.extra.schema?.twitter %}"{{ config.extra.schema.twitter | safe }}",{% endif %}
+        {% if config.extra.schema?.linked_in %}"{{ config.extra.schema.linked_in | safe }}",{% endif %}
+        {% if config.extra.schema?.github %}"{{ config.extra.schema.github | safe }}"{% endif %}
       ]
     }
     </script>
@@ -140,14 +137,14 @@
       "url": "{{ page_path | safe }}",
       "name": "{{ title }}",
       "sameAs": [
-        {% if config.extra.schema.twitter %}"{{ config.extra.schema.twitter | safe }}",{% endif %}
-        {% if config.extra.schema.linked_in %}"{{ config.extra.schema.linked_in | safe }}",{% endif %}
-        {% if config.extra.schema.github %}"{{ config.extra.schema.github | safe }}"{% endif %}
+        {% if config.extra.schema?.twitter %}"{{ config.extra.schema.twitter | safe }}",{% endif %}
+        {% if config.extra.schema?.linked_in %}"{{ config.extra.schema.linked_in | safe }}",{% endif %}
+        {% if config.extra.schema?.github %}"{{ config.extra.schema.github | safe }}"{% endif %}
       ]
     }
     </script>
   {% endif %}
-  {% if config.extra.schema.site_links_search_box %}
+  {% if config.extra.schema?.site_links_search_box %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -163,7 +160,7 @@
   {% endif %}
 {% endif %}
 
-{% if is_page and config.extra.schema.section %}
+{% if is_page and config.extra?.schema?.section %}
   {% if config.extra.schema.section == page_section %}
     <script type="application/ld+json">
     {
@@ -212,7 +209,7 @@
       "item": "{{ url_item | safe }}"
     },
     {% else %}
-      {% set paths = page_path | trim_start_matches(pat="/") | trim_end_matches(pat="/") | split(pat="/") %}
+      {% set paths = page_path | trim_start(pat="/") | trim_end(pat="/") | split(pat="/") %}
       {% for val in paths %}
         {% set name_array = val | split(pat="-") %}
         {% set_global str = "" %}
@@ -220,7 +217,7 @@
         {% set cap_val = val | capitalize %}
         {% set_global str = str ~ cap_val ~ " " %}
         {% endfor %}
-        {% set name = str | trim_end_matches(pat=" ") | title %}
+        {% set name = str | trim_end(pat=" ") | title %}
         {% if not index %}
           {
             "@type": "ListItem",
@@ -251,7 +248,7 @@
   }
 </script>
 
-{% if config.extra.ganalytics %}
+{% if config.extra?.ganalytics %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{config.extra.ganalytics}}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -260,4 +257,4 @@
   gtag('config', '{{config.extra.ganalytics}}');
 </script>
 {% endif %}
-{% endmacro %}
+{% endcomponent site.seo %}

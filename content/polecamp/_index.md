@@ -6,7 +6,7 @@ title = "Up next: Ivy Polecamp 2026"
 
 4. bis 7. Juni 2026
 
-{{ image(img="/img/polecamp/2026shoot.jpg", max=600) }}
+{{ <image img="/img/polecamp/2026shoot.jpg" max={600} /> }}
 
 <br />
 <a href="https://ivypoledance.at/courses/courses-and-booking/polecamp/">Programm und weitere Infos</a>
@@ -24,33 +24,33 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 <br />
 
 <br />
-{{ image(img="/img/polecamp/polecamp.jpg", max=400) }}
+{{ <image img="/img/polecamp/polecamp.jpg" max={400} /> }}
 
 ## Polecamp 2026
 
-{{ image(img="/img/polecamp/POLECAMP2026_INSTAGRAM.jpg", max=400) }}
+{{ <image img="/img/polecamp/POLECAMP2026_INSTAGRAM.jpg" max={400} /> }}
 
 
 ## Ivy Aerial Lab 2025: Spiral Edition (Wien)
 
-{{ image(img="/img/polecamp/spiralbanner.jpg", max=400) }}
+{{ <image img="/img/polecamp/spiralbanner.jpg" max={400} /> }}
 
 ## Polecamp 2025
 
-{{ image(img="/img/polecamp/polecamp2025.jpg", max=400) }}
+{{ <image img="/img/polecamp/polecamp2025.jpg" max={400} /> }}
 
 ## Polecamp 2024
 
-{{ image(img="/img/polecamp/polecamp2024.jpg", max=400) }}
+{{ <image img="/img/polecamp/polecamp2024.jpg" max={400} /> }}
 
 ## Polecamp 2023
 
-{{ image(img="/img/polecamp/polecamp2023.jpg", max=400) }}
+{{ <image img="/img/polecamp/polecamp2023.jpg" max={400} /> }}
 
 ## Polecamp 2022
 
-{{ image(img="/img/polecamp/polecamp2022.jpg", max=400) }}
+{{ <image img="/img/polecamp/polecamp2022.jpg" max={400} /> }}
 
 ## Polecamp 2021
 
-{{ image(img="/img/polecamp/polecamp2021.jpg", max=400) }}
+{{ <image img="/img/polecamp/polecamp2021.jpg" max={400} /> }}

@@ -2,7 +2,7 @@
 
 {% block seo %}
   {% set title_addition = "" %}
-  {% if config.extra.title_separator %}
+  {% if config.extra?.title_separator %}
     {% set title_separator = " " ~ config.extra.title_separator ~ " " %}
   {% else %}
     {% set title_separator = " | " %}
@@ -17,18 +17,20 @@
   {% else %}
     {% set title = config.title %}
   {% endif %}
-  
-  {% if page.description %}
+
+  {% if page?.description %}
     {% set description = section.description %}
   {% else %}
     {% set description = config.description %}
   {% endif %}
-  
-  {{ macros_head::seo(title=title, title_addition=title_addition, description=description) }}
+
+  {{<site.seo config={config} current_url={current_url} current_path={current_path}
+              images={section.extra?.images or []}
+              title={title} title_addition={title_addition} description={description} />}}
 {% endblock seo %}
 
 {% block body %}
-  {% if section.extra.class %}
+  {% if section.extra?.class %}
     {% set page_class = section.extra.class %}
   {% else %}
     {% set page_class = "contributors list" %}
@@ -58,5 +60,3 @@
   </div>
 </div>
 {% endblock content %}
-
-

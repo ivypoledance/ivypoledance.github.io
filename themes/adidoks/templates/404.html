@@ -1,18 +1,23 @@
 {% extends "base.html" %}
 
 {% block seo %}
-  {{ super() }} 
+  {% if config.extra?.title_separator %}
+    {% set title_separator = " " ~ config.extra.title_separator ~ " " %}
+  {% else %}
+    {% set title_separator = " | " %}
+  {% endif %}
   {% set title = "404 Page not found" %}
-  
+
   {% if config.title %}
     {% set title_addition = title_separator ~ config.title %}
   {% else %}
     {% set title_addition = "" %}
   {% endif %}
-  
+
   {% set description = config.description %}
-  
-  {{ macros_head::seo(title=title, title_addition=title_addition, description=description, is_404=true) }}
+
+  {{<site.seo config={config} current_url={current_url} current_path={current_path}
+              title={title} title_addition={title_addition} description={description} is_404={true} />}}
 {% endblock seo %}
 
 {% block content %}

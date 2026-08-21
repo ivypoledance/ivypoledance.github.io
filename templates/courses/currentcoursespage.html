@@ -7,18 +7,19 @@
 {% block header %}
   {# This value is matched by the config.extra.menu.main~url #}
   {% set current_section = "courses" %}
-  {{ macros_header::header(current_section=current_section)}}
+  {{<adidoks.header current_section={current_section} config={config} lang={lang} />}}
 {% endblock header %}
 
 {% block content %}
+{% set current_section = "courses" %}
 <div class="wrap container" role="document">
   <div class="content">
     <div class="row flex-xl-nowrap">
-	  {{ macros_sidebar::docs_sidebar(current_section=current_section) }}
-	  {{ macros_toc::docs_toc(page=page) }}
+	  {{<site.docs_sidebar current_section={current_section} current_url={current_url} />}}
+	  {{<adidoks.docs_toc page={page} />}}
       <main class="docs-content col-lg-11 col-xl-9">
         <h1>{{ page.title }}</h1>
-        {% if page.extra.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
+        {% if page.extra?.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
         <h2 id="aktuelle-kurse">Aktuelle Kurse</h2>
         {% set data = load_data(path="coursedates.csv") -%}
         {% set records = data["records"] | sort(attribute="3") %}
@@ -29,7 +30,7 @@
 		<br />
 		Du kannst mir aber gerne eine <a href="/courses/courses-and-booking/booking/#kursanfrage">Kursanfrage</a> schicken, bzw. dich schon jetzt für die Zeit danach für eine Privatstunde voranmelden</p>
         {% else %}
-        {% set showPrice = records | map(attribute="2") | join(sep="") | length > 0 %}
+        {% set showPrice = [r[2] for r in records] | join(sep="") | length > 0 %}
         <p>
           !!! SOMMERPAUSE 2026:  1. Juli bis  23. August !!!
 			 <br />
@@ -63,9 +64,9 @@
                   </td>
                   {% endif %}
                   <td>
-                    {{ record[3] | date(format="%a. %d.%m.%Y, %H:%M", locale="de_DE") }}{% if record[4] | length > 0 %}-{{ record[4] | date(format="%H:%M") }}{% endif %}
+                    {{<de_datetime value={record[3]} />}}{% if record[4] | length > 0 %}-{{ record[4] | date(format="%H:%M") }}{% endif %}
                     {% if record[5] | length > 0 %} - <br/>
-                    {{ record[5] | date(format="%a. %d.%m.%Y, %H:%M", locale="de_DE") }}{% if record[6] | length > 0 %}-{{ record[6] | date(format="%H:%M") }}{% endif %}
+                    {{<de_datetime value={record[5]} />}}{% if record[6] | length > 0 %}-{{ record[6] | date(format="%H:%M") }}{% endif %}
                     {% endif %}
                   </td>
               </tr>
@@ -74,10 +75,10 @@
         </table>
         {% endif %}
         {{ page.content | safe }}
-        {% if config.extra.edit_page %}
-          {{ macros_edit_page::docs_edit_page(current_path=current_path) }}
+        {% if config.extra?.edit_page %}
+          {{<adidoks.docs_edit_page config={config} current_path={current_path} />}}
         {% endif %}
-        {{ macros_navigation::docs_navigation(page=page, current_section=current_section) }}
+        {{<site.docs_navigation page={page} current_section={current_section} />}}
       </main>
     </div>
   </div>

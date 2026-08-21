@@ -13,10 +13,12 @@ taxonomies = [
 ]
 
 [markdown]
-highlight_code = false
 external_links_target_blank = true
 external_links_no_follow = true
 external_links_no_referrer = true
+# Zola defaults this to true; kept off so external links stay
+# rel="noopener nofollow noreferrer".
+external_links_external = false
 
 [link_checker]
 internal_level = "error"

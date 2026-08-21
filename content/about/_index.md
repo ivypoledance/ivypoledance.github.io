@@ -76,7 +76,7 @@ Emma Insley Cabaret (Irish Aerial Dance Fest) 2026 (An Grianán Theatre, Letterk
 Cirque Rouge / Oh Lala Shows 2026-- (Mirage, Wien)
 
 <br/>
- {{ image(img="/img/performance/acrovision.png", max=500) }}
+ {{ <image img="/img/performance/acrovision.png" max={500} /> }}
 
 
 © Photography Cloud
