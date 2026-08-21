@@ -180,6 +180,25 @@ jobs:
             exit 1
           fi
 
+      - name: Wait until the preview answers
+        env:
+          PREVIEW_URL: ${{ steps.names.outputs.url }}
+        run: |
+          # A newly attached hostname needs a certificate issued and routed
+          # before it serves anything; until then it fails outright or returns
+          # 5xx. Waiting here means the link is live by the time it is posted.
+          for i in $(seq 1 50); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 10 "${PREVIEW_URL}/" 2>/dev/null || true)
+            if [ "$code" = "200" ]; then
+              echo "preview live after ~$((i * 6))s"
+              exit 0
+            fi
+            printf 'waiting (%s) ... %ss\n' "${code:-000}" "$((i * 6))"
+            sleep 6
+          done
+          echo "::error::preview did not become reachable at ${PREVIEW_URL}"
+          exit 1
+
       - name: Comment the preview URL
         uses: actions/github-script@v9
         env:
