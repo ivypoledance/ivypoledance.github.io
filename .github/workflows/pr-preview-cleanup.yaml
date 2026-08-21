@@ -1,9 +1,15 @@
 # Tears down the staging environment created by pr-preview.yaml once the pull
 # request closes or merges: detaches the custom domain, deletes the DNS record
-# and deletes that branch's deployments.
+# and removes the site content.
 #
 # Cloudflare does not expire previews on its own, so this is what keeps the
 # project under its custom-domain limit (100 on the free plan).
+#
+# Cloudflare refuses to delete the newest deployment of a branch, so simply
+# deleting deployments would leave the whole site served from
+# pr-<number>.<project>.pages.dev forever. A placeholder is therefore published
+# first and becomes that undeletable newest deployment, after which every real
+# deployment for the branch is removed.
 
 name: Remove PR preview
 
@@ -33,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.head.repo.full_name == github.repository
     steps:
-      - name: Remove subdomain, DNS record and deployments
+      - name: Detach the subdomain and delete its DNS record
         env:
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -58,9 +64,39 @@ jobs:
             fi
           fi
 
-          # Delete this branch's deployments. Cloudflare refuses to delete the
-          # newest deployment of a branch, so one may remain; it is unreachable
-          # once the domain and DNS record are gone.
+      - name: Replace the preview content with a placeholder
+        run: |
+          mkdir -p placeholder
+          cat > placeholder/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
+          <title>Preview removed</title></head>
+          <body><p>This staging preview was removed when its pull request closed.</p></body>
+          </html>
+          HTML
+          printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > placeholder/_headers
+
+      - name: Publish the placeholder
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: >-
+            pages deploy placeholder
+            --project-name=${{ env.CF_PROJECT }}
+            --branch=pr-${{ github.event.number }}
+
+      - name: Delete the real deployments
+        env:
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          BRANCH: pr-${{ github.event.number }}
+        run: |
+          api() { curl -sS -H "Authorization: Bearer $CF_API_TOKEN" -H 'Content-Type: application/json' "$@"; }
+
+          # Everything except the placeholder, which is now the newest and
+          # cannot be deleted.
           deleted=0
           for _ in 1 2 3 4 5 6 7 8 9 10; do
             ids=$(api "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/${CF_PROJECT}/deployments?per_page=25" \
