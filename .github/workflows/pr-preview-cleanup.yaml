@@ -1,15 +1,13 @@
 # Tears down the staging environment created by pr-preview.yaml once the pull
 # request closes or merges: detaches the custom domain, deletes the DNS record
-# and removes the site content.
+# and force-deletes the branch's deployments.
 #
 # Cloudflare does not expire previews on its own, so this is what keeps the
-# project under its custom-domain limit (100 on the free plan).
+# project tidy and under its custom-domain limit (100 on the free plan).
 #
-# Cloudflare refuses to delete the newest deployment of a branch, so simply
-# deleting deployments would leave the whole site served from
-# pr-<number>.<project>.pages.dev forever. A placeholder is therefore published
-# first and becomes that undeletable newest deployment, after which every real
-# deployment for the branch is removed.
+# Deleting a deployment that still holds a branch alias needs force=true;
+# without it Cloudflare keeps the newest deployment per branch and the whole
+# site would stay served from pr-<number>.<project>.pages.dev.
 
 name: Remove PR preview
 
@@ -40,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.head.repo.full_name == github.repository
     steps:
-      - name: Detach the subdomain and delete its DNS record
+      - name: Remove the subdomain, DNS record and deployments
         env:
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -48,12 +46,11 @@ jobs:
         run: |
           api() { curl -sS -H "Authorization: Bearer $CF_API_TOKEN" -H 'Content-Type: application/json' "$@"; }
           hostname="${BRANCH}.${STAGING_SUFFIX}"
+          projects="https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects"
 
           # Detach the custom domain first, so the hostname stops resolving even
           # if a later step fails.
-          api -X DELETE \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/${CF_PROJECT}/domains/${hostname}" \
-            >/dev/null || true
+          api -X DELETE "${projects}/${CF_PROJECT}/domains/${hostname}" >/dev/null || true
           echo "custom domain detached: ${hostname}"
 
           zone_id=$(api "https://api.cloudflare.com/client/v4/zones?name=${STAGING_ZONE}" | jq -r '.result[0].id // empty')
@@ -65,57 +62,29 @@ jobs:
             fi
           fi
 
-      - name: Replace the preview content with a placeholder
-        run: |
-          mkdir -p placeholder
-          cat > placeholder/index.html <<'HTML'
-          <!doctype html>
-          <html lang="en">
-          <head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
-          <title>Preview removed</title></head>
-          <body><p>This staging preview was removed when its pull request closed.</p></body>
-          </html>
-          HTML
-          printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > placeholder/_headers
-
-      - name: Publish the placeholder
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: >-
-            pages deploy placeholder
-            --project-name=${{ env.CF_PROJECT }}
-            --branch=pr-${{ github.event.number }}
-
-      - name: Delete the real deployments
-        env:
-          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          BRANCH: pr-${{ github.event.number }}
-        run: |
-          api() { curl -sS -H "Authorization: Bearer $CF_API_TOKEN" -H 'Content-Type: application/json' "$@"; }
-
-          # Everything except the placeholder, which is now the newest and
-          # cannot be deleted.
+          # force=true also removes the newest deployment, which still carries
+          # the branch alias.
           deleted=0
+          remaining=0
           for _ in 1 2 3 4 5 6 7 8 9 10; do
-            ids=$(api "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/${CF_PROJECT}/deployments?per_page=25" \
+            ids=$(api "${projects}/${CF_PROJECT}/deployments?per_page=50" \
               | jq -r --arg b "$BRANCH" '.result[]? | select(.deployment_trigger.metadata.branch == $b) | .id')
             [ -z "$ids" ] && break
             progressed=0
             for id in $ids; do
-              if api -X DELETE "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/${CF_PROJECT}/deployments/${id}" \
-                   | jq -e '.success' >/dev/null 2>&1; then
+              if api -X DELETE "${projects}/${CF_PROJECT}/deployments/${id}?force=true" | jq -e '.success' >/dev/null 2>&1; then
                 deleted=$((deleted + 1))
                 progressed=1
+              else
+                remaining=$((remaining + 1))
               fi
             done
-            # Only the undeletable newest deployment is left.
             [ "$progressed" -eq 0 ] && break
           done
           echo "deployments deleted: ${deleted}"
-          echo "teardown complete for ${BRANCH}"
+          if [ "$remaining" -gt 0 ]; then
+            echo "::warning::${remaining} deployment(s) for ${BRANCH} could not be deleted"
+          fi
 
       - name: Mark the Staging deployment inactive
         uses: actions/github-script@v9
