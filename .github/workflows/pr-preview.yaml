@@ -184,17 +184,12 @@ jobs:
         uses: actions/github-script@v9
         env:
           PREVIEW_URL: ${{ steps.names.outputs.url }}
-          ZOLA: ${{ env.ZOLA_VERSION }}
         with:
           script: |
+            // The marker is how the step finds its own comment to update
+            // instead of posting a new one on every push.
             const marker = '<!-- pr-preview -->';
-            const body = [
-              marker,
-              `Staging preview: ${process.env.PREVIEW_URL}`,
-              '',
-              `Built with Zola ${process.env.ZOLA} from ${context.sha.slice(0, 7)}.`,
-              'Removed automatically when this pull request closes.',
-            ].join('\n');
+            const body = `${marker}\nStaging preview: ${process.env.PREVIEW_URL}`;
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
