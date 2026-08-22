@@ -1,0 +1,27 @@
+name = "ivypoledance-booking"
+main = "src/index.js"
+compatibility_date = "2026-08-22"
+
+# Created with a European location hint so booking data stays in the EU:
+#   wrangler d1 create ivypoledance-booking --location weur
+# Then paste the returned id here.
+[[d1_databases]]
+binding = "DB"
+database_name = "ivypoledance-booking"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[vars]
+SITE_URL = "https://ivypoledance.at"
+# The booking form is served from the site, so only that origin may post.
+ALLOWED_ORIGIN = "https://ivypoledance.at"
+FROM_EMAIL = "buchung@ivypoledance.at"
+FROM_NAME = "Ivy Poledance"
+# "mailjet" or "brevo"; both are French with free tiers above this site's volume.
+MAIL_PROVIDER = "mailjet"
+OWNER_EMAIL = "REPLACE_WITH_YOUR_INBOX"
+
+# Secrets, set with `wrangler secret put <NAME>` rather than committed:
+#   ADMIN_TOKEN       shared with CI so it may sync events
+#   MAIL_API_KEY      mail provider key
+#   MAIL_API_SECRET   Mailjet only; Brevo uses the key alone
+#   TURNSTILE_SECRET  optional; when unset the challenge is skipped
