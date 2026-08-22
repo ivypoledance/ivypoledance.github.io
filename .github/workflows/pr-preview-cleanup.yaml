@@ -62,29 +62,29 @@ jobs:
             fi
           fi
 
-          # force=true also removes the newest deployment, which still carries
-          # the branch alias.
+          # force=true is what allows removing the newest deployment, which still
+          # carries the branch alias.
           deleted=0
-          remaining=0
-          for _ in 1 2 3 4 5 6 7 8 9 10; do
-            ids=$(api "${projects}/${CF_PROJECT}/deployments?per_page=50" \
-              | jq -r --arg b "$BRANCH" '.result[]? | select(.deployment_trigger.metadata.branch == $b) | .id')
-            [ -z "$ids" ] && break
-            progressed=0
-            for id in $ids; do
-              if api -X DELETE "${projects}/${CF_PROJECT}/deployments/${id}?force=true" | jq -e '.success' >/dev/null 2>&1; then
+          for page in 1 2 3 4 5; do
+            resp=$(api "${projects}/${CF_PROJECT}/deployments?per_page=100&page=${page}")
+            if [ "$(echo "$resp" | jq -r '.success')" != "true" ]; then
+              echo "::error::could not list deployments: $(echo "$resp" | jq -c '.errors')"
+              exit 1
+            fi
+            count=$(echo "$resp" | jq '[.result[]?] | length')
+            [ "$count" -eq 0 ] && break
+            echo "page ${page}: ${count} deployment(s); branches: $(echo "$resp" | jq -r '[.result[]?.deployment_trigger.metadata.branch // "?"] | unique | join(", ")')"
+
+            for id in $(echo "$resp" | jq -r --arg b "$BRANCH" '.result[]? | select(.deployment_trigger.metadata.branch == $b) | .id'); do
+              out=$(api -X DELETE "${projects}/${CF_PROJECT}/deployments/${id}?force=true")
+              if [ "$(echo "$out" | jq -r '.success')" = "true" ]; then
                 deleted=$((deleted + 1))
-                progressed=1
               else
-                remaining=$((remaining + 1))
+                echo "::warning::could not delete ${id}: $(echo "$out" | jq -c '.errors')"
               fi
             done
-            [ "$progressed" -eq 0 ] && break
           done
           echo "deployments deleted: ${deleted}"
-          if [ "$remaining" -gt 0 ]; then
-            echo "::warning::${remaining} deployment(s) for ${BRANCH} could not be deleted"
-          fi
 
       - name: Mark the Staging deployment inactive
         uses: actions/github-script@v9
