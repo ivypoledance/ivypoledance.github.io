@@ -9,18 +9,51 @@ if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') 
     document.body.classList.add('dark');
 }
 
-function closeModal(modal) {
-    modal.parentElement.remove();
+function closeModal(element) {
+    element.closest('.imageModal').remove();
     return false;
 }
 
-function openModal(imageLink) {
-    document.body.innerHTML = document.body.innerHTML + "" +
-        '<div class="imageModal">' +
-        '   <span onclick="closeModal(this)">&times;</span>' +
-        '   <img src="' + imageLink.href + '" />' +
-        '</div>'
-    event.preventDefault();
+// Appended as a node. Rebuilding document.body.innerHTML would discard every
+// listener registered above, leaving the dark mode button dead, and would
+// reload each embedded iframe on the page.
+function openModal(imageLink, event) {
+    if (event) {
+        event.preventDefault();
+    }
+
+    const modal = document.createElement('div');
+    modal.className = 'imageModal';
+
+    const close = document.createElement('span');
+    close.textContent = '×';
+    close.setAttribute('role', 'button');
+    close.setAttribute('aria-label', 'Schließen');
+
+    const image = document.createElement('img');
+    image.src = imageLink.href;
+    image.alt = imageLink.querySelector('img')?.alt ?? '';
+
+    modal.append(close, image);
+
+    const dismiss = () => {
+        document.removeEventListener('keydown', onKeydown);
+        modal.remove();
+    };
+    const onKeydown = (keyEvent) => {
+        if (keyEvent.key === 'Escape') {
+            dismiss();
+        }
+    };
+
+    // The cross, the backdrop and Escape all close it.
+    modal.addEventListener('click', (clickEvent) => {
+        if (clickEvent.target === modal || clickEvent.target === close) {
+            dismiss();
+        }
+    });
+    document.addEventListener('keydown', onKeydown);
+
+    document.body.append(modal);
     return false;
 }
-
