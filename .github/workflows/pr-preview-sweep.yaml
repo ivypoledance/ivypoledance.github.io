@@ -1,0 +1,92 @@
+# Safety net for pr-preview-cleanup.yaml: removes any preview whose pull
+# request is no longer open. Useful for clearing previews left behind by a
+# teardown that failed, and runnable by hand at any time.
+
+name: Sweep stale previews
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly, so a failed teardown cannot accumulate indefinitely.
+    - cron: "17 4 * * 0"
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: "pr-preview-sweep"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  CF_PROJECT: "ivypoledance-staging"
+  STAGING_ZONE: "ivypoledance.at"
+  STAGING_SUFFIX: "staging.ivypoledance.at"
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove previews for pull requests that are no longer open
+        env:
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          api() { curl -sS -H "Authorization: Bearer $CF_API_TOKEN" -H 'Content-Type: application/json' "$@"; }
+          projects="https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects"
+
+          zone_id=$(api "https://api.cloudflare.com/client/v4/zones?name=${STAGING_ZONE}" | jq -r '.result[0].id // empty')
+
+          # per_page must stay at 25; larger values are rejected (error 8000024).
+          resp=$(api "${projects}/${CF_PROJECT}/deployments?per_page=25")
+          if [ "$(echo "$resp" | jq -r '.success')" != "true" ]; then
+            echo "::error::could not list deployments: $(echo "$resp" | jq -c '.errors')"
+            exit 1
+          fi
+
+          branches=$(echo "$resp" | jq -r '[.result[]?.deployment_trigger.metadata.branch // empty] | unique | .[]' | grep -E '^pr-[0-9]+$' || true)
+          if [ -z "$branches" ]; then
+            echo "no pr-* previews found"
+            exit 0
+          fi
+          echo "previews present: $(echo "$branches" | tr '\n' ' ')"
+
+          for branch in $branches; do
+            num=${branch#pr-}
+            state=$(gh api "repos/${REPO}/pulls/${num}" --jq '.state' 2>/dev/null || echo "missing")
+            if [ "$state" = "open" ]; then
+              echo "${branch}: pull request open, keeping"
+              continue
+            fi
+            echo "${branch}: pull request ${state}, removing"
+
+            hostname="${branch}.${STAGING_SUFFIX}"
+            api -X DELETE "${projects}/${CF_PROJECT}/domains/${hostname}" >/dev/null || true
+
+            if [ -n "$zone_id" ]; then
+              rec=$(api "https://api.cloudflare.com/client/v4/zones/${zone_id}/dns_records?name=${hostname}" | jq -r '.result[0].id // empty')
+              [ -n "$rec" ] && api -X DELETE "https://api.cloudflare.com/client/v4/zones/${zone_id}/dns_records/${rec}" >/dev/null || true
+            fi
+
+            for _ in $(seq 1 20); do
+              ids=$(api "${projects}/${CF_PROJECT}/deployments?per_page=25" \
+                | jq -r --arg b "$branch" '.result[]? | select(.deployment_trigger.metadata.branch == $b) | .id')
+              [ -z "$ids" ] && break
+              progressed=0
+              for id in $ids; do
+                if api -X DELETE "${projects}/${CF_PROJECT}/deployments/${id}?force=true" | jq -e '.success' >/dev/null 2>&1; then
+                  progressed=1
+                else
+                  echo "::warning::could not delete ${id} (${branch})"
+                fi
+              done
+              [ "$progressed" -eq 0 ] && break
+            done
+            echo "${branch}: removed"
+          done
