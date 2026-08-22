@@ -1,0 +1,72 @@
+# Keeps the booking store in step with coursedates.csv, which stays the source
+# of truth for course dates.
+#
+# On a pull request the dates are only validated, so a malformed row or a
+# missing capacity is caught before it reaches main. On a push to main they are
+# sent to the booking API.
+#
+# Until BOOKING_API is set the sync step reports and stops rather than failing,
+# so this can be merged before the Worker is deployed.
+
+name: Sync course dates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "coursedates.csv"
+      - "content/**"
+      - "booking/**"
+      - ".github/workflows/booking-sync.yaml"
+  pull_request:
+    paths:
+      - "coursedates.csv"
+      - "content/**"
+      - "booking/**"
+      - ".github/workflows/booking-sync.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "booking-sync"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  check:
+    name: Validate course dates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Run the booking tests
+        working-directory: booking
+        run: node --test test/booking.test.mjs test/api.test.mjs test/sync.test.mjs
+
+      - name: Validate coursedates.csv
+        run: node booking/sync-events.mjs --dry-run
+
+  sync:
+    name: Sync to the booking API
+    needs: check
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Sync
+        env:
+          BOOKING_API: ${{ secrets.BOOKING_API }}
+          BOOKING_ADMIN_TOKEN: ${{ secrets.BOOKING_ADMIN_TOKEN }}
+        run: |
+          if [ -z "${BOOKING_API}" ] || [ -z "${BOOKING_ADMIN_TOKEN}" ]; then
+            echo "::notice::BOOKING_API/BOOKING_ADMIN_TOKEN not set; skipping sync."
+            echo "Set both repository secrets once the booking Worker is deployed."
+            exit 0
+          fi
+          node booking/sync-events.mjs
