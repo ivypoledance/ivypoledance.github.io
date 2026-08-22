@@ -52,6 +52,11 @@ SELECT ?1, ?2, ?3, ?4,
 WHERE EXISTS (SELECT 1 FROM events WHERE id = ?2)
 RETURNING status`;
 
+// Backstop against a flood: counts recent bookings without storing anything
+// extra, so no IP address has to be kept to rate limit.
+export const RECENT_BOOKING_COUNT = `
+SELECT COUNT(*) AS n FROM bookings WHERE created_at > ?1`;
+
 // Position among people currently waiting, oldest first.
 export const WAITLIST_POSITION = `
 SELECT COUNT(*) AS position

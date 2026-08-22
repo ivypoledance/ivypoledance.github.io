@@ -19,9 +19,15 @@ FROM_NAME = "Ivy Poledance"
 # "mailjet" or "brevo"; both are French with free tiers above this site's volume.
 MAIL_PROVIDER = "mailjet"
 OWNER_EMAIL = "REPLACE_WITH_YOUR_INBOX"
+# Backstop behind Turnstile, mainly to protect the mail quota. 0 disables it.
+RATE_LIMIT_PER_MINUTE = "10"
 
 # Secrets, set with `wrangler secret put <NAME>` rather than committed:
 #   ADMIN_TOKEN       shared with CI so it may sync events
 #   MAIL_API_KEY      mail provider key
 #   MAIL_API_SECRET   Mailjet only; Brevo uses the key alone
-#   TURNSTILE_SECRET  optional; when unset the challenge is skipped
+#   TURNSTILE_SECRET  required in production; without it bookings are refused
+#
+# Local development sets ALLOW_UNVERIFIED_BOOKINGS = "true" in .dev.vars to skip
+# the challenge. It is deliberately not set here: a deployment missing
+# TURNSTILE_SECRET refuses bookings rather than accepting unverified ones.
