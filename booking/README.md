@@ -26,6 +26,63 @@ docker run --rm -v "$PWD:/app:ro" -w /app node:24-alpine \
   node --test test/booking.test.mjs test/api.test.mjs
 ```
 
+## Try it before it goes live
+
+The site still uses the `mailto:` links, so nothing here is reachable by
+visitors until the booking form replaces them. Both routes below are safe to
+run against the real dates.
+
+### Locally, without a Cloudflare account
+
+```sh
+cd booking
+npx wrangler d1 execute ivypoledance-booking --local --file schema.sql
+npx wrangler dev                      # serves http://localhost:8787
+```
+
+In a second shell, push the real dates in and book a place:
+
+```sh
+cd ..                                 # repository root
+node booking/sync-events.mjs --dry-run     # check what the CSV produces
+
+BOOKING_API=http://localhost:8787 \
+BOOKING_ADMIN_TOKEN=local-dev \
+  node booking/sync-events.mjs
+
+# The id comes from the dry run above.
+EVENT='courses-technic-cirque-chair.md@2026-08-27t17:00:00'
+
+curl -s "http://localhost:8787/api/events/$(printf %s "$EVENT" | jq -sRr @uri)" | jq
+
+curl -s http://localhost:8787/api/bookings -H 'content-type: application/json' \
+  -d "{\"event_id\":\"$EVENT\",\"name\":\"Test Person\",
+       \"email\":\"test@example.at\",\"accept_terms\":true}" | jq
+```
+
+Expect `"status":"confirmed"` and the free count dropping. Book past the
+capacity and it becomes `"status":"waitlist"` with a position. Locally
+`email_sent` is `false` because no mail key is set — set `ADMIN_TOKEN=local-dev`
+and the mail variables in `.dev.vars` if you want to test real sends.
+
+### Against the deployed Worker
+
+Same calls with `BOOKING_API` and the URL pointing at the deployed Worker, and
+the real `ADMIN_TOKEN`. Worth checking:
+
+- the confirmation email arrives, and reads correctly in German
+- it comes **from** `buchung@ivypoledance.at` and is not treated as spam
+- you receive the owner notification
+- filling a date puts the next person on the waitlist with the right position
+- booking the same address twice is refused with `409 already_booked`
+
+Reset between attempts:
+
+```sh
+npx wrangler d1 execute ivypoledance-booking --remote \
+  --command "DELETE FROM bookings"
+```
+
 ## Setup
 
 Steps only the account owner can do.
