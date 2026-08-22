@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS events (
   ends_at           TEXT,
   second_starts_at  TEXT,
   second_ends_at    TEXT,
-  capacity          INTEGER NOT NULL CHECK (capacity > 0),
+  -- NULL means unlimited places: a blank capacity in the CSV never fills up.
+  capacity          INTEGER CHECK (capacity IS NULL OR capacity > 0),
   updated_at        TEXT NOT NULL
 );
 

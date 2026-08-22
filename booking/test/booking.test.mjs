@@ -147,9 +147,37 @@ test('events dropped from the CSV are removed with their bookings', () => {
   assert.equal(db.prepare('SELECT COUNT(*) AS n FROM bookings').get().n, 0);
 });
 
-test('capacity must be positive', () => {
+test('capacity must be positive when set', () => {
   const db = freshDb();
   assert.throws(() => addEvent(db, { capacity: 0 }), /constraint/i);
+  assert.throws(() => addEvent(db, { capacity: -1 }), /constraint/i);
+});
+
+test('a null capacity confirms everyone, however many book', () => {
+  const db = freshDb();
+  addEvent(db, { capacity: null });
+
+  const statuses = ['a@x.at', 'b@x.at', 'c@x.at', 'd@x.at', 'e@x.at', 'f@x.at']
+    .map((email) => book(db, { email }).status);
+
+  assert.deepEqual(statuses, Array(6).fill('confirmed'));
+  const counts = db.prepare(EVENT_WITH_COUNTS).get('ev1');
+  assert.equal(counts.confirmed, 6);
+  assert.equal(counts.waitlist, 0);
+  assert.equal(counts.capacity, null);
+});
+
+test('setting a capacity below the bookings already taken waitlists only new ones', () => {
+  const db = freshDb();
+  addEvent(db, { capacity: null });
+  book(db, { email: 'a@x.at' });
+  book(db, { email: 'b@x.at' });
+  book(db, { email: 'c@x.at' });
+
+  // A limit added later does not cancel anyone, but stops further places.
+  addEvent(db, { capacity: 2 });
+  assert.equal(db.prepare(EVENT_WITH_COUNTS).get('ev1').confirmed, 3);
+  assert.equal(book(db, { email: 'd@x.at' }).status, 'waitlist');
 });
 
 test('input validation', () => {
