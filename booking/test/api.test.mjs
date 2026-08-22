@@ -36,7 +36,7 @@ class D1 {
   }
 }
 
-function setup({ mailOk = true, turnstileSecret = null } = {}) {
+function setup({ mailOk = true, turnstileSecret = null, overrides = {}, unset = [] } = {}) {
   const db = new DatabaseSync(':memory:');
   db.exec('PRAGMA foreign_keys = ON');
   db.exec(schema);
@@ -62,8 +62,13 @@ function setup({ mailOk = true, turnstileSecret = null } = {}) {
     OWNER_EMAIL: 'studio@ivypoledance.at',
     SITE_URL: 'https://ivypoledance.at',
     ALLOWED_ORIGIN: 'https://ivypoledance.at',
+    // Explicit opt-out, mirroring local development; production must not rely on this.
+    ALLOW_UNVERIFIED_BOOKINGS: 'true',
+    RATE_LIMIT_PER_MINUTE: '100',
     ...(turnstileSecret ? { TURNSTILE_SECRET: turnstileSecret } : {}),
+    ...overrides,
   };
+  for (const key of unset) delete env[key];
 
   const call = (path, init = {}) =>
     worker.fetch(new Request(`https://booking.ivypoledance.at${path}`, init), env, {}, fakeFetch);
@@ -264,6 +269,38 @@ test('a capacity that is present but unusable is rejected', async () => {
     const res = await call('/api/events', syncBody([{ ...EVENT, capacity }]));
     assert.equal(res.status, 400, `capacity ${capacity}`);
     assert.equal((await res.json()).error, 'invalid_event');
+  }
+});
+
+test('without a Turnstile secret bookings are refused, not waved through', async () => {
+  // Fails closed: forgetting the secret must not silently remove bot protection.
+  const { call, db } = setup({ unset: ['ALLOW_UNVERIFIED_BOOKINGS'] });
+  await call('/api/events', syncBody([EVENT]));
+
+  const res = await call('/api/bookings', bookBody());
+  assert.equal(res.status, 403);
+  assert.equal((await res.json()).error, 'challenge_failed');
+  assert.equal(db.prepare('SELECT COUNT(*) AS n FROM bookings').get().n, 0);
+});
+
+test('a flood of bookings is capped', async () => {
+  const { call } = setup({ overrides: { RATE_LIMIT_PER_MINUTE: '3' } });
+  await call('/api/events', syncBody([{ ...EVENT, capacity: '' }]));
+
+  for (const email of ['a@x.at', 'b@x.at', 'c@x.at']) {
+    assert.equal((await call('/api/bookings', bookBody({ email }))).status, 201, email);
+  }
+
+  const blocked = await call('/api/bookings', bookBody({ email: 'd@x.at' }));
+  assert.equal(blocked.status, 429);
+  assert.equal((await blocked.json()).error, 'too_many_requests');
+});
+
+test('the cap can be turned off', async () => {
+  const { call } = setup({ overrides: { RATE_LIMIT_PER_MINUTE: '0' } });
+  await call('/api/events', syncBody([{ ...EVENT, capacity: '' }]));
+  for (const email of ['a@x.at', 'b@x.at', 'c@x.at', 'd@x.at']) {
+    assert.equal((await call('/api/bookings', bookBody({ email }))).status, 201);
   }
 });
 

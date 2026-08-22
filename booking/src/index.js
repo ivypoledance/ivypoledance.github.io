@@ -9,6 +9,7 @@ import {
   EVENT_WITH_COUNTS,
   INSERT_BOOKING,
   WAITLIST_POSITION,
+  RECENT_BOOKING_COUNT,
 } from './queries.js';
 import { validateBooking } from './validate.js';
 import {
@@ -53,9 +54,13 @@ function isAdmin(request, env) {
   return tokenMatches(header.slice(prefix.length), env.ADMIN_TOKEN);
 }
 
-/** Cloudflare Turnstile, when configured. Absent secret means no check. */
+/**
+ * Cloudflare Turnstile. Fails closed: a missing secret must not quietly remove
+ * the only bot protection, so running without it has to be opted into
+ * explicitly, which is for local development.
+ */
 async function passesTurnstile(env, token, ip, fetchImpl) {
-  if (!env.TURNSTILE_SECRET) return true;
+  if (!env.TURNSTILE_SECRET) return env.ALLOW_UNVERIFIED_BOOKINGS === 'true';
   if (!token) return false;
   try {
     const response = await fetchImpl('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
@@ -106,6 +111,19 @@ async function createBooking(request, env, fetchImpl) {
   const ip = request.headers.get('cf-connecting-ip');
   if (!await passesTurnstile(env, body.turnstile_token, ip, fetchImpl)) {
     return json(env, { error: 'challenge_failed' }, 403);
+  }
+
+  // Site-wide, not per event: a class opening can legitimately see several
+  // bookings at once, but nothing here should ever see dozens in a minute.
+  // This caps the damage from abuse, mainly the mail quota, and is a backstop
+  // behind Turnstile rather than a defence on its own.
+  const perMinute = Number(env.RATE_LIMIT_PER_MINUTE ?? 10);
+  if (perMinute > 0) {
+    const since = new Date(Date.now() - 60_000).toISOString();
+    const recent = await env.DB.prepare(RECENT_BOOKING_COUNT).bind(since).first();
+    if ((recent?.n ?? 0) >= perMinute) {
+      return json(env, { error: 'too_many_requests' }, 429);
+    }
   }
 
   const { eventId, name, email } = parsed.value;

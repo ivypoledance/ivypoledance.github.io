@@ -39,3 +39,6 @@ CREATE UNIQUE INDEX IF NOT EXISTS bookings_active_email
 -- Serves both the capacity count and waitlist ordering.
 CREATE INDEX IF NOT EXISTS bookings_event_status
   ON bookings (event_id, status, created_at);
+
+-- Supports the rate-limit lookup, which scans by time across all events.
+CREATE INDEX IF NOT EXISTS bookings_created_at ON bookings (created_at);

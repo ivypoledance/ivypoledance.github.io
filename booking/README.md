@@ -43,6 +43,33 @@ docker run --rm -v "$PWD:/app:ro" -w /app node:24-alpine \
   node --test test/booking.test.mjs test/api.test.mjs
 ```
 
+## Spam protection
+
+The form is public, so it is treated as hostile input.
+
+- **Turnstile is required.** Every booking must carry a token that is verified
+  server-side against Cloudflare. This **fails closed**: with no
+  `TURNSTILE_SECRET` set, bookings are refused rather than accepted unchecked,
+  so a forgotten secret cannot silently remove the protection. Local
+  development opts out with `ALLOW_UNVERIFIED_BOOKINGS = "true"` in `.dev.vars`.
+- **Rate limit.** At most `RATE_LIMIT_PER_MINUTE` bookings site-wide per minute
+  (default 10), which caps the damage from abuse — chiefly the mail quota. It
+  counts existing rows by time, so no IP address is stored to enforce it. It is
+  a backstop, not a defence on its own.
+- **One active booking per address per event**, enforced by the database rather
+  than by a check that could race.
+- **Input is validated** before anything is stored, and admin endpoints need a
+  bearer token compared without early exit.
+
+What is *not* protected, stated plainly:
+
+- **Addresses are not verified.** Someone can book using another person's email.
+  The confirmation goes to that address, so it is visible, but the place is
+  taken. A double opt-in link would fix it at the cost of friction; worth
+  revisiting if it ever happens.
+- CORS restricts browsers only. It is not a control against a direct request,
+  which is why Turnstile and the rate limit do the real work.
+
 ## Try it before it goes live
 
 The site still uses the `mailto:` links, so nothing here is reachable by
