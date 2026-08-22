@@ -1,3 +1,12 @@
+/**
+ * Third-party embeds carry a fixed pixel width and their contents do not
+ * reflow, so a narrow viewport would otherwise be widened by them. This is why
+ * the testimonials page rendered wider than the screen on a phone.
+ */
+.content iframe {
+  max-width: 100%;
+}
+
 .imageModal {
   position: fixed;
   z-index: 99999;
