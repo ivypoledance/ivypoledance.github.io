@@ -1,4 +1,30 @@
 /**
+ * Two-column layout for pages that are a list of items, such as the
+ * testimonials screenshots.
+ *
+ * `columns: 260px 2` asks for at most two columns and at least 260px each, so
+ * it falls back to one column on narrow screens without a media query.
+ */
+.responsive-two-column-grid {
+  columns: 260px 2;
+  column-gap: 2rem;
+
+  > * {
+    // Keep a screenshot or an embed whole rather than split across columns.
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  // Screenshots become uniform thumbnails filling the column; the full-size
+  // image is a click away through the existing lightbox.
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/**
  * Third-party embeds carry a fixed pixel width and their contents do not
  * reflow, so a narrow viewport would otherwise be widened by them. This is why
  * the testimonials page rendered wider than the screen on a phone.
