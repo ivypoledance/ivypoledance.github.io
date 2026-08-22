@@ -109,8 +109,46 @@ test('events sync, then availability is reported', async () => {
   const res = await call(`/api/events/${encodeURIComponent(EVENT.id)}`);
   assert.equal(res.status, 200);
   assert.deepEqual(await res.json(), {
-    id: EVENT.id, capacity: 2, confirmed: 0, waitlist: 0, free: 2,
+    id: EVENT.id, capacity: 2, confirmed: 0, waitlist: 0, free: 2, unlimited: false,
   });
+});
+
+test('a date without a capacity never fills up', async () => {
+  const { call } = setup();
+  const unlimited = { ...EVENT, capacity: '' };
+  assert.equal((await call('/api/events', syncBody([unlimited]))).status, 200);
+
+  const availability = await (await call(`/api/events/${encodeURIComponent(EVENT.id)}`)).json();
+  assert.equal(availability.capacity, null);
+  assert.equal(availability.unlimited, true);
+  assert.equal(availability.free, null, 'free must not read as "none left"');
+
+  for (const email of ['a@x.at', 'b@x.at', 'c@x.at', 'd@x.at', 'e@x.at']) {
+    const body = await (await call('/api/bookings', bookBody({ email }))).json();
+    assert.equal(body.status, 'confirmed');
+    assert.equal(body.unlimited, true);
+    assert.equal(body.free, null);
+  }
+
+  const after = await (await call(`/api/events/${encodeURIComponent(EVENT.id)}`)).json();
+  assert.equal(after.confirmed, 5);
+  assert.equal(after.waitlist, 0);
+});
+
+test('capacity may be omitted entirely as well as blank', async () => {
+  const { call } = setup();
+  const { capacity, ...noCapacity } = EVENT;
+  assert.equal((await call('/api/events', syncBody([noCapacity]))).status, 200);
+  const availability = await (await call(`/api/events/${encodeURIComponent(EVENT.id)}`)).json();
+  assert.equal(availability.unlimited, true);
+});
+
+test('the owner notification says when a date has no limit', async () => {
+  const { call, sent } = setup();
+  await call('/api/events', syncBody([{ ...EVENT, capacity: '' }]));
+  await call('/api/bookings', bookBody());
+  const owner = sent.at(-1).Messages[0].TextPart;
+  assert.match(owner, /Belegt: 1 \(kein Limit\)/);
 });
 
 test('a booking is confirmed and both emails are sent', async () => {
@@ -219,11 +257,14 @@ test('an empty sync clears every event', async () => {
   assert.equal(db.prepare('SELECT COUNT(*) AS n FROM events').get().n, 0);
 });
 
-test('events without a usable capacity are rejected', async () => {
+test('a capacity that is present but unusable is rejected', async () => {
   const { call } = setup();
-  const res = await call('/api/events', syncBody([{ ...EVENT, capacity: 0 }]));
-  assert.equal(res.status, 400);
-  assert.equal((await res.json()).error, 'invalid_event');
+  // Blank means unlimited; these are typos and must not be read that way.
+  for (const capacity of [0, -1, 'six', 3.5]) {
+    const res = await call('/api/events', syncBody([{ ...EVENT, capacity }]));
+    assert.equal(res.status, 400, `capacity ${capacity}`);
+    assert.equal((await res.json()).error, 'invalid_event');
+  }
 });
 
 test('a failed Turnstile check blocks the booking', async () => {

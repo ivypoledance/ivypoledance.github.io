@@ -58,13 +58,20 @@ export function buildEvents(rows, readCourse) {
     const line = index + 2; // header is line 1
     const coursePath = row.course;
     const startsAt = row['date1-from'];
-    const capacity = Number(row.capacity);
 
     if (!coursePath) { problems.push(`line ${line}: missing course`); return; }
     if (!startsAt) { problems.push(`line ${line}: missing date1-from`); return; }
-    if (!Number.isInteger(capacity) || capacity <= 0) {
-      problems.push(`line ${line}: capacity must be a positive whole number, got "${row.capacity}"`);
-      return;
+
+    // Blank means unlimited places. A value that is present must still be
+    // usable, so a typo cannot quietly turn into "no limit".
+    const raw = (row.capacity ?? '').trim();
+    let capacity = null;
+    if (raw !== '') {
+      capacity = Number(raw);
+      if (!Number.isInteger(capacity) || capacity <= 0) {
+        problems.push(`line ${line}: capacity must be blank for unlimited, or a positive whole number, got "${row.capacity}"`);
+        return;
+      }
     }
 
     const markdown = readCourse(coursePath);
@@ -104,6 +111,14 @@ async function main() {
   if (problems.length) {
     for (const problem of problems) console.error(`::error::coursedates.csv ${problem}`);
     process.exit(1);
+  }
+
+  // A blank capacity is legitimate, but silently unlimited places is worth
+  // saying out loud on every sync so a forgotten limit is visible.
+  const unlimited = events.filter((e) => e.capacity === null);
+  if (unlimited.length) {
+    console.log(`::warning::${unlimited.length} date(s) have no capacity and cannot fill up: `
+      + unlimited.map((e) => `${e.course_path} ${e.starts_at}`).join(', '));
   }
 
   if (dryRun) {

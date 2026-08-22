@@ -6,6 +6,23 @@ database; payment happens outside this system, so a booking only holds a place.
 `coursedates.csv` in the repository root stays the source of truth for dates.
 CI pushes them here on every push to `main`, so there is nothing to enter twice.
 
+## Capacity
+
+The `capacity` column limits places on a date:
+
+- **A number** — places are given out until it is reached, then bookings join
+  the waitlist in order.
+- **Blank** — unlimited: the date never fills up and nobody is ever waitlisted.
+- **Anything else** (`0`, `-1`, `abc`, `3.5`) — the sync fails. A typo must not
+  quietly become "no limit".
+
+Every sync prints a warning listing dates with no capacity, so a limit that was
+meant to be set does not stay missing unnoticed.
+
+Adding a limit later never cancels bookings already taken; it only stops further
+places being given out. Raising one does not promote anyone already waiting,
+which is deliberate: editing a CSV should not send email.
+
 ## Endpoints
 
 | | |

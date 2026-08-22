@@ -90,7 +90,8 @@ export function ownerNotificationEmail({ event, booking, status, counts }) {
       `Kurs:   ${courseLabel(event)}`,
       `Termin: ${formatEventDates(event)}`,
       `Status: ${status}`,
-      `Belegt: ${counts.confirmed}/${event.capacity}${counts.waitlist ? ` (Warteliste: ${counts.waitlist})` : ''}`,
+      `Belegt: ${counts.confirmed}${event.capacity === null ? ' (kein Limit)' : `/${event.capacity}`}`
+        + `${counts.waitlist ? ` (Warteliste: ${counts.waitlist})` : ''}`,
     ].join('\n'),
   };
 }

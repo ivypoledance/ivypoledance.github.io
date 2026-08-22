@@ -41,6 +41,8 @@ export const INSERT_BOOKING = `
 INSERT INTO bookings (id, event_id, name, email, status, token, created_at)
 SELECT ?1, ?2, ?3, ?4,
   CASE
+    -- No capacity set means unlimited, so there is nothing to fill up.
+    WHEN (SELECT capacity FROM events WHERE id = ?2) IS NULL THEN 'confirmed'
     WHEN (SELECT COUNT(*) FROM bookings WHERE event_id = ?2 AND status = 'confirmed')
        < (SELECT capacity FROM events WHERE id = ?2)
     THEN 'confirmed'

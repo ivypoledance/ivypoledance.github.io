@@ -64,12 +64,28 @@ test('empty optional dates become null rather than empty strings', () => {
   assert.equal(events[0].second_ends_at, null);
 });
 
-test('a missing or unusable capacity stops the sync', () => {
-  for (const value of ['', '0', '-1', 'six', '3.5']) {
+test('a blank capacity means unlimited places', () => {
+  for (const value of ['', '   ']) {
+    const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,,${value}`);
+    const { events, problems } = buildEvents(rows, readCourse);
+    assert.deepEqual(problems, []);
+    assert.equal(events[0].capacity, null, `capacity "${value}" should mean unlimited`);
+  }
+});
+
+test('a capacity column missing altogether means unlimited', () => {
+  const rows = parseCsv('course,name,price,date1-from,date1-to,date2-from,date2-to\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,');
+  const { events, problems } = buildEvents(rows, readCourse);
+  assert.deepEqual(problems, []);
+  assert.equal(events[0].capacity, null);
+});
+
+test('a capacity that is present but unusable stops the sync', () => {
+  for (const value of ['0', '-1', 'six', '3.5']) {
     const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,,${value}`);
     const { events, problems } = buildEvents(rows, readCourse);
     assert.equal(events.length, 0, `capacity "${value}" should be rejected`);
-    assert.match(problems[0], /capacity must be a positive whole number/);
+    assert.match(problems[0], /blank for unlimited, or a positive whole number/);
   }
 });
 
@@ -114,7 +130,8 @@ test('the repository CSV parses and builds cleanly', async () => {
   assert.deepEqual(problems, [], 'the committed CSV must always sync');
   assert.ok(events.length > 0);
   for (const event of events) {
-    assert.ok(event.capacity > 0);
+    // null is legitimate and means unlimited; a number must be usable.
+    assert.ok(event.capacity === null || event.capacity > 0, `${event.id} has capacity ${event.capacity}`);
     assert.ok(event.course_title, `${event.course_path} has no title`);
   }
 });

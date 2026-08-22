@@ -75,7 +75,9 @@ async function replaceEvents(env, events) {
   const statements = events.map((e) => db.prepare(UPSERT_EVENT).bind(
     e.id, e.course_path, e.course_title ?? '', e.name ?? '', e.price ?? '',
     e.starts_at, e.ends_at ?? null, e.second_starts_at ?? null, e.second_ends_at ?? null,
-    Number(e.capacity), new Date().toISOString(),
+    // Absent capacity is stored as NULL, meaning unlimited.
+    e.capacity === null || e.capacity === undefined || e.capacity === '' ? null : Number(e.capacity),
+    new Date().toISOString(),
   ));
 
   // Dropping absent events keeps the store from drifting from the CSV. With an
@@ -168,9 +170,16 @@ async function createBooking(request, env, fetchImpl) {
   return json(env, {
     status,
     position,
-    free: Math.max(0, event.capacity - after.confirmed),
+    ...freePlaces(after),
     email_sent: sent,
   }, 201);
+}
+
+/** Unlimited dates report free: null, so callers cannot read it as "none left". */
+function freePlaces(event) {
+  return event.capacity === null
+    ? { unlimited: true, free: null }
+    : { unlimited: false, free: Math.max(0, event.capacity - event.confirmed) };
 }
 
 async function getAvailability(env, eventId) {
@@ -181,7 +190,7 @@ async function getAvailability(env, eventId) {
     capacity: event.capacity,
     confirmed: event.confirmed,
     waitlist: event.waitlist,
-    free: Math.max(0, event.capacity - event.confirmed),
+    ...freePlaces(event),
   });
 }
 
@@ -203,7 +212,13 @@ export default {
         return json(env, { error: 'invalid_body' }, 400);
       }
       if (!Array.isArray(body?.events)) return json(env, { error: 'missing_events' }, 400);
-      const invalid = body.events.find((e) => !e?.id || !e?.starts_at || !(Number(e?.capacity) > 0));
+      // Capacity may be absent, meaning unlimited, but a value that is present
+      // has to be usable rather than silently treated as no limit.
+      const invalid = body.events.find((e) => {
+        if (!e?.id || !e?.starts_at) return true;
+        const unlimited = e.capacity === null || e.capacity === undefined || e.capacity === '';
+        return !unlimited && !(Number.isInteger(Number(e.capacity)) && Number(e.capacity) > 0);
+      });
       if (invalid) return json(env, { error: 'invalid_event', event: invalid }, 400);
       const count = await replaceEvents(env, body.events);
       return json(env, { synced: count });
