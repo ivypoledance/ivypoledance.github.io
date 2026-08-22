@@ -4,10 +4,11 @@
    explicitly. Renders as e.g. "Do. 27.08.2026, 17:00". #}
 {% component de_datetime(value) %}{% set weekdays = ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."] %}{{ weekdays[value | date(format="%w") | int] }} {{ value | date(format="%d.%m.%Y, %H:%M") }}{% endcomponent de_datetime %}
 
+{# `event` is passed explicitly rather than relying on the legacy global. #}
 {% component image(img, max) %}
 {% set resized = resize_image(path=img, width=max, height=max, op="fit") %}
 <div class="text-center">
-    <a onclick="openModal(this)" href="{{ get_url(path=img) }}" target="_blank">
+    <a onclick="return openModal(this, event)" href="{{ get_url(path=img) }}" target="_blank">
         <img src="{{ resized.url }}" />
     </a>
 </div>
