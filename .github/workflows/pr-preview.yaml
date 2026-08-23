@@ -114,6 +114,10 @@ jobs:
 
       - name: Build with Zola
         run: zola build --base-url "${{ steps.names.outputs.url }}"
+      - name: Render legal documents to PDF
+        run: |
+          ./tools/legal-pdf.sh content/agb.md public/download/AGB-IvyPoledance.pdf
+          ./tools/legal-pdf.sh content/datenschutz.md public/download/Datenschutzerklaerung-IvyPoledance.pdf
 
       - name: Keep staging out of search results
         run: |
