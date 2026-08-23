@@ -13,7 +13,8 @@ pdf = "download/Datenschutzerklaerung-IvyPoledance.pdf"
 
 Verantwortlich für die Verarbeitung personenbezogener Daten im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
 
-![Name, Anschrift und Emailadresse von Ivy Poledance](/img/contact/anschrift.svg)
+![Name und Anschrift der Inhaberin von Ivy Poledance](/img/contact/anschrift.svg)\
+![Emailadresse von Ivy Poledance](/img/contact/mail.svg)
 
 Für Fragen zum Datenschutz und zur Ausübung der unten genannten Rechte genügt eine Email an diese Adresse.
 

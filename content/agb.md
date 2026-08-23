@@ -13,7 +13,7 @@ pdf = "download/AGB-IvyPoledance.pdf"
 
 1.1 „Ivy Poledance“ bietet verschiedene Fitness-, Poledance und Aerialkurse an einem Kursort in Wien an. Die angebotenen Kurse können über die Website www.ivypoledance.at eingesehen und gebucht werden. „Ivy Poledance“ wird betrieben von:
 
-![Name, Anschrift und Emailadresse von Ivy Poledance](/img/contact/anschrift.svg)
+![Name und Anschrift der Inhaberin von Ivy Poledance](/img/contact/anschrift.svg)
 
 1.2 Die AGB sind in ihrer aktuellen Fassung jeweils auf www.ivypoledance.at kostenlos abrufbar, liegen im Kursraum kostenlos auf und werden somit sämtlichen Kund\*innen zur Kenntnis gebracht.
 
@@ -47,7 +47,9 @@ In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt
 
 4.1 Durch Buchung eines Kurses wird verbindlicher Anspruch auf die im Buchungsprozess angegebene Anzahl an Kursteilnahme(n) erworben.
 
-4.2 Erfüllungsort der vertraglich geschuldeten Leistung ist der Kursraum Dingelstedtgasse 1/1/32, 1150 Wien.
+4.2 Erfüllungsort der vertraglich geschuldeten Leistung ist der Kursraum:
+
+![Name und Anschrift der Inhaberin von Ivy Poledance](/img/contact/anschrift.svg)
 
 ## 5. Verhaltensregeln in den Studios
 
