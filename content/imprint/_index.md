@@ -1,5 +1,5 @@
 +++
-title = "Impressum & AGB"
+title = "Impressum"
 +++
 
 <div class="text-center">
