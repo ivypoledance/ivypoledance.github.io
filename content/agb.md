@@ -5,7 +5,7 @@ template = "legal.html"
 
 [extra]
 # Shown in the document and in the generated PDF.
-fassung = "15.02.2026"
+fassung = "23.08.2026"
 pdf = "download/AGB-IvyPoledance.pdf"
 +++
 
