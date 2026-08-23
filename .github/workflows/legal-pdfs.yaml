@@ -1,0 +1,44 @@
+# Renders the AGB and the Datenschutzerklärung and attaches them to the run, for
+# when the PDFs are wanted on their own: to send to someone, or to read what a
+# change to the markdown does to the typeset document, without publishing the
+# site or waiting for a preview.
+#
+# Run by hand only. Every publish and every preview renders the same two files
+# from the same composite action, so nothing here needs to run on a push.
+#
+# The PDFs are byte-identical to the published ones: their creation date is the
+# document's own Fassung rather than the time of the build.
+
+name: Legal documents
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  render:
+    name: 📄 Render the PDFs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Render the legal documents
+        uses: ./.github/actions/legal-pdfs
+        with:
+          output-dir: legal-pdfs
+
+      # Retained for the default 90 days. The artifact is a zip of both files;
+      # GitHub offers no way to attach them individually.
+      - name: Attach the PDFs to this run
+        uses: actions/upload-artifact@v7
+        with:
+          name: legal-pdfs
+          path: legal-pdfs/*.pdf
+          if-no-files-found: error

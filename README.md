@@ -18,6 +18,9 @@ from the same toolchain. Previews are uploaded to Cloudflare Pages; `Sweep stale
 previews` runs weekly, and can be run by hand, to remove previews whose pull
 request is no longer open.
 
+The `Legal documents` workflow renders the AGB and the Datenschutzerklärung on
+demand and attaches them to the run, for when the PDFs are wanted on their own.
+
 Required secrets and API token scopes are documented at the top of
 `.github/workflows/pr-preview.yaml`.
 
