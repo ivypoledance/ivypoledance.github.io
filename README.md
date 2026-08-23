@@ -30,7 +30,6 @@ Required secrets and API token scopes are documented at the top of
 - [ ] Photo frame (like on landing page)
 - [ ] Different icon for imprint (feather or impressum in bottom bar)
 - [ ] Have a lawyer review the AGB and the Datenschutzerklärung before relying on them
-- [ ] The AGB does not agree with itself grammatically, from a singular party having been replaced by `Kund*innen` throughout: `die Kund*innen ... hat` in 7.3(b), `kann die Kund*innen ... zurückverlangen` in 3.1, `dass Kund*innen ... erreichbar ist` and `wird ... informieren` in 2.2, `werden bei Kursen ersuchen` in 5.6, `nicht binnen 10 Kalendertagen ausdrücklich widerspricht` in 10.2. Fixing it means rewording clauses rather than correcting characters
 - [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2 theme
 - [ ] Booking page requests a missing `js/book.js` (404) — implement the form or unpublish the page
 - [ ] Remove the theme's unused math macro (pins KaTeX 0.11.1; math is disabled)

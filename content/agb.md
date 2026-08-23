@@ -23,7 +23,7 @@ pdf = "download/AGB-IvyPoledance.pdf"
 
 2.1 Die Kurse können über [https://ivypoledance.at/](https://ivypoledance.at/) gebucht werden.
 
-2.2 Kund\*innen sichern zu, dass alle im Anmeldevorgang angegebenen Daten und Informationen korrekt sind und wird binnen angemessener Frist informieren, sobald sich diese Informationen und/oder Daten ändern (insb. Änderung von Emailadresse und Postanschrift). Entsprechend kann also davon ausgegangen werden, dass Kund\*innen über die im Registrierungsprozess angegebenen Kontaktdaten erreichbar ist und dorthin übermittelte Nachrichten zur Kenntnis nehmen. Im Zuge der Anmeldung bzw. Buchung bestätigen Kund\*innen, dass sie mit Überweisung des Kursbeitrags die AGB zur Kenntnis genommen haben und mit deren Inhalt und Geltung einverstanden sind.
+2.2 Kund\*innen sichern zu, dass alle im Anmeldevorgang angegebenen Daten und Informationen korrekt sind und werden binnen angemessener Frist informieren, sobald sich diese Informationen und/oder Daten ändern (insb. Änderung von Emailadresse und Postanschrift). Entsprechend kann also davon ausgegangen werden, dass Kund\*innen über die im Registrierungsprozess angegebenen Kontaktdaten erreichbar sind und dorthin übermittelte Nachrichten zur Kenntnis nehmen. Im Zuge der Anmeldung bzw. Buchung bestätigen Kund\*innen, dass sie mit Überweisung des Kursbeitrags die AGB zur Kenntnis genommen haben und mit deren Inhalt und Geltung einverstanden sind.
 
 2.3 Nach Anklicken der Schaltfläche „Anmelden“ erhalten Kund\*innen eine Email mit Zahlungsinformationen an die von Kund\*innen hinterlegte Emailadresse. Nach erfolgter Zahlung des für die Buchung des Kurses (oder Kurse) in der Email ausgewiesenen Entgelts (Überweisung) kommt die Buchung verbindlich zustande und Kund\*innen erhalten eine Buchungsbestätigung. Ab Zahlung des Kursbeitrags ist Ivy Poledance verpflichtet, Kund\*innen einen Platz im gebuchten Kurs zu reservieren.
 
@@ -39,9 +39,9 @@ pdf = "download/AGB-IvyPoledance.pdf"
 
 3.1 Nach Abschluss des Buchungsvorgangs, kann das für den Kurs entrichtete Entgelt von Kund\*innen nicht zurückgefordert werden. Können Kund\*innen nicht am Kurs teilnehmen, entsteht kein Anspruch auf Rückforderung des Entgelts, es sei denn der Kurs findet nicht statt (z.B. Kurs wird von Ivy Poledance abgesagt).
 
-In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt nach abgeschlossener Buchung nicht zurückverlangen und nur im Rahmen der gesetzlichen Rücktrittsfrist, welche 14 Tage beträgt und mit dem Tag der Buchungsfixierung (=Durchführungsdatum der Überweisung) beginnt. Dies gilt auch, wenn der Grund für das Fernbleiben der Kund\*innen nicht von den Kund\*innen zu verantworten ist und/oder die Kund\*innen im Voraus absagen.
+In allen anderen Fällen können die Kund\*innen das für den Kurs bezahlte Entgelt nach abgeschlossener Buchung nicht zurückverlangen und nur im Rahmen der gesetzlichen Rücktrittsfrist, welche 14 Tage beträgt und mit dem Tag der Buchungsfixierung (=Durchführungsdatum der Überweisung) beginnt. Dies gilt auch, wenn der Grund für das Fernbleiben der Kund\*innen nicht von den Kund\*innen zu verantworten ist und/oder die Kund\*innen im Voraus absagen.
 
-3.2 Ausdrücklich wird darauf hingewiesen, dass Kund\*innen ihr Entgelt nicht zurückverlangen können, wenn Ivy Poledance der betreffenden Kund\*innen die Teilnahme an dem jeweiligen Kurs nicht gestattet, weil die Kund\*innen geltende gesetzliche oder behördliche Anordnungen im Zusammenhang mit der Corona-Pandemie nicht befolgt (z.B. kein aktueller negativer Corona-Test oder Impfnachweis), sofern die betreffenden gesetzlichen und behördlichen Anordnungen zum Kurstermin in Geltung waren.
+3.2 Ausdrücklich wird darauf hingewiesen, dass Kund\*innen ihr Entgelt nicht zurückverlangen können, wenn Ivy Poledance der betreffenden Kund\*innen die Teilnahme an dem jeweiligen Kurs nicht gestattet, weil die Kund\*innen geltende gesetzliche oder behördliche Anordnungen im Zusammenhang mit der Corona-Pandemie nicht befolgen (z.B. kein aktueller negativer Corona-Test oder Impfnachweis), sofern die betreffenden gesetzlichen und behördlichen Anordnungen zum Kurstermin in Geltung waren.
 
 ## 4. Leistungsumfang und Leistungsgegenstand
 
@@ -69,13 +69,13 @@ In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt
 
 ### Gegenseitige Sicherung und Verwendung von Sportgeräten
 
-5.6 Kund\*innen werden bei Kursen ersuchen, bestimmte Sportgeräte (z.B. Hoops, Silks, Lollipops, Trapeze und Ropes) gemeinsam zu verwenden. Grundsätzlich werden, je nach Sportart, die betreffenden Sportgeräte zwei bis drei Kund\*innen zugeteilt. Dies dient vordergründig der gegenseitigen Sicherung, sodass jede Kund\*innen das betreffende Sportgerät nur dann verwendet, wenn gleichzeitig eine Sicherung durch eine andere Kund\*innen erfolgt.
+5.6 Kund\*innen werden bei Kursen ersucht, bestimmte Sportgeräte (z.B. Hoops, Silks, Lollipops, Trapeze und Ropes) gemeinsam zu verwenden. Grundsätzlich werden, je nach Sportart, die betreffenden Sportgeräte zwei bis drei Kund\*innen zugeteilt. Dies dient vordergründig der gegenseitigen Sicherung, sodass jede Kund\*in das betreffende Sportgerät nur dann verwendet, wenn gleichzeitig eine Sicherung durch eine andere Kund\*in erfolgt.
 
 5.7 Kund\*innen haben die Sicherung anderer Kund\*innen so durchzuführen, wie von der Trainerin beschrieben und sind verpflichtet, nachzufragen und die jeweils dem Gerät gemeinsam zugeteilte Kund\*innen sowie die Trainerin darauf hinzuweisen, wenn sie die Funktionsweise des Sicherns nicht verstanden haben oder sich dazu außer Stande sehen.
 
 ### Rechtsfolgen von Verstößen
 
-5.8 Bei Verstößen gegen Pflichten der Kund\*innen haftet die Kund\*innen (siehe Punkt 7).
+5.8 Bei Verstößen gegen Pflichten der Kund\*innen haften die Kund\*innen (siehe Punkt 7).
 
 ## 6. Sonstige Pflichten von Kund\*innen
 
@@ -91,7 +91,7 @@ In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt
 
 ### Rechtsfolgen von Verstößen
 
-6.5 Bei Verstößen gegen Pflichten der Kund\*innen haftet die Kund\*innen (siehe Punkt 7).
+6.5 Bei Verstößen gegen Pflichten der Kund\*innen haften die Kund\*innen (siehe Punkt 7).
 
 ## 7. Haftung
 
@@ -99,7 +99,7 @@ In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt
 
 7.1 Kund\*innen haften gegenüber Ivy Poledance/ der Inhaberin für von ihr schuldhaft (einschließlich leicht fahrlässig) verursachte Schäden. Insbesondere halten Kund\*innen Ivy Poledance/ die Inhaberin schad- und klaglos gegen Verstöße gegen die in diesen AGB geregelten Pflichten (z.B. Verhaltensregeln in den Studios) und die Richtigkeit und Vollständigkeit ihrer Angaben im Zuge der Buchung von Kursen (siehe Punkt 2).
 
-7.2 Im Falle eines Zahlungsverzugs der Kund\*innen schuldet die Kund\*innen gesetzliche Verzugszinsen und ersetzt allenfalls angefallene angemessene Mahn- und Inkassospesen.
+7.2 Im Falle eines Zahlungsverzugs der Kund\*innen schulden die Kund\*innen gesetzliche Verzugszinsen und ersetzen allenfalls angefallene angemessene Mahn- und Inkassospesen.
 
 ### Haftung von Ivy Poledance für Verletzungen und Personenschäden
 
@@ -107,7 +107,7 @@ In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt
 
 a. die betreffende Kund\*innen nicht den Anweisungen der Trainerin folgen;
 
-b. die Kund\*innen Vorerkrankungen oder Verletzungen hat, die sie nicht bekannt gegeben haben;
+b. die Kund\*innen Vorerkrankungen oder Verletzungen haben, die sie nicht bekannt gegeben haben;
 
 c. die Kund\*innen (z.B. aufgrund einer Verspätung) nicht ausreichend am Aufwärmen teilgenommen haben;
 
@@ -143,7 +143,7 @@ Es gilt das gesetzliche Gewährleistungsrecht.
 
 10.1 Bei künftigen Änderungen der AGB kann Ivy Poledance die geänderten AGB (kurz AGB „neu“) der Kund\*innen via Email (an die im Registrierungsprozess hinterlegte Emailadresse oder die ggf. danach bekanntgegebene Emailadresse) übermitteln.
 
-10.2 Im Anschluss an die Übermittlung der AGB „neu“ an die Kund\*innen gelten die AGB „neu“ als von der Kund\*innen akzeptiert und somit als zwischen Ivy Poledance und Kund\*innen anstelle der bisherigen AGB vereinbart, sofern die Kund\*innen ausdrücklich zustimmen oder nicht binnen 10 Kalendertagen ausdrücklich widerspricht (Kontaktdaten siehe Punkt 9).
+10.2 Im Anschluss an die Übermittlung der AGB „neu“ an die Kund\*innen gelten die AGB „neu“ als von den Kund\*innen akzeptiert und somit als zwischen Ivy Poledance und Kund\*innen anstelle der bisherigen AGB vereinbart, sofern die Kund\*innen ausdrücklich zustimmen oder nicht binnen 10 Kalendertagen ausdrücklich widersprechen (Kontaktdaten siehe Punkt 9).
 
 10.3 Ivy Poledance wird Kund\*innen im Zuge der Übermittlung der AGB „neu“ auf die Widerspruchsfrist und die rechtlichen Folgen der Nichtäußerung nach Punkt 10.2 nochmals hinweisen.
 
