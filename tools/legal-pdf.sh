@@ -44,6 +44,19 @@ if [ ! -s "$WORK/body.md" ]; then
   exit 1
 fi
 
+# German quotation marks are handed over as plain quotes and set by typst's
+# German smart-quote rules. Passing the characters through instead loses the
+# distinction: pandoc rewrites the closing U+201C as a plain quote, which typst
+# then sets as another opening mark, so both ends come out low.
+#
+# Matched as raw bytes under LC_ALL=C, which behaves the same in the BSD and
+# GNU sed this runs against.
+LC_ALL=C sed -i.bak \
+  -e "s/$(printf '\342\200\236')/\"/g" \
+  -e "s/$(printf '\342\200\234')/\"/g" \
+  "$WORK/body.md"
+rm -f "$WORK/body.md.bak"
+
 # The footer states which version the reader is holding: these documents change
 # over time and customers agree to a particular one, so a printed copy has to
 # identify itself.
