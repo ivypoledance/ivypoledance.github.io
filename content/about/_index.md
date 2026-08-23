@@ -1,9 +1,5 @@
 +++
 title = "About"
-
-[extra]
-# Wider column: this page is a gallery rather than prose.
-wide = true
 +++
 
 ## Ivy Poledance

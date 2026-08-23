@@ -1,9 +1,5 @@
 +++
 title = "Testimonials"
-
-[extra]
-# Wider column: this page is a gallery rather than prose.
-wide = true
 +++
 Du hast Feedback für mich? <a href="https://tinyurl.com/ivypole">Klicke hier!</a>
 
