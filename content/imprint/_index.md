@@ -25,7 +25,15 @@ title = "Impressum & AGB"
 ## AGB
 
 <div class="text-center">
-    <a class="btn btn-primary" href="/download/AGB-IvyPoledance.pdf">AGB herunterladen</a>
+    <a class="btn btn-primary" href="/agb/">AGB lesen</a>
+    <a class="btn btn-secondary" href="/download/AGB-IvyPoledance.pdf">AGB herunterladen</a>
+</div>
+
+## Datenschutz
+
+<div class="text-center">
+    <a class="btn btn-primary" href="/datenschutz/">Datenschutzerkl&auml;rung lesen</a>
+    <a class="btn btn-secondary" href="/download/Datenschutzerklaerung-IvyPoledance.pdf">Datenschutzerkl&auml;rung herunterladen</a>
 </div>
 
 ## Attribution
