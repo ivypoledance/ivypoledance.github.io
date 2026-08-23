@@ -39,7 +39,7 @@ pdf = "download/AGB-IvyPoledance.pdf"
 
 3.1 Nach Abschluss des Buchungsvorgangs, kann das für den Kurs entrichtete Entgelt von Kund\*innen nicht zurückgefordert werden. Können Kund\*innen nicht am Kurs teilnehmen, entsteht kein Anspruch auf Rückforderung des Entgelts, es sei denn der Kurs findet nicht statt (z.B. Kurs wird von Ivy Poledance abgesagt).
 
-In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt nach abgeschlossener Buchung nicht zurückverlangen und nur im Rahmen der gesetzlichen Rücktrittsfrist, welche 14 Tage beträgt und mit dem Tag der Buchungsfixierung (=Durchführungsdatum der Überweisung) beginnt. Dies gilt auch, wenn der Grund für das Fernbleiben der Kund\*innen nicht von den Kund\*innen zu verantworten ist und/oder die Kund\*innen im Voraus abgsagen.
+In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt nach abgeschlossener Buchung nicht zurückverlangen und nur im Rahmen der gesetzlichen Rücktrittsfrist, welche 14 Tage beträgt und mit dem Tag der Buchungsfixierung (=Durchführungsdatum der Überweisung) beginnt. Dies gilt auch, wenn der Grund für das Fernbleiben der Kund\*innen nicht von den Kund\*innen zu verantworten ist und/oder die Kund\*innen im Voraus absagen.
 
 3.2 Ausdrücklich wird darauf hingewiesen, dass Kund\*innen ihr Entgelt nicht zurückverlangen können, wenn Ivy Poledance der betreffenden Kund\*innen die Teilnahme an dem jeweiligen Kurs nicht gestattet, weil die Kund\*innen geltende gesetzliche oder behördliche Anordnungen im Zusammenhang mit der Corona-Pandemie nicht befolgt (z.B. kein aktueller negativer Corona-Test oder Impfnachweis), sofern die betreffenden gesetzlichen und behördlichen Anordnungen zum Kurstermin in Geltung waren.
 
@@ -57,7 +57,7 @@ In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt
 
 5.1 Kund\*innen sind zur Betretung und Nutzung des Kursraums nur im Rahmen von Kursen berechtigt, die von ihnen gebucht wurden.
 
-5.2 Die Kund\*innen sind verpflichtet, vermeidbare Verunreinigungen des Studios zu vermeiden und sämtliche Gegenstände in den Studios¸ insbesondere Sportgeräte (z.B. die „Poles“) pfleglich und sorgfältig zu benutzen.
+5.2 Die Kund\*innen sind verpflichtet, vermeidbare Verunreinigungen des Studios zu vermeiden und sämtliche Gegenstände in den Studios, insbesondere Sportgeräte (z.B. die „Poles“) pfleglich und sorgfältig zu benutzen.
 
 ### Verwendung der Geräte und Einrichtung der Studios
 
@@ -77,7 +77,7 @@ In allen anderen Fällen kann die Kund\*innen das für den Kurs bezahlte Entgelt
 
 5.8 Bei Verstößen gegen Pflichten der Kund\*innen haftet die Kund\*innen (siehe Punkt 7).
 
-## 6. Sonstige Pflichten von Kund\*nnen
+## 6. Sonstige Pflichten von Kund\*innen
 
 ### Bekanntgabe von Verletzungen und Eigenverantwortlichkeit
 
@@ -133,7 +133,7 @@ Es gilt das gesetzliche Gewährleistungsrecht.
 
 9.1 Der Kursraum ist zu den Zeiten der dort stattfindenden Kurse, einschließlich angemessener Zeitfenster vor und nach den Kursen geöffnet. Darüber hinaus gibt es keine verbindlichen Öffnungszeiten.
 
-9.2 Die Adressen des Kursraums ist:
+9.2 Die Adresse des Kursraums ist:
 
 ![Name und Anschrift der Inhaberin von Ivy Poledance](/img/contact/anschrift.svg)
 
