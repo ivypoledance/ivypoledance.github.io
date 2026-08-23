@@ -100,10 +100,10 @@ for path in $(grep -o '](/[^)]*\.svg)' "$WORK/body.md" | sed 's/^](//; s/)$//' |
   rm -f "$WORK/body.md.bak"
 done
 
-# The footer states which version the reader is holding: these documents change
-# over time and customers agree to a particular one, so a printed copy has to
-# identify itself.
-FOOTER_LEFT="Ivy Poledance · Fassung $FASSUNG"
+# The footer names the document and states which version the reader is holding:
+# these documents change over time and customers agree to a particular one, so a
+# printed copy, or a single page of one, has to identify itself.
+FOOTER_LEFT="Ivy Poledance · $TITLE"
 
 cat > "$WORK/header.typ" <<TYPST
 #set page(
@@ -114,6 +114,8 @@ cat > "$WORK/header.typ" <<TYPST
     ${FOOTER_LEFT}
     #h(1fr)
     Seite #counter(page).display() von #counter(page).final().first()
+    #linebreak()
+    Fassung ${FASSUNG}
   ],
 )
 #set text(lang: "de", region: "at", size: 11pt, hyphenate: true)
