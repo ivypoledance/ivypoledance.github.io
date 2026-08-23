@@ -159,6 +159,7 @@ docker run --rm -v "$WORK:/work" -w /work \
     --pdf-engine=typst \
     --include-in-header=header.typ \
     --metadata title="$TITLE" \
+    --metadata author="Ivy Poledance" \
     --metadata lang=de-AT \
     --variable papersize=a4 \
     --variable margin.x=2.5cm \
