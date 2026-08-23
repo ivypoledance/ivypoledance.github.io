@@ -29,7 +29,7 @@
 {# page_images:   using for the blog single template page #}
 {# page_section:  the blog single template page have to pass the parameter #}
 {# is_404:        using for the 404.html template #}
-{# images:        og/twitter images of the current page or section #}
+{# images:        not read; every page shares config.extra.preview_image #}
 {% component site.seo(
   config,
   current_url,
@@ -70,52 +70,27 @@
 <meta name="description" content="{{ description }}">
 <link rel="canonical" href="{{ page_url | safe }}">
 
-{% if config.extra?.open?.enable %}
-  <meta name="twitter:card" content="summary_large_image">
-  {% if images %}
-    {% for image in images %}
-      <meta property="twitter:image" content="{{ get_url(path=image) | safe }}">
-    {% endfor %}
-  {% elif config.extra?.open?.image %}
-    <meta name="twitter:image" content="{{ config.base_url | safe }}/{{ config.extra.open.image }}">
-  {% endif %}
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ description }}">
-  <meta name="twitter:site" content="@{{ config.extra.open.twitter_site }}">
-  <meta name="twitter:creator" content="@{{ config.extra.open.twitter_creator }}">
-
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ description }}">
-  <meta property="og:type" content="{{ type }}">
-  <meta property="og:url" content="{{ page_url | safe }}">
-
-  {% if images %}
-    {% for image in images %}
-      <meta property="og:image" content="{{ get_url(path=image) | safe }}">
-    {% endfor %}
-  {% elif config.extra?.open?.image %}
-    <meta property="og:image" content="{{ config.base_url | safe }}/{{ config.extra.open.image }}">
-  {% endif %}
-
-  <meta property="og:updated_time" content="{{ updated_time }}">
-  <meta property="og:site_name" content="{{ title }}">
-
-  {% if config.extra?.open?.audio %}
-    <meta property="og:audio" content="{{ config.extra.open.audio }}">
-  {% endif %}
-
-  {% if config.extra?.open?.locale %}
-    <meta property="og:locale" content="{{ config.extra.open.locale }}">
-  {% endif %}
-
-  {% if config.extra?.open?.videos %}
-    {% for video in config.extra.open.videos %}
-      <meta property="og:video" content="{{ get_url(path=video) }}">
-    {% endfor %}
-  {% endif %}
-  <meta property="article:publisher" content="https://www.facebook.com/{{ config.extra.open.facebook_publisher }}">
-  <meta property="article:author" content="https://www.facebook.com/{{ config.extra.open.facebook_author }}">
-  <meta property="og:locale" content="{{ config.extra.open.og_locale }}">
+{# The card a shared link is rendered as. Open Graph is what every messenger and
+   network reads for it; the one Twitter tag decides only whether the picture is
+   shown full width or as a small thumbnail beside the text. #}
+<meta property="og:type" content="{{ type }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ page_url | safe }}">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta property="og:locale" content="de_AT">
+<meta name="twitter:card" content="summary_large_image">
+{% if config.extra?.preview_image %}
+  {# A card is laid out for roughly 1.91:1. `fit` keeps the whole picture and
+     lands close to that, where filling to the ratio exactly would crop the
+     sides: the ivy leaf sits in one corner and the wordmark in the other, and
+     both would be cut. The size is stated as well, so a scraper can lay the
+     card out before it has fetched the file. #}
+  {% set preview = resize_image(path=config.extra.preview_image, width=1200, height=630, op="fit", format="jpg", quality=80) %}
+  <meta property="og:image" content="{{ preview.url | safe }}">
+  <meta property="og:image:width" content="{{ preview.width }}">
+  <meta property="og:image:height" content="{{ preview.height }}">
+  <meta property="og:image:alt" content="{{ config.extra?.preview_image_alt or config.title }}">
 {% endif %}
 
 {% if is_home and config.extra?.schema %}
