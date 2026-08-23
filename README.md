@@ -12,10 +12,11 @@ Static site built with [Zola](https://www.getzola.org/) and a vendored copy of t
   environment and linked from a comment on the pull request. It is removed when
   the pull request closes.
 
-Both are built by CI with the Zola version pinned in the workflow, so staging and
-production always come from the same toolchain. Previews are uploaded to
-Cloudflare Pages; `Sweep stale previews` runs weekly, and can be run by hand, to
-remove previews whose pull request is no longer open.
+Both run the same steps, out of the composite actions in `.github/actions/`, and
+the generator version is pinned there once, so staging and production always come
+from the same toolchain. Previews are uploaded to Cloudflare Pages; `Sweep stale
+previews` runs weekly, and can be run by hand, to remove previews whose pull
+request is no longer open.
 
 Required secrets and API token scopes are documented at the top of
 `.github/workflows/pr-preview.yaml`.
