@@ -31,7 +31,7 @@ external_level = "error"
 # templates/macros/head.html. Any image in static/ can stand in for it; the
 # landing image is used because it carries the wordmark.
 preview_image = "/img/landing/web.jpeg"
-preview_image_alt = "Ivy Poledance: Artistin kopfüber in einer Figur an der Pole-Stange"
+preview_image_alt = "Ivy Poledance"
 
 [extra.footer]
 info = " "
