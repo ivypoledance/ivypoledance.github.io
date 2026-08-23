@@ -80,3 +80,13 @@
     transform: scale(1)
   }
 }
+
+.legal-meta {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: $gray-600;
+
+  a {
+    margin-left: 0.75rem;
+  }
+}

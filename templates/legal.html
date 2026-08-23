@@ -1,0 +1,30 @@
+{# Legal documents (AGB, Datenschutzerklärung).
+
+   The markdown source is also typeset to PDF by tools/legal-pdf.sh, so the
+   version stated here and the one in the PDF footer come from the same
+   front matter field. #}
+
+{% extends "page.html" %}
+
+{% block content %}
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xxl-8">
+        <article>
+          <div class="page-header">
+            <h1>{{ page.title }}</h1>
+          </div>
+          <p class="legal-meta">
+            {% if page.extra?.fassung %}Fassung {{ page.extra.fassung }}{% endif %}
+            {% if page.extra?.pdf %}
+              <a href="{{ get_url(path=page.extra.pdf) | safe }}">Als PDF herunterladen</a>
+            {% endif %}
+          </p>
+          {{ page.content | safe }}
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
