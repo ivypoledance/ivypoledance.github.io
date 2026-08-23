@@ -1,12 +1,12 @@
 # Keeps the booking store in step with coursedates.csv, which stays the source
 # of truth for course dates.
 #
-# On a pull request the dates are only validated, so a malformed row or a
-# missing capacity is caught before it reaches main. On a push to main they are
-# sent to the booking API.
+# Validation runs on every push and pull request that touches the dates, so a
+# malformed row or a missing capacity is caught before it reaches main. Sending
+# them to the booking API is a manual run: there is no Worker deployed yet, and
+# nothing should be pushed to it by accident once there is.
 #
-# Until BOOKING_API is set the sync step reports and stops rather than failing,
-# so this can be merged before the Worker is deployed.
+# Until BOOKING_API is set the sync step reports and stops rather than failing.
 
 name: Sync course dates
 
@@ -54,7 +54,7 @@ jobs:
   sync:
     name: 🔄 Sync to the booking API
     needs: check
-    if: github.event_name != 'pull_request'
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

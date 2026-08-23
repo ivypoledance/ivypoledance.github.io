@@ -20,6 +20,8 @@ request is no longer open.
 
 The `Legal documents` workflow renders the AGB and the Datenschutzerklärung on
 demand and attaches them to the run, for when the PDFs are wanted on their own.
+`Sync course dates` validates `coursedates.csv` on every change and only sends it
+to the booking API when run by hand.
 
 Required secrets and API token scopes are documented at the top of
 `.github/workflows/pr-preview.yaml`.
