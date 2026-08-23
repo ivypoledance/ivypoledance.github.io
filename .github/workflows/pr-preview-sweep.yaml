@@ -29,6 +29,7 @@ env:
 
 jobs:
   sweep:
+    name: 🧹 Remove closed previews
     runs-on: ubuntu-latest
     steps:
       - name: Remove previews for pull requests that are no longer open

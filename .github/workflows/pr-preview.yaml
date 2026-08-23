@@ -47,6 +47,7 @@ env:
 
 jobs:
   preview:
+    name: 👀 Publish the preview
     runs-on: ubuntu-latest
     # Forks cannot receive the deploy token.
     if: github.event.pull_request.head.repo.full_name == github.repository

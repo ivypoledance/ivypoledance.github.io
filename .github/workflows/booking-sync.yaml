@@ -39,7 +39,7 @@ defaults:
 
 jobs:
   check:
-    name: Validate course dates
+    name: ✅ Validate the course dates
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -52,7 +52,7 @@ jobs:
         run: node booking/sync-events.mjs --dry-run
 
   sync:
-    name: Sync to the booking API
+    name: 🔄 Sync to the booking API
     needs: check
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
