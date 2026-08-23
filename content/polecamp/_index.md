@@ -1,5 +1,9 @@
 +++
 title = "Up next: Ivy Polecamp 2026"
+
+[extra]
+# Wider column: this page is a gallery rather than prose.
+wide = true
 +++
 
 ## Polecamp 2026
