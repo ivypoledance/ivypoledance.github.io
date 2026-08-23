@@ -90,3 +90,16 @@
     margin-left: 0.75rem;
   }
 }
+
+/**
+ * Contact details are drawn as outlines in an SVG so that no address or mail
+ * address appears in the markup for a harvester to read.
+ *
+ * The artwork is dark, and an SVG referenced by <img> is isolated from the
+ * page: currentColor inside it resolves against the file's own root and comes
+ * out black regardless of the theme. Inverting it is what makes it legible on
+ * the dark background.
+ */
+body.dark img[src*="/img/contact/"] {
+  filter: invert(1);
+}
