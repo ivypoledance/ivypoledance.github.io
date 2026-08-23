@@ -17,7 +17,15 @@
     <div class="row flex-xl-nowrap">
 	  {{<site.docs_sidebar current_section={current_section} current_url={current_url} />}}
 	  {{<adidoks.docs_toc page={page} />}}
-      <main class="docs-content col-lg-11 col-xl-9">
+      {# The table of contents takes col-xl-3 when a page enables it. No page
+         does today, and that space would otherwise sit empty, so the content
+         claims it and gives way again if a table of contents appears. #}
+      {% if page.extra?.toc %}
+        {% set content_columns = "col-xl-9" %}
+      {% else %}
+        {% set content_columns = "col-xl-12" %}
+      {% endif %}
+      <main class="docs-content col-lg-11 {{ content_columns }}">
         <h1>{{ page.title }}</h1>
         {% if page.extra?.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
         <h2 id="aktuelle-kurse">Aktuelle Kurse</h2>
