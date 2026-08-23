@@ -94,12 +94,7 @@ for path in $(grep -o '](/[^)]*\.svg)' "$WORK/body.md" | sed 's/^](//; s/)$//' |
     echo "::error::$asset has no width attribute, so it cannot be sized for print" >&2
     exit 1
   fi
-  # The roughening filter on the contact artwork is dropped for print. typst
-  # rasterises SVG filters through resvg, whose feTurbulence and
-  # feDisplacementMap do not agree with a browser's, and the lettering comes out
-  # as noise at any size. The outlines underneath print sharply and are still
-  # not text, which is the point of the artwork.
-  sed 's/ filter="url([^)]*)"//g' "$asset" > "$WORK/$(basename "$path")"
+  cp "$asset" "$WORK/"
   width_pt="$(awk -v px="$width_px" 'BEGIN { printf "%.1f", px * 0.75 }')"
   sed -i.bak "s|](${path})|]($(basename "$path")){width=${width_pt}pt}|g" "$WORK/body.md"
   rm -f "$WORK/body.md.bak"
