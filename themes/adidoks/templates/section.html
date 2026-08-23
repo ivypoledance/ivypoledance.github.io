@@ -39,17 +39,12 @@
 {% endblock body %}
 
 {% block content %}
-{# Sections without a sidebar can opt into a wider column with extra.wide,
-   which suits pages that are a gallery rather than prose. #}
-{% if section.extra?.wide %}
-  {% set column = "col-md-14 col-lg-12 col-xxl-10" %}
-{% else %}
-  {% set column = "col-md-12 col-lg-10 col-xxl-8" %}
-{% endif %}
+{# The column every page without a sidebar uses. Counted against the 16-column
+   grid set in sass/common/_variables.scss, not Bootstrap's default 12. #}
 <div class="wrap container" role="document">
   <div class="content">
     <div class="row justify-content-center">
-      <div class="{{ column }}">
+      <div class="col-md-14 col-lg-12 col-xxl-10">
         <article>
           <div class="page-header">
             <h1>{{ section.title }}</h1>

@@ -42,6 +42,10 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Build with Zola
         run: zola build
+      - name: Render legal documents to PDF
+        run: |
+          ./tools/legal-pdf.sh content/agb.md public/download/AGB-IvyPoledance.pdf
+          ./tools/legal-pdf.sh content/datenschutz.md public/download/Datenschutzerklaerung-IvyPoledance.pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:

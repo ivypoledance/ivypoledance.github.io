@@ -93,3 +93,6 @@ $RECYCLE.BIN/
 
 .idea/
 static/processed_images/
+
+# Working directory of tools/legal-pdf.sh
+.legal-pdf-*/

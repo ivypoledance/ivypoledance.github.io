@@ -29,7 +29,7 @@ Required secrets and API token scopes are documented at the top of
 - [ ] Optimize photos
 - [ ] Photo frame (like on landing page)
 - [ ] Different icon for imprint (feather or impressum in bottom bar)
-- [ ] Testimonials into two columns
+- [ ] Have a lawyer review the AGB and the Datenschutzerklärung before relying on them
 - [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2 theme
 - [ ] Booking page requests a missing `js/book.js` (404) — implement the form or unpublish the page
 - [ ] Remove the theme's unused math macro (pins KaTeX 0.11.1; math is disabled)
