@@ -15,7 +15,11 @@ set -euo pipefail
 SRC="${1:?usage: legal-pdf.sh <source.md> <output.pdf>}"
 OUT="${2:?usage: legal-pdf.sh <source.md> <output.pdf>}"
 
-PANDOC_IMAGE="pandoc/typst:latest"
+# Pinned, not :latest. These documents get re-rendered years apart and the
+# output must not re-flow because an upstream tag moved. The tag fixes pandoc
+# (3.10); typst's version is not part of any pandoc/typst tag, so pin the digest
+# instead if that matters more than readability.
+PANDOC_IMAGE="pandoc/typst:3.10.0.0"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # Zola's front matter is TOML between +++ fences. pandoc would typeset it as
@@ -24,6 +28,23 @@ field() { sed -n "s/^$1 *= *\"\(.*\)\"/\1/p" "$SRC" | head -1; }
 TITLE="$(field title)"
 FASSUNG="$(field fassung)"
 : "${TITLE:?$SRC has no title in its front matter}"
+: "${FASSUNG:?$SRC has no fassung in its front matter}"
+
+# The PDF records the document's own Fassung date as its creation date rather
+# than the moment of the build, which typst takes from SOURCE_DATE_EPOCH. Two
+# runs of one source then produce identical bytes on any machine, so a PDF that
+# differs means the markdown behind it changed.
+if [[ ! "$FASSUNG" =~ ^([0-9]{2})\.([0-9]{2})\.([0-9]{4})$ ]]; then
+  echo "::error::$SRC has fassung \"$FASSUNG\", expected DD.MM.YYYY" >&2
+  exit 1
+fi
+ISO_FASSUNG="${BASH_REMATCH[3]}-${BASH_REMATCH[2]}-${BASH_REMATCH[1]}"
+# GNU date first, then the BSD form used on macOS.
+SOURCE_DATE_EPOCH="$(
+  date -u -d "$ISO_FASSUNG" +%s 2>/dev/null ||
+  date -u -j -f '%Y-%m-%d' "$ISO_FASSUNG" +%s
+)"
+export SOURCE_DATE_EPOCH
 
 # Kept inside the repository rather than the system temp directory, which is
 # not shared with the container runtime on macOS.
@@ -60,8 +81,7 @@ rm -f "$WORK/body.md.bak"
 # The footer states which version the reader is holding: these documents change
 # over time and customers agree to a particular one, so a printed copy has to
 # identify itself.
-FOOTER_LEFT="Ivy Poledance"
-[ -n "$FASSUNG" ] && FOOTER_LEFT="Ivy Poledance · Fassung $FASSUNG"
+FOOTER_LEFT="Ivy Poledance · Fassung $FASSUNG"
 
 cat > "$WORK/header.typ" <<TYPST
 #set page(
@@ -86,6 +106,7 @@ mkdir -p "$(dirname "$OUT")"
 # fancy_lists is disabled so the "a." to "g." paragraphs in the liability clause
 # stay exactly as written instead of being renumbered as a list.
 docker run --rm -v "$WORK:/work" -w /work \
+  -e SOURCE_DATE_EPOCH \
   --entrypoint pandoc "$PANDOC_IMAGE" \
     body.md \
     --from=markdown-fancy_lists \
