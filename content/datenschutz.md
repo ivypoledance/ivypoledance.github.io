@@ -13,9 +13,7 @@ pdf = "download/Datenschutzerklaerung-IvyPoledance.pdf"
 
 Verantwortlich für die Verarbeitung personenbezogener Daten im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
 
-Ivy Poledance\
-**[ergänzen: vollständige Anschrift der Inhaberin]**\
-Email: studio@ivypoledance.at
+![Name, Anschrift und Emailadresse von Ivy Poledance](/img/contact/anschrift.svg)
 
 Für Fragen zum Datenschutz und zur Ausübung der unten genannten Rechte genügt eine Email an diese Adresse.
 
@@ -102,7 +100,9 @@ Nach der DSGVO bestehen die folgenden Rechte:
 - Widerspruch gegen Verarbeitungen, die auf ein berechtigtes Interesse gestützt sind (Art 21 DSGVO)
 - Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft (Art 7 Abs 3 DSGVO)
 
-Zur Ausübung dieser Rechte genügt eine Email an studio@ivypoledance.at.
+Zur Ausübung dieser Rechte genügt eine Email an:
+
+![Emailadresse von Ivy Poledance](/img/contact/mail.svg)
 
 Besteht der Verdacht, dass die Verarbeitung gegen das Datenschutzrecht verstößt, kann Beschwerde bei der Aufsichtsbehörde erhoben werden:
 

@@ -78,6 +78,28 @@ LC_ALL=C sed -i.bak \
   "$WORK/body.md"
 rm -f "$WORK/body.md.bak"
 
+# Images are written for the web, as a path from the site root that Zola serves
+# out of static/. typst resolves a path against the working directory and, told
+# nothing else, scales an image to the full text width, so each file is copied
+# next to the markdown and asked for at the size its own width attribute states.
+# CSS pixels are 1/96 inch and typst points 1/72, hence the factor.
+for path in $(grep -o '](/[^)]*\.svg)' "$WORK/body.md" | sed 's/^](//; s/)$//' | sort -u); do
+  asset="$ROOT/static$path"
+  if [ ! -f "$asset" ]; then
+    echo "::error::$SRC references $path, which is not in static/" >&2
+    exit 1
+  fi
+  width_px="$(sed -n 's/.*<svg[^>]* width="\([0-9.]*\)".*/\1/p' "$asset" | head -1)"
+  if [ -z "$width_px" ]; then
+    echo "::error::$asset has no width attribute, so it cannot be sized for print" >&2
+    exit 1
+  fi
+  cp "$asset" "$WORK/"
+  width_pt="$(awk -v px="$width_px" 'BEGIN { printf "%.1f", px * 0.75 }')"
+  sed -i.bak "s|](${path})|]($(basename "$path")){width=${width_pt}pt}|g" "$WORK/body.md"
+  rm -f "$WORK/body.md.bak"
+done
+
 # The footer states which version the reader is holding: these documents change
 # over time and customers agree to a particular one, so a printed copy has to
 # identify itself.
@@ -104,12 +126,14 @@ TYPST
 mkdir -p "$(dirname "$OUT")"
 
 # fancy_lists is disabled so the "a." to "g." paragraphs in the liability clause
-# stay exactly as written instead of being renumbered as a list.
+# stay exactly as written instead of being renumbered as a list. implicit_figures
+# is disabled so an image on its own line stays in the text instead of becoming a
+# numbered figure with a caption.
 docker run --rm -v "$WORK:/work" -w /work \
   -e SOURCE_DATE_EPOCH \
   --entrypoint pandoc "$PANDOC_IMAGE" \
     body.md \
-    --from=markdown-fancy_lists \
+    --from=markdown-fancy_lists-implicit_figures \
     --output=out.pdf \
     --pdf-engine=typst \
     --include-in-header=header.typ \
