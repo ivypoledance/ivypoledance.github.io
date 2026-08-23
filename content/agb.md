@@ -133,7 +133,9 @@ Es gilt das gesetzliche Gewährleistungsrecht.
 
 9.1 Der Kursraum ist zu den Zeiten der dort stattfindenden Kurse, einschließlich angemessener Zeitfenster vor und nach den Kursen geöffnet. Darüber hinaus gibt es keine verbindlichen Öffnungszeiten.
 
-9.2 Die Adressen des Kursraums ist Dingelstedtgasse 1/1/32, 1150 Wien.
+9.2 Die Adressen des Kursraums ist:
+
+![Name und Anschrift der Inhaberin von Ivy Poledance](/img/contact/anschrift.svg)
 
 9.3 Die Kontaktdaten von Ivy Poledance finden sich auf www.ivypoledance.at.
 
