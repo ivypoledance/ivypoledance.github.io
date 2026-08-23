@@ -10,7 +10,7 @@
   column-gap: 2rem;
 
   > * {
-    // Keep a screenshot or an embed whole rather than split across columns.
+    // Keep a screenshot whole rather than split across columns.
     break-inside: avoid;
     margin-bottom: 1.5rem;
   }
@@ -21,22 +21,6 @@
     width: 100%;
     height: auto;
   }
-
-  // Embeds cannot be widened to fill the column without their contents being
-  // clipped, so they keep the width baked into their URL and sit centred.
-  iframe {
-    display: block;
-    margin-inline: auto;
-  }
-}
-
-/**
- * Third-party embeds carry a fixed pixel width and their contents do not
- * reflow, so a narrow viewport would otherwise be widened by them. This is why
- * the testimonials page rendered wider than the screen on a phone.
- */
-.content iframe {
-  max-width: 100%;
 }
 
 .imageModal {
