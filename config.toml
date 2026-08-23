@@ -27,6 +27,12 @@ external_level = "error"
 [extra]
 # Put all your custom variables here
 
+# The picture a shared link is rendered with, resized for the card in
+# templates/macros/head.html. Any image in static/ can stand in for it; the
+# landing image is used because it carries the wordmark.
+preview_image = "/img/landing/web.jpeg"
+preview_image_alt = "Ivy Poledance"
+
 [extra.footer]
 info = " "
 
