@@ -128,6 +128,18 @@ cat > "$WORK/header.typ" <<TYPST
 #show heading.where(level: 1): set text(size: 13pt)
 #show heading.where(level: 2): set text(size: 11pt)
 #show heading.where(level: 3): set text(size: 11pt, style: "italic", weight: "regular")
+
+// A clause is quoted and referred to as a unit, so it is not split across a page
+// boundary. The block has to be constructed rather than configured: setting
+// breakable on a paragraph styles the blocks inside it, not the paragraph's own.
+// Headings need nothing here, being sticky already through typst's own show-set
+// rule for them.
+#show par: it => block(breakable: false, it)
+
+// An address in a printed document is copied out by hand, so it is never broken
+// across lines. A box cannot be broken, and the whole address moves to the next
+// line instead.
+#show link: it => box(it)
 TYPST
 
 mkdir -p "$(dirname "$OUT")"
