@@ -123,9 +123,13 @@ cat > "$WORK/header.typ" <<TYPST
 )
 #set text(lang: "de", region: "at", size: 11pt, hyphenate: true)
 #set par(leading: 0.7em, spacing: 1.1em)
-// Clause numbers carry the structure, so headings stay restrained.
+// Clause numbers carry the structure, so headings stay restrained. The clause
+// headings the documents start from land on level 2; their sub-headings are
+// level 3 and are set in italic rather than bold, so they read as a subdivision
+// of the clause above them and not as another clause.
 #show heading.where(level: 1): set text(size: 13pt)
 #show heading.where(level: 2): set text(size: 11pt, style: "italic")
+#show heading.where(level: 3): set text(size: 11pt, style: "italic", weight: "regular")
 TYPST
 
 mkdir -p "$(dirname "$OUT")"
