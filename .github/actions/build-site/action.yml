@@ -1,0 +1,42 @@
+name: Build the site
+description: >-
+  Installs the pinned static site generator and builds the site into public/.
+  The version lives here so production and every preview are built by one
+  toolchain.
+
+inputs:
+  base-url:
+    description: >-
+      Absolute URL the site is built for. Left empty, the one in config.toml is
+      used, which is what production wants; a preview passes its own hostname so
+      that the links and the cache-busted asset URLs point at the preview.
+    required: false
+    default: ""
+  version:
+    description: Version of the site generator to build with.
+    required: false
+    default: "0.23.4"
+
+runs:
+  using: composite
+  steps:
+    - name: Install the site generator
+      shell: bash
+      env:
+        VERSION: ${{ inputs.version }}
+      run: |
+        mkdir -p "$HOME/.local/bin"
+        curl -sSfL "https://github.com/getzola/zola/releases/download/v${VERSION}/zola-v${VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+          | tar -xz -C "$HOME/.local/bin" zola
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+    - name: Build
+      shell: bash
+      env:
+        BASE_URL: ${{ inputs.base-url }}
+      run: |
+        if [ -n "$BASE_URL" ]; then
+          zola build --base-url "$BASE_URL"
+        else
+          zola build
+        fi

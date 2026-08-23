@@ -1,4 +1,9 @@
-name: Deploy Zola site to Pages
+# Builds the site and publishes it to GitHub Pages at https://ivypoledance.at
+#
+# The build steps are shared with the preview workflow through the composite
+# actions in .github/actions/, so production and staging cannot drift apart.
+
+name: 🚀 Publish the site
 
 on:
   push:
@@ -19,11 +24,9 @@ defaults:
   run:
     shell: bash
 
-env:
-  ZOLA_VERSION: "0.23.4"
-
 jobs:
   build:
+    name: Build the site
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,23 +37,16 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
-      - name: Install Zola
-        run: |
-          mkdir -p "$HOME/.local/bin"
-          curl -sSfL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
-            | tar -xz -C "$HOME/.local/bin" zola
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-      - name: Build with Zola
-        run: zola build
-      - name: Render legal documents to PDF
-        run: |
-          ./tools/legal-pdf.sh content/agb.md public/download/AGB-IvyPoledance.pdf
-          ./tools/legal-pdf.sh content/datenschutz.md public/download/Datenschutzerklaerung-IvyPoledance.pdf
+      - name: Build the site
+        uses: ./.github/actions/build-site
+      - name: Render the legal documents
+        uses: ./.github/actions/legal-pdfs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
   deploy:
+    name: Publish to Pages
     environment:
       name: Production
       url: ${{ steps.deployment.outputs.page_url }}

@@ -2,7 +2,7 @@
 # request is no longer open. Useful for clearing previews left behind by a
 # teardown that failed, and runnable by hand at any time.
 
-name: Sweep stale previews
+name: 🧹 Sweep stale previews
 
 on:
   workflow_dispatch:
@@ -29,6 +29,7 @@ env:
 
 jobs:
   sweep:
+    name: Remove closed previews
     runs-on: ubuntu-latest
     steps:
       - name: Remove previews for pull requests that are no longer open

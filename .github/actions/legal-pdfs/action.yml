@@ -1,0 +1,22 @@
+name: Render the legal documents
+description: >-
+  Typesets the AGB and the Datenschutzerklärung from their markdown sources to
+  PDF. The published names of the two files are fixed here, so a link to either
+  of them keeps working wherever they are rendered.
+
+inputs:
+  output-dir:
+    description: Directory the two PDFs are written to. Created if missing.
+    required: false
+    default: public/download
+
+runs:
+  using: composite
+  steps:
+    - name: Render
+      shell: bash
+      env:
+        OUTPUT_DIR: ${{ inputs.output-dir }}
+      run: |
+        ./tools/legal-pdf.sh content/agb.md "${OUTPUT_DIR}/AGB-IvyPoledance.pdf"
+        ./tools/legal-pdf.sh content/datenschutz.md "${OUTPUT_DIR}/Datenschutzerklaerung-IvyPoledance.pdf"
