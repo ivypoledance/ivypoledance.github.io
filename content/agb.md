@@ -11,17 +11,17 @@ pdf = "download/AGB-IvyPoledance.pdf"
 
 ## 1. Geltungsbereich und Informationen zu Ivy Poledance
 
-1.1 „Ivy Poledance“ bietet verschiedene Fitness-, Poledance und Aerialkurse an einem Kursort in Wien an. Die angebotenen Kurse können über die Website www.ivypoledance.at eingesehen und gebucht werden. „Ivy Poledance“ wird betrieben von:
+1.1 „Ivy Poledance“ bietet verschiedene Fitness-, Poledance und Aerialkurse an einem Kursort in Wien an. Die angebotenen Kurse können über die Website [https://ivypoledance.at/](https://ivypoledance.at/) eingesehen und gebucht werden. „Ivy Poledance“ wird betrieben von:
 
 ![Name und Anschrift der Inhaberin von Ivy Poledance](/img/contact/anschrift.svg)
 
-1.2 Die AGB sind in ihrer aktuellen Fassung jeweils auf www.ivypoledance.at kostenlos abrufbar, liegen im Kursraum kostenlos auf und werden somit sämtlichen Kund\*innen zur Kenntnis gebracht.
+1.2 Die AGB sind in ihrer aktuellen Fassung jeweils auf [https://ivypoledance.at/](https://ivypoledance.at/) kostenlos abrufbar, liegen im Kursraum kostenlos auf und werden somit sämtlichen Kund\*innen zur Kenntnis gebracht.
 
 ## 2. Vertragsabschluss und (verbindliche) Buchung von Kursen
 
 ### Online Registrierung und Kursbuchung
 
-2.1 Die Kurse können über www.ivypoledance.at gebucht werden.
+2.1 Die Kurse können über [https://ivypoledance.at/](https://ivypoledance.at/) gebucht werden.
 
 2.2 Kund\*innen sichern zu, dass alle im Anmeldevorgang angegebenen Daten und Informationen korrekt sind und wird binnen angemessener Frist informieren, sobald sich diese Informationen und/oder Daten ändern (insb. Änderung von Emailadresse und Postanschrift). Entsprechend kann also davon ausgegangen werden, dass Kund\*innen über die im Registrierungsprozess angegebenen Kontaktdaten erreichbar ist und dorthin übermittelte Nachrichten zur Kenntnis nehmen. Im Zuge der Anmeldung bzw. Buchung bestätigen Kund\*innen, dass sie mit Überweisung des Kursbeitrags die AGB zur Kenntnis genommen haben und mit deren Inhalt und Geltung einverstanden sind.
 
@@ -137,7 +137,7 @@ Es gilt das gesetzliche Gewährleistungsrecht.
 
 ![Name und Anschrift der Inhaberin von Ivy Poledance](/img/contact/anschrift.svg)
 
-9.3 Die Kontaktdaten von Ivy Poledance finden sich auf www.ivypoledance.at.
+9.3 Die Kontaktdaten von Ivy Poledance finden sich auf [https://ivypoledance.at/](https://ivypoledance.at/).
 
 ## 10. Künftige Änderungen der AGB und Zustimmungsfiktion
 
@@ -163,7 +163,7 @@ Es gilt das gesetzliche Gewährleistungsrecht.
 
 12.2 Kund\*innen nehmen zur Kenntnis, dass die von ihr elektronisch bekannt gegebenen Daten zum Zwecke der Vertragsabwicklung elektronisch verarbeitet und für die Dauer der Geschäftsbeziehung sowie darüber hinaus gemäß den gesetzlichen Aufbewahrungs- und Dokumentationspflichten; darüber hinausgehend bis zur Beendigung eines allfälligen Rechtsstreits, gespeichert werden.
 
-12.3. Sofern alle abgebildeten Kund\*innen vorab zustimmen, werden vereinzelt im Zuge der Kurse Fotos oder Videoaufnahmen gemacht, welche ggf. auch auf der Webseite www.ivypoledance.at oder auf den entsprechenden Accounts in sozialen Medien veröffentlicht werden.
+12.3. Sofern alle abgebildeten Kund\*innen vorab zustimmen, werden vereinzelt im Zuge der Kurse Fotos oder Videoaufnahmen gemacht, welche ggf. auch auf der Webseite [https://ivypoledance.at/](https://ivypoledance.at/) oder auf den entsprechenden Accounts in sozialen Medien veröffentlicht werden.
 
 - Zweck. Verwendung des Bild- bzw. Videomaterials zwecks Bewerbung des Unternehmens nach außen.
 

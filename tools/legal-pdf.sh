@@ -133,7 +133,9 @@ mkdir -p "$(dirname "$OUT")"
 # fancy_lists is disabled so the "a." to "g." paragraphs in the liability clause
 # stay exactly as written instead of being renumbered as a list. implicit_figures
 # is disabled so an image on its own line stays in the text instead of becoming a
-# numbered figure with a caption.
+# numbered figure with a caption. Bare addresses are deliberately not autolinked:
+# Zola does not autolink them either, and a link the PDF has but the page does not
+# is a difference between two renderings of one source.
 docker run --rm -v "$WORK:/work" -w /work \
   -e SOURCE_DATE_EPOCH \
   --entrypoint pandoc "$PANDOC_IMAGE" \

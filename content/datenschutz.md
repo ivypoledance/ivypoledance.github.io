@@ -61,7 +61,7 @@ Dieser Wert enthält ausschließlich die Angabe „hell“ oder „dunkel“, is
 
 Auf der Seite „Testimonials“ sind einzelne öffentliche Facebook-Beiträge eingebettet. Diese Inhalte werden von Servern von Meta geladen. Dabei erhält Meta die IP-Adresse und weitere technische Daten des Browsers und kann bei gleichzeitig angemeldetem Facebook-Konto den Aufruf diesem Konto zuordnen. Auf die weitere Verarbeitung durch Meta besteht kein Einfluss.
 
-Verantwortlich für diese Verarbeitung ist Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland. Informationen dazu finden sich in der Datenschutzrichtlinie von Facebook unter https://www.facebook.com/privacy/policy.
+Verantwortlich für diese Verarbeitung ist Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland. Informationen dazu finden sich in der Datenschutzrichtlinie von Facebook unter [https://www.facebook.com/privacy/policy](https://www.facebook.com/privacy/policy).
 
 Diese Inhalte werden ausschließlich beim Aufruf der Seite „Testimonials“ geladen. Alle übrigen Seiten laden keine Inhalte von Dritten. Wer die Übermittlung vermeiden möchte, ruft diese Seite nicht auf oder unterbindet das Laden von Inhalten Dritter im Browser.
 
@@ -109,7 +109,7 @@ Besteht der Verdacht, dass die Verarbeitung gegen das Datenschutzrecht verstöß
 
 Österreichische Datenschutzbehörde\
 Barichgasse 40-42, 1030 Wien\
-dsb@dsb.gv.at, https://www.dsb.gv.at
+[dsb@dsb.gv.at](mailto:dsb@dsb.gv.at), [https://www.dsb.gv.at](https://www.dsb.gv.at)
 
 ## 9. Änderungen dieser Datenschutzerklärung
 
