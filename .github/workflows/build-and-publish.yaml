@@ -3,7 +3,7 @@
 # The build steps are shared with the preview workflow through the composite
 # actions in .github/actions/, so production and staging cannot drift apart.
 
-name: Publish the site
+name: 🚀 Publish the site
 
 on:
   push:
@@ -26,7 +26,7 @@ defaults:
 
 jobs:
   build:
-    name: 🏗️ Build the site
+    name: Build the site
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,7 +46,7 @@ jobs:
         with:
           path: ./public
   deploy:
-    name: 🚀 Publish to Pages
+    name: Publish to Pages
     environment:
       name: Production
       url: ${{ steps.deployment.outputs.page_url }}

@@ -9,7 +9,7 @@
 # without it Cloudflare keeps the newest deployment per branch and the whole
 # site would stay served from pr-<number>.<project>.pages.dev.
 
-name: Remove PR preview
+name: 🗑️ Remove PR preview
 
 on:
   pull_request:
@@ -35,7 +35,7 @@ env:
 
 jobs:
   teardown:
-    name: 🗑️ Tear down the preview
+    name: Tear down the preview
     runs-on: ubuntu-latest
     if: github.event.pull_request.head.repo.full_name == github.repository
     steps:

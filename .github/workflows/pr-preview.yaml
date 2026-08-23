@@ -22,7 +22,7 @@
 # forks, which is the behaviour we want rather than running fork code with a
 # token that can edit DNS.
 
-name: Deploy PR preview
+name: 🕵️‍♀️ Deploy PR preview
 
 on:
   pull_request:
@@ -47,7 +47,7 @@ env:
 
 jobs:
   preview:
-    name: 👀 Publish the preview
+    name: Publish the preview
     runs-on: ubuntu-latest
     # Forks cannot receive the deploy token.
     if: github.event.pull_request.head.repo.full_name == github.repository

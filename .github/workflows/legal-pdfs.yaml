@@ -9,7 +9,7 @@
 # The PDFs are byte-identical to the published ones: their creation date is the
 # document's own Fassung rather than the time of the build.
 
-name: Legal documents
+name: 📄 Legal documents
 
 on:
   workflow_dispatch:
@@ -23,7 +23,7 @@ defaults:
 
 jobs:
   render:
-    name: 📄 Render the PDFs
+    name: Render the PDFs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

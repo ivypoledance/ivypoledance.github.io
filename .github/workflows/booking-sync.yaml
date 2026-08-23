@@ -8,7 +8,7 @@
 #
 # Until BOOKING_API is set the sync step reports and stops rather than failing.
 
-name: Sync course dates
+name: 🔄 Sync course dates
 
 on:
   push:
@@ -39,7 +39,7 @@ defaults:
 
 jobs:
   check:
-    name: ✅ Validate the course dates
+    name: Validate the course dates
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -52,7 +52,7 @@ jobs:
         run: node booking/sync-events.mjs --dry-run
 
   sync:
-    name: 🔄 Sync to the booking API
+    name: Sync to the booking API
     needs: check
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
