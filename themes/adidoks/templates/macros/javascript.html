@@ -1,8 +1,11 @@
+{# Hashed URLs, for the reason given above the stylesheet in
+   templates/macros/head.html. The search index is rebuilt from the content on
+   every deploy, so it is the asset that would go stale most often. #}
 {% component adidoks.javascript(config, lang) %}
-<script type="text/javascript" src="{{ get_url(path="js/main.js") | safe }}" defer></script>
+<script type="text/javascript" src="{{ get_url(path="js/main.js", cachebust=true) | safe }}" defer></script>
 {% if config.build_search_index %}
-  <script type="text/javascript" src="{{ get_url(path="plugins/elasticlunr.min.js") | safe }}" defer></script>
-  <script type="text/javascript" src="{{ get_url(path="search_index." ~ lang ~ ".js") | safe }}" defer></script>
-  <script type="text/javascript" src="{{ get_url(path="js/search.js") | safe }}" defer></script>
+  <script type="text/javascript" src="{{ get_url(path="plugins/elasticlunr.min.js", cachebust=true) | safe }}" defer></script>
+  <script type="text/javascript" src="{{ get_url(path="search_index." ~ lang ~ ".js", cachebust=true) | safe }}" defer></script>
+  <script type="text/javascript" src="{{ get_url(path="js/search.js", cachebust=true) | safe }}" defer></script>
 {% endif %}
 {% endcomponent adidoks.javascript %}

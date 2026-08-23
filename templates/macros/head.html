@@ -3,8 +3,14 @@
 {% endcomponent site.head_resource %}
 
 
+{# GitHub Pages serves every asset with `cache-control: max-age=14400` while a
+   page itself is only cached for ten minutes. An asset asked for by bare name
+   therefore keeps being served from the previous deploy for up to four hours
+   after it changed, to a visitor whose pages already come from the new one.
+   `cachebust` puts a hash of the file in its URL, so the URL changes exactly
+   when the file does and the two can never be mixed. #}
 {% component site.head_stylesheet() %}
-<link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
+<link rel="stylesheet" href="{{ get_url(path="main.css", cachebust=true) | safe }}">
 {% endcomponent site.head_stylesheet %}
 
 
