@@ -30,8 +30,7 @@ Required secrets and API token scopes are documented at the top of
 - [ ] Photo frame (like on landing page)
 - [ ] Different icon for imprint (feather or impressum in bottom bar)
 - [ ] Have a lawyer review the AGB and the Datenschutzerklärung before relying on them
-- [ ] Decide whether the course room address in AGB clauses 4.2 and 9.2 should become artwork too. It is still text there, it reads `Dingelstedtgasse 1/1/32` where `static/img/contact/anschrift.svg` reads `Dingelstedtgasse 1`, and changing a clause's wording is not a formatting decision
-- [ ] AGB defects to raise with the lawyer: clause 11 contains items numbered 13.1/13.2, and 7.3(f) cites a non-existent "Punkt 5.11"
+- [ ] Typos carried over verbatim from the AGB the text was transcribed from, left alone because correcting a legal document is not a transcription decision: `abgsagen` in 3.1, `Kund*nnen` in the heading of clause 6, a stray `¸` for a comma in 5.2, and `Die Adressen des Kursraums ist` in 9.2
 - [ ] Replace the Facebook embeds on the testimonials page with screenshots; they are the only content loaded from a third party, and dropping them removes the site's last transfer of visitor data
 - [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2 theme
 - [ ] Booking page requests a missing `js/book.js` (404) — implement the form or unpublish the page

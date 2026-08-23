@@ -115,7 +115,7 @@ d. die Kund\*innen sich wegen Selbstüberschätzung verletzen (z.B. Zerrungen im
 
 e. die Kund\*innen ein Sportgerät ungesichert verwenden;
 
-f. die Sicherung nicht angemessen erfolgt (siehe ab Punkt 5.11);
+f. die Sicherung nicht angemessen erfolgt (siehe Punkte 5.6 und 5.7);
 
 g. die betreffenden Kund\*innen einen Kurs gebucht haben, für den sie nicht über die notwendigen (und im Zuge des Buchungsprozesses angeführten) Vorkenntnisse verfügen.
 
@@ -149,9 +149,9 @@ Es gilt das gesetzliche Gewährleistungsrecht.
 
 ## 11. Rechtswahl und Gerichtsstand
 
-13.1 Sämtliche Rechte und Pflichten zwischen Ivy Poledance/ der Inhaberin und den jeweiligen Kund\*innen unterliegen österreichischem Recht, sofern nicht anders vereinbart oder zwingende Verbraucherschutzbestimmungen Abweichendes vorsehen.
+11.1 Sämtliche Rechte und Pflichten zwischen Ivy Poledance/ der Inhaberin und den jeweiligen Kund\*innen unterliegen österreichischem Recht, sofern nicht anders vereinbart oder zwingende Verbraucherschutzbestimmungen Abweichendes vorsehen.
 
-13.2 Als zuständiges Gericht für alle Rechtsstreitigkeiten im Zusammenhang mit diesen AGB und den zwischen Kund\*innen und Ivy Poledance abgeschlossenen Vertragsbeziehungen wird das sachlich zuständige Gericht in Wien, Österreich, vereinbart.
+11.2 Als zuständiges Gericht für alle Rechtsstreitigkeiten im Zusammenhang mit diesen AGB und den zwischen Kund\*innen und Ivy Poledance abgeschlossenen Vertragsbeziehungen wird das sachlich zuständige Gericht in Wien, Österreich, vereinbart.
 
 ## 12. Sonstiges / Allgemeine Bestimmungen
 
