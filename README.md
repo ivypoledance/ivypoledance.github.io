@@ -26,19 +26,34 @@ to the booking API when run by hand.
 Required secrets and API token scopes are documented at the top of
 `.github/workflows/pr-preview.yaml`.
 
-## ToDo:
+## ToDo
 
-- [ ] Favicon (transparent background)
-- [ ] Automated booking
-- [ ] Email send from booking
-- [ ] Fixed position background images
-- [ ] Optimize photos
-- [ ] Photo frame (like on landing page)
-- [ ] Different icon for imprint (feather or impressum in bottom bar)
-- [ ] Have a lawyer review the AGB and the Datenschutzerklärung before relying on them
-- [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2 theme
-- [ ] Booking page requests a missing `js/book.js` (404) — implement the form or unpublish the page
-- [ ] Remove the theme's unused math macro (pins KaTeX 0.11.1; math is disabled)
-- [ ] Recheck the `.form-floating` override in the theme sass on the next Bootstrap upgrade (it mirrors Bootstrap's own selectors)
-- [ ] Drop `submodules: recursive` and `lfs: true` from the workflows (no submodules, no LFS in this repo)
-- [ ] Decide whether to restrict the `*.pages.dev` preview URLs (Pages → Settings → General → access policy); the domain itself cannot be removed
+Most worth doing first.
+
+1. [ ] **The booking page is published and broken.** `/courses/courses-and-booking/book/`
+   answers 200 while the `js/book.js` it asks for answers 404, so the form does
+   nothing at all. Finish it or take the page down — it is the only entry here a
+   visitor can already reach.
+2. [ ] **Photos are shipped at their original size.** `static/img` is 191 MB and
+   every byte of it is deployed: `polecamp/camp2025seefaded2.png` alone is 23 MB,
+   and the poses drawn behind the course text at 30% opacity are up to 4.4 MB
+   each. Only the galleries go through `resize_image`.
+3. [ ] **Finish the booking flow.** The API in `booking/` is written and tested,
+   but nothing reaches it and the site still books by `mailto:`. Left to do: the
+   form, a mail provider with DKIM and SPF for `ivypoledance.at`, and deploying
+   the Worker. `booking/README.md` has the steps.
+4. [ ] Drop `submodules: recursive` and `lfs: true` from the checkouts in
+   `build-and-publish.yaml` and `pr-preview.yaml`. This repository has neither.
+5. [ ] Give the imprint its own icon in `config.toml`. It borrows feather's
+   envelope, which reads as "write to us".
+6. [ ] Favicon on a transparent background. None of the icons in `static/`
+   carries an alpha channel.
+7. [ ] Hold the decorative background images still while the page scrolls, and
+   frame photographs the way the landing page does. Both mean lifting the inline
+   styles repeated across the course pages into a class.
+8. [ ] Remove the theme's unused math macro. It pins KaTeX 0.11.1 from a CDN and
+   never renders, `config.extra.math` being unset.
+9. [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2
+   theme, which would make item 8 moot.
+10. [ ] Decide whether to restrict the `*.pages.dev` preview URLs (Pages →
+    Settings → General → access policy); the domain itself cannot be removed.
