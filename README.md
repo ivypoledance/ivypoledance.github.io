@@ -48,5 +48,3 @@ Most worth doing first.
    are dead weight. Declare them or delete them.
 5. [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2
    theme.
-6. [ ] Decide whether to restrict the `*.pages.dev` preview URLs (Pages →
-   Settings → General → access policy); the domain itself cannot be removed.
