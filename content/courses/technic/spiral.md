@@ -31,5 +31,5 @@ Solltest du Trainingspartner*innen für eine geteilte Privatstunde suchen, lass 
 Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/polecamp/spiral4.png" />
+<img class="pose-backdrop" src="/img/polecamp/spiral4.png" />
 

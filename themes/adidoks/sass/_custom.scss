@@ -23,6 +23,25 @@
   }
 }
 
+/**
+ * The pose silhouette drawn behind the text of a course page.
+ *
+ * It is decoration, not content: `z-index` keeps it behind everything the page
+ * says, and it is held to the viewport rather than to the document, so the text
+ * scrolls over a still picture instead of dragging it along. `height: 100%` is
+ * one viewport high for the same reason, and the picture keeps its aspect ratio,
+ * so a narrow window shows a narrower strip of it at the right edge.
+ */
+.pose-backdrop {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -100;
+}
+
 .imageModal {
   position: fixed;
   z-index: 99999;
