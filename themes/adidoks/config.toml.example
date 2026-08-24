@@ -73,12 +73,6 @@ edit_page = false
 docs_repo = "https://github.com/aaranxu/adidoks"
 repo_branch = "main"
 
-## Math settings
-# options: true, false. Enable math support globally,
-# default: false. You can always enable math on a per page.
-math = false
-library = "katex"  # options: "katex", "mathjax". default is "katex".
-
 ## Open Graph + Twitter Cards
 [extra.open]
 enable = true
