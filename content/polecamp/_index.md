@@ -6,6 +6,8 @@ title = "Ivy Polecamp"
 
 {{ <image img="/img/polecamp/POLECAMP2026_INSTAGRAM.jpg" max={400} /> }}
 
+{{ <image img="/img/polecamp/2026shoot.jpg" max={600} /> }}
+
 ## Ivy Aerial Lab 2025: Spiral Edition (Wien)
 
 {{ <image img="/img/polecamp/spiralbanner.jpg" max={400} /> }}
