@@ -168,11 +168,15 @@ Steps only the account owner can do.
    `Workers Scripts: Edit` and `D1: Edit` added to deploy this.
 
 5. **Privacy notice.** Storing names and emails makes you the data controller.
-   `content/imprint/_index.md` currently has an Impressum and AGB but no
-   Datenschutzerklärung. It needs one before the form goes live, covering what
-   is stored (name, email, chosen date), why, how long, and how to have it
-   deleted. Bookings should also be pruned on a schedule rather than kept
-   indefinitely.
+   `content/datenschutz.md` already covers the booking as such: §5 names the
+   data (name, email, course, payment), the legal basis and how long it is kept,
+   and §7 the right to have it deleted.
+
+   What it does not name is this system. Before the form goes live it wants the
+   D1 database and the mail provider listed as processors — §3 has Cloudflare
+   for DNS, delivery and email forwarding only — and Turnstile mentioned, that
+   one running in the visitor's browser. Bookings should also be pruned on a
+   schedule rather than kept indefinitely.
 
 ## Notes
 
