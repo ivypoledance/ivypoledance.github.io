@@ -9,4 +9,4 @@ The best of two worlds - lerne mit Lollipop (Polelyra) die fabelhafte Kombinatio
 
 Max. Teilnehmer*innenzahl: 3 Personen! 
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/lolli.png" />
+<img class="pose-backdrop" src="/img/pose/lolli.png" />

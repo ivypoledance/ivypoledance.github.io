@@ -18,4 +18,4 @@ Superman (mindestens ein Eingang)
 
 Einzeltermin/ Drop-in: €29
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/ayesha.png" />
+<img class="pose-backdrop" src="/img/pose/ayesha.png" />

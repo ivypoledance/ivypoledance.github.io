@@ -40,8 +40,8 @@ Most worth doing first.
    deploying the Worker. `booking/README.md` has the steps, and the
    Datenschutzerklärung wants the D1 database and the mail provider named in it
    before any of this is public.
-3. [ ] Hold the decorative background images still while the page scrolls, and
-   frame photographs the way the landing page does. Both mean lifting the inline
-   styles repeated across the course pages into a class.
+3. [ ] Frame photographs the way the landing page does: the landing image is
+   still sized by an inline `style` in `templates/index.html`, and nothing else
+   frames a picture that way.
 4. [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2
    theme.

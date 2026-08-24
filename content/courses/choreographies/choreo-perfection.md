@@ -10,4 +10,4 @@ Open Level! Die Aerial-Teile werden je nach Teilnehmer*innen für mehrere Levels
 
 Einzeltermin/ Drop-in: €28
 
-<img style="display: block; height:100%; opacity: 0.3; position: absolute; z-index: -100; right: 0px; top: 0px;" src="/img/pose/hide.png" />
+<img class="pose-backdrop" src="/img/pose/hide.png" />
