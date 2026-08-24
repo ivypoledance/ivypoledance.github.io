@@ -26,21 +26,14 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 ## Schnupperstunden Poledance
 
-Lerne in Kleinstgruppen (maximal 6 Personen) eine neue Sportart kennen und lieben!  
+Lerne in Kleinstgruppen (maximal 9 Personen) eine neue Sportart kennen und lieben!  
 Die Schnupperstunde für Poledance 101 setzt keinerlei Vorkenntnisse voraus und ist für alle geeignet: Egal welches Alter, Gewicht oder Sportlichkeitslevel - hier bist du richtig!  
-Wenn du dich für einen anschließenden Kurs anmeldest, wird dir der Schnupperstunden-Beitrag vom Kursbeitrag abgezogen (und du wirst sehen, dass man auch ohne jemals einen Kraftsport ausgeübt zu haben schon in vier Wochen spannende Figuren und Bewegungen an der Pole erlernen kann)!
 
-  - PREIS: € 7.-
+  - PREIS: € 8.-
 
 ### Nächste Termine:
 
-Mo, 6.4., 18:15-19:15 
-
-Di, 7.4., 18:00-19:00 
-
-Do, 16.4., 17:15-18:15
-
-So, 19.4., 16:45-17:45
+Mo, 24.8., 19:00-20:00 
 
 Keiner der Termine passt? Schick uns unverbindlich eine Termin-Anfrage per EMail!
 
