@@ -43,8 +43,5 @@ Most worth doing first.
 3. [ ] Hold the decorative background images still while the page scrolls, and
    frame photographs the way the landing page does. Both mean lifting the inline
    styles repeated across the course pages into a class.
-4. [ ] Four `mstile-*.png` are referenced by nothing: `browserconfig.xml`
-   declares only `square150x150logo`, so the 70, 144, 310x150 and 310x310 tiles
-   are dead weight. Declare them or delete them.
-5. [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2
+4. [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2
    theme.
