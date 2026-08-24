@@ -60,9 +60,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
-        with:
-          submodules: recursive
-          lfs: true
 
       - name: Resolve preview names
         id: names

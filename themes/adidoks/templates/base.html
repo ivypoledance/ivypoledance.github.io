@@ -10,7 +10,6 @@
 {% block seo %}{% endblock seo %}
 
 {{<adidoks.head_favicons config={config} />}}
-{% block math %}{{<adidoks.math enabled={config.extra?.math or false} library={config.extra?.library or false} />}}{% endblock math %}
 </head>
 {% block body %}{% set page_class="home" %}{% endblock body %}
 <body class="{{ page_class }}">

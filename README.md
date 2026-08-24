@@ -40,18 +40,8 @@ Most worth doing first.
    deploying the Worker. `booking/README.md` has the steps, and the
    Datenschutzerklärung wants the D1 database and the mail provider named in it
    before any of this is public.
-3. [ ] Drop `submodules: recursive` and `lfs: true` from the checkouts in
-   `build-and-publish.yaml` and `pr-preview.yaml`. This repository has neither.
-4. [ ] Give the imprint its own icon in `config.toml`. It borrows feather's
-   envelope, which reads as "write to us".
-5. [ ] Favicon on a transparent background. None of the icons in `static/`
-   carries an alpha channel.
-6. [ ] Hold the decorative background images still while the page scrolls, and
+3. [ ] Hold the decorative background images still while the page scrolls, and
    frame photographs the way the landing page does. Both mean lifting the inline
    styles repeated across the course pages into a class.
-7. [ ] Remove the theme's unused math macro. It pins KaTeX 0.11.1 from a CDN and
-   never renders, `config.extra.math` being unset.
-8. [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2
-   theme, which would make item 7 moot.
-9. [ ] Decide whether to restrict the `*.pages.dev` preview URLs (Pages →
-   Settings → General → access policy); the domain itself cannot be removed.
+4. [ ] Replace the vendored AdiDoks theme with a maintained Zola 0.23 / Tera v2
+   theme.
