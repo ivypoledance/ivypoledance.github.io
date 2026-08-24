@@ -24,22 +24,37 @@
 }
 
 /**
- * The pose silhouette drawn behind the text of a course page.
+ * The artwork drawn behind the text of a page: a pose silhouette on the course
+ * pages, the filmstrip collage on the About page.
  *
- * It is decoration, not content: `z-index` keeps it behind everything the page
+ * It is decoration, not content. `z-index` keeps it behind everything the page
  * says, and it is held to the viewport rather than to the document, so the text
- * scrolls over a still picture instead of dragging it along. `height: 100%` is
- * one viewport high for the same reason, and the picture keeps its aspect ratio,
- * so a narrow window shows a narrower strip of it at the right edge.
+ * scrolls over a still picture instead of dragging it out of sight with the
+ * first screenful. Every length below is a share of the viewport for the same
+ * reason, and each picture keeps its aspect ratio, so a narrow window shows a
+ * narrower slice of it.
  */
-.pose-backdrop {
+.pose-backdrop,
+.film-backdrop {
   display: block;
   position: fixed;
+  z-index: -100;
+}
+
+.pose-backdrop {
   top: 0;
   right: 0;
   height: 100%;
   opacity: 0.3;
-  z-index: -100;
+}
+
+.film-backdrop {
+  top: 60%;
+  left: 85%;
+  height: 130%;
+  opacity: 0.5;
+  // The offsets place the middle of the collage, not its top left corner.
+  transform: translate(-50%, -50%);
 }
 
 .imageModal {

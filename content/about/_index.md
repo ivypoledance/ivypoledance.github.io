@@ -85,4 +85,4 @@ Cirque Rouge / Oh Lala Shows 2026-- (Mirage, Wien)
 
 Hier findest du in Kürze die gängigsten Fragen und Antworten rund um Poledance!
 
-<img style="display: block; height: 130%; opacity: 0.5; position: absolute; z-index: -100; left: 85%; top: 60%; transform: translate(-50%, -50%);" src="/img/hifilmswappedbig2.png" />
+<img class="film-backdrop" src="/img/hifilmswappedbig2.png" />
