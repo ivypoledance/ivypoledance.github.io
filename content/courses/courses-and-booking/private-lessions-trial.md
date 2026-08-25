@@ -7,9 +7,9 @@ sort_by = "weight"
 
 ## Privatstunden
 
-Privatstunden, sowie Stunden für dich & deine Freund*innen (2-6 Personen) sind jederzeit buchbar! 
+Privatstunden sowie Stunden für dich & deine Freund*innen (2-6 Personen) sind jederzeit buchbar! 
 
-In einer Einheit, die ideal auf dich, deine Wünsche & deine Bedürfnisse abgestimmt ist, stellen wir Technik, Choreos, oder auch Spezialskills (Aerial Spiral, Twinpole, Chairdance, Lollipop, Polehooping…) zu DEINEM perfekten Programm zusammen.
+In einer Einheit, die ideal auf dich, deine Wünsche & deine Bedürfnisse abgestimmt ist, stellen wir Technik, Choreos oder auch Spezialskills (Aerial Spiral, Twinpole, Chairdance, Lollipop, Polehooping…) zu DEINEM perfekten Programm zusammen.
 
   - 1 Stunde: 	  € 59.- (einzeln) <br />
     (zu zweit: je € 44.-, zu dritt: je € 36.-, ab vier Personen: je € 25.-)

@@ -16,6 +16,6 @@ content = "Erlerne einzigartige Choreographien, spannende Technik und innovative
 
 [[extra.list]]
 title = "Privatstunden"
-content = "Einzelstunden, sowie Stunden für dich und deine Freund*innen (2-6 Personen) sind jederzeit buchbar."
+content = "Einzelstunden sowie Stunden für dich und deine Freund*innen (2-6 Personen) sind jederzeit buchbar."
 
 +++

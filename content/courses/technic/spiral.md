@@ -14,7 +14,7 @@ Lerne die fantastische Welt der Aerial Spiral kennen und lass dir den Kopf verdr
 In Privatstunden (einzeln oder als Gruppe bis max. 3 Personen buchbar, bei größeren Gruppen bitte vorab Kontaktaufnahme!) erlernst du spezifische Technikaspekte der Spiral, bekommst flowy Kombinationen, die für dich und dein Level passen und kannst mit Improvisationselementen spielen und damit diesen wundervollen Apparat ganz „deins“ machen. 
 
 
-ACHTUNG: Trainingsort ist das TRAP Circus Center in Simmering, solltest du keine Trainingsmitgliedschaft dort haben, kommt noch ein Betrag (zwischen 8€ und 35€ /Stunde) für die Hallenmiete dazu. 
+ACHTUNG: Trainingsort ist das TRAP Circus Center in Simmering. Solltest du keine Trainingsmitgliedschaft dort haben, kommt noch ein Betrag (zwischen 8 € und 35 € pro Stunde) für die Hallenmiete dazu. 
 
   - 1 Stunde: 	  € 59.- (zu zweit: je € 39.-, ab drei Personen: je € 32.-)
   - 90 Minuten: 	€ 74.- (zu zweit: je € 49.-, ab drei Personen: je € 39.-)

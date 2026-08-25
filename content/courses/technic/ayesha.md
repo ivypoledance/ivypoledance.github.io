@@ -5,7 +5,7 @@ weight = 1204
 sort_by = "weight"
 +++
 
-Einer der großen Stars unter den Pole Moves: Die Ayesha! Es gibt mehr als nur eine "handvoll" Grip-Varianten für sie – und eine Unmenge an spannenden, kreativen Ein- und Ausgängen!  
+Einer der großen Stars unter den Pole Moves: Die Ayesha! Es gibt mehr als nur eine "Handvoll" Grip-Varianten für sie – und eine Unmenge an spannenden, kreativen Ein- und Ausgängen!  
 In Ayesha 2.0 erwartet dich eine ganze Reihe dieser Transitions, individuell an dich und die Gruppe angepasst und aus einer ellenlangen Liste an Möglichkeiten ausgewählt - mehrfach besuchbar!
 
 ##### Achtung:
