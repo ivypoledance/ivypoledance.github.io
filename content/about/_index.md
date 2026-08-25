@@ -18,7 +18,7 @@ Ich unterrichte nun schon seit 2014 Poledance und Aerial, und habe das große Gl
 
 Mit einer fundierten Basis, pädagogischem Background und einem professionell geplanten und vorbereiteten Unterrichtskonzept haben wir gemeinsam die Möglichkeit, spontan und flexibel zu reagieren und zu gestalten, ohne dass damit der Fokus unserer Stunde verloren geht: Dein Spaß, deine Polereise, deine Freude an der Bewegung.
 
-Meine Räumlichkeiten sind leider nicht barrierefrei zugänglich, solltest du hier Bedenken haben, bitte ich um eine EMail – wir finden eine ausgelagerte Lösung 😊
+Meine Räumlichkeiten sind leider nicht barrierefrei zugänglich, solltest du hier Bedenken haben, bitte ich um eine E-Mail – wir finden eine ausgelagerte Lösung 😊
 
 Es ist mir wichtig, unsere gemeinsamen Stunden und den Studio-Space so inklusiv wie möglich zu gestalten, denn: Ein Studio ist nie neutral. Hier ist kein Platz für Rassismus, Queerfeindlichkeit, Bodyshaming, Ableismus und andere Formen der Ausgrenzung. Ich arbeite kontinuierlich daran, einen möglichst sicheren Raum für BIPoC, LGBTQIA+-Personen, Menschen jeder Körperform, Altersgruppe, Herkunft und neurodivergente Menschen zu gestalten. Poledance ist Ausdruck, Community und Empowerment – für alle.
 

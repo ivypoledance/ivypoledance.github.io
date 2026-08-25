@@ -14,9 +14,9 @@ pdf = "download/Datenschutzerklaerung-IvyPoledance.pdf"
 Verantwortlich für die Verarbeitung personenbezogener Daten im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
 
 ![Name und Anschrift der Inhaberin von Ivy Poledance](/img/contact/anschrift.svg)\
-![Emailadresse von Ivy Poledance](/img/contact/mail.svg)
+![E-Mail-Adresse von Ivy Poledance](/img/contact/mail.svg)
 
-Für Fragen zum Datenschutz und zur Ausübung der unten genannten Rechte genügt eine Email an diese Adresse.
+Für Fragen zum Datenschutz und zur Ausübung der unten genannten Rechte genügt eine E-Mail an diese Adresse.
 
 ## 2. Überblick
 
@@ -42,7 +42,7 @@ Die Webseite wird über zwei Dienstleister ausgeliefert, die dabei als Auftragsv
 
 | Dienstleister | Rolle |
 | --- | --- |
-| Cloudflare, Inc. (USA) mit Cloudflare Germany GmbH | Domainverwaltung (DNS), Auslieferung über das Cloudflare-Netzwerk, Emailweiterleitung |
+| Cloudflare, Inc. (USA) mit Cloudflare Germany GmbH | Domainverwaltung (DNS), Auslieferung über das Cloudflare-Netzwerk, E-Mail-Weiterleitung |
 | GitHub, Inc. (USA), ein Unternehmen von Microsoft | Speicherung und Auslieferung der Webseite über GitHub Pages |
 
 Beide Anbieter betreiben Rechenzentren in der Europäischen Union; Zugriffe aus Österreich werden in der Regel innerhalb der EU bedient. Eine Übermittlung in die USA kann jedoch nicht ausgeschlossen werden. Mit beiden Anbietern bestehen Auftragsverarbeitungsverträge samt Standarddatenschutzklauseln der Europäischen Kommission (Art 46 Abs 2 lit c DSGVO); beide Unternehmen sind darüber hinaus nach dem EU-US Data Privacy Framework zertifiziert.
@@ -61,9 +61,9 @@ Dieser Wert enthält ausschließlich die Angabe „hell“ oder „dunkel“, is
 
 ### Verarbeitung
 
-Für die Buchung eines Kurses und für Anfragen werden die dabei bekanntgegebenen Daten verarbeitet, insbesondere Name, Emailadresse, allenfalls Telefonnummer sowie die Angaben zum gebuchten Kurs und zur Zahlung. Bei Anfragen per Email wird zusätzlich der Inhalt der Nachricht verarbeitet.
+Für die Buchung eines Kurses und für Anfragen werden die dabei bekanntgegebenen Daten verarbeitet, insbesondere Name, E-Mail-Adresse, allenfalls Telefonnummer sowie die Angaben zum gebuchten Kurs und zur Zahlung. Bei Anfragen per E-Mail wird zusätzlich der Inhalt der Nachricht verarbeitet.
 
-Emails an Adressen der Domain ivypoledance.at werden über die Emailweiterleitung von Cloudflare an ein Postfach weitergeleitet und dort gespeichert.
+E-Mails an Adressen der Domain ivypoledance.at werden über die E-Mail-Weiterleitung von Cloudflare an ein Postfach weitergeleitet und dort gespeichert.
 
 ### Rechtsgrundlage
 
@@ -91,9 +91,9 @@ Nach der DSGVO bestehen die folgenden Rechte:
 - Widerspruch gegen Verarbeitungen, die auf ein berechtigtes Interesse gestützt sind (Art 21 DSGVO)
 - Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft (Art 7 Abs 3 DSGVO)
 
-Zur Ausübung dieser Rechte genügt eine Email an:
+Zur Ausübung dieser Rechte genügt eine E-Mail an:
 
-![Emailadresse von Ivy Poledance](/img/contact/mail.svg)
+![E-Mail-Adresse von Ivy Poledance](/img/contact/mail.svg)
 
 Besteht der Verdacht, dass die Verarbeitung gegen das Datenschutzrecht verstößt, kann Beschwerde bei der Aufsichtsbehörde erhoben werden:
 

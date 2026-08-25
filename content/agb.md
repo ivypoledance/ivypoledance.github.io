@@ -23,9 +23,9 @@ pdf = "download/AGB-IvyPoledance.pdf"
 
 2.1 Die Kurse können über [https://ivypoledance.at/](https://ivypoledance.at/) gebucht werden.
 
-2.2 Kund\*innen sichern zu, dass alle im Anmeldevorgang angegebenen Daten und Informationen korrekt sind und werden binnen angemessener Frist informieren, sobald sich diese Informationen und/oder Daten ändern (insb. Änderung von Emailadresse und Postanschrift). Entsprechend kann also davon ausgegangen werden, dass Kund\*innen über die im Registrierungsprozess angegebenen Kontaktdaten erreichbar sind und dorthin übermittelte Nachrichten zur Kenntnis nehmen. Im Zuge der Anmeldung bzw. Buchung bestätigen Kund\*innen, dass sie mit Überweisung des Kursbeitrags die AGB zur Kenntnis genommen haben und mit deren Inhalt und Geltung einverstanden sind.
+2.2 Kund\*innen sichern zu, dass alle im Anmeldevorgang angegebenen Daten und Informationen korrekt sind und werden binnen angemessener Frist informieren, sobald sich diese Informationen und/oder Daten ändern (insb. Änderung von E-Mail-Adresse und Postanschrift). Entsprechend kann also davon ausgegangen werden, dass Kund\*innen über die im Registrierungsprozess angegebenen Kontaktdaten erreichbar sind und dorthin übermittelte Nachrichten zur Kenntnis nehmen. Im Zuge der Anmeldung bzw. Buchung bestätigen Kund\*innen, dass sie mit Überweisung des Kursbeitrags die AGB zur Kenntnis genommen haben und mit deren Inhalt und Geltung einverstanden sind.
 
-2.3 Nach Anklicken der Schaltfläche „Anmelden“ erhalten Kund\*innen eine Email mit Zahlungsinformationen an die von Kund\*innen hinterlegte Emailadresse. Nach erfolgter Zahlung des für die Buchung des Kurses (oder Kurse) in der Email ausgewiesenen Entgelts (Überweisung) kommt die Buchung verbindlich zustande und Kund\*innen erhalten eine Buchungsbestätigung. Ab Zahlung des Kursbeitrags ist Ivy Poledance verpflichtet, Kund\*innen einen Platz im gebuchten Kurs zu reservieren.
+2.3 Nach Anklicken der Schaltfläche „Anmelden“ erhalten Kund\*innen eine E-Mail mit Zahlungsinformationen an die von Kund\*innen hinterlegte E-Mail-Adresse. Nach erfolgter Zahlung des für die Buchung des Kurses (oder Kurse) in der E-Mail ausgewiesenen Entgelts (Überweisung) kommt die Buchung verbindlich zustande und Kund\*innen erhalten eine Buchungsbestätigung. Ab Zahlung des Kursbeitrags ist Ivy Poledance verpflichtet, Kund\*innen einen Platz im gebuchten Kurs zu reservieren.
 
 ### Unübertragbarkeit von Buchungen und Registrierungen
 
@@ -141,7 +141,7 @@ Es gilt das gesetzliche Gewährleistungsrecht.
 
 ## 10. Künftige Änderungen der AGB und Zustimmungsfiktion
 
-10.1 Bei künftigen Änderungen der AGB kann Ivy Poledance die geänderten AGB (kurz AGB „neu“) der Kund\*innen via Email (an die im Registrierungsprozess hinterlegte Emailadresse oder die ggf. danach bekanntgegebene Emailadresse) übermitteln.
+10.1 Bei künftigen Änderungen der AGB kann Ivy Poledance die geänderten AGB (kurz AGB „neu“) der Kund\*innen via E-Mail (an die im Registrierungsprozess hinterlegte E-Mail-Adresse oder die ggf. danach bekanntgegebene E-Mail-Adresse) übermitteln.
 
 10.2 Im Anschluss an die Übermittlung der AGB „neu“ an die Kund\*innen gelten die AGB „neu“ als von den Kund\*innen akzeptiert und somit als zwischen Ivy Poledance und Kund\*innen anstelle der bisherigen AGB vereinbart, sofern die Kund\*innen ausdrücklich zustimmen oder nicht binnen 10 Kalendertagen ausdrücklich widersprechen (Kontaktdaten siehe Punkt 9).
 

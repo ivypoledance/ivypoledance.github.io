@@ -18,7 +18,7 @@ title = "Impressum"
 
 ## Kontakt
 
-<img src="/img/contact/mail.svg" alt="Emailadresse von Ivy Poledance">
+<img src="/img/contact/mail.svg" alt="E-Mail-Adresse von Ivy Poledance">
 <br>
 <img src="/img/contact/anschrift.svg" alt="Name und Anschrift der Inhaberin von Ivy Poledance">
 
