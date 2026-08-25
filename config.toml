@@ -27,6 +27,17 @@ external_level = "error"
 [extra]
 # Put all your custom variables here
 
+# The `lang` attribute of every page, set in templates/base.html. All content is
+# Austrian German, which is what spell-checkers, hyphenation and screen readers
+# key off.
+#
+# `default_language` deliberately stays at Zola's "en": it selects the stemming
+# pipeline for the search index, and a German index names `trimmer-de` and
+# `stemmer-de` in its pipeline. elasticlunr throws "Cannot load un-registered
+# function" on those unless lunr.de.js is loaded first, which the theme does not
+# ship, so setting it would trade a correct `lang` for a dead search box.
+language_code = "de-AT"
+
 # The picture a shared link is rendered with, resized for the card in
 # templates/macros/head.html. Any image in static/ can stand in for it; the
 # landing image is used because it carries the wordmark.
