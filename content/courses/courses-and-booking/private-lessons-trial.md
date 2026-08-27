@@ -3,6 +3,9 @@ title = "Privat- und Schnupperstunden"
 template = "courses/page.html"
 weight = 1120
 sort_by = "weight"
+# This page was published for months at "lessions". The alias keeps that URL
+# reachable, so bookmarks and any link already out in the world still arrive.
+aliases = ["/courses/courses-and-booking/private-lessions-trial/"]
 +++
 
 ## Privatstunden
