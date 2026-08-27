@@ -81,7 +81,7 @@ In allen anderen Fällen können die Kund\*innen das für den Kurs bezahlte Entg
 
 ### Bekanntgabe von Verletzungen und Eigenverantwortlichkeit
 
-6.1 Kund\*innen sind verpflichtet, der Trainerin Vorerkrankungen und Verletzungen bekanntzugeben, die ihr Verletzungsrisiko oder ihre Belastungsfähigkeit potenziell erhöhen könnten.
+6.1 Kund\*innen sind verpflichtet, der Trainerin Vorerkrankungen und Verletzungen bekanntzugeben, die das Verletzungsrisiko für sie selbst oder für die Trainerin potenziell erhöhen oder ihre eigene Belastungsfähigkeit potenziell verringern könnten.
 
 6.2 Kund\*innen sind verpflichtet, von der Sportausübung abzusehen, wenn sie gegenwärtig erkrankt sind (insb. potenziell ansteckende Krankheiten) oder Anzeichen bzw. Symptome verspüren, die nach allgemeiner Auffassung einer Sportausübung entgegenstehen (z.B. akute Kreislaufprobleme, Schwindel, Schlafmangel, akute Verletzungen und körperliche Beschwerden).
 
