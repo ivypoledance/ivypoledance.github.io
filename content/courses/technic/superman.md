@@ -16,6 +16,6 @@ Dieser Kurs ist **nicht** Open Level!
 
 Superman (mindestens ein Eingang)
 
-Einzeltermin/Drop-in: € 29,–
+Einzeltermin/Drop-in: € 29
 
 <img class="pose-backdrop" src="/img/pose/ayesha.png" />
