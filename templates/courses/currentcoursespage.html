@@ -44,7 +44,7 @@
         <p>
 			Aktuell kannst du folgende Kurse sowie Privat- und Kleingruppenstunden (Pole, Aerial Spiral, …) buchen.<br />
            <br />
-		Der Kursort für alle Poledance-Einheiten befindet sich direkt beim Westbahnhof - die genaue Adresse folgt in der Buchungsbestätigung.<br />
+		Der Kursort für alle Poledance-Einheiten befindet sich direkt beim Westbahnhof – die genaue Adresse folgt in der Buchungsbestätigung.<br />
 		Den Buchungslink findest du auf der jeweiligen Kursseite.<br />
 <br />
 		<a href="{{ get_url(path="@/courses/courses-and-booking/private-lessons-trial.md") | safe }}">Schnupperstunden</a> <br />
@@ -63,7 +63,7 @@
                   <td>
                     {% set coursePage = get_page(path=record[0]) %}
                     <a href="{{ coursePage.path }}">{{ coursePage.title }}</a>
-                    {% if record[1] | length > 0 %} - {{ record[1] }}{% endif %}
+                    {% if record[1] | length > 0 %} – {{ record[1] }}{% endif %}
                   </td>
                   {% if showPrice == true %}
                   <td>
@@ -72,7 +72,7 @@
                   {% endif %}
                   <td>
                     {{<de_datetime value={record[3]} />}}{% if record[4] | length > 0 %}-{{ record[4] | date(format="%H:%M") }}{% endif %}
-                    {% if record[5] | length > 0 %} - <br/>
+                    {% if record[5] | length > 0 %} – <br/>
                     {{<de_datetime value={record[5]} />}}{% if record[6] | length > 0 %}-{{ record[6] | date(format="%H:%M") }}{% endif %}
                     {% endif %}
                   </td>

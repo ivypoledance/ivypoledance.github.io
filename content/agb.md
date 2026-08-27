@@ -97,13 +97,13 @@ In allen anderen Fällen können die Kund\*innen das für den Kurs bezahlte Entg
 
 ### Haftung der Kund\*innen
 
-7.1 Kund\*innen haften gegenüber Ivy Poledance/ der Inhaberin für von ihnen schuldhaft (einschließlich leicht fahrlässig) verursachte Schäden. Insbesondere halten Kund\*innen Ivy Poledance/ die Inhaberin schad- und klaglos für Verstöße gegen die in diesen AGB geregelten Pflichten (z.B. Verhaltensregeln in den Studios) und die Richtigkeit und Vollständigkeit ihrer Angaben im Zuge der Buchung von Kursen (siehe Punkt 2).
+7.1 Kund\*innen haften gegenüber Ivy Poledance/der Inhaberin für von ihnen schuldhaft (einschließlich leicht fahrlässig) verursachte Schäden. Insbesondere halten Kund\*innen Ivy Poledance/die Inhaberin schad- und klaglos für Verstöße gegen die in diesen AGB geregelten Pflichten (z.B. Verhaltensregeln in den Studios) und die Richtigkeit und Vollständigkeit ihrer Angaben im Zuge der Buchung von Kursen (siehe Punkt 2).
 
 7.2 Im Falle eines Zahlungsverzugs der Kund\*innen schulden die Kund\*innen gesetzliche Verzugszinsen und ersetzen allenfalls angefallene angemessene Mahn- und Inkassospesen.
 
 ### Haftung von Ivy Poledance für Verletzungen und Personenschäden
 
-7.3 Ivy Poledance/ die Inhaberin haftet für Verletzungen und andere Personenschäden nur, wenn sie Schäden schuldhaft verursacht hat. Dies ist insbesondere nicht der Fall, wenn Schäden entstehen, weil:
+7.3 Ivy Poledance/die Inhaberin haftet für Verletzungen und andere Personenschäden nur, wenn sie Schäden schuldhaft verursacht hat. Dies ist insbesondere nicht der Fall, wenn Schäden entstehen, weil:
 
 a. die betreffenden Kund\*innen nicht den Anweisungen der Trainerin folgen;
 
@@ -149,7 +149,7 @@ Es gilt das gesetzliche Gewährleistungsrecht.
 
 ## 11. Rechtswahl und Gerichtsstand
 
-11.1 Sämtliche Rechte und Pflichten zwischen Ivy Poledance/ der Inhaberin und den jeweiligen Kund\*innen unterliegen österreichischem Recht, sofern nicht anders vereinbart oder zwingende Verbraucherschutzbestimmungen Abweichendes vorsehen.
+11.1 Sämtliche Rechte und Pflichten zwischen Ivy Poledance/der Inhaberin und den jeweiligen Kund\*innen unterliegen österreichischem Recht, sofern nicht anders vereinbart oder zwingende Verbraucherschutzbestimmungen Abweichendes vorsehen.
 
 11.2 Als zuständiges Gericht für alle Rechtsstreitigkeiten im Zusammenhang mit diesen AGB und den zwischen Kund\*innen und Ivy Poledance abgeschlossenen Vertragsbeziehungen wird das sachlich zuständige Gericht in Wien, Österreich, vereinbart.
 
@@ -157,7 +157,7 @@ Es gilt das gesetzliche Gewährleistungsrecht.
 
 ### Salvatorische Klausel
 
-12.1 Sollte eine Bestimmung dieser AGB ganz oder teilweise rechtsunwirksam oder undurchführbar sein oder werden, so berührt dies nicht die Rechtswirksamkeit oder Durchführbarkeit aller anderen Geschäftsbestimmungen. Die Vertragsparteien (Kund\*innen und Ivy Poledance/ Inhaberin) werden die rechtsunwirksame oder undurchführbare Bestimmung durch eine wirksame und durchführbare Bestimmung ersetzen, die gemäß Inhalt und Zweck der rechtsunwirksamen oder undurchführbaren Bestimmung möglichst nahekommt.
+12.1 Sollte eine Bestimmung dieser AGB ganz oder teilweise rechtsunwirksam oder undurchführbar sein oder werden, so berührt dies nicht die Rechtswirksamkeit oder Durchführbarkeit aller anderen Geschäftsbestimmungen. Die Vertragsparteien (Kund\*innen und Ivy Poledance/Inhaberin) werden die rechtsunwirksame oder undurchführbare Bestimmung durch eine wirksame und durchführbare Bestimmung ersetzen, die gemäß Inhalt und Zweck der rechtsunwirksamen oder undurchführbaren Bestimmung möglichst nahekommt.
 
 ### Datenschutz und Datenschutzerklärung
 

@@ -5,8 +5,8 @@ weight = 1204
 sort_by = "weight"
 +++
 
-Einer der großen Stars unter den Pole Moves: Die Ayesha! Es gibt mehr als nur eine "Handvoll" Grip-Varianten für sie – und eine Unmenge an spannenden, kreativen Ein- und Ausgängen!  
-In Ayesha 2.0 erwartet dich eine ganze Reihe dieser Transitions, individuell an dich und die Gruppe angepasst und aus einer ellenlangen Liste an Möglichkeiten ausgewählt - mehrfach besuchbar!
+Einer der großen Stars unter den Pole Moves: Die Ayesha! Es gibt mehr als nur eine „Handvoll“ Grip-Varianten für sie – und eine Unmenge an spannenden, kreativen Ein- und Ausgängen!  
+In Ayesha 2.0 erwartet dich eine ganze Reihe dieser Transitions, individuell an dich und die Gruppe angepasst und aus einer ellenlangen Liste an Möglichkeiten ausgewählt – mehrfach besuchbar!
 
 ##### Achtung:
 
@@ -18,9 +18,9 @@ Stabile Ayesha (mindestens eine Grip-Variante)
 
 
 
-Einzeltermin/ Drop-in bei zweiwöchigem Kurs: €29
+Einzeltermin/Drop-in bei zweiwöchigem Kurs: € 29,–
 
-Technik-Special (1,5h): €39
+Technik-Special (1,5h): € 39,–
 
 
 <img class="pose-backdrop" src="/img/pose/ayesha.png" />
