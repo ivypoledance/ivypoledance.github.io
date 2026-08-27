@@ -70,7 +70,7 @@ export function waitlistEmail({ event, booking, position, siteUrl }) {
       `  Termin:   ${formatEventDates(event)}`,
       `  Position: ${position}`,
       '',
-      'Sobald ein Platz frei wird, meldest du dich als Erste*r nach Reihenfolge.',
+      'Sobald ein Platz frei wird, kommst du der Reihenfolge nach zum Zug.',
       'Wir melden uns dann per E-Mail. Es entstehen dir keine Kosten.',
       '',
       `Alle Kurse: ${siteUrl}/courses/courses-and-booking/booking/`,
