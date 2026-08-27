@@ -15,7 +15,7 @@ Ein Kurs, der dich interessiert, ist gerade nicht verfügbar? Lass es uns unverb
 
 ## Buchungsanfrage / Performances
 
-Du willst eine maßgeschneiderte Performance für dein Event, oder Unterhaltung zum Mitmachen für Polterabend und Co? Schick uns eine unverbindliche Buchungsanfrage!
+Du willst eine maßgeschneiderte Performance für dein Event oder Unterhaltung zum Mitmachen für Polterabend und Co.? Schick uns eine unverbindliche Buchungsanfrage!
 
 <div class="text-center">
     <a class="btn btn-primary" href="mailto:buchung@ivypoledance.at?subject=Buchungsanfrage&body=Liebes%20Ivy%20Poledance%20Team%2C%0D%0A%0D%0A%7B%7B%20DEINE%20ANFRAGE%20%7D%7D%0D%0A%0D%0ALG%0D%0A%0D%0A%0D%0A">Buchungsanfrage schicken!</a>
