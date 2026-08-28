@@ -9,6 +9,7 @@ In Combine & Captivate lernst und perfektionierst du kreative Kombinationen mit 
 
 Open Level!
 
-Einzeltermin/Drop-in: € 29
+{{ <prices block="dropin-29" /> }}
+
 
 <img class="pose-backdrop" src="/img/pose/ayesha.png" />

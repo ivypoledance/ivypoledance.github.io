@@ -1,0 +1,28 @@
+id,block,label,amount,duration,persons
+dropin-29,dropin-29,Einzeltermin/Drop-in,29,,
+dropin-28,dropin-28,Einzeltermin/Drop-in,28,,
+dropin-25,dropin-25,Einzeltermin/Drop-in,25,,
+ayesha-dropin,ayesha,Einzeltermin/Drop-in bei zweiwöchigem Kurs,29,,
+ayesha-technik-special,ayesha,"Technik-Special (1,5h)",39,,
+schnupperstunde,schnupper,PREIS,8,,
+privat-60-1,privat,,59,1 Stunde,einzeln
+privat-60-2,privat,,44,1 Stunde,zu zweit
+privat-60-3,privat,,36,1 Stunde,zu dritt
+privat-60-4,privat,,25,1 Stunde,ab vier Personen
+privat-90-1,privat,,79,90 Minuten,einzeln
+privat-90-2,privat,,59,90 Minuten,zu zweit
+privat-90-3,privat,,48,90 Minuten,zu dritt
+privat-90-4,privat,,34,90 Minuten,ab vier Personen
+privat-120-1,privat,,99,120 Minuten,einzeln
+privat-120-2,privat,,74,120 Minuten,zu zweit
+privat-120-3,privat,,59,120 Minuten,zu dritt
+privat-120-4,privat,,42,120 Minuten,ab vier Personen
+spiral-60-1,spiral,,59,1 Stunde,einzeln
+spiral-60-2,spiral,,39,1 Stunde,zu zweit
+spiral-60-3,spiral,,32,1 Stunde,ab drei Personen
+spiral-90-1,spiral,,74,90 Minuten,einzeln
+spiral-90-2,spiral,,49,90 Minuten,zu zweit
+spiral-90-3,spiral,,39,90 Minuten,ab drei Personen
+spiral-120-1,spiral,,94,120 Minuten,einzeln
+spiral-120-2,spiral,,62,120 Minuten,zu zweit
+spiral-120-3,spiral,,49,120 Minuten,ab drei Personen
