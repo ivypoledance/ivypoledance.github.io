@@ -45,6 +45,9 @@
 {%- set flat = [r for r in rows if r[4] == ""] -%}
 {%- set tiered = [r for r in rows if r[4] != ""] -%}
 {%- if rows | length == 0 %}{{ price_block_not_found_in_prices_csv }}{% endif -%}
+{#- Rows a course date names, and no page shows, carry an empty block. Asking
+    for `block=""` would otherwise collect all of them into one stray list. -#}
+{%- if block == "" %}{{ price_block_must_not_be_empty }}{% endif -%}
 {%- if flat | length > 0 -%}
 <ul class="prices">{% for row in flat %}<li>{{ row[2] }}: € {{ row[3] }}</li> {% endfor %}</ul>
 {%- endif -%}

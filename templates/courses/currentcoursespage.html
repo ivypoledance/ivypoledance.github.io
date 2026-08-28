@@ -40,7 +40,8 @@
         <br />
         Du kannst mir aber gerne eine <a href="/courses/courses-and-booking/booking/#kursanfrage">Kursanfrage</a> schicken oder dich für eine Privatstunde voranmelden.</p>
         {% else %}
-        {% set showPrice = [r[2] for r in records] | join(sep="") | length > 0 %}
+        {% set showPrice = [r[2] for r in records] | join(sep="") | trim | length > 0 %}
+        {% set price_list = load_data(path="prices.csv") %}
         <p>
 			Aktuell kannst du folgende Kurse sowie Privat- und Kleingruppenstunden (Pole, Aerial Spiral, …) buchen.<br />
            <br />
@@ -67,7 +68,9 @@
                   </td>
                   {% if showPrice == true %}
                   <td>
-                    {{ record[2] }}
+                    {# See bookingpage.html: the column holds an id, not an
+                       amount. #}
+                    {% set price_id = record[2] | trim %}{% if price_id %}€ {{ [r for r in price_list["records"] if r[0] == price_id][0][3] }}{% endif %}
                   </td>
                   {% endif %}
                   <td>

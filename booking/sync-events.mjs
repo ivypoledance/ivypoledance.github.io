@@ -47,20 +47,42 @@ export function courseTitle(markdown) {
 }
 
 /**
+ * Renders an amount the way templates/components.html does, so the price in a
+ * confirmation mail reads exactly as it does on the page.
+ */
+function formatPrice(amount) {
+  return `€ ${amount}`;
+}
+
+/**
  * @param rows parsed CSV rows
  * @param readCourse (coursePath) => markdown | null
+ * @param priceRows parsed rows of prices.csv, the only place amounts live
  */
-export function buildEvents(rows, readCourse) {
+export function buildEvents(rows, readCourse, priceRows) {
   const events = [];
   const problems = [];
+  const amountById = new Map();
+
+  // A duplicate id would resolve differently on each side: a Map keeps the last
+  // row, while the templates filter and take the first. That would put one
+  // amount on the page and a different one in the customer's confirmation mail,
+  // with nothing to show for it, so it stops the sync instead.
+  for (const [index, row] of priceRows.entries()) {
+    if (amountById.has(row.id)) {
+      problems.push(`prices.csv line ${index + 2}: duplicate id "${row.id}"`);
+      continue;
+    }
+    amountById.set(row.id, row.amount);
+  }
 
   rows.forEach((row, index) => {
     const line = index + 2; // header is line 1
     const coursePath = row.course;
     const startsAt = row['date1-from'];
 
-    if (!coursePath) { problems.push(`line ${line}: missing course`); return; }
-    if (!startsAt) { problems.push(`line ${line}: missing date1-from`); return; }
+    if (!coursePath) { problems.push(`coursedates.csv line ${line}: missing course`); return; }
+    if (!startsAt) { problems.push(`coursedates.csv line ${line}: missing date1-from`); return; }
 
     // Blank means unlimited places. A value that is present must still be
     // usable, so a typo cannot quietly turn into "no limit".
@@ -69,20 +91,41 @@ export function buildEvents(rows, readCourse) {
     if (raw !== '') {
       capacity = Number(raw);
       if (!Number.isInteger(capacity) || capacity <= 0) {
-        problems.push(`line ${line}: capacity must be blank for unlimited, or a positive whole number, got "${row.capacity}"`);
+        problems.push(`coursedates.csv line ${line}: capacity must be blank for unlimited, or a positive whole number, got "${row.capacity}"`);
         return;
       }
     }
 
     const markdown = readCourse(coursePath);
-    if (markdown === null) { problems.push(`line ${line}: no such course page ${coursePath}`); return; }
+    if (markdown === null) { problems.push(`coursedates.csv line ${line}: no such course page ${coursePath}`); return; }
+
+    // The column holds an id into prices.csv, resolved here so the Worker, the
+    // database and the mails only ever see a finished amount. Blank means the
+    // date shows no price; a value that does not resolve is a typo and stops
+    // the sync rather than silently dropping the price.
+    const priceId = (row.price_id ?? '').trim();
+    let price = '';
+    if (priceId !== '') {
+      if (!amountById.has(priceId)) {
+        problems.push(`coursedates.csv line ${line}: price_id "${priceId}" is not in prices.csv`);
+        return;
+      }
+      const amount = amountById.get(priceId);
+      if (!/^\d+$/.test(amount)) {
+        // Otherwise the mail says "Preis:  € " and the page renders a bare sign.
+        problems.push(`coursedates.csv line ${line}: price_id "${priceId}" has amount "${amount}", `
+          + 'expected a whole number of euro');
+        return;
+      }
+      price = formatPrice(amount);
+    }
 
     events.push({
       id: eventId(coursePath, startsAt),
       course_path: coursePath,
       course_title: courseTitle(markdown),
       name: row.name ?? '',
-      price: row.price ?? '',
+      price,
       starts_at: startsAt,
       ends_at: row['date1-to'] || null,
       second_starts_at: row['date2-from'] || null,
@@ -93,7 +136,7 @@ export function buildEvents(rows, readCourse) {
 
   const ids = events.map((e) => e.id);
   const duplicate = ids.find((id, i) => ids.indexOf(id) !== i);
-  if (duplicate) problems.push(`duplicate date for the same course: ${duplicate}`);
+  if (duplicate) problems.push(`coursedates.csv: duplicate date for the same course: ${duplicate}`);
 
   return { events, problems };
 }
@@ -103,13 +146,14 @@ async function main() {
   const root = process.cwd();
 
   const rows = parseCsv(readFileSync(join(root, 'coursedates.csv'), 'utf8'));
+  const priceRows = parseCsv(readFileSync(join(root, 'prices.csv'), 'utf8'));
   const { events, problems } = buildEvents(rows, (coursePath) => {
     const file = join(root, 'content', coursePath);
     return existsSync(file) ? readFileSync(file, 'utf8') : null;
-  });
+  }, priceRows);
 
   if (problems.length) {
-    for (const problem of problems) console.error(`::error::coursedates.csv ${problem}`);
+    for (const problem of problems) console.error(`::error::${problem}`);
     process.exit(1);
   }
 

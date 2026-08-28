@@ -15,12 +15,14 @@ on:
     branches: [main]
     paths:
       - "coursedates.csv"
+      - "prices.csv"
       - "content/**"
       - "booking/**"
       - ".github/workflows/booking-sync.yaml"
   pull_request:
     paths:
       - "coursedates.csv"
+      - "prices.csv"
       - "content/**"
       - "booking/**"
       - ".github/workflows/booking-sync.yaml"
