@@ -1,31 +1,34 @@
-id,block,label,amount,duration,persons
-dropin-29,dropin-29,Einzeltermin/Drop-in,29,,
-dropin-28,dropin-28,Einzeltermin/Drop-in,28,,
-dropin-25,dropin-25,Einzeltermin/Drop-in,25,,
-ayesha-dropin,ayesha,Einzeltermin/Drop-in bei zweiwöchigem Kurs,29,,
-ayesha-technik-special,ayesha,"Technik-Special (1,5h)",39,,
-schnupperstunde,schnupper,PREIS,8,,
-privat-60-1,privat,,59,1 Stunde,einzeln
-privat-60-2,privat,,44,1 Stunde,zu zweit
-privat-60-3,privat,,36,1 Stunde,zu dritt
-privat-60-4,privat,,25,1 Stunde,ab vier Personen
-privat-90-1,privat,,79,90 Minuten,einzeln
-privat-90-2,privat,,59,90 Minuten,zu zweit
-privat-90-3,privat,,48,90 Minuten,zu dritt
-privat-90-4,privat,,34,90 Minuten,ab vier Personen
-privat-120-1,privat,,99,120 Minuten,einzeln
-privat-120-2,privat,,74,120 Minuten,zu zweit
-privat-120-3,privat,,59,120 Minuten,zu dritt
-privat-120-4,privat,,42,120 Minuten,ab vier Personen
-spiral-60-1,spiral,,59,1 Stunde,einzeln
-spiral-60-2,spiral,,39,1 Stunde,zu zweit
-spiral-60-3,spiral,,32,1 Stunde,ab drei Personen
-spiral-90-1,spiral,,74,90 Minuten,einzeln
-spiral-90-2,spiral,,49,90 Minuten,zu zweit
-spiral-90-3,spiral,,39,90 Minuten,ab drei Personen
-spiral-120-1,spiral,,94,120 Minuten,einzeln
-spiral-120-2,spiral,,62,120 Minuten,zu zweit
-spiral-120-3,spiral,,49,120 Minuten,ab drei Personen
-kurs-2-termine,,Kurs (2 Termine),44,,
-kurs-4-termine,,Kurs (4 Termine),82,,
-einzeltermin-39,,Einzeltermin,39,,
+course,kind,label,amount,duration,persons
+ayesha,dropin,Einzeltermin/Drop-in bei zweiwöchigem Kurs,29,,
+ayesha,special,"Technik-Special (1,5h)",39,,
+choreo-perfection,dropin,Einzeltermin/Drop-in,28,,
+choreo-swift,einzeltermin,Einzeltermin,39,,
+combine-and-captivate,dropin,Einzeltermin/Drop-in,29,,
+fliptastic,dropin,Einzeltermin/Drop-in,29,,
+polekurse,dropin,Einzeltermin/Drop-in,25,,
+polekurse,kurs-4-termine,Kurs (4 Termine),82,,
+superman,dropin,Einzeltermin/Drop-in,29,,
+tricktastic,dropin,Einzeltermin/Drop-in,25,,
+tricktastic,kurs-2-termine,Kurs (2 Termine),44,,
+private-lessons-trial,privat-60-1,,59,1 Stunde,einzeln
+private-lessons-trial,privat-60-2,,44,1 Stunde,zu zweit
+private-lessons-trial,privat-60-3,,36,1 Stunde,zu dritt
+private-lessons-trial,privat-60-4,,25,1 Stunde,ab vier Personen
+private-lessons-trial,privat-90-1,,79,90 Minuten,einzeln
+private-lessons-trial,privat-90-2,,59,90 Minuten,zu zweit
+private-lessons-trial,privat-90-3,,48,90 Minuten,zu dritt
+private-lessons-trial,privat-90-4,,34,90 Minuten,ab vier Personen
+private-lessons-trial,privat-120-1,,99,120 Minuten,einzeln
+private-lessons-trial,privat-120-2,,74,120 Minuten,zu zweit
+private-lessons-trial,privat-120-3,,59,120 Minuten,zu dritt
+private-lessons-trial,privat-120-4,,42,120 Minuten,ab vier Personen
+private-lessons-trial,schnupper,PREIS,8,,
+spiral,spiral-60-1,,59,1 Stunde,einzeln
+spiral,spiral-60-2,,39,1 Stunde,zu zweit
+spiral,spiral-60-3,,32,1 Stunde,ab drei Personen
+spiral,spiral-90-1,,74,90 Minuten,einzeln
+spiral,spiral-90-2,,49,90 Minuten,zu zweit
+spiral,spiral-90-3,,39,90 Minuten,ab drei Personen
+spiral,spiral-120-1,,94,120 Minuten,einzeln
+spiral,spiral-120-2,,62,120 Minuten,zu zweit
+spiral,spiral-120-3,,49,120 Minuten,ab drei Personen

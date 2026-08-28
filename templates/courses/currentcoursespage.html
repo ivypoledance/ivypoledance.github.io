@@ -68,9 +68,9 @@
                   </td>
                   {% if showPrice == true %}
                   <td>
-                    {# See bookingpage.html: the column holds an id, not an
-                       amount. #}
-                    {% set price_id = record[2] | trim %}{% if price_id %}€ {{ [r for r in price_list["records"] if r[0] == price_id][0][3] }}{% endif %}
+                    {# See bookingpage.html: the column names one of the
+                       course's prices, not an amount. #}
+                    {% set kind = record[2] | trim %}{% if kind %}€ {{ [r for r in price_list["records"] if r[0] == coursePage.slug and r[1] == kind][0][3] }}{% endif %}
                   </td>
                   {% endif %}
                   <td>

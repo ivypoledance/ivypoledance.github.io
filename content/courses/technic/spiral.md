@@ -16,8 +16,6 @@ In Privatstunden (einzeln oder als Gruppe bis max. 3 Personen buchbar, bei grö�
 
 ACHTUNG: Trainingsort ist das TRAP Circus Center in Simmering. Solltest du keine Trainingsmitgliedschaft dort haben, kommt noch ein Betrag (zwischen € 8 und € 35 pro Stunde) für die Hallenmiete dazu. 
 
-{{ <prices block="spiral" /> }}
-
 
 Solltest du Trainingspartner*innen für eine geteilte Privatstunde suchen, lass es mich wissen – oft finden sich hier rasch Gleichgesinnte. :)
 

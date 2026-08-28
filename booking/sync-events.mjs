@@ -39,6 +39,15 @@ export function parseCsv(text) {
   return body.map((fields) => Object.fromEntries(header.map((key, i) => [key, fields[i] ?? ''])));
 }
 
+/**
+ * The file name without directory or extension, which is what Zola exposes as
+ * `page.slug` and what prices.csv keys on. `courses/technic/ayesha.md` is
+ * `ayesha`.
+ */
+export function courseSlug(coursePath) {
+  return coursePath.split('/').pop().replace(/\.md$/, '');
+}
+
 /** Course title from the page's TOML front matter, so emails name the course. */
 export function courseTitle(markdown) {
   const match = markdown.match(/^\+\+\+\s*([\s\S]*?)\s*\+\+\+/);
@@ -62,18 +71,23 @@ function formatPrice(amount) {
 export function buildEvents(rows, readCourse, priceRows) {
   const events = [];
   const problems = [];
-  const amountById = new Map();
+  const amounts = new Map();
 
-  // A duplicate id would resolve differently on each side: a Map keeps the last
-  // row, while the templates filter and take the first. That would put one
-  // amount on the page and a different one in the customer's confirmation mail,
-  // with nothing to show for it, so it stops the sync instead.
+  // A price belongs to a course, so a date's `kind` is only meaningful next to
+  // the course it is on: `kurs-4-termine` means something different under a
+  // different course, and nothing at all under most.
+  //
+  // A repeated pair would resolve differently on each side — a Map keeps the
+  // last row, the templates filter and take the first — putting one amount on
+  // the page and another in the customer's confirmation mail with nothing to
+  // show for it, so it stops the sync instead.
   for (const [index, row] of priceRows.entries()) {
-    if (amountById.has(row.id)) {
-      problems.push(`prices.csv line ${index + 2}: duplicate id "${row.id}"`);
+    const key = `${row.course}/${row.kind}`;
+    if (amounts.has(key)) {
+      problems.push(`prices.csv line ${index + 2}: ${row.course} has "${row.kind}" twice`);
       continue;
     }
-    amountById.set(row.id, row.amount);
+    amounts.set(key, row.amount);
   }
 
   rows.forEach((row, index) => {
@@ -99,21 +113,22 @@ export function buildEvents(rows, readCourse, priceRows) {
     const markdown = readCourse(coursePath);
     if (markdown === null) { problems.push(`coursedates.csv line ${line}: no such course page ${coursePath}`); return; }
 
-    // The column holds an id into prices.csv, resolved here so the Worker, the
-    // database and the mails only ever see a finished amount. Blank means the
-    // date shows no price; a value that does not resolve is a typo and stops
-    // the sync rather than silently dropping the price.
-    const priceId = (row.price_id ?? '').trim();
+    // The column names one of that course's prices, resolved here so the
+    // Worker, the database and the mails only ever see a finished amount.
+    // Blank means the date shows no price; a value that does not resolve is a
+    // typo and stops the sync rather than silently dropping the price.
+    const kind = (row.kind ?? '').trim();
     let price = '';
-    if (priceId !== '') {
-      if (!amountById.has(priceId)) {
-        problems.push(`coursedates.csv line ${line}: price_id "${priceId}" is not in prices.csv`);
+    if (kind !== '') {
+      const slug = courseSlug(coursePath);
+      const amount = amounts.get(`${slug}/${kind}`);
+      if (amount === undefined) {
+        problems.push(`coursedates.csv line ${line}: ${slug} has no price called "${kind}" in prices.csv`);
         return;
       }
-      const amount = amountById.get(priceId);
       if (!/^\d+$/.test(amount)) {
         // Otherwise the mail says "Preis:  € " and the page renders a bare sign.
-        problems.push(`coursedates.csv line ${line}: price_id "${priceId}" has amount "${amount}", `
+        problems.push(`coursedates.csv line ${line}: ${slug}/${kind} has amount "${amount}", `
           + 'expected a whole number of euro');
         return;
       }

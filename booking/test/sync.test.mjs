@@ -5,9 +5,10 @@ import assert from 'node:assert/strict';
 
 import { parseCsv, courseTitle, buildEvents } from '../sync-events.mjs';
 
-const HEADER = 'course,name,price_id,date1-from,date1-to,date2-from,date2-to,capacity';
+const HEADER = 'course,name,kind,date1-from,date1-to,date2-from,date2-to,capacity';
 // prices.csv is the only place an amount lives; the sync resolves the id.
-const PRICES = parseCsv('id,block,label,amount,duration,persons\nsommer,sommer,Einzeltermin,39,,');
+// Prices are keyed by the course's file name, so the fixture names lollipop.
+const PRICES = parseCsv('course,kind,label,amount,duration,persons\nlollipop,sommer,Einzeltermin,39,,');
 const courses = {
   'courses/technic/lollipop.md': '+++\ntitle = "Lollipop ☆"\ntemplate = "courses/bookingpage.html"\n+++\nbody',
   'courses/technic/twinpole.md': '+++\ntitle = "Twinpole ☆"\n+++\n',
@@ -76,44 +77,44 @@ test('a blank capacity means unlimited places', () => {
 });
 
 test('a capacity column missing altogether means unlimited', () => {
-  const rows = parseCsv('course,name,price_id,date1-from,date1-to,date2-from,date2-to\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,');
+  const rows = parseCsv('course,name,kind,date1-from,date1-to,date2-from,date2-to\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,');
   const { events, problems } = buildEvents(rows, readCourse, PRICES);
   assert.deepEqual(problems, []);
   assert.equal(events[0].capacity, null);
 });
 
-test('a price_id that is not in prices.csv stops the sync', () => {
+test('a kind the course has no price for stops the sync', () => {
   const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,sommr,2026-09-01T18:00:00,,,,3`);
   const { events, problems } = buildEvents(rows, readCourse, PRICES);
   assert.equal(events.length, 0);
-  assert.match(problems[0], /price_id "sommr" is not in prices.csv/);
+  assert.match(problems[0], /lollipop has no price called "sommr"/);
 });
 
-test('a blank price_id is legitimate and means no price is shown', () => {
+test('a blank kind is legitimate and means no price is shown', () => {
   const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,,3`);
   const { events, problems } = buildEvents(rows, readCourse, PRICES);
   assert.deepEqual(problems, []);
   assert.equal(events[0].price, '');
 });
 
-test('an id resolves to the amount formatted as the page shows it', () => {
+test('a kind resolves to the amount formatted as the page shows it', () => {
   const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,sommer,2026-09-01T18:00:00,,,,3`);
   const { events } = buildEvents(rows, readCourse, PRICES);
   assert.equal(events[0].price, '€ 39');
 });
 
-test('a duplicate id in prices.csv stops the sync', () => {
+test('the same kind twice for one course stops the sync', () => {
   // A Map keeps the last row while the templates take the first, so a duplicate
   // would put one amount on the page and another in the confirmation mail.
-  const prices = parseCsv('id,block,label,amount,duration,persons\nsommer,sommer,A,39,,\nsommer,sommer,B,44,,');
+  const prices = parseCsv('course,kind,label,amount,duration,persons\nlollipop,sommer,A,39,,\nlollipop,sommer,B,44,,');
   const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,sommer,2026-09-01T18:00:00,,,,3`);
   const { problems } = buildEvents(rows, readCourse, prices);
-  assert.match(problems.join('\n'), /duplicate id "sommer"/);
+  assert.match(problems.join('\n'), /lollipop has "sommer" twice/);
 });
 
-test('an id whose amount is not a whole number stops the sync', () => {
+test('a price whose amount is not a whole number stops the sync', () => {
   for (const amount of ['', '39,50', '€ 39', 'frei']) {
-    const prices = parseCsv(`id,block,label,amount,duration,persons\nsommer,sommer,A,"${amount}",,`);
+    const prices = parseCsv(`course,kind,label,amount,duration,persons\nlollipop,sommer,A,"${amount}",,`);
     const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,sommer,2026-09-01T18:00:00,,,,3`);
     const { events, problems } = buildEvents(rows, readCourse, prices);
     assert.equal(events.length, 0, `amount "${amount}" should be rejected`);
@@ -121,7 +122,7 @@ test('an id whose amount is not a whole number stops the sync', () => {
   }
 });
 
-test('a price_id of only whitespace counts as blank, as it does on the page', () => {
+test('a kind of only whitespace counts as blank, as it does on the page', () => {
   const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,   ,2026-09-01T18:00:00,,,,3`);
   const { events, problems } = buildEvents(rows, readCourse, PRICES);
   assert.deepEqual(problems, []);

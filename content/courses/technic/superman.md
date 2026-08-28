@@ -16,7 +16,5 @@ Dieser Kurs ist **nicht** Open Level!
 
 Superman (mindestens ein Eingang)
 
-{{ <prices block="dropin-29" /> }}
-
 
 <img class="pose-backdrop" src="/img/pose/ayesha.png" />

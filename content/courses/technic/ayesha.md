@@ -16,7 +16,5 @@ Dieser Kurs ist **nicht** Open Level!
 
 Stabile Ayesha (mindestens eine Grip-Variante)
 
-{{ <prices block="ayesha" /> }}
-
 
 <img class="pose-backdrop" src="/img/pose/ayesha.png" />

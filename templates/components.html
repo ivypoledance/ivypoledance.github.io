@@ -4,53 +4,43 @@
    explicitly. Renders as e.g. "Do. 27.08.2026, 17:00". #}
 {% component de_datetime(value) %}{% set weekdays = ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."] %}{{ weekdays[value | date(format="%w") | int] }} {{ value | date(format="%d.%m.%Y, %H:%M") }}{% endcomponent de_datetime %}
 
-{# One price block from prices.csv, by block name.
+{# Every price for one course, from prices.csv, keyed by the course's file name.
 
-   Called from a course page's markdown, where the prices belong:
+   Called by the page templates, never from markdown:
 
-       {{ <prices block="dropin-29" /> }}
+       {{<prices course=page.slug />}}
 
-   The page names a block, never an amount. Every amount lives in prices.csv, so
-   a rate shared by several courses is one row and changing it is one edit; the
-   euro sign and its spacing live here, so the price format is also one edit
-   sitewide and no amount in the CSV can carry a comma that would split a field.
+   `page.slug` is the file name without its extension, so `ayesha.md` finds the
+   rows whose `course` column is `ayesha`. Nothing has to be written into a
+   course page to give it a price, and there is no name that can drift out of
+   step with the file it belongs to.
 
-   It is called from markdown rather than appended by the page template so that
-   the text lands in `page.content`, which is what the search index is built
-   from. Appended markup is invisible to search.
+   It has to be the template rather than a call in the markdown, because a
+   component called from markdown cannot see `page` at all — the build fails
+   with "Variable `page` is not defined". The cost is that this text sits
+   outside `page.content` and so never reaches the search index.
 
-   A row with `duration` set is part of a tier grid and renders as a table of
+   A row with a `duration` is part of a tier grid and renders as a table of
    duration against group size. A row without one is a named rate and renders as
-   "label: € amount". A block mixing the two is a mistake in the data, and shows
-   as both.
+   "label: € amount". A course may have both, and the private lessons do.
 
-   A block name that matches nothing is a typo, and must stop the build rather
-   than quietly render no price. Tera has no assert, and `{% set %}` accepts an
-   out-of-range index without complaint — only rendering an undefined value
-   raises. So the guard below renders one, deliberately: the build then fails
-   naming this file, this line, and `price_block_not_found_in_prices_csv`.
+   A course with no rows renders nothing at all, which is the normal case: most
+   course pages carry no price. That is why there is no guard here for a name
+   that matches nothing — an unknown course is indistinguishable from a course
+   with no prices. `tools/check-prices.mjs` covers the other direction instead,
+   failing when a row names a course page that does not exist.
 
-   The markup is emitted flush left and on as few lines as possible, because a
-   line indented by four spaces would be turned into a code block by the
-   markdown parser rather than into HTML.
-
-   Adjacent cells are separated by a space even though HTML does not need one.
-   The search index is built by stripping tags from the rendered body, so
-   `<td>x</td><td>y</td>` would be indexed as the single token "xy": without the
-   space, "zu zweit" and "ab drei Personen" run together and neither is
-   findable. #}
-{% component prices(block) %}
+   Adjacent cells are separated by a space even though HTML does not need one:
+   `<td>x</td><td>y</td>` reads as the single word "xy" once tags are stripped,
+   which matters wherever this text is scraped or read aloud. #}
+{% component prices(course) %}
 {%- set all = load_data(path="prices.csv") -%}
-{%- set rows = [r for r in all["records"] if r[1] == block] -%}
+{%- set rows = [r for r in all["records"] if r[0] == course] -%}
 {%- set flat = [r for r in rows if r[4] == ""] -%}
 {%- set tiered = [r for r in rows if r[4] != ""] -%}
-{%- if rows | length == 0 %}{{ price_block_not_found_in_prices_csv }}{% endif -%}
-{#- Rows a course date names, and no page shows, carry an empty block. Asking
-    for `block=""` would otherwise collect all of them into one stray list. -#}
-{%- if block == "" %}{{ price_block_must_not_be_empty }}{% endif -%}
-{%- if flat | length > 0 -%}
-<ul class="prices">{% for row in flat %}<li>{{ row[2] }}: € {{ row[3] }}</li> {% endfor %}</ul>
-{%- endif -%}
+{#- Tier grids come before named rates. Only the private lessons have both, and
+    there the grid belongs to the first section of the page and the single rate
+    to the second, so this is the order that page reads in. -#}
 {%- if tiered | length > 0 -%}
 {%- set durations = [r[4] for r in tiered] | unique -%}
 {%- set groups = [r[5] for r in tiered] | unique -%}
@@ -67,7 +57,10 @@
 {%- endfor %}
 </tbody>
 </table>
-{% endif %}
+{%- endif -%}
+{%- if flat | length > 0 -%}
+<ul class="prices">{% for row in flat %}<li>{{ row[2] }}: € {{ row[3] }}</li> {% endfor %}</ul>
+{%- endif %}
 {% endcomponent prices %}
 
 {# `event` is passed explicitly rather than relying on the legacy global. #}

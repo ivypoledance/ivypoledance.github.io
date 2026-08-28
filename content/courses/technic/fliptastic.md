@@ -11,7 +11,5 @@ In diesem zweiwöchigen Kurs lernst du Flips an die Pole, von der Pole und mit d
 
 Open Format: Bitte gib bei deiner Anmeldung an, welche Voraussetzung (Aerial Invert und/oder Ayesha) du erfüllst; die Inhalte werden entsprechend ausgewählt.
 
-{{ <prices block="dropin-29" /> }}
-
 
 <img class="pose-backdrop" src="/img/pose/ayesha.png" />

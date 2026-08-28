@@ -30,7 +30,10 @@
         <h1>{{ page.title }}</h1>
         {% if page.extra?.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
         {{ page.content | safe }}
-        {% set data = load_data(path="coursedates.csv") -%}
+        {#- Prices for this course, found by its file name. Nothing in the
+            markdown asks for them. -#}
+        {{<prices course={page.slug} />}}
+        {%- set data = load_data(path="coursedates.csv") -%}
         {% set records = [r for r in data["records"] if r[0] == page.relative_path] | sort(attribute="3") %}
         {% if records | length <= 0 %}
         <hr />
@@ -58,10 +61,10 @@
                   {% endif %}
                   {% if showPrice == true %}
                   <td>
-                    {# The column holds an id into prices.csv, so a date's price
-                       is not a second copy of an amount. Indexing the matching
-                       row directly means a dangling id fails the build. #}
-                    {% set price_id = record[2] | trim %}{% if price_id %}€ {{ [r for r in price_list["records"] if r[0] == price_id][0][3] }}{% endif %}
+                    {# The column names one of the course's own prices, so a
+                       date's amount is not a second copy. Indexing the matching
+                       row directly means an unknown name fails the build. #}
+                    {% set kind = record[2] | trim %}{% if kind %}€ {{ [r for r in price_list["records"] if r[0] == page.slug and r[1] == kind][0][3] }}{% endif %}
                   </td>
                   {% endif %}
                   <td>

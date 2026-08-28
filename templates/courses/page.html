@@ -1,0 +1,45 @@
+{% extends "page.html" %}
+
+{% block body %}
+  {% set page_class = "docs single" %}
+{% endblock body %}
+
+{% block header %}
+  {# This value is matched by the config.extra.menu.main~url #}
+  {% set current_section = "courses" %}
+  {{<adidoks.header current_section={current_section} config={config} lang={lang} />}}
+{% endblock header %}
+
+{% block content %}
+{% set current_section = "courses" %}
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  {{<site.docs_sidebar current_section={current_section} current_url={current_url} />}}
+	  {{<adidoks.docs_toc page={page} />}}
+      {# Without a table of contents the content may take some of the column
+         reserved for it, but not all: the decorative image on the right is
+         positioned out of flow, so that space is not free, it is where the
+         image shows. #}
+      {% if page.extra?.toc %}
+        {% set content_columns = "col-xl-9" %}
+      {% else %}
+        {% set content_columns = "col-xl-10" %}
+      {% endif %}
+      <main class="docs-content col-lg-11 {{ content_columns }}">
+        <h1>{{ page.title }}</h1>
+        {% if page.extra?.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
+        {{ page.content | safe }}
+        {#- Prices for this course, found by its file name, exactly as
+            courses/bookingpage.html does it. This page shadows the theme's copy
+            only to add them. -#}
+        {{<prices course={page.slug} />}}
+        {% if config.extra?.edit_page %}
+          {{<adidoks.docs_edit_page config={config} current_path={current_path} />}}
+        {% endif %}
+        {{<site.docs_navigation page={page} current_section={current_section} />}}
+      </main>
+    </div>
+  </div>
+</div>
+{% endblock content %}

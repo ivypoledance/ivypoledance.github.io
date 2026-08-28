@@ -1,6 +1,6 @@
-course,name,price_id,date1-from,date1-to,date2-from,date2-to,capacity
+course,name,kind,date1-from,date1-to,date2-from,date2-to,capacity
 courses/technic/tricktastic.md,,kurs-2-termine,2026-09-04T18:00:00,2026-09-04T19:00:00,2026-09-11T18:00:00,2026-09-11T19:00:00,
 courses/technic/polekurse.md,Poledance: Improver,kurs-4-termine,2026-09-10T18:30:00,2026-09-10T19:30:00,2026-10-01T18:30:00,2026-10-01T19:30:00,
 courses/technic/polekurse.md,Poledance: Explorer,kurs-4-termine,2026-09-20T19:15:00,2026-09-20T20:15:00,2026-10-11T19:15:00,2026-10-11T20:15:00,
 courses/technic/polekurse.md,Poledance 101,kurs-4-termine,2026-08-31T19:00:00,2026-08-31T20:00:00,2026-09-21T19:00:00,2026-09-21T20:00:00,
-courses/choreographies/choreo-swift.md,,einzeltermin-39,2026-09-27T17:15:00,2026-09-27T18:45:00,,,
+courses/choreographies/choreo-swift.md,,einzeltermin,2026-09-27T17:15:00,2026-09-27T18:45:00,,,
