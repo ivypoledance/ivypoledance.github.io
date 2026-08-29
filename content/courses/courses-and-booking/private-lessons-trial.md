@@ -10,7 +10,7 @@ aliases = ["/courses/courses-and-booking/private-lessions-trial/"]
 
 ## Privatstunden
 
-Privatstunden sowie Stunden für dich & deine Freund*innen (2-6 Personen) sind jederzeit buchbar! 
+Privatstunden sowie Stunden für dich & deine Freund*innen (2-6 Personen) sind jederzeit buchbar!
 
 In einer Einheit, die ideal auf dich, deine Wünsche & deine Bedürfnisse abgestimmt ist, stellen wir Technik, Choreos oder auch Spezialskills (Aerial Spiral, Twinpole, Chairdance, Lollipop, Polehooping…) zu DEINEM perfekten Programm zusammen.
 
@@ -29,14 +29,14 @@ Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
 
 ## Schnupperstunden Poledance
 
-Lerne in Kleinstgruppen (maximal 9 Personen) eine neue Sportart kennen und lieben!  
-Die Schnupperstunde für Poledance 101 setzt keinerlei Vorkenntnisse voraus und ist für alle geeignet: Egal welches Alter, Gewicht oder Sportlichkeitslevel – hier bist du richtig!  
+Lerne in Kleinstgruppen (maximal 9 Personen) eine neue Sportart kennen und lieben!
+Die Schnupperstunde für Poledance 101 setzt keinerlei Vorkenntnisse voraus und ist für alle geeignet: Egal welches Alter, Gewicht oder Sportlichkeitslevel – hier bist du richtig!
 
   - PREIS: € 8
 
 ### Nächste Termine:
 
-Mo, 24.8., 19:00-20:00 
+Mo, 24.8., 19:00-20:00
 
 Keiner der Termine passt? Schick uns unverbindlich eine Termin-Anfrage per E-Mail!
 
