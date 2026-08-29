@@ -39,11 +39,12 @@
 {% endcomponent prices %}
 
 {# `event` is passed explicitly rather than relying on the legacy global. #}
-{% component image(img, max) %}
+{% component image(img, max, credit="") %}
 {% set resized = resize_image(path=img, width=max, height=max, op="fit") %}
 <div class="text-center">
-    <a onclick="return openModal(this, event)" href="{{ get_url(path=img) }}" target="_blank">
+    <a onclick="return openModal(this, event)" href="{{ get_url(path=img) }}" target="_blank" data-credit="{{ credit }}">
         <img src="{{ resized.url }}" />
     </a>
+    {% if credit %}<p class="image-credit">{{ credit }}</p>{% endif %}
 </div>
 {% endcomponent image %}

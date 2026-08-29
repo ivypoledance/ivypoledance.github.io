@@ -36,6 +36,14 @@ function openModal(imageLink, event) {
 
     modal.append(close, image);
 
+    const credit = imageLink.dataset.credit;
+    if (credit) {
+        const caption = document.createElement('p');
+        caption.className = 'image-credit';
+        caption.textContent = credit;
+        modal.append(caption);
+    }
+
     const dismiss = () => {
         document.removeEventListener('keydown', onKeydown);
         modal.remove();

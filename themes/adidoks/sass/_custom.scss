@@ -147,3 +147,18 @@ h3,
   text-align: right;
   font-size: $font-size-sm;
 }
+
+/**
+ * A photographer's credit, under the picture it belongs to on the page and
+ * under the enlarged one in the lightbox. It follows the image in both, so it
+ * stays with the picture it credits.
+ */
+.image-credit {
+  font-size: $font-size-sm;
+  margin: 0.5rem 0 0 0;
+}
+
+.imageModal .image-credit {
+  color: #f1f1f1;
+  text-align: center;
+}

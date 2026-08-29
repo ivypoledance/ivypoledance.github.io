@@ -55,8 +55,7 @@ Aerial (Spiral, Hoop, Trapeze, Straps, Harness) & Creative Coaching: Amy Ell, Ch
 - Emma Insley Cabaret (Irish Aerial Dance Fest) 2026 (An Grianán Theatre, Letterkenny – Flying Pole)
 - Cirque Rouge / Oh Lala Shows seit 2026 (Mirage, Wien)
 
-{{ <image img="/img/performance/acrovision.png" max={500} /> }}
-© Photography Cloud
+{{ <image img="/img/performance/acrovision.png" max={500} credit="© Photography Cloud" /> }}
 
 ## FAQs
 
