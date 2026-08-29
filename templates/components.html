@@ -19,7 +19,7 @@
 </thead>
 <tbody>
 {%- for label in labels %}
-<tr><th scope="row">{{ label }}</th> {% for column in columns %}{% set cell = [r for r in grid if r[1] == label and r[3] == column] %}<td>{% if cell | length > 0 %}€ {{ cell[0][2] }}{% endif %}</td> {% endfor %}</tr>
+<tr><th scope="row">{{ label }}</th> {% for column in columns %}{% set cell = [r for r in grid if r[1] == label and r[3] == column] %}<td>{% if cell | length > 0 %}€ {{ cell[0][2] }}{% else %}–{% endif %}</td> {% endfor %}</tr>
 {%- endfor %}
 </tbody>
 </table>
