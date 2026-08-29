@@ -1,14 +1,3 @@
-# Checks that every price belongs to a course page.
-#
-# A dangling reference in the other direction cannot happen: the page templates
-# look prices up by the course's file name, so there is no name to mistype. What
-# can happen is a row naming a page that does not exist, which renders nowhere
-# and which `zola build` cannot report — a course with no prices is the ordinary
-# case, so "nothing matched" is not an error at render time.
-#
-# Kept out of the booking workflow: this is about the site's own data, and does
-# not touch booking/.
-
 name: 🏷️ Check the prices
 
 on:

@@ -4,49 +4,15 @@
    explicitly. Renders as e.g. "Do. 27.08.2026, 17:00". #}
 {% component de_datetime(value) %}{% set weekdays = ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."] %}{{ weekdays[value | date(format="%w") | int] }} {{ value | date(format="%d.%m.%Y, %H:%M") }}{% endcomponent de_datetime %}
 
-{# Every price for one course, from prices.csv, keyed by the course's file name.
-
-   Called by the page templates, never from markdown:
-
-       {{<prices course=page.slug />}}
-
-   `page.slug` is the file name without its extension, so `ayesha.md` finds the
-   rows whose `course` column is `ayesha`. Nothing has to be written into a
-   course page to give it a price, and there is no name that can drift out of
-   step with the file it belongs to.
-
-   It has to be the template rather than a call in the markdown, because a
-   component called from markdown cannot see `page` at all — the build fails
-   with "Variable `page` is not defined". The cost is that this text sits
-   outside `page.content` and so never reaches the search index.
-
-   A row with a `duration` is part of a tier grid and renders as a table of
-   duration against group size. A row without one is a named rate and renders as
-   "label: € amount". A course may have both, and the private lessons do.
-
-   A course with no rows renders nothing at all, which is the normal case: most
-   course pages carry no price. That is why there is no guard here for a name
-   that matches nothing — an unknown course is indistinguishable from a course
-   with no prices. `tools/check-prices.mjs` covers the other direction instead,
-   failing when a row names a course page that does not exist.
-
-   Adjacent cells are separated by a space even though HTML does not need one:
-   `<td>x</td><td>y</td>` reads as the single word "xy" once tags are stripped,
-   which matters wherever this text is scraped or read aloud. #}
+{# Prices for one course, from prices.csv, keyed by its file name. #}
 {% component prices(course) %}
 {%- set all = load_data(path="prices.csv") -%}
 {%- set rows = [r for r in all["records"] if r[0] == course] -%}
 {%- set flat = [r for r in rows if r[4] == ""] -%}
 {%- set tiered = [r for r in rows if r[4] != ""] -%}
-{#- Tier grids come before named rates. Only the private lessons have both, and
-    there the grid belongs to the first section of the page and the single rate
-    to the second, so this is the order that page reads in. -#}
 {%- if tiered | length > 0 -%}
 {%- set durations = [r[4] for r in tiered] | unique -%}
 {%- set groups = [r[5] for r in tiered] | unique -%}
-{#- Both axes carry meaning, so each header says which one it heads and the
-    empty corner is a `td`: a screen reader reading a cell then announces its
-    duration and its group size rather than guessing. -#}
 <table class="prices">
 <thead>
 <tr><td></td> {% for group in groups %}<th scope="col">{{ group }}</th> {% endfor %}</tr>

@@ -30,9 +30,6 @@
         <h1>{{ page.title }}</h1>
         {% if page.extra?.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
         {{ page.content | safe }}
-        {#- Prices for this course, found by its file name, exactly as
-            courses/bookingpage.html does it. This page shadows the theme's copy
-            only to add them. -#}
         {{<prices course={page.slug} />}}
         {% if config.extra?.edit_page %}
           {{<adidoks.docs_edit_page config={config} current_path={current_path} />}}

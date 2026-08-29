@@ -1,9 +1,3 @@
-// Covers tools/check-prices.mjs, which catches the one mistake the build
-// cannot: a price row naming a course page that does not exist. No template can
-// see it, because a course with no prices is the normal case, so "nothing
-// matched" is indistinguishable from "nothing to show".
-//
-//   node --test tools/check-prices.test.mjs
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -23,7 +17,6 @@ test('a price on a course that exists is fine', () => {
 });
 
 test('a price naming a course page that does not exist is an error', () => {
-  // The row renders nowhere and nothing else in the build says so.
   const problems = run(`${PRICES}\ntippfehler,dropin,Drop-in,29,,`);
   assert.equal(problems.length, 1);
   assert.match(problems[0], /no course page called "tippfehler.md"/);
@@ -47,7 +40,6 @@ test('the same kind on different courses is fine', () => {
 });
 
 test('an amount must be a whole number of euro', () => {
-  // A comma would also split the CSV field, so it is refused twice over.
   for (const amount of ['"45,50"', '"€ 45"', 'frei', '']) {
     assert.ok(run(`${PRICES}\nayesha,dropin,Test,${amount},,`)
       .some((p) => /expected a whole number of euro/.test(p)), `amount ${amount} should be rejected`);
