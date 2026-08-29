@@ -4,6 +4,34 @@
    explicitly. Renders as e.g. "Do. 27.08.2026, 17:00". #}
 {% component de_datetime(value) %}{% set weekdays = ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."] %}{{ weekdays[value | date(format="%w") | int] }} {{ value | date(format="%d.%m.%Y, %H:%M") }}{% endcomponent de_datetime %}
 
+{# Prices for one course, from prices.csv, keyed by its file name. #}
+{% component prices(course) %}
+{%- set all = load_data(path="prices.csv") -%}
+{%- set rows = [r for r in all["records"] if r[0] == course] -%}
+{%- set plain = [r for r in rows if r[3] == ""] -%}
+{%- set grid = [r for r in rows if r[3] != ""] -%}
+{%- if rows | length > 0 -%}
+<h3>Preise</h3>
+{%- endif -%}
+{%- if grid | length > 0 -%}
+{%- set labels = [r[1] for r in grid] | unique -%}
+{%- set columns = [r[3] for r in grid] | unique -%}
+<table class="prices">
+<thead>
+<tr><td></td> {% for column in columns %}<th scope="col">{{ column }}</th> {% endfor %}</tr>
+</thead>
+<tbody>
+{%- for label in labels %}
+<tr><th scope="row">{{ label }}</th> {% for column in columns %}{% set cell = [r for r in grid if r[1] == label and r[3] == column] %}<td>{% if cell | length > 0 %}€ {{ cell[0][2] }}{% else %}–{% endif %}</td> {% endfor %}</tr>
+{%- endfor %}
+</tbody>
+</table>
+{%- endif -%}
+{%- if plain | length > 0 -%}
+<ul class="prices">{% for row in plain %}<li>{{ row[1] }}: € {{ row[2] }}</li> {% endfor %}</ul>
+{%- endif %}
+{% endcomponent prices %}
+
 {# `event` is passed explicitly rather than relying on the legacy global. #}
 {% component image(img, max) %}
 {% set resized = resize_image(path=img, width=max, height=max, op="fit") %}

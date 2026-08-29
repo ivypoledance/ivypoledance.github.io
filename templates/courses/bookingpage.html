@@ -30,7 +30,8 @@
         <h1>{{ page.title }}</h1>
         {% if page.extra?.lead %}<p class="lead">{{ page.extra.lead | safe }}</p>{% endif %}
         {{ page.content | safe }}
-        {% set data = load_data(path="coursedates.csv") -%}
+        {{<prices course={page.slug} />}}
+        {%- set data = load_data(path="coursedates.csv") -%}
         {% set records = [r for r in data["records"] if r[0] == page.relative_path] | sort(attribute="3") %}
         {% if records | length <= 0 %}
         <hr />
