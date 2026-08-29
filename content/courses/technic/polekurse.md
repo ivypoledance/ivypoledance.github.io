@@ -5,33 +5,32 @@ weight = 1200
 sort_by = "weight"
 +++
 
-In diesen vierwöchigen Kursen lernst du spannende Tricks und Transitions, arbeitest an deiner Technik und erweiterst dein Bewegungsvokabular mit dem Fokus auf das jeweilige „Level“/den jeweiligen Schwerpunkt. 
+In diesen vierwöchigen Kursen lernst du spannende Tricks und Transitions, arbeitest an deiner Technik und erweiterst dein Bewegungsvokabular mit dem Fokus auf das jeweilige „Level“/den jeweiligen Schwerpunkt.
 
 Die Unterteilung dient der groben Orientierung, ist aber nicht als „hier geht es ausschließlich um Inverts/Aerial Inverts/Ayeshas“ zu verstehen. Skills überschneiden sich und Kursinhalte werden stark an Teilnehmende angepasst.
 
 Klick auf den Kurs für die nähere Beschreibung:
 
 <details>
-<summary>Poledance 101</summary>
-
+  <summary>Poledance 101</summary>
   Du hast noch keine/fast keine Erfahrung an der Stange.
-    </details>
-<details>
-<summary>Poledance: Explorer</summary>
+</details>
 
-   Du hast schon Erfahrung und kannst – einigermaßen verlässlich – vom Boden invertieren. (Tricks, Transitions zw. Boden und Stange, vereinzelte Kombinationen von Tricks)
-       </details>
 <details>
-<summary>Poledance: Improver</summary>
+  <summary>Poledance: Explorer</summary>
+  Du hast schon Erfahrung und kannst – einigermaßen verlässlich – vom Boden invertieren. (Tricks, Transitions zw. Boden und Stange, vereinzelte Kombinationen von Tricks)
+</details>
 
+<details>
+  <summary>Poledance: Improver</summary>
   Auch Inverts aus der Luft/aus dem Klettern stellen für dich kein (großes) Hindernis dar. (Tricks, Transitions, Kombos, Drops)
-      </details>
+</details>
+
 <details>
-<summary>Poledance: Elevated</summary>
-
+  <summary>Poledance: Elevated</summary>
   Ayeshas? Zumindest eine Variante stellt kein Problem für dich dar. (Tricks, Kombos, Drops & Flips)
-    </details>
+</details>
 
-  Du weißt schon vorab, dass du nicht zu allen Einheiten Zeit haben wirst? Oder du bist dir nicht sicher, welcher Fokus der richtige für dich ist? Schreib uns eine E-Mail, wir finden eine Lösung!
+Du weißt schon vorab, dass du nicht zu allen Einheiten Zeit haben wirst? Oder du bist dir nicht sicher, welcher Fokus der richtige für dich ist? Schreib uns eine E-Mail, wir finden eine Lösung!
 
 <img class="pose-backdrop" src="/img/pose/ayesha.png" />

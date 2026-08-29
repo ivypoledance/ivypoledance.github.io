@@ -20,7 +20,6 @@ Du willst eine maßgeschneiderte Performance für dein Event oder Unterhaltung z
 <div class="text-center">
     <a class="btn btn-primary" href="mailto:buchung@ivypoledance.at?subject=Buchungsanfrage&body=Liebes%20Ivy%20Poledance%20Team%2C%0D%0A%0D%0A%7B%7B%20DEINE%20ANFRAGE%20%7D%7D%0D%0A%0D%0ALG%0D%0A%0D%0A%0D%0A">Buchungsanfrage schicken!</a>
 </div>
-<hr />
-Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
+{{ <agb /> }}
 
 <img class="pose-backdrop" src="/img/pose/hide.png" />

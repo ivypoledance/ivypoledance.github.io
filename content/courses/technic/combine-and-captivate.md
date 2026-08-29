@@ -9,5 +9,4 @@ In Combine & Captivate lernst und perfektionierst du kreative Kombinationen mit 
 
 Open Level!
 
-
 <img class="pose-backdrop" src="/img/pose/ayesha.png" />

@@ -34,8 +34,8 @@
         {%- set data = load_data(path="coursedates.csv") -%}
         {% set records = [r for r in data["records"] if r[0] == page.relative_path] | sort(attribute="3") %}
         {% if records | length <= 0 %}
-        <hr />
-        <p>Derzeit gibt es keine Termine für den Kurs.<br />
+        <hr/>
+        <p>Derzeit gibt es keine Termine für den Kurs.<br/>
         Du kannst mir aber gerne eine <a href="/courses/courses-and-booking/booking/#kursanfrage">Kursanfrage</a> schicken.</p>
         {% else %}
         {% set showName = [r[1] for r in records] | join(sep="") | length > 0 %}
@@ -75,12 +75,8 @@
 
               {% endfor %}
           </tbody>
-          <tfoot>
-            <tr>
-                <td colspan="4">Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.</td>
-            </tr>
-          </tfoot>
         </table>
+        {{<agb />}}
         {% endif %}
         {% if config.extra?.edit_page %}
           {{<adidoks.docs_edit_page config={config} current_path={current_path} />}}

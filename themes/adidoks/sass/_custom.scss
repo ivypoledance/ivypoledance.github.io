@@ -121,3 +121,44 @@
 body.dark img[src*="/img/contact/"] {
   filter: invert(1);
 }
+
+/**
+ * A course page's sections — Achtung, Voraussetzung, Preise — are `h3`, and at
+ * Bootstrap's size they compete with the page title. They read as sections, not
+ * as a second title, so they take the next size down.
+ *
+ * The sidebar's own `h3` is unaffected: `.docs-links h3` is more specific and
+ * sets its own size.
+ */
+h3,
+.h3 {
+  // The mixin, not the plain property: responsive font sizes are on, so h4 is
+  // a calc() that grows with the viewport. A flat size would match it at one
+  // width and nowhere else.
+  @include font-size($h4-font-size);
+}
+
+/**
+ * The AGB confirmation under a booking button, and in the footer of a course's
+ * date table. It is a legal note rather than something to read on the way
+ * through, so it sits out of the way at the end of the line and a size down.
+ */
+.agb-note {
+  text-align: right;
+  font-size: $font-size-sm;
+}
+
+/**
+ * A photographer's credit, under the picture it belongs to on the page and
+ * under the enlarged one in the lightbox. It follows the image in both, so it
+ * stays with the picture it credits.
+ */
+.image-credit {
+  font-size: $font-size-sm;
+  margin: 0.5rem 0 0 0;
+}
+
+.imageModal .image-credit {
+  color: #f1f1f1;
+  text-align: center;
+}
