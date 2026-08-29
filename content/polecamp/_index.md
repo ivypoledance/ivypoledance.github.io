@@ -6,7 +6,7 @@ title = "Ivy Polecamp"
 
 {{ <image img="/img/polecamp/POLECAMP2026_INSTAGRAM.jpg" max={400} /> }}
 
-<br />
+<br/>
 
 {{ <image img="/img/polecamp/2026shoot.jpg" max={600} /> }}
 

@@ -35,19 +35,19 @@
         {% if records | length <= 0 %}
         {# No dates in here: the message stands whenever the list happens to be
            empty, so it cannot go stale between one pause and the next. #}
-        <p>Derzeit sind keine Kurse ausgeschrieben.<br />
-        Sobald neue Termine feststehen, findest du sie hier.<br />
-        <br />
+        <p>Derzeit sind keine Kurse ausgeschrieben.<br/>
+        Sobald neue Termine feststehen, findest du sie hier.<br/>
+        <br/>
         Du kannst mir aber gerne eine <a href="/courses/courses-and-booking/booking/#kursanfrage">Kursanfrage</a> schicken oder dich für eine Privatstunde voranmelden.</p>
         {% else %}
         {% set showPrice = [r[2] for r in records] | join(sep="") | length > 0 %}
         <p>
-			Aktuell kannst du folgende Kurse sowie Privat- und Kleingruppenstunden (Pole, Aerial Spiral, …) buchen.<br />
-           <br />
-		Der Kursort für alle Poledance-Einheiten befindet sich direkt beim Westbahnhof – die genaue Adresse folgt in der Buchungsbestätigung.<br />
-		Den Buchungslink findest du auf der jeweiligen Kursseite.<br />
-<br />
-		<a href="{{ get_url(path="@/courses/courses-and-booking/private-lessons-trial.md") | safe }}">Schnupperstunden</a> <br />
+			Aktuell kannst du folgende Kurse sowie Privat- und Kleingruppenstunden (Pole, Aerial Spiral, …) buchen.<br/>
+           <br/>
+		Der Kursort für alle Poledance-Einheiten befindet sich direkt beim Westbahnhof – die genaue Adresse folgt in der Buchungsbestätigung.<br/>
+		Den Buchungslink findest du auf der jeweiligen Kursseite.<br/>
+<br/>
+		<a href="{{ get_url(path="@/courses/courses-and-booking/private-lessons-trial.md") | safe }}">Schnupperstunden</a> <br/>
         </p>
         <table>
           <thead>

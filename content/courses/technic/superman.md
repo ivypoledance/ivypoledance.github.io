@@ -8,13 +8,12 @@ sort_by = "weight"
 Der Superman ist zweifelsfrei eine Ikone unter den Polemoves – und es gibt eine Vielzahl an spannenden, kreativen Ein- und Ausgängen für ihn!
 In diesem zweiwöchigen Kurs erwartet euch eine ganze Reihe dieser Transitions, individuell an euch einzeln und als Gruppe angepasst und aus einer ellenlangen Liste an Möglichkeiten ausgewählt – mehrfach besuchbar!
 
-##### Achtung:
+### Achtung
 
 Dieser Kurs ist **nicht** Open Level!
 
-##### Voraussetzung:
+### Voraussetzung
 
 Superman (mindestens ein Eingang)
-
 
 <img class="pose-backdrop" src="/img/pose/ayesha.png" />
