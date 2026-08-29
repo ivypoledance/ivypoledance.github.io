@@ -1,0 +1,39 @@
+name: 🏷️ Check the prices
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "prices.csv"
+      - "content/courses/**"
+      - "tools/check-prices.mjs"
+      - "tools/check-prices.test.mjs"
+      - ".github/workflows/prices.yaml"
+  pull_request:
+    paths:
+      - "prices.csv"
+      - "content/courses/**"
+      - "tools/check-prices.mjs"
+      - "tools/check-prices.test.mjs"
+      - ".github/workflows/prices.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  check:
+    name: Check the prices
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Run the checker's tests
+        run: node --test tools/check-prices.test.mjs
+
+      - name: Check the committed prices
+        run: node tools/check-prices.mjs
