@@ -1,31 +1,31 @@
-course,label,amount,duration,persons
-ayesha,Einzeltermin/Drop-in bei zweiwöchigem Kurs,29,,
-ayesha,"Technik-Special (1,5h)",39,,
-choreo-perfection,Einzeltermin/Drop-in,28,,
-combine-and-captivate,Einzeltermin/Drop-in,29,,
-fliptastic,Einzeltermin/Drop-in,29,,
-polekurse,Einzeltermin/Drop-in,25,,
-superman,Einzeltermin/Drop-in,29,,
-tricktastic,Einzeltermin/Drop-in,25,,
-private-lessons-trial,,59,1 Stunde,einzeln
-private-lessons-trial,,44,1 Stunde,zu zweit
-private-lessons-trial,,36,1 Stunde,zu dritt
-private-lessons-trial,,25,1 Stunde,ab vier Personen
-private-lessons-trial,,79,90 Minuten,einzeln
-private-lessons-trial,,59,90 Minuten,zu zweit
-private-lessons-trial,,48,90 Minuten,zu dritt
-private-lessons-trial,,34,90 Minuten,ab vier Personen
-private-lessons-trial,,99,120 Minuten,einzeln
-private-lessons-trial,,74,120 Minuten,zu zweit
-private-lessons-trial,,59,120 Minuten,zu dritt
-private-lessons-trial,,42,120 Minuten,ab vier Personen
-private-lessons-trial,PREIS,8,,
-spiral,,59,1 Stunde,einzeln
-spiral,,39,1 Stunde,zu zweit
-spiral,,32,1 Stunde,ab drei Personen
-spiral,,74,90 Minuten,einzeln
-spiral,,49,90 Minuten,zu zweit
-spiral,,39,90 Minuten,ab drei Personen
-spiral,,94,120 Minuten,einzeln
-spiral,,62,120 Minuten,zu zweit
-spiral,,49,120 Minuten,ab drei Personen
+course,label,amount,column
+ayesha,Einzeltermin/Drop-in bei zweiwöchigem Kurs,29,
+ayesha,"Technik-Special (1,5h)",39,
+choreo-perfection,Einzeltermin/Drop-in,28,
+combine-and-captivate,Einzeltermin/Drop-in,29,
+fliptastic,Einzeltermin/Drop-in,29,
+polekurse,Einzeltermin/Drop-in,25,
+superman,Einzeltermin/Drop-in,29,
+tricktastic,Einzeltermin/Drop-in,25,
+private-lessons-trial,Schnupperstunde,8,
+private-lessons-trial,1 Stunde,59,einzeln
+private-lessons-trial,1 Stunde,44,zu zweit
+private-lessons-trial,1 Stunde,36,zu dritt
+private-lessons-trial,1 Stunde,25,ab vier Personen
+private-lessons-trial,90 Minuten,79,einzeln
+private-lessons-trial,90 Minuten,59,zu zweit
+private-lessons-trial,90 Minuten,48,zu dritt
+private-lessons-trial,90 Minuten,34,ab vier Personen
+private-lessons-trial,120 Minuten,99,einzeln
+private-lessons-trial,120 Minuten,74,zu zweit
+private-lessons-trial,120 Minuten,59,zu dritt
+private-lessons-trial,120 Minuten,42,ab vier Personen
+spiral,1 Stunde,59,einzeln
+spiral,1 Stunde,39,zu zweit
+spiral,1 Stunde,32,ab drei Personen
+spiral,90 Minuten,74,einzeln
+spiral,90 Minuten,49,zu zweit
+spiral,90 Minuten,39,ab drei Personen
+spiral,120 Minuten,94,einzeln
+spiral,120 Minuten,62,zu zweit
+spiral,120 Minuten,49,ab drei Personen

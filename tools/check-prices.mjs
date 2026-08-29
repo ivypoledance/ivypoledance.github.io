@@ -32,7 +32,7 @@ export function coursePages(dir) {
 
 export function checkPrices(prices, pages) {
   const problems = [];
-  const seenTierCells = new Set();
+  const seenCells = new Set();
 
   prices.forEach((row, index) => {
     const where = `prices.csv line ${index + 2}`;
@@ -42,20 +42,19 @@ export function checkPrices(prices, pages) {
         + 'so this price is never shown');
     }
 
+    if (!row.label) problems.push(`${where}: ${row.course} has a row with no label`);
+
     if (!/^\d+$/.test(row.amount)) {
       problems.push(`${where}: ${row.course} has amount "${row.amount}", expected a whole number of euro`);
     }
-    if (row.duration && !row.persons) problems.push(`${where}: ${row.course} has a duration but no persons`);
-    if (!row.duration && row.persons) problems.push(`${where}: ${row.course} has persons but no duration`);
-    if (!row.duration && !row.label) problems.push(`${where}: ${row.course} is a named rate and needs a label`);
 
-    if (row.duration && row.persons) {
-      const cell = JSON.stringify([row.course, row.duration, row.persons]);
-      if (seenTierCells.has(cell)) {
-        problems.push(`${where}: ${row.course} repeats ${row.duration} / ${row.persons}, `
+    if (row.column) {
+      const cell = JSON.stringify([row.course, row.label, row.column]);
+      if (seenCells.has(cell)) {
+        problems.push(`${where}: ${row.course} repeats ${row.label} / ${row.column}, `
           + 'and only the first of them is ever rendered');
       }
-      seenTierCells.add(cell);
+      seenCells.add(cell);
     }
   });
 
