@@ -4,6 +4,12 @@
    explicitly. Renders as e.g. "Do. 27.08.2026, 17:00". #}
 {% component de_datetime(value) %}{% set weekdays = ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."] %}{{ weekdays[value | date(format="%w") | int] }} {{ value | date(format="%d.%m.%Y, %H:%M") }}{% endcomponent de_datetime %}
 
+{# The line confirming the AGB, with the rule that separates it. #}
+{% component agb() %}
+<hr/>
+<p class="agb-note">Mit Kauf/Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.</p>
+{% endcomponent agb %}
+
 {# Prices for one course, from prices.csv, keyed by its file name. #}
 {% component prices(course) %}
 {%- set all = load_data(path="prices.csv") -%}

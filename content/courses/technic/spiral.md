@@ -20,7 +20,6 @@ Trainingsort ist das TRAP Circus Center in Simmering. Solltest du keine Training
 <div class="text-center">
     <a class="btn btn-primary" href="mailto:buchung@ivypoledance.at?subject=Buchungsanfrage%20-%20Privatstunde&body=Liebes%20Ivy%20Poledance%20Team%2C%0D%0A%0D%0Aich%20interessiere%20mich%20f%C3%BCr%20die%20Buchung%20einer%20Privatstunde.%0D%0AMein%2Fe%20Wunschtermin%2Fe%20und%20Uhrzeiten%20w%C3%A4ren%3A%0D%0A%0D%0A%7B%7B%20DATUM%20%2F%20UHRZEIT%20%2F%2060-90-120%20MINUTEN%20%7D%7D%0D%0A%0D%0ALG%0D%0A%0D%0A%0D%0A">Privatstunde buchen!</a>
 </div>
-<hr/>
-Mit einer Buchung bestätigst du unsere <a href="/imprint/#agb">AGB</a>.
+{{ <agb /> }}
 
 <img class="pose-backdrop" src="/img/polecamp/spiral4.png" />

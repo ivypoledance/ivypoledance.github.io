@@ -137,3 +137,13 @@ h3,
   // width and nowhere else.
   @include font-size($h4-font-size);
 }
+
+/**
+ * The AGB confirmation under a booking button, and in the footer of a course's
+ * date table. It is a legal note rather than something to read on the way
+ * through, so it sits out of the way at the end of the line and a size down.
+ */
+.agb-note {
+  text-align: right;
+  font-size: $font-size-sm;
+}
