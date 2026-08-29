@@ -2,14 +2,11 @@ course,kind,label,amount,duration,persons
 ayesha,dropin,Einzeltermin/Drop-in bei zweiwöchigem Kurs,29,,
 ayesha,special,"Technik-Special (1,5h)",39,,
 choreo-perfection,dropin,Einzeltermin/Drop-in,28,,
-choreo-swift,einzeltermin,Einzeltermin,39,,
 combine-and-captivate,dropin,Einzeltermin/Drop-in,29,,
 fliptastic,dropin,Einzeltermin/Drop-in,29,,
 polekurse,dropin,Einzeltermin/Drop-in,25,,
-polekurse,kurs-4-termine,Kurs (4 Termine),82,,
 superman,dropin,Einzeltermin/Drop-in,29,,
 tricktastic,dropin,Einzeltermin/Drop-in,25,,
-tricktastic,kurs-2-termine,Kurs (2 Termine),44,,
 private-lessons-trial,privat-60-1,,59,1 Stunde,einzeln
 private-lessons-trial,privat-60-2,,44,1 Stunde,zu zweit
 private-lessons-trial,privat-60-3,,36,1 Stunde,zu dritt

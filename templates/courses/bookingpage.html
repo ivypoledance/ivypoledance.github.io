@@ -41,8 +41,7 @@
         Du kannst mir aber gerne eine <a href="/courses/courses-and-booking/booking/#kursanfrage">Kursanfrage</a> schicken.</p>
         {% else %}
         {% set showName = [r[1] for r in records] | join(sep="") | length > 0 %}
-        {% set showPrice = [r[2] for r in records] | join(sep="") | trim | length > 0 %}
-        {% set price_list = load_data(path="prices.csv") %}
+        {% set showPrice = [r[2] for r in records] | join(sep="") | length > 0 %}
         <table>
           <thead>
               <tr>
@@ -61,10 +60,7 @@
                   {% endif %}
                   {% if showPrice == true %}
                   <td>
-                    {# The column names one of the course's own prices, so a
-                       date's amount is not a second copy. Indexing the matching
-                       row directly means an unknown name fails the build. #}
-                    {% set kind = record[2] | trim %}{% if kind %}€ {{ [r for r in price_list["records"] if r[0] == page.slug and r[1] == kind][0][3] }}{% endif %}
+                    {{ record[2] }}
                   </td>
                   {% endif %}
                   <td>

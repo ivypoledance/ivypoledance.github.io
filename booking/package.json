@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Booking API for ivypoledance.at: course dates, places and waitlist",
   "scripts": {
-    "test": "node --test test/booking.test.mjs test/api.test.mjs test/sync.test.mjs test/prices.test.mjs",
+    "test": "node --test test/booking.test.mjs test/api.test.mjs",
     "deploy": "wrangler deploy",
     "schema": "wrangler d1 execute ivypoledance-booking --remote --file schema.sql"
   },

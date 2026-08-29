@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 //
-// Checks that prices.csv and coursedates.csv agree with the course pages.
+// Checks that every row in prices.csv belongs to a course page.
 //
 //   node tools/check-prices.mjs
 //
@@ -20,7 +20,9 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
-import { parseCsv, courseSlug } from '../booking/sync-events.mjs';
+// Imported rather than copied so there is one CSV reader in the repository.
+// Nothing here writes to booking/.
+import { parseCsv } from '../booking/sync-events.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -47,9 +49,10 @@ export function coursePages(dir) {
   return slugs;
 }
 
-export function checkPrices(prices, pages, courseDates) {
+export function checkPrices(prices, pages) {
   const problems = [];
-  const seen = new Map();
+  const seen = new Set();
+  const cells = new Set();
 
   prices.forEach((row, index) => {
     const where = `prices.csv line ${index + 2}`; // header is line 1
@@ -65,7 +68,7 @@ export function checkPrices(prices, pages, courseDates) {
 
     const key = `${row.course}/${row.kind}`;
     if (seen.has(key)) problems.push(`${where}: ${row.course} has "${row.kind}" twice`);
-    seen.set(key, true);
+    seen.add(key);
 
     if (!/^\d+$/.test(row.amount)) {
       problems.push(`${where}: ${key} has amount "${row.amount}", expected a whole number of euro`);
@@ -75,29 +78,17 @@ export function checkPrices(prices, pages, courseDates) {
     if (row.duration && !row.persons) problems.push(`${where}: ${key} has a duration but no persons`);
     if (!row.duration && row.persons) problems.push(`${where}: ${key} has persons but no duration`);
     if (!row.duration && !row.label) problems.push(`${where}: ${key} is a named rate and needs a label`);
-  });
 
-  // The table renders one cell per duration and group size and takes the first
-  // row that matches, so a second row for the same cell never appears — as
-  // invisible as a row on a page that does not exist.
-  const cells = new Set();
-  prices.forEach((row, index) => {
-    if (!row.duration || !row.persons) return;
-    const cell = JSON.stringify([row.course, row.duration, row.persons]);
-    if (cells.has(cell)) {
-      problems.push(`prices.csv line ${index + 2}: ${row.course} repeats `
-        + `${row.duration} / ${row.persons}, and only the first of them is ever rendered`);
-    }
-    cells.add(cell);
-  });
-
-  courseDates.forEach((row, index) => {
-    const where = `coursedates.csv line ${index + 2}`;
-    const kind = (row.kind ?? '').trim();
-    if (kind === '') return; // a date may legitimately show no price
-    const slug = courseSlug(row.course ?? '');
-    if (!seen.has(`${slug}/${kind}`)) {
-      problems.push(`${where}: ${slug} has no price called "${kind}" in prices.csv`);
+    // The table renders one cell per duration and group size and takes the
+    // first row that matches, so a second row for the same cell never appears —
+    // as invisible as a row on a page that does not exist.
+    if (row.duration && row.persons) {
+      const cell = JSON.stringify([row.course, row.duration, row.persons]);
+      if (cells.has(cell)) {
+        problems.push(`${where}: ${row.course} repeats ${row.duration} / ${row.persons}, `
+          + 'and only the first of them is ever rendered');
+      }
+      cells.add(cell);
     }
   });
 
@@ -105,17 +96,15 @@ export function checkPrices(prices, pages, courseDates) {
 }
 
 function main() {
-  const read = (name) => parseCsv(readFileSync(join(root, name), 'utf8'));
   const problems = checkPrices(
-    read('prices.csv'),
+    parseCsv(readFileSync(join(root, 'prices.csv'), 'utf8')),
     coursePages(join(root, 'content', 'courses')),
-    read('coursedates.csv'),
   );
   if (problems.length) {
     for (const problem of problems) console.error(`::error::${problem}`);
     process.exit(1);
   }
-  console.log('every price belongs to a course page and every date resolves');
+  console.log('every price belongs to a course page');
 }
 
 // Matched by name rather than by full path: `import.meta.url` is realpathed and

@@ -5,10 +5,7 @@ import assert from 'node:assert/strict';
 
 import { parseCsv, courseTitle, buildEvents } from '../sync-events.mjs';
 
-const HEADER = 'course,name,kind,date1-from,date1-to,date2-from,date2-to,capacity';
-// prices.csv is the only place an amount lives; the sync resolves the id.
-// Prices are keyed by the course's file name, so the fixture names lollipop.
-const PRICES = parseCsv('course,kind,label,amount,duration,persons\nlollipop,sommer,Einzeltermin,39,,');
+const HEADER = 'course,name,price,date1-from,date1-to,date2-from,date2-to,capacity';
 const courses = {
   'courses/technic/lollipop.md': '+++\ntitle = "Lollipop ☆"\ntemplate = "courses/bookingpage.html"\n+++\nbody',
   'courses/technic/twinpole.md': '+++\ntitle = "Twinpole ☆"\n+++\n',
@@ -16,7 +13,7 @@ const courses = {
 const readCourse = (path) => courses[path] ?? null;
 
 test('reads quoted fields and commas inside them', () => {
-  const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,"Sommer, Teil 1",sommer,2026-09-01T18:00:00,,,,3`);
+  const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,"Sommer, Teil 1",€39.-,2026-09-01T18:00:00,,,,3`);
   assert.equal(rows.length, 1);
   assert.equal(rows[0].name, 'Sommer, Teil 1');
   assert.equal(rows[0].capacity, '3');
@@ -40,8 +37,8 @@ test('the course title comes from the front matter', () => {
 });
 
 test('a full row becomes an event', () => {
-  const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,Sommer,sommer,2026-09-01T18:00:00,2026-09-01T19:30:00,2026-09-08T18:00:00,2026-09-08T19:30:00,3`);
-  const { events, problems } = buildEvents(rows, readCourse, PRICES);
+  const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,Sommer,€39.-,2026-09-01T18:00:00,2026-09-01T19:30:00,2026-09-08T18:00:00,2026-09-08T19:30:00,3`);
+  const { events, problems } = buildEvents(rows, readCourse);
 
   assert.deepEqual(problems, []);
   assert.deepEqual(events, [{
@@ -50,7 +47,7 @@ test('a full row becomes an event', () => {
     course_path: 'courses/technic/lollipop.md',
     course_title: 'Lollipop ☆',
     name: 'Sommer',
-    price: '€ 39',
+    price: '€39.-',
     starts_at: '2026-09-01T18:00:00',
     ends_at: '2026-09-01T19:30:00',
     second_starts_at: '2026-09-08T18:00:00',
@@ -61,7 +58,7 @@ test('a full row becomes an event', () => {
 
 test('empty optional dates become null rather than empty strings', () => {
   const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,,3`);
-  const { events } = buildEvents(rows, readCourse, PRICES);
+  const { events } = buildEvents(rows, readCourse);
   assert.equal(events[0].ends_at, null);
   assert.equal(events[0].second_starts_at, null);
   assert.equal(events[0].second_ends_at, null);
@@ -70,69 +67,23 @@ test('empty optional dates become null rather than empty strings', () => {
 test('a blank capacity means unlimited places', () => {
   for (const value of ['', '   ']) {
     const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,,${value}`);
-    const { events, problems } = buildEvents(rows, readCourse, PRICES);
+    const { events, problems } = buildEvents(rows, readCourse);
     assert.deepEqual(problems, []);
     assert.equal(events[0].capacity, null, `capacity "${value}" should mean unlimited`);
   }
 });
 
 test('a capacity column missing altogether means unlimited', () => {
-  const rows = parseCsv('course,name,kind,date1-from,date1-to,date2-from,date2-to\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,');
-  const { events, problems } = buildEvents(rows, readCourse, PRICES);
+  const rows = parseCsv('course,name,price,date1-from,date1-to,date2-from,date2-to\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,');
+  const { events, problems } = buildEvents(rows, readCourse);
   assert.deepEqual(problems, []);
   assert.equal(events[0].capacity, null);
-});
-
-test('a kind the course has no price for stops the sync', () => {
-  const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,sommr,2026-09-01T18:00:00,,,,3`);
-  const { events, problems } = buildEvents(rows, readCourse, PRICES);
-  assert.equal(events.length, 0);
-  assert.match(problems[0], /lollipop has no price called "sommr"/);
-});
-
-test('a blank kind is legitimate and means no price is shown', () => {
-  const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,,3`);
-  const { events, problems } = buildEvents(rows, readCourse, PRICES);
-  assert.deepEqual(problems, []);
-  assert.equal(events[0].price, '');
-});
-
-test('a kind resolves to the amount formatted as the page shows it', () => {
-  const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,sommer,2026-09-01T18:00:00,,,,3`);
-  const { events } = buildEvents(rows, readCourse, PRICES);
-  assert.equal(events[0].price, '€ 39');
-});
-
-test('the same kind twice for one course stops the sync', () => {
-  // A Map keeps the last row while the templates take the first, so a duplicate
-  // would put one amount on the page and another in the confirmation mail.
-  const prices = parseCsv('course,kind,label,amount,duration,persons\nlollipop,sommer,A,39,,\nlollipop,sommer,B,44,,');
-  const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,sommer,2026-09-01T18:00:00,,,,3`);
-  const { problems } = buildEvents(rows, readCourse, prices);
-  assert.match(problems.join('\n'), /lollipop has "sommer" twice/);
-});
-
-test('a price whose amount is not a whole number stops the sync', () => {
-  for (const amount of ['', '39,50', '€ 39', 'frei']) {
-    const prices = parseCsv(`course,kind,label,amount,duration,persons\nlollipop,sommer,A,"${amount}",,`);
-    const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,sommer,2026-09-01T18:00:00,,,,3`);
-    const { events, problems } = buildEvents(rows, readCourse, prices);
-    assert.equal(events.length, 0, `amount "${amount}" should be rejected`);
-    assert.match(problems[0], /expected a whole number of euro/);
-  }
-});
-
-test('a kind of only whitespace counts as blank, as it does on the page', () => {
-  const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,   ,2026-09-01T18:00:00,,,,3`);
-  const { events, problems } = buildEvents(rows, readCourse, PRICES);
-  assert.deepEqual(problems, []);
-  assert.equal(events[0].price, '');
 });
 
 test('a capacity that is present but unusable stops the sync', () => {
   for (const value of ['0', '-1', 'six', '3.5']) {
     const rows = parseCsv(`${HEADER}\ncourses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,,${value}`);
-    const { events, problems } = buildEvents(rows, readCourse, PRICES);
+    const { events, problems } = buildEvents(rows, readCourse);
     assert.equal(events.length, 0, `capacity "${value}" should be rejected`);
     assert.match(problems[0], /blank for unlimited, or a positive whole number/);
   }
@@ -140,21 +91,21 @@ test('a capacity that is present but unusable stops the sync', () => {
 
 test('a date pointing at a course page that does not exist stops the sync', () => {
   const rows = parseCsv(`${HEADER}\ncourses/technic/ghost.md,x,,2026-09-01T18:00:00,,,,3`);
-  const { events, problems } = buildEvents(rows, readCourse, PRICES);
+  const { events, problems } = buildEvents(rows, readCourse);
   assert.equal(events.length, 0);
   assert.match(problems[0], /no such course page/);
 });
 
 test('missing course or start date is reported with the line number', () => {
   const rows = parseCsv(`${HEADER}\n,x,,2026-09-01T18:00:00,,,,3\ncourses/technic/lollipop.md,x,,,,,,3`);
-  const { problems } = buildEvents(rows, readCourse, PRICES);
+  const { problems } = buildEvents(rows, readCourse);
   assert.match(problems[0], /line 2: missing course/);
   assert.match(problems[1], /line 3: missing date1-from/);
 });
 
 test('the same course twice at the same time is rejected', () => {
   const row = 'courses/technic/lollipop.md,x,,2026-09-01T18:00:00,,,,3';
-  const { problems } = buildEvents(parseCsv(`${HEADER}\n${row}\n${row}`), readCourse, PRICES);
+  const { problems } = buildEvents(parseCsv(`${HEADER}\n${row}\n${row}`), readCourse);
   assert.match(problems.at(-1), /duplicate date/);
 });
 
@@ -164,7 +115,7 @@ test('the same course at different times is fine', () => {
     'courses/technic/lollipop.md,Morgens,,2026-09-01T10:00:00,,,,3',
     'courses/technic/lollipop.md,Abends,,2026-09-01T18:00:00,,,,3',
   ].join('\n'));
-  const { events, problems } = buildEvents(rows, readCourse, PRICES);
+  const { events, problems } = buildEvents(rows, readCourse);
   assert.deepEqual(problems, []);
   assert.equal(events.length, 2);
   assert.notEqual(events[0].id, events[1].id);
@@ -173,21 +124,14 @@ test('the same course at different times is fine', () => {
 test('the repository CSV parses and builds cleanly', async () => {
   const { readFileSync, existsSync } = await import('node:fs');
   const rows = parseCsv(readFileSync('../coursedates.csv', 'utf8'));
-  // The committed prices.csv, so a price_id in coursedates.csv that no longer
-  // resolves is caught here rather than on the deployed site.
-  const prices = parseCsv(readFileSync('../prices.csv', 'utf8'));
   const { events, problems } = buildEvents(rows, (p) => (
     existsSync(`../content/${p}`) ? readFileSync(`../content/${p}`, 'utf8') : null
-  ), prices);
+  ));
   assert.deepEqual(problems, [], 'the committed CSV must always sync');
   assert.ok(events.length > 0);
   for (const event of events) {
     // null is legitimate and means unlimited; a number must be usable.
     assert.ok(event.capacity === null || event.capacity > 0, `${event.id} has capacity ${event.capacity}`);
     assert.ok(event.course_title, `${event.course_path} has no title`);
-    // Blank is legitimate too and means the date shows no price. Anything else
-    // has to be a resolved amount, reading as it does on the page.
-    assert.ok(event.price === '' || /^€ \d+$/.test(event.price),
-      `${event.id} has price "${event.price}"`);
   }
 });

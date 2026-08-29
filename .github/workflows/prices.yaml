@@ -1,0 +1,50 @@
+# Checks that every price belongs to a course page.
+#
+# A dangling reference in the other direction cannot happen: the page templates
+# look prices up by the course's file name, so there is no name to mistype. What
+# can happen is a row naming a page that does not exist, which renders nowhere
+# and which `zola build` cannot report — a course with no prices is the ordinary
+# case, so "nothing matched" is not an error at render time.
+#
+# Kept out of the booking workflow: this is about the site's own data, and does
+# not touch booking/.
+
+name: 🏷️ Check the prices
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "prices.csv"
+      - "content/courses/**"
+      - "tools/check-prices.mjs"
+      - "tools/check-prices.test.mjs"
+      - ".github/workflows/prices.yaml"
+  pull_request:
+    paths:
+      - "prices.csv"
+      - "content/courses/**"
+      - "tools/check-prices.mjs"
+      - "tools/check-prices.test.mjs"
+      - ".github/workflows/prices.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  check:
+    name: Check the prices
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Run the checker's tests
+        run: node --test tools/check-prices.test.mjs
+
+      - name: Check the committed prices
+        run: node tools/check-prices.mjs

@@ -8,25 +8,21 @@
 #
 # Until BOOKING_API is set the sync step reports and stops rather than failing.
 
-name: 🔄 Sync course dates and check prices
+name: 🔄 Sync course dates
 
 on:
   push:
     branches: [main]
     paths:
       - "coursedates.csv"
-      - "prices.csv"
       - "content/**"
       - "booking/**"
-      - "tools/check-prices.mjs"
       - ".github/workflows/booking-sync.yaml"
   pull_request:
     paths:
       - "coursedates.csv"
-      - "prices.csv"
       - "content/**"
       - "booking/**"
-      - "tools/check-prices.mjs"
       - ".github/workflows/booking-sync.yaml"
   workflow_dispatch:
 
@@ -43,19 +39,14 @@ defaults:
 
 jobs:
   check:
-    name: Validate the dates and prices
+    name: Validate the course dates
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
 
       - name: Run the booking tests
         working-directory: booking
-        # `npm test` rather than the file list, so this and package.json cannot
-        # drift into running different sets.
-        run: npm test
-
-      - name: Check that every price is used
-        run: node tools/check-prices.mjs
+        run: node --test test/booking.test.mjs test/api.test.mjs test/sync.test.mjs
 
       - name: Validate coursedates.csv
         run: node booking/sync-events.mjs --dry-run
