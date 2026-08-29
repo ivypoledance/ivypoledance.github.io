@@ -8,24 +8,24 @@
 {% component prices(course) %}
 {%- set all = load_data(path="prices.csv") -%}
 {%- set rows = [r for r in all["records"] if r[0] == course] -%}
-{%- set flat = [r for r in rows if r[4] == ""] -%}
-{%- set tiered = [r for r in rows if r[4] != ""] -%}
+{%- set flat = [r for r in rows if r[3] == ""] -%}
+{%- set tiered = [r for r in rows if r[3] != ""] -%}
 {%- if tiered | length > 0 -%}
-{%- set durations = [r[4] for r in tiered] | unique -%}
-{%- set groups = [r[5] for r in tiered] | unique -%}
+{%- set durations = [r[3] for r in tiered] | unique -%}
+{%- set groups = [r[4] for r in tiered] | unique -%}
 <table class="prices">
 <thead>
 <tr><td></td> {% for group in groups %}<th scope="col">{{ group }}</th> {% endfor %}</tr>
 </thead>
 <tbody>
 {%- for duration in durations %}
-<tr><th scope="row">{{ duration }}</th> {% for group in groups %}{% set cell = [r for r in tiered if r[4] == duration and r[5] == group] %}<td>{% if cell | length > 0 %}€ {{ cell[0][3] }}{% endif %}</td> {% endfor %}</tr>
+<tr><th scope="row">{{ duration }}</th> {% for group in groups %}{% set cell = [r for r in tiered if r[3] == duration and r[4] == group] %}<td>{% if cell | length > 0 %}€ {{ cell[0][2] }}{% endif %}</td> {% endfor %}</tr>
 {%- endfor %}
 </tbody>
 </table>
 {%- endif -%}
 {%- if flat | length > 0 -%}
-<ul class="prices">{% for row in flat %}<li>{{ row[2] }}: € {{ row[3] }}</li> {% endfor %}</ul>
+<ul class="prices">{% for row in flat %}<li>{{ row[1] }}: € {{ row[2] }}</li> {% endfor %}</ul>
 {%- endif %}
 {% endcomponent prices %}
 

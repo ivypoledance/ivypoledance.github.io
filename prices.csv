@@ -1,31 +1,31 @@
-course,kind,label,amount,duration,persons
-ayesha,dropin,Einzeltermin/Drop-in bei zweiwöchigem Kurs,29,,
-ayesha,special,"Technik-Special (1,5h)",39,,
-choreo-perfection,dropin,Einzeltermin/Drop-in,28,,
-combine-and-captivate,dropin,Einzeltermin/Drop-in,29,,
-fliptastic,dropin,Einzeltermin/Drop-in,29,,
-polekurse,dropin,Einzeltermin/Drop-in,25,,
-superman,dropin,Einzeltermin/Drop-in,29,,
-tricktastic,dropin,Einzeltermin/Drop-in,25,,
-private-lessons-trial,privat-60-1,,59,1 Stunde,einzeln
-private-lessons-trial,privat-60-2,,44,1 Stunde,zu zweit
-private-lessons-trial,privat-60-3,,36,1 Stunde,zu dritt
-private-lessons-trial,privat-60-4,,25,1 Stunde,ab vier Personen
-private-lessons-trial,privat-90-1,,79,90 Minuten,einzeln
-private-lessons-trial,privat-90-2,,59,90 Minuten,zu zweit
-private-lessons-trial,privat-90-3,,48,90 Minuten,zu dritt
-private-lessons-trial,privat-90-4,,34,90 Minuten,ab vier Personen
-private-lessons-trial,privat-120-1,,99,120 Minuten,einzeln
-private-lessons-trial,privat-120-2,,74,120 Minuten,zu zweit
-private-lessons-trial,privat-120-3,,59,120 Minuten,zu dritt
-private-lessons-trial,privat-120-4,,42,120 Minuten,ab vier Personen
-private-lessons-trial,schnupper,PREIS,8,,
-spiral,spiral-60-1,,59,1 Stunde,einzeln
-spiral,spiral-60-2,,39,1 Stunde,zu zweit
-spiral,spiral-60-3,,32,1 Stunde,ab drei Personen
-spiral,spiral-90-1,,74,90 Minuten,einzeln
-spiral,spiral-90-2,,49,90 Minuten,zu zweit
-spiral,spiral-90-3,,39,90 Minuten,ab drei Personen
-spiral,spiral-120-1,,94,120 Minuten,einzeln
-spiral,spiral-120-2,,62,120 Minuten,zu zweit
-spiral,spiral-120-3,,49,120 Minuten,ab drei Personen
+course,label,amount,duration,persons
+ayesha,Einzeltermin/Drop-in bei zweiwöchigem Kurs,29,,
+ayesha,"Technik-Special (1,5h)",39,,
+choreo-perfection,Einzeltermin/Drop-in,28,,
+combine-and-captivate,Einzeltermin/Drop-in,29,,
+fliptastic,Einzeltermin/Drop-in,29,,
+polekurse,Einzeltermin/Drop-in,25,,
+superman,Einzeltermin/Drop-in,29,,
+tricktastic,Einzeltermin/Drop-in,25,,
+private-lessons-trial,,59,1 Stunde,einzeln
+private-lessons-trial,,44,1 Stunde,zu zweit
+private-lessons-trial,,36,1 Stunde,zu dritt
+private-lessons-trial,,25,1 Stunde,ab vier Personen
+private-lessons-trial,,79,90 Minuten,einzeln
+private-lessons-trial,,59,90 Minuten,zu zweit
+private-lessons-trial,,48,90 Minuten,zu dritt
+private-lessons-trial,,34,90 Minuten,ab vier Personen
+private-lessons-trial,,99,120 Minuten,einzeln
+private-lessons-trial,,74,120 Minuten,zu zweit
+private-lessons-trial,,59,120 Minuten,zu dritt
+private-lessons-trial,,42,120 Minuten,ab vier Personen
+private-lessons-trial,PREIS,8,,
+spiral,,59,1 Stunde,einzeln
+spiral,,39,1 Stunde,zu zweit
+spiral,,32,1 Stunde,ab drei Personen
+spiral,,74,90 Minuten,einzeln
+spiral,,49,90 Minuten,zu zweit
+spiral,,39,90 Minuten,ab drei Personen
+spiral,,94,120 Minuten,einzeln
+spiral,,62,120 Minuten,zu zweit
+spiral,,49,120 Minuten,ab drei Personen
