@@ -18,7 +18,8 @@
     card: document.querySelector(".testimonial-template"),
     paragraph: document.querySelector(".testimonial-paragraph"),
     question: document.querySelector(".testimonial-question-template"),
-    date: document.querySelector(".testimonial-date-template")
+    date: document.querySelector(".testimonial-date-template"),
+    avatar: document.querySelector(".testimonial-avatar-template")
   };
 
   // Keyed by the network id a quote names in `platform`.
@@ -87,9 +88,10 @@
       name.textContent = testimonial.name;
     }
 
+    var meta = figcaption.querySelector(".testimonial-meta");
     var network = networks[testimonial.platform];
     if (!network) {
-      return;
+      return meta;
     }
 
     var handle = testimonial.handle;
@@ -111,7 +113,8 @@
     label.textContent = (handle ? " auf " : "auf ") + network.dataset.name;
     element.appendChild(label);
 
-    figcaption.appendChild(element);
+    meta.appendChild(element);
+    return meta;
   }
 
   function buildCard(testimonial) {
@@ -124,12 +127,25 @@
       quote.appendChild(paragraph);
     });
 
-    var figcaption = card.querySelector("figcaption");
-    buildSource(figcaption, testimonial);
+    var image = httpUrl(testimonial.image);
+    if (image) {
+      var avatar = clone(templates.avatar);
+      avatar.setAttribute("src", image);
+      card.insertBefore(avatar, quote);
+      // The class, not `:has()`, is what gives the card its second column: the
+      // card is built here, so it can say plainly whether it has a face.
+      card.classList.add("testimonial-with-avatar");
+    }
+
+    var meta = buildSource(card.querySelector("figcaption"), testimonial);
 
     var date = buildDate(testimonial.date);
     if (date) {
-      figcaption.appendChild(date);
+      meta.appendChild(date);
+    }
+    if (!meta.firstChild) {
+      // An empty line still takes the caption's row gap.
+      meta.remove();
     }
 
     return card;
