@@ -52,47 +52,16 @@
 {%- endif -%}
 {% endcomponent social_icon %}
 
-{# The question a piece of feedback answers, for the quotes that came from the
-   feedback form and only read as an answer. Belongs inside a `testimonial`.
+{# Where the testimonials go. The quotes are fetched from `src` by
+   static/js/testimonials.js, so that the list can come from somewhere other
+   than this repository without the site being rebuilt.
 
-   Its body is one line of plain text, not markdown: it sits inside the
-   surrounding HTML block, so markdown never looks at it, and it is escaped, so
-   an `&` in a question stays an `&`. A `<p>` cannot hold a paragraph either
-   way. #}
-{% component testimonial_question() %}<p class="testimonial-question">{{ body | escape_html }}</p>{% endcomponent testimonial_question %}
-
-{# One quote on the testimonials page: the words, and who said them.
-
-   The body is markdown — the blank lines around it end the HTML block above,
-   which is what lets each paragraph render as one.
-
-   `platform` is instagram, facebook or twitter and says where the quote comes
-   from; a `handle` names the profile there and links to it. Both read the
-   network out of `networks`, so a handle without a platform, or a platform
-   spelled any other way, fails the build instead of quietly dropping the
-   attribution. #}
-{% component testimonial(name, platform="", handle="") %}
-{%- set networks = {
-      "instagram": {"name": "Instagram", "profile": "https://www.instagram.com/"},
-      "facebook": {"name": "Facebook", "profile": "https://www.facebook.com/"},
-      "twitter": {"name": "Twitter", "profile": "https://twitter.com/"}
-    } -%}
-<figure class="testimonial">
-<blockquote>
-
-{{ body }}
-
-</blockquote>
-<figcaption>
-<span class="testimonial-name">{{ name | escape_html }}</span>
-{%- if handle -%}
-<a class="testimonial-handle" href="{{ networks[platform].profile }}{{ handle | urlencode }}" target="_blank" rel="nofollow noopener noreferrer">{{<social_icon platform={platform} />}}{{ handle | escape_html }}<span class="visually-hidden"> auf {{ networks[platform].name }}</span></a>
-{%- elif platform -%}
-<span class="testimonial-handle">{{<social_icon platform={platform} />}}<span class="visually-hidden">auf {{ networks[platform].name }}</span></span>
-{%- endif -%}
-</figcaption>
-</figure>
-{% endcomponent testimonial %}
+   Only the container is here. The shapes the script clones to fill it live in
+   templates/testimonials.html: markdown wraps a one-line `<template>` in a
+   paragraph, which is not markup a `<template>` may sit in. #}
+{% component testimonials(src) %}
+<div class="testimonials responsive-two-column-grid" data-src="{{ src }}" aria-busy="true"></div>
+{% endcomponent testimonials %}
 
 {# `event` is passed explicitly rather than relying on the legacy global. #}
 {% component image(img, max, credit="") %}

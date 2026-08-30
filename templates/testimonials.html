@@ -1,0 +1,36 @@
+{# The testimonials page: the theme's section layout, plus everything needed to
+   fill the list that the `testimonials` component leaves empty.
+
+   The card and the two kinds of paragraph are markup rather than strings in
+   the script, so that a quote reaches the page as text and never as markup —
+   the list may one day be served from somewhere that collects the quotes
+   rather than from this repository. One icon per network is here for the same
+   reason the rest is: the feather SVG is written once, in `social_icon`.
+
+   `data-network` is the set of networks a quote may name. A quote naming
+   anything else gets no icon and no link rather than a broken profile URL.
+
+   The JSON is deliberately not cachebusted, unlike the script: the point of
+   fetching it is that it can change without the site being rebuilt, and a
+   hashed URL would pin it to whatever it held at build time. #}
+
+{% extends "section.html" %}
+
+{% block js %}
+<template class="testimonial-template">
+  <figure class="testimonial">
+    <blockquote></blockquote>
+    <figcaption><span class="testimonial-name"></span></figcaption>
+  </figure>
+</template>
+<template class="testimonial-paragraph"><p></p></template>
+<template class="testimonial-question-template"><p class="testimonial-question"></p></template>
+{% for network in [
+     {"id": "instagram", "name": "Instagram", "profile": "https://www.instagram.com/"},
+     {"id": "facebook", "name": "Facebook", "profile": "https://www.facebook.com/"},
+     {"id": "twitter", "name": "Twitter", "profile": "https://twitter.com/"}
+   ] %}
+<template class="testimonial-icon" data-network="{{ network.id }}" data-name="{{ network.name }}" data-profile="{{ network.profile }}">{{<social_icon platform={network.id} />}}</template>
+{% endfor %}
+<script type="text/javascript" src="{{ get_url(path="js/testimonials.js", cachebust=true) | safe }}" defer></script>
+{% endblock js %}

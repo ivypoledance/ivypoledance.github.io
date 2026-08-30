@@ -23,6 +23,23 @@
 }
 
 /**
+ * What the testimonials page says when it cannot show any quotes. While they
+ * are still being fetched the container is empty and has no height of its own,
+ * so only the failure needs saying.
+ *
+ * `column-span` keeps the line out of the two-column flow it sits in: one
+ * sentence broken across two columns reads as a mistake.
+ */
+.testimonials-message {
+  column-span: all;
+  color: $gray-700;
+}
+
+body.dark .testimonials-message {
+  color: $gray-500;
+}
+
+/**
  * A quote on the testimonials page: the words, and under them, at the end of
  * the line, who said them and where.
  *
