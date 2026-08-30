@@ -1,0 +1,51 @@
+{# The testimonials page: the theme's section layout, plus everything needed to
+   fill the list that the `testimonials` component leaves empty.
+
+   The card and the two kinds of paragraph are markup rather than strings in
+   the script, so that a quote reaches the page as text and never as markup —
+   the list may one day be served from somewhere that collects the quotes
+   rather than from this repository. One icon per network is here for the same
+   reason the rest is: the feather SVG is written once, in `social_icon`.
+
+   `data-network` is the set of networks a quote may name — the whole set, and
+   the same for all of them. A quote naming anything else gets no icon and no
+   link rather than a broken profile URL. A network only links when the quote
+   also carries a `handle`; without one the icon just says where it came from.
+
+   A quote may also carry a `date` (an ISO day), an `url` that makes the name
+   itself clickable, and an `image` — a face, shown as a circle beside the
+   words. Not everyone wants to be published with one, so a quote without it
+   simply keeps the full width of the card.
+
+   The JSON is deliberately not cachebusted, unlike the script: the point of
+   fetching it is that it can change without the site being rebuilt, and a
+   hashed URL would pin it to whatever it held at build time. #}
+
+{% extends "section.html" %}
+
+{% block js %}
+<template class="testimonial-template">
+  <figure class="testimonial">
+    <blockquote></blockquote>
+    <figcaption>
+      <span class="testimonial-name"></span>
+      <span class="testimonial-meta"></span>
+    </figcaption>
+  </figure>
+</template>
+<template class="testimonial-paragraph"><p></p></template>
+<template class="testimonial-question-template"><p class="testimonial-question"></p></template>
+<template class="testimonial-date-template"><time class="testimonial-date"></time></template>
+{# The face is decorative: the name is right beside it, so an alt text would
+   only say the same thing twice. Sized in the markup as well as in the
+   stylesheet so the card does not resize around it as it arrives. #}
+<template class="testimonial-avatar-template"><img class="testimonial-avatar" alt="" width="48" height="48" loading="lazy" decoding="async"></template>
+{% for network in [
+     {"id": "instagram", "name": "Instagram", "profile": "https://www.instagram.com/"},
+     {"id": "facebook", "name": "Facebook", "profile": "https://www.facebook.com/"},
+     {"id": "twitter", "name": "Twitter", "profile": "https://twitter.com/"}
+   ] %}
+<template class="testimonial-icon" data-network="{{ network.id }}" data-name="{{ network.name }}" data-profile="{{ network.profile }}">{{<social_icon platform={network.id} />}}</template>
+{% endfor %}
+<script type="text/javascript" src="{{ get_url(path="js/testimonials.js", cachebust=true) | safe }}" defer></script>
+{% endblock js %}

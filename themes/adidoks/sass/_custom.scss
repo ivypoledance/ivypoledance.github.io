@@ -1,26 +1,196 @@
 /**
  * Two-column layout for pages that are a list of items, such as the
- * testimonials screenshots.
+ * testimonials.
  *
- * `columns: 260px 2` asks for at most two columns and at least 260px each, so
- * it falls back to one column on narrow screens without a media query.
+ * `columns: 320px 2` asks for at most two columns and at least 320px each, so
+ * it falls back to one column on narrow screens without a media query. The
+ * minimum is a readable measure for a paragraph, not the narrowest one that
+ * still fits.
  */
 .responsive-two-column-grid {
-  columns: 260px 2;
+  columns: 320px 2;
   column-gap: 2rem;
 
   > * {
-    // Keep a screenshot whole rather than split across columns.
+    // Keep an item whole rather than split across columns.
     break-inside: avoid;
+    // A margin above the first item is kept at the top of the first column but
+    // truncated at the top of the second, which starts the two columns at
+    // different heights. The gap below is what spaces the items apart.
+    margin-top: 0;
     margin-bottom: 1.5rem;
   }
+}
 
-  // Screenshots become uniform thumbnails filling the column; the full-size
-  // image is a click away through the existing lightbox.
-  img {
-    width: 100%;
-    height: auto;
+/**
+ * What the testimonials page says when it cannot show any quotes. While they
+ * are still being fetched the container is empty and has no height of its own,
+ * so only the failure needs saying.
+ *
+ * `column-span` keeps the line out of the two-column flow it sits in: one
+ * sentence broken across two columns reads as a mistake.
+ */
+.testimonials-message {
+  column-span: all;
+  color: $gray-700;
+}
+
+body.dark .testimonials-message {
+  color: $gray-500;
+}
+
+/**
+ * A quote on the testimonials page: the words, and under them, at the end of
+ * the line, who said them and where.
+ *
+ * The card is what separates one quote from the next — the two-column flow they
+ * sit in draws no rule between them — and the oversized quotation mark stands
+ * in for the rule the theme otherwise puts down the side of a blockquote.
+ */
+.testimonial {
+  // One column, or a narrow one for the face and the rest for the words. The
+  // blockquote takes the last column either way, so only the card itself has
+  // to know whether there is a face; the caption spans the full width below.
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  padding: 1.75rem 1.5rem 1.25rem;
+  border-radius: $border-radius-lg;
+  background: $beige;
+
+  blockquote {
+    position: relative;
+    grid-column: -2 / -1;
+    margin: 0;
+    padding-left: 2.25rem;
+    border-left: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+
+    // The quotation mark is set in the body font rather than a serif of its
+    // own, so it is the same shape as the quote marks inside the text.
+    &::before {
+      content: "“";
+      position: absolute;
+      top: -0.72rem;
+      left: 0;
+      font-size: 4rem;
+      line-height: 1;
+      color: $primary;
+      opacity: 0.5;
+    }
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
   }
+
+  // The name gets a line of its own and the handle and the date share the one
+  // below it: on a column this narrow, all three on one line crowd each other.
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    grid-column: 1 / -1;
+    gap: 0.15rem;
+    margin-top: 1rem;
+    font-size: $font-size-sm;
+  }
+
+  // The card's background is warmer and darker than the page's, and both the
+  // link colour and the muted grey fall under a 4.5:1 contrast ratio on it at
+  // this size. They are darkened back over the line.
+  a {
+    color: darken($primary, 5%);
+  }
+}
+
+/**
+ * The face of the person who said it, where there is one to show. Round, and
+ * cropped to a square first so that a portrait is not squashed into the circle.
+ */
+.testimonial-with-avatar {
+  grid-template-columns: auto 1fr;
+}
+
+.testimonial-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/**
+ * Where the quote came from and when. Wraps to a line of its own on a card too
+ * narrow to hold both.
+ */
+.testimonial-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem 0.6rem;
+}
+
+/**
+ * The question a piece of feedback answers. It is context for the answer rather
+ * than something the person said, so it is set quieter than the quote itself.
+ */
+.testimonial-question {
+  margin-bottom: 0.35rem;
+  color: $gray-700;
+  font-size: $font-size-sm;
+  font-style: italic;
+}
+
+.testimonial-name {
+  font-weight: 600;
+
+  &::before {
+    content: "~ ";
+  }
+}
+
+/**
+ * When the quote was given. It is the last thing in the caption and the least
+ * of it, so it is set quieter than the name it follows and wraps below the
+ * name on a card too narrow to hold both.
+ */
+.testimonial-date {
+  color: $gray-700;
+}
+
+body.dark .testimonial-date {
+  color: $gray-500;
+}
+
+.testimonial-handle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+body.dark .testimonial {
+  background: $body-overlay-dark;
+
+  blockquote {
+    border-left: 0;
+  }
+
+  // The card is darker than the page, not lighter, so the light theme's
+  // darkening would work the wrong way here.
+  a {
+    color: $link-color-dark;
+  }
+}
+
+body.dark .testimonial-question {
+  color: $gray-500;
 }
 
 /**
