@@ -17,7 +17,8 @@
   var templates = {
     card: document.querySelector(".testimonial-template"),
     paragraph: document.querySelector(".testimonial-paragraph"),
-    question: document.querySelector(".testimonial-question-template")
+    question: document.querySelector(".testimonial-question-template"),
+    date: document.querySelector(".testimonial-date-template")
   };
 
   // Keyed by the network id a quote names in `platform`.
@@ -30,10 +31,61 @@
     return template.content.firstElementChild.cloneNode(true);
   }
 
+  // An `url` is only ever followed if it is one the browser would navigate to.
+  // `javascript:` and `data:` are URLs too, and a name is a link the reader is
+  // invited to click, so the scheme is checked rather than the string.
+  function httpUrl(url) {
+    if (typeof url !== "string" || !url) {
+      return null;
+    }
+    try {
+      var parsed = new URL(url, document.baseURI);
+      return parsed.protocol === "https:" || parsed.protocol === "http:" ? parsed.href : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  // `date` is an ISO day, written the way the rest of the site writes one. One
+  // that is not a real day is left out rather than printed: `Date` rolls a
+  // 30th of February over into March rather than rejecting it, so the parts it
+  // gives back have to be the parts it was handed.
+  function buildDate(date) {
+    var match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date || "");
+    if (!match) {
+      return null;
+    }
+    var year = Number(match[1]), month = Number(match[2]) - 1, dayOfMonth = Number(match[3]);
+    var day = new Date(year, month, dayOfMonth);
+    if (day.getFullYear() !== year || day.getMonth() !== month || day.getDate() !== dayOfMonth) {
+      return null;
+    }
+
+    var element = clone(templates.date);
+    element.setAttribute("datetime", date);
+    element.textContent = day.toLocaleDateString("de-AT", {
+      day: "numeric", month: "long", year: "numeric"
+    });
+    return element;
+  }
+
   // The name, and where the quote comes from. A `handle` links to the profile;
   // a network without one only says which network it was.
   function buildSource(figcaption, testimonial) {
-    figcaption.querySelector(".testimonial-name").textContent = testimonial.name;
+    var name = figcaption.querySelector(".testimonial-name");
+    var url = httpUrl(testimonial.url);
+
+    if (url) {
+      var link = document.createElement("a");
+      link.className = name.className;
+      link.setAttribute("href", url);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "nofollow noopener noreferrer");
+      link.textContent = testimonial.name;
+      name.replaceWith(link);
+    } else {
+      name.textContent = testimonial.name;
+    }
 
     var network = networks[testimonial.platform];
     if (!network) {
@@ -72,7 +124,14 @@
       quote.appendChild(paragraph);
     });
 
-    buildSource(card.querySelector("figcaption"), testimonial);
+    var figcaption = card.querySelector("figcaption");
+    buildSource(figcaption, testimonial);
+
+    var date = buildDate(testimonial.date);
+    if (date) {
+      figcaption.appendChild(date);
+    }
+
     return card;
   }
 

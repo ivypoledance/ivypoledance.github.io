@@ -111,8 +111,21 @@ body.dark .testimonials-message {
   font-weight: 600;
 
   &::before {
-    content: "— ";
+    content: "~ ";
   }
+}
+
+/**
+ * When the quote was given. It is the last thing in the caption and the least
+ * of it, so it is set quieter than the name it follows and wraps below the
+ * name on a card too narrow to hold both.
+ */
+.testimonial-date {
+  color: $gray-700;
+}
+
+body.dark .testimonial-date {
+  color: $gray-500;
 }
 
 .testimonial-handle {

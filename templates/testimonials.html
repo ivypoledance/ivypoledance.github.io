@@ -7,8 +7,13 @@
    rather than from this repository. One icon per network is here for the same
    reason the rest is: the feather SVG is written once, in `social_icon`.
 
-   `data-network` is the set of networks a quote may name. A quote naming
-   anything else gets no icon and no link rather than a broken profile URL.
+   `data-network` is the set of networks a quote may name — the whole set, and
+   the same for all of them. A quote naming anything else gets no icon and no
+   link rather than a broken profile URL. A network only links when the quote
+   also carries a `handle`; without one the icon just says where it came from.
+
+   A quote may also carry a `date` (an ISO day) and an `url` that makes the
+   name itself clickable.
 
    The JSON is deliberately not cachebusted, unlike the script: the point of
    fetching it is that it can change without the site being rebuilt, and a
@@ -25,6 +30,7 @@
 </template>
 <template class="testimonial-paragraph"><p></p></template>
 <template class="testimonial-question-template"><p class="testimonial-question"></p></template>
+<template class="testimonial-date-template"><time class="testimonial-date"></time></template>
 {% for network in [
      {"id": "instagram", "name": "Instagram", "profile": "https://www.instagram.com/"},
      {"id": "facebook", "name": "Facebook", "profile": "https://www.facebook.com/"},
