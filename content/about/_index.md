@@ -33,6 +33,7 @@ Komm wie du bist, tanz wie du willst!
 - Twinpole (Parallelstangen) seit 2021
 - Veranstaltung Ivy Polecamp jährlich seit 2021
 - Aerial Spiral seit 2024
+- Flying Pole seit 2026
 
 ### Workshops/(Online-)Kurse/Fortbildungen bei
 
