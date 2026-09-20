@@ -38,22 +38,22 @@ Komm wie du bist, tanz wie du willst!
 
 Pole: Anna Valfsson, Dan Rosen, Evgeny Greshilov, Jazzy K, Kira Noire, Marlo Fisken, Michelle Stanek, Natasha Wang, Phoenix Kazree, Sergia Louse Anderson, Simone Fluhr
 
-Aerial (Spiral, Hoop, Trapeze, Straps, Harness) & Creative Coaching: Amy Ell, Chantal MxCormick, Emma D'Lemma, Jenna Ciotta, Jenny Tuft, Laila Umeko, Lindsey Butcher, Oran Leong, Polina Shapkina, Rachel Strickland
+Aerial (Spiral, Hoop, Trapeze, Straps, Harness) & Creative Coaching: Amy Ell, Chantal McCormick, Emma D'Lemma, Jenna Ciotta, Jenny Tuft, Laila Umeko, Lindsey Butcher, Oran Leong, Polina Shapkina, Rachel Strickland
 
 ### Performances
 
-- Cirque Noir / Kathy and the Troubles 2014-2016 (Cabaret Fledermaus, Wien – Pole)
-- Gothic Dandy & Lolita Music Festival 2015 ((szene) Wien, Wien – Cabaret/Chair)
-- Poledance Playhouse 2016 (SimmCity, Wien – Pole)
-- Poledance Playhouse 2017 (Theater Akzent, Wien – Pole)
-- Pole Theatre Hungary Finalist 2018 (Trafó, Budapest – Pole)
-- Pole Soirée 2025 (Atelier Theater, Wien – Pole)
-- Acro Vision – Aerial Art Pro (17+) Winner 2025 (Online Competition – Aerial Spiral)
-- Acroyoga Vienna Festival 2025 (TRAP, Wien – Aerial Spiral)
-- Cirque Rouge / Burlesque Spectacular Shows 2025-2026 (Mirage, Wien – Tanz)
-- Burlesque Atelier 2026 (Atelier Theater, Wien – Pole, Hoop)
-- Emma Insley Cabaret (Irish Aerial Dance Fest) 2026 (An Grianán Theatre, Letterkenny – Flying Pole)
 - Cirque Rouge / Oh Lala Shows seit 2026 (Mirage, Wien)
+- Emma Insley Cabaret (Irish Aerial Dance Fest) 2026 (An Grianán Theatre, Letterkenny – Flying Pole)
+- Burlesque Atelier 2026 (Atelier Theater, Wien – Pole, Hoop, Flying Pole)
+- Cirque Rouge / Burlesque Spectacular Shows 2025-2026 (Mirage, Wien – Tanz)
+- Acroyoga Vienna Festival 2025 (TRAP, Wien – Aerial Spiral)
+- Acro Vision – Aerial Art Pro (17+) Winner 2025 (Online Competition – Aerial Spiral)
+- Pole Soirée 2025 (Atelier Theater, Wien – Pole)
+- Pole Theatre Hungary Finalist 2018 (Trafó, Budapest – Pole)
+- Poledance Playhouse 2017 (Theater Akzent, Wien – Pole)
+- Poledance Playhouse 2016 (SimmCity, Wien – Pole)
+- Gothic Dandy & Lolita Music Festival 2015 ((szene) Wien, Wien – Cabaret/Chair)
+- Cirque Noir / Kathy and the Troubles 2014-2016 (Cabaret Fledermaus, Wien – Pole)
 
 {{ <image img="/img/performance/acrovision.png" max={500} credit="© Photography Cloud" /> }}
 
